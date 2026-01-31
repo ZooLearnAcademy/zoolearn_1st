@@ -311,6 +311,9 @@
     /* Enable scrolling */
     width: 100%;
     /* Take full container width */
+    max-width: calc(100vw - 4rem);
+    /* Ensure container is smaller than viewport to force overflow */
+    touch-action: pan-x;
     padding-bottom: 1rem;
     gap: 1.5rem;
     -webkit-overflow-scrolling: touch;
