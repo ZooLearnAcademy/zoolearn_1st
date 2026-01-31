@@ -103,7 +103,7 @@ const About = () => {
               <h2>Founder</h2>
               <div className="team-profile">
                 <div className="person">
-                  <img src="https://res.cloudinary.com/duibfmcw1/image/upload/v1769757696/WhatsApp_Image_2026-01-29_at_11.38.56_PM-removebg-preview_naa5tx.png"></img>
+                  <img loading="lazy" src="https://res.cloudinary.com/duibfmcw1/image/upload/v1769757696/WhatsApp_Image_2026-01-29_at_11.38.56_PM-removebg-preview_naa5tx.png"></img>
                   <h3>Pranav Karthik</h3>
                   <p>Founder & Chief Zoology Educator</p>
                 </div>
@@ -114,39 +114,39 @@ const About = () => {
               <div className="team-profile">
                 <div className="lead">
                   <div className="person">
-                    <img src="https://res.cloudinary.com/duibfmcw1/image/upload/v1769757711/1710902792982_-_Vikram_A-removebg-preview_kwlbgr.png"></img>
+                    <img loading="lazy" src="https://res.cloudinary.com/duibfmcw1/image/upload/v1769757711/1710902792982_-_Vikram_A-removebg-preview_kwlbgr.png"></img>
                     <h3>Vikram</h3>
                     <p>Technical Lead</p>
                   </div>
                   <div className="person">
-                    <img src="https://res.cloudinary.com/duibfmcw1/image/upload/v1769757695/thomas-removebg-preview_xpotrg.png"></img>
+                    <img loading="lazy" src="https://res.cloudinary.com/duibfmcw1/image/upload/v1769757695/thomas-removebg-preview_xpotrg.png"></img>
                     <h3>Thomas Jeberson</h3>
                     <p>Technical Lead</p>
                   </div>
                 </div>
                 <div className="member">
                   <div className="person">
-                    <img src="https://res.cloudinary.com/duibfmcw1/image/upload/v1769709839/vijaiphoto-removebg-preview_oxwrkz.png"></img>
+                    <img loading="lazy" src="https://res.cloudinary.com/duibfmcw1/image/upload/v1769709839/vijaiphoto-removebg-preview_oxwrkz.png"></img>
                     <h3>Vijai Sharathi</h3>
                     <p>Front-End Developer</p>
                   </div>
                   <div className="person">
-                    <img src="https://res.cloudinary.com/duibfmcw1/image/upload/v1769757696/kamesh-removebg-preview_vhyrpc.png"></img>
+                    <img loading="lazy" src="https://res.cloudinary.com/duibfmcw1/image/upload/v1769757696/kamesh-removebg-preview_vhyrpc.png"></img>
                     <h3>Kamesh</h3>
                     <p>Front-End Developer</p>
                   </div>
                   <div className="person">
-                    <img src="https://res.cloudinary.com/duibfmcw1/image/upload/v1769757698/44111459_-_charan_GD-removebg-preview_yjsljq.png"></img>
+                    <img loading="lazy" src="https://res.cloudinary.com/duibfmcw1/image/upload/v1769757698/44111459_-_charan_GD-removebg-preview_yjsljq.png"></img>
                     <h3>Charan</h3>
                     <p>Front-End Developer</p>
                   </div>
                   <div className="person">
-                    <img src="https://res.cloudinary.com/duibfmcw1/image/upload/v1769757698/IMG_20260119_215345_-_Sathees_Satheeswaran-removebg-preview_gofzcs.png"></img>
+                    <img loading="lazy" src="https://res.cloudinary.com/duibfmcw1/image/upload/v1769757698/IMG_20260119_215345_-_Sathees_Satheeswaran-removebg-preview_gofzcs.png"></img>
                     <h3>Satheeswaren</h3>
                     <p>Front-End Developer</p>
                   </div>
                   <div className="person">
-                    <img src="https://res.cloudinary.com/duibfmcw1/image/upload/v1769757697/1000037476_11zon_-_Vishnuputhran_Rajan-removebg-preview_tkvmnw.png"></img>
+                    <img loading="lazy" src="https://res.cloudinary.com/duibfmcw1/image/upload/v1769757697/1000037476_11zon_-_Vishnuputhran_Rajan-removebg-preview_tkvmnw.png"></img>
                     <h3>Vishnuputhiran</h3>
                     <p>Back-End Developer</p>
                   </div>
@@ -160,50 +160,50 @@ const About = () => {
                 <div className="lead">
 
                   <div className="person">
-                    <img src="https://res.cloudinary.com/duibfmcw1/image/upload/v1769775276/PP-02.jpg-removebg-preview_gyx28w.png"></img>
+                    <img loading="lazy" src="https://res.cloudinary.com/duibfmcw1/image/upload/v1769775276/PP-02.jpg-removebg-preview_gyx28w.png"></img>
                     <h3>Ahmed Safnas</h3>
                     <p>Research lead</p>
                   </div>
                 </div>
                 <div className="member">
                   <div className="person">
-                    <img src="https://res.cloudinary.com/duibfmcw1/image/upload/v1769757697/IMG_20260129_153151_-_Nethra_V-removebg-preview_fuarx0.png"></img>
+                    <img loading="lazy" src="https://res.cloudinary.com/duibfmcw1/image/upload/v1769757697/IMG_20260129_153151_-_Nethra_V-removebg-preview_fuarx0.png"></img>
                     <h3>Nethra V</h3>
                     <p>Research Department</p>
                   </div>
                   <div className="person">
-                    <img src="https://res.cloudinary.com/duibfmcw1/image/upload/v1769757695/javith_photo_-_Javith-removebg-preview_jldum5.png"></img>
+                    <img loading="lazy" src="https://res.cloudinary.com/duibfmcw1/image/upload/v1769757695/javith_photo_-_Javith-removebg-preview_jldum5.png"></img>
                     <h3>Javith ahmed</h3>
                     <p>Research Department</p>
                   </div>
                   <div className="person">
-                    <img src="https://res.cloudinary.com/duibfmcw1/image/upload/v1769757697/Srihari_vardhan_Image_-_SRIHARI_VARDHAN_SRIRAM-removebg-preview_djteic.png"></img>
+                    <img loading="lazy" src="https://res.cloudinary.com/duibfmcw1/image/upload/v1769757697/Srihari_vardhan_Image_-_SRIHARI_VARDHAN_SRIRAM-removebg-preview_djteic.png"></img>
                     <h3>Srihari varadhan</h3>
                     <p>Research Department</p>
                   </div>
 
                   <div className="person">
-                    <img src="https://res.cloudinary.com/duibfmcw1/image/upload/v1769757696/IMG-20250527-WA0021_-_Boomani_Priyan-removebg-preview_lpphaq.png"></img>
+                    <img loading="lazy" src="https://res.cloudinary.com/duibfmcw1/image/upload/v1769757696/IMG-20250527-WA0021_-_Boomani_Priyan-removebg-preview_lpphaq.png"></img>
                     <h3>Boomani Priyan</h3>
                     <p>Research Department</p>
                   </div>
                   <div className="person">
-                    <img src="https://res.cloudinary.com/duibfmcw1/image/upload/v1769757696/IMG-20250401-WA0000_-_Pavan_Shankar-removebg-preview_zmnepq.png"></img>
+                    <img loading="lazy" src="https://res.cloudinary.com/duibfmcw1/image/upload/v1769757696/IMG-20250401-WA0000_-_Pavan_Shankar-removebg-preview_zmnepq.png"></img>
                     <h3>Pavan shankar</h3>
                     <p>Research Department</p>
                   </div>
                   <div className="person">
-                    <img src="https://res.cloudinary.com/duibfmcw1/image/upload/v1765947727/logopng_2_webaac.png"></img>
+                    <img loading="lazy" src="https://res.cloudinary.com/duibfmcw1/image/upload/v1765947727/logopng_2_webaac.png"></img>
                     <h3>Nishanth M</h3>
                     <p>Research Department</p>
                   </div>
                   <div className="person">
-                    <img src="https://res.cloudinary.com/duibfmcw1/image/upload/v1765947727/logopng_2_webaac.png"></img>
+                    <img loading="lazy" src="https://res.cloudinary.com/duibfmcw1/image/upload/v1765947727/logopng_2_webaac.png"></img>
                     <h3>Khurab F</h3>
                     <p>Research Department</p>
                   </div>
                   <div className="person">
-                    <img src="https://res.cloudinary.com/duibfmcw1/image/upload/v1765947727/logopng_2_webaac.png"></img>
+                    <img loading="lazy" src="https://res.cloudinary.com/duibfmcw1/image/upload/v1765947727/logopng_2_webaac.png"></img>
                     <h3>Aslam sheriff</h3>
                     <p>Research Department</p>
                   </div>
@@ -216,12 +216,12 @@ const About = () => {
               <div className="team-profile">
                 <div className="member">
                   <div className="person">
-                    <img src="https://res.cloudinary.com/duibfmcw1/image/upload/v1765947727/logopng_2_webaac.png"></img>
+                    <img loading="lazy" src="https://res.cloudinary.com/duibfmcw1/image/upload/v1765947727/logopng_2_webaac.png"></img>
                     <h3>Vijayakarthikmukilan</h3>
                     <p>UI/UX Designer</p>
                   </div>
                   <div className="person">
-                    <img src="https://res.cloudinary.com/duibfmcw1/image/upload/v1765947727/logopng_2_webaac.png"></img>
+                    <img loading="lazy" src="https://res.cloudinary.com/duibfmcw1/image/upload/v1765947727/logopng_2_webaac.png"></img>
                     <h3>Amirtharaj</h3>
                     <p>3D Head</p>
                   </div>

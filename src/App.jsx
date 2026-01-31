@@ -23,7 +23,7 @@ function App() {
     // Handler for when everything (including images) is loaded
     const handleLoad = () => {
       // Small timeout to ensure smooth transition
-      setTimeout(() => setIsLoading(false), 800);
+      setTimeout(() => setIsLoading(false), 500); // reduced from 800
     };
 
     if (document.readyState === 'complete') {
@@ -32,8 +32,8 @@ function App() {
       window.addEventListener('load', handleLoad);
     }
 
-    // Safety fallback: Force load after 4 seconds even if an asset is stuck
-    const outputTimeout = setTimeout(() => setIsLoading(false), 4000);
+    // Safety fallback: Force load after 2 seconds (was 4s)
+    const outputTimeout = setTimeout(() => setIsLoading(false), 2000);
 
     return () => {
       window.removeEventListener('load', handleLoad);
