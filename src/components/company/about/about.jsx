@@ -113,7 +113,7 @@ const About = () => {
               <h2>Research Department</h2>
               <div className="team-profile">
                 <div className="lead">
-                  
+
                   <div className="person">
                     <img src="https://res.cloudinary.com/duibfmcw1/image/upload/v1769775276/PP-02.jpg-removebg-preview_gyx28w.png"></img>
                     <h3>Ahmed Safnas</h3>
@@ -136,7 +136,7 @@ const About = () => {
                     <h3>Srihari varadhan</h3>
                     <p>Research Department</p>
                   </div>
-                  
+
                   <div className="person">
                     <img src="https://res.cloudinary.com/duibfmcw1/image/upload/v1769757696/IMG-20250527-WA0021_-_Boomani_Priyan-removebg-preview_lpphaq.png"></img>
                     <h3>Boomani Priyan</h3>
@@ -163,7 +163,7 @@ const About = () => {
                     <p>Research Department</p>
                   </div>
                 </div>
-                
+
               </div>
             </div>
             <div className="department">
@@ -208,16 +208,23 @@ const About = () => {
                     <p>Back-End Developer</p>
                   </div>
                 </div>
-                
+
               </div>
             </div>
             <div className="department">
               <h2>Design Department</h2>
               <div className="team-profile">
-                <div className="person">
-                  <img src="https://res.cloudinary.com/duibfmcw1/image/upload/v1769712514/WhatsApp_Image_2026-01-29_at_3.18.58_PM_y7fvrd.jpg"></img>
-                  <h3>Vijayakarthikmukilan</h3>
-                  <p>UI/UX Designer</p>
+                <div className="member">
+                  <div className="person">
+                    <img src="https://res.cloudinary.com/duibfmcw1/image/upload/v1769712514/WhatsApp_Image_2026-01-29_at_3.18.58_PM_y7fvrd.jpg"></img>
+                    <h3>Vijayakarthikmukilan</h3>
+                    <p>UI/UX Designer</p>
+                  </div>
+                  <div className="person">
+                    <img src="https://res.cloudinary.com/duibfmcw1/image/upload/v1765947727/logopng_2_webaac.png"></img>
+                    <h3>Amirtharaj</h3>
+                    <p>3D Head</p>
+                  </div>
                 </div>
               </div>
             </div>

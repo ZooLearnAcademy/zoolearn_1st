@@ -300,4 +300,31 @@
   .section-title {
     font-size: 2rem;
   }
+
+  /* Team Section Scrolling */
+  .lead,
+  .member {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    gap: 1.5rem;
+    -webkit-overflow-scrolling: touch;
+    /* Smooth scrolling on iOS */
+    scrollbar-width: none;
+    /* Optional: hide scrollbar for cleaner look */
+  }
+
+  /* Hide scrollbar for Chrome/Safari */
+  .lead::-webkit-scrollbar,
+  .member::-webkit-scrollbar {
+    display: none;
+  }
+
+  .person {
+    flex-shrink: 0;
+    /* Prevent items from squishing */
+    width: 160px;
+    /* Fixed width for consistent cards */
+    text-align: center;
+  }
 }
