@@ -307,17 +307,15 @@
     display: flex;
     flex-wrap: nowrap;
     /* Force single row */
-    overflow-x: auto;
-    /* Enable scrolling */
+    overflow-x: scroll;
+    /* Force scrolling always */
+    justify-content: flex-start;
+    /* Prevent centering from locking scroll */
     width: 100%;
-    /* Take full container width */
-    max-width: calc(100vw - 4rem);
-    /* Ensure container is smaller than viewport to force overflow */
-    touch-action: pan-x;
+    /* max-width removed to let parent constrain */
     padding-bottom: 1rem;
     gap: 1.5rem;
     -webkit-overflow-scrolling: touch;
-    /* scrollbar-width: none;  <-- REMOVED to make scroll visible */
   }
 
   /* REMOVED .lead::-webkit-scrollbar hiding block */
