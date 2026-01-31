@@ -193,17 +193,17 @@ const About = () => {
                     <p>Research Department</p>
                   </div>
                   <div className="person">
-                    <img src="https://res.cloudinary.com/duibfmcw1/image/upload/v1769712514/WhatsApp_Image_2026-01-29_at_3.18.58_PM_y7fvrd.jpg"></img>
+                    <img src="https://res.cloudinary.com/duibfmcw1/image/upload/v1765947727/logopng_2_webaac.png"></img>
                     <h3>Nishanth M</h3>
                     <p>Research Department</p>
                   </div>
                   <div className="person">
-                    <img src="https://res.cloudinary.com/duibfmcw1/image/upload/v1769712514/WhatsApp_Image_2026-01-29_at_3.18.58_PM_y7fvrd.jpg"></img>
+                    <img src="https://res.cloudinary.com/duibfmcw1/image/upload/v1765947727/logopng_2_webaac.png"></img>
                     <h3>Khurab F</h3>
                     <p>Research Department</p>
                   </div>
                   <div className="person">
-                    <img src="https://res.cloudinary.com/duibfmcw1/image/upload/v1769712514/WhatsApp_Image_2026-01-29_at_3.18.58_PM_y7fvrd.jpg"></img>
+                    <img src="https://res.cloudinary.com/duibfmcw1/image/upload/v1765947727/logopng_2_webaac.png"></img>
                     <h3>Aslam sheriff</h3>
                     <p>Research Department</p>
                   </div>
@@ -216,7 +216,7 @@ const About = () => {
               <div className="team-profile">
                 <div className="member">
                   <div className="person">
-                    <img src="https://res.cloudinary.com/duibfmcw1/image/upload/v1769712514/WhatsApp_Image_2026-01-29_at_3.18.58_PM_y7fvrd.jpg"></img>
+                    <img src="https://res.cloudinary.com/duibfmcw1/image/upload/v1765947727/logopng_2_webaac.png"></img>
                     <h3>Vijayakarthikmukilan</h3>
                     <p>UI/UX Designer</p>
                   </div>
