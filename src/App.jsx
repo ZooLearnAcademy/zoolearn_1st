@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, useState, useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import './App.css';
 
@@ -16,6 +16,34 @@ const About = lazy(() => import('./components/company/about/about'));
 
 function App() {
   const location = useLocation();
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Global Page Loader Logic
+  useEffect(() => {
+    // Handler for when everything (including images) is loaded
+    const handleLoad = () => {
+      // Small timeout to ensure smooth transition
+      setTimeout(() => setIsLoading(false), 800);
+    };
+
+    if (document.readyState === 'complete') {
+      handleLoad();
+    } else {
+      window.addEventListener('load', handleLoad);
+    }
+
+    // Safety fallback: Force load after 4 seconds even if an asset is stuck
+    const outputTimeout = setTimeout(() => setIsLoading(false), 4000);
+
+    return () => {
+      window.removeEventListener('load', handleLoad);
+      clearTimeout(outputTimeout);
+    };
+  }, []);
+
+  if (isLoading) {
+    return <Spinner fullPage text="Loading ZooLearn..." />;
+  }
 
   return (
     <ToastProvider>

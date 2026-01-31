@@ -42,7 +42,46 @@
 </head>
 
 <body>
-  <div id="root"></div>
+  <div id="root">
+    <!-- Initial Loader (Visible before React Hydrates) -->
+    <style>
+      .initial-loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #f8fafc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+      }
+
+      .loader-spinner {
+        width: 50px;
+        height: 50px;
+        border: 4px solid #e2e8f0;
+        border-top: 4px solid #2e7d6f;
+        /* ZooLearn Green */
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+    <div class="initial-loader">
+      <div class="loader-spinner"></div>
+    </div>
+  </div>
   <script type="module" src="/src/main.jsx"></script>
 </body>
 
