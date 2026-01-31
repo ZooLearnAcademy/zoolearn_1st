@@ -1,0 +1,8 @@
+.organism-detail { padding: 20px; }
+.organism-detail h3 { margin: 0 0 20px 0; font-size: 1.5em; color: #333; border-bottom: 2px solid #667eea; padding-bottom: 10px; }
+.info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+.info-item { background: white; padding: 15px; border-radius: 6px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); }
+.info-item label { display: block; font-weight: 600; color: #667eea; margin-bottom: 8px; font-size: 0.95em; }
+.info-item p { margin: 0; color: #555; line-height: 1.6; }
+.info-item ul { margin: 0; padding-left: 20px; color: #555; }
+.info-item li { margin-bottom: 5px; }

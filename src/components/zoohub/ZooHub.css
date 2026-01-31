@@ -1,0 +1,314 @@
+/* ZooHub.css */
+
+/* ===============================
+   ZOO HUB PAGE - PROFESSIONAL DESIGN
+================================ */
+:root {
+  --zoo-primary: #2f7432;
+  --zoo-secondary: #3087a9;
+  --zoo-accent: #fed32c;
+  --zoo-dark: #1a3c2a;
+  --zoo-light: #f5f7f6;
+  --zoo-text: #2c3e50;
+  --zoo-text-light: #6c757d;
+  --zoo-gradient: linear-gradient(135deg, #2f7432 0%, #3087a9 100%);
+  --zoo-shadow: 0 4px 20px rgba(47, 116, 50, 0.15);
+  --zoo-radius: 16px;
+}
+
+.zoohub-page {
+  background: linear-gradient(180deg, #f0f9f0 0%, #e8f5e8 50%, #f5f7f6 100%);
+  min-height: 100vh;
+  padding-bottom: 3rem;
+}
+
+/* ===============================
+   CLASS NAVIGATION BAR
+================================ */
+.class-navbar {
+  position: sticky;
+  top: 64px;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(47, 116, 50, 0.1);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+  padding: 0.5rem 1rem;
+}
+
+.class-scroll {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0.25rem 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.class-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.class-scroll span {
+  flex-shrink: 0;
+  padding: 0.625rem 1.25rem;
+  background: linear-gradient(135deg, #ffffff 0%, #f8faf8 100%);
+  border: 2px solid rgba(47, 116, 50, 0.15);
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--zoo-dark);
+  cursor: pointer;
+  text-transform: capitalize;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.class-scroll span:hover {
+  border-color: var(--zoo-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(47, 116, 50, 0.2);
+  color: var(--zoo-primary);
+}
+
+.class-scroll span:active,
+.class-scroll span.active {
+  background: var(--zoo-gradient);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 4px 20px rgba(47, 116, 50, 0.4);
+}
+
+/* ===============================
+   SEARCH SECTION - PROFESSIONAL
+================================ */
+.search-section {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  display:fixed;
+}
+
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 60px;
+  box-shadow: 0 8px 40px rgba(47, 116, 50, 0.12);
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.search-container:focus-within {
+  border-color: var(--zoo-primary);
+  box-shadow: 0 8px 40px rgba(47, 116, 50, 0.2), 0 0 0 4px rgba(47, 116, 50, 0.1);
+}
+
+.search-input-wrapper {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 0.75rem;
+  padding-left: 1.25rem;
+}
+
+.search-icon-text {
+  font-size: 1.25rem;
+  line-height: 1;
+  opacity: 0.7;
+}
+
+.search-input-wrapper input {
+  flex: 1;
+  padding: 1rem 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--zoo-text);
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: inherit;
+}
+
+.search-input-wrapper input::placeholder {
+  color: var(--zoo-text-light);
+  font-weight: 400;
+}
+
+.search-btn {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  margin: 0.5rem;
+  background: var(--zoo-gradient);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.search-btn:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 20px rgba(47, 116, 50, 0.4);
+}
+
+.search-btn:active {
+  transform: scale(0.98);
+}
+
+/* Search Results Dropdown */
+.search-results {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  right: 0;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.15);
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 200;
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem;
+  animation: dropdownFade 0.2s ease;
+}
+
+@keyframes dropdownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.search-results li {
+  padding: 0.875rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--zoo-text);
+  cursor: pointer;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.search-results li:hover {
+  background: linear-gradient(135deg, rgba(47, 116, 50, 0.08) 0%, rgba(48, 135, 169, 0.08) 100%);
+  color: var(--zoo-primary);
+}
+
+.search-results .species-class {
+  font-size: 0.75rem;
+  color: var(--zoo-text-light);
+  background: rgba(47, 116, 50, 0.1);
+  padding: 0.25rem 0.625rem;
+  border-radius: 20px;
+  margin-left: auto;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* ===============================
+   PAGE HEADER
+================================ */
+.zoohub-header {
+  text-align: center;
+  padding: 1rem 1.5rem 0.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.zoohub-header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: var(--zoo-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.5px;
+}
+
+.zoohub-header p {
+  font-size: 1.1rem;
+  color: var(--zoo-text-light);
+  line-height: 1.6;
+}
+
+/* ===============================
+   SECTIONS
+================================ */
+.zoohub-page section {
+  scroll-margin-top: 160px;
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+================================ */
+@media (max-width: 768px) {
+  .class-navbar {
+    top: 64px;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .class-scroll span {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  .search-section {
+    padding: 0 1rem;
+    margin: 1.5rem auto;
+  }
+
+  .search-container {
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 0.5rem;
+  }
+
+  .search-input-wrapper {
+    width: 100%;
+    padding: 0.5rem 1rem;
+  }
+
+  .search-btn {
+    width: 100%;
+    justify-content: center;
+    margin: 0;
+    border-radius: 12px;
+  }
+
+  .zoohub-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .zoohub-header p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .class-scroll span {
+    padding: 0.5rem 0.875rem;
+    font-size: 0.75rem;
+  }
+}

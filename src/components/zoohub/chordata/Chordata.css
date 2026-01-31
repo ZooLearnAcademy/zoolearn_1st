@@ -1,0 +1,13 @@
+.phylum-container { padding: 20px; }
+.phylum-header { margin-bottom: 30px; border-bottom: 3px solid #667eea; padding-bottom: 15px; }
+.phylum-header h2 { margin: 0 0 10px 0; font-size: 2em; color: #333; }
+.phylum-header p { margin: 0; font-size: 1.1em; color: #666; }
+.organism-nav { margin-bottom: 30px; }
+.organism-nav h3 { font-size: 1.2em; color: #333; margin: 0 0 15px 0; }
+.organism-buttons { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 10px; }
+.organism-btn { padding: 10px 15px; border: 2px solid #ddd; background: white; color: #333; border-radius: 6px; cursor: pointer; font-size: 0.9em; font-weight: 500; transition: all 0.3s ease; }
+.organism-btn:hover { border-color: #667eea; background: #f5f5f5; }
+.organism-btn.active { background: #667eea; color: white; border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3); }
+.organism-content { background: #f9f9f9; border-radius: 8px; padding: 20px; border: 1px solid #eee; max-height: 60vh; overflow-y: auto; }
+.organism-placeholder { text-align: center; padding: 40px 20px; color: #999; }
+.organism-placeholder h3 { color: #666; margin: 0 0 10px 0; }

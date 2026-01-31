@@ -1,0 +1,687 @@
+/* =========================================
+   ZooLearn.css - Responsive Green Theme (NEET)
+   ========================================= */
+
+:root {
+  /* -- Green Theme Variables -- */
+  --primary-color: #16a34a;
+  /* Green-600 */
+  --primary-light: #dcfce7;
+  /* Green-100 */
+  --primary-dark: #15803d;
+  /* Green-700 */
+
+  /* -- Standard Neutrals -- */
+  --text-main: #1f2937;
+  /* Gray-800 */
+  --text-secondary: #4b5563;
+  /* Gray-600 */
+  --bg-app: #f9fafb;
+  /* Gray-50 */
+  --bg-panel: #ffffff;
+  --border-color: #e5e7eb;
+  /* Gray-200 */
+
+  /* -- Shadows -- */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.zoo-app-container {
+  display: flex;
+  /* Adjusted height to account for fixed header (approx 100px/13vh) */
+  height: calc(100vh - 100px);
+  margin-top: 2rem;
+  /* Add some breathing room from the header */
+  background-color: var(--bg-app);
+  font-family: system-ui, -apple-system, sans-serif;
+  color: var(--text-main);
+  position: relative;
+  overflow: hidden;
+  /* Prevent body scroll when menu is fixed */
+}
+
+/* --- Mobile Header (Hidden on Desktop) --- */
+.mobile-header {
+  display: none;
+  /* Default hidden */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--border-color);
+  z-index: 50;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.mobile-menu-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.mobile-brand-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+}
+
+/* --- Sidebar Styling --- */
+.zoo-sidebar {
+  width: 25%;
+  min-width: 250px;
+  background-color: var(--bg-panel);
+  border-right: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-lg);
+  overflow-y: auto;
+  z-index: 40;
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidebar-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--primary-light);
+  background: linear-gradient(to right, #ffffff, var(--primary-light));
+}
+
+.brand-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin: 0;
+}
+
+.brand-subtitle {
+  font-size: 0.75rem;
+  color: var(--primary-color);
+  margin-top: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.sidebar-nav {
+  flex: 1;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding-bottom: 4rem;
+  /* Extra space for mobile scroll */
+}
+
+.nav-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: var(--text-secondary);
+  text-align: left;
+}
+
+.nav-btn:hover {
+  background-color: var(--bg-app);
+  color: var(--primary-dark);
+}
+
+.nav-btn.active {
+  background-color: var(--primary-light);
+  color: var(--primary-dark);
+  box-shadow: var(--shadow-sm);
+  border-left: 4px solid var(--primary-color);
+}
+
+/* --- Main Content Area --- */
+.zoo-main-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 2.5rem;
+  scroll-behavior: smooth;
+}
+
+.content-card {
+  max-width: 56rem;
+  margin: 0 auto;
+  background-color: var(--bg-panel);
+  min-height: 80vh;
+  border-radius: 1rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  padding: 2rem;
+  border-top: 4px solid var(--primary-color);
+}
+
+/* --- Header --- */
+.content-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /* Allows wrapping on small screens */
+}
+
+.header-icon-wrapper {
+  padding: 0.75rem;
+  background-color: var(--primary-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+}
+
+.header-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+/* --- Sections --- */
+.sections-wrapper {
+  animation: slideUp 0.5s ease-out;
+}
+
+.content-section {
+  margin-bottom: 2.5rem;
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.section-marker {
+  width: 0.375rem;
+  height: 1.5rem;
+  background-color: var(--primary-color);
+  border-radius: 9999px;
+  display: inline-block;
+}
+
+.section-text {
+  color: var(--text-secondary);
+  line-height: 1.625;
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  border-left: 2px solid var(--primary-light);
+}
+
+/* --- Lists --- */
+.section-list {
+  padding-left: 1rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  color: #374151;
+  line-height: 1.6;
+}
+
+.bullet-dot {
+  margin-top: 0.6rem;
+  width: 0.375rem;
+  height: 0.375rem;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* --- Tables --- */
+.table-container {
+  margin-top: 1rem;
+  overflow-x: auto;
+  /* Enable horizontal scroll on mobile */
+  border-radius: 0.75rem;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.zoo-table {
+  width: 100%;
+  min-width: 500px;
+  /* Forces scroll on small screens */
+  border-collapse: collapse;
+  border: 2px solid var(--primary-color);
+  border-radius: 0.75rem;
+  text-align: left;
+}
+
+.zoo-table th {
+  background-color: var(--primary-light);
+  padding: 1rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid var(--primary-color);
+  border-right: 1px solid var(--primary-color);
+
+}
+
+.zoo-table td {
+  padding: 1rem;
+  color: #374151;
+  font-size: 0.875rem;
+  border-bottom: 1px solid var(--primary-color);
+  border-right: 1px solid var(--primary-color);
+}
+
+.zoo-table th:last-child,
+.zoo-table td:last-child {
+  border-right: none;
+}
+
+.zoo-table tr:hover {
+  background-color: #ebfff7;
+}
+
+.zoo-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* --- Images --- */
+.section-image-wrapper {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  background-color: #fff;
+}
+
+.section-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  max-height: 400px;
+}
+
+.image-caption {
+  padding: 0.75rem;
+  background-color: var(--bg-app);
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  text-align: center;
+  border-top: 1px solid var(--border-color);
+  font-style: italic;
+}
+
+/* --- Animation --- */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Example Block --- */
+.example-block {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #fffbeb;
+  border: 1px solid #fde68a;
+  border-left: 4px solid var(--primary-color);
+  border-radius: 0.5rem;
+  color: #92400e;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.example-label {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.15rem 0.5rem;
+  border-radius: 0.25rem;
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.example-list {
+  margin: 0;
+  padding-left: 1rem;
+  list-style-type: disc;
+}
+
+.example-list li {
+  margin-bottom: 0.25rem;
+}
+
+/* --- Navigation Footer & Buttons --- */
+.navigation-footer {
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-action-btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+}
+
+.prev-btn {
+  background-color: white;
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+}
+
+.prev-btn:hover {
+  background-color: var(--primary-light);
+  color: var(--primary-dark);
+  border-color: var(--primary-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.next-btn {
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  color: white;
+}
+
+.next-btn:hover {
+  background-color: var(--primary-dark);
+  box-shadow: var(--shadow-sm);
+}
+
+/* =========================================
+   MEDIA QUERIES (RESPONSIVENESS)
+   ========================================= */
+
+/* Overlay for Mobile Menu */
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 30;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.sidebar-overlay.active {
+  display: block;
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+
+  /* Show Mobile Header */
+  .mobile-header {
+    display: flex;
+  }
+
+  /* Adjust Main Content to account for fixed header */
+  .zoo-main-content {
+    padding: 1rem;
+    padding-top: 5rem;
+    /* Space for mobile header */
+  }
+
+  /* Make Sidebar a Slide-out Drawer */
+  .zoo-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 80%;
+    max-width: 300px;
+    transform: translateX(-100%);
+    /* Hide by default */
+    border-right: none;
+  }
+
+  .zoo-sidebar.open {
+    transform: translateX(0);
+    /* Slide in */
+  }
+
+  /* Adjust Card Layout */
+  .content-card {
+    padding: 1.5rem;
+    min-height: auto;
+  }
+
+  /* Adjust Header Layout */
+  .content-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .header-nav-buttons {
+    width: 100%;
+    justify-content: space-between;
+    margin-left: 0 !important;
+  }
+
+  .header-title {
+    font-size: 1.5rem;
+  }
+
+  /* Buttons on Mobile */
+  .nav-action-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* =========================================
+   RESPONSIVE DESIGN (Mobile & Tablet)
+   ========================================= */
+
+/* Mobile Header & Close Button (Hidden on Desktop) */
+.mobile-header-bar,
+.mobile-close-btn,
+.sidebar-overlay {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  /* --- Layout Adjustments --- */
+  .zoo-app-container {
+    flex-direction: column;
+  }
+
+  /* --- Sidebar (Mobile Drawer) --- */
+  .zoo-sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    /* Hidden by default */
+    width: 280px;
+    height: 100%;
+    transition: left 0.3s ease-in-out;
+    z-index: 50;
+    /* Above everything */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .zoo-sidebar.open {
+    left: 0;
+    /* Slide in */
+  }
+
+  /* --- Overlay --- */
+  .sidebar-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 40;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .sidebar-overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* --- Mobile Header Bar --- */
+  .mobile-header-bar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: var(--bg-panel);
+    border-bottom: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+  }
+
+  .mobile-menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem;
+  }
+
+  .mobile-brand-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-main);
+  }
+
+  /* --- Close Button inside Sidebar --- */
+  .mobile-close-btn {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-secondary);
+  }
+
+  /* --- Main Content Adjustments --- */
+  .zoo-main-content {
+    padding: 1rem;
+    /* Reduce padding */
+  }
+
+  .content-card {
+    padding: 1.5rem 1rem;
+    /* Reduce card padding */
+    min-height: auto;
+  }
+
+  /* --- Typography Adjustments --- */
+  .header-title {
+    font-size: 1.5rem;
+    /* Smaller title */
+  }
+
+  .section-title {
+    font-size: 1.1rem;
+  }
+
+  .section-text,
+  .list-item {
+    font-size: 1rem;
+    /* Readable body text */
+  }
+
+  /* --- Header Buttons (Prev/Next) --- */
+  .content-header {
+    flex-direction: column;
+    /* Stack title and buttons */
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .header-nav-buttons {
+    margin-left: 0 !important;
+    /* Reset margin */
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  /* --- Table Scrolling --- */
+  .table-container {
+    overflow-x: auto;
+    /* Enable horizontal scroll for tables */
+  }
+
+  .zoo-table th,
+  .zoo-table td {
+    white-space: nowrap;
+    /* Prevent wrapping inside cells */
+    padding: 0.75rem;
+  }
+
+  /* --- Footer Navigation --- */
+  .navigation-footer {
+    flex-direction: row;
+    /* Keep side by side but smaller */
+    margin-top: 2rem;
+  }
+
+  .nav-action-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}

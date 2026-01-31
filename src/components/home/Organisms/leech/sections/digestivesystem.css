@@ -1,0 +1,356 @@
+/* SECTION WRAPPER */
+.ds-digestive-section {
+  padding: 80px 5%;
+  background: linear-gradient(to bottom, #ffffff, #ecfdf5);
+  font-family: "Inter", system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+.ds-digestive-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* MARGIN UTILITY */
+.ds-mt-section {
+  margin-top: 60px;
+}
+
+.ds-center-text {
+  text-align: center;
+}
+
+/* MAIN HEADER */
+.ds-digestive-header {
+  text-align: center;
+  margin-bottom: 50px;
+  animation: ds-fadeInDown 0.8s ease-out;
+}
+
+.ds-section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #064e3b;
+  margin-bottom: 12px;
+}
+
+.ds-title-underline {
+  width: 100px;
+  height: 5px;
+  background: #10b981;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+
+/* SUB HEADINGS */
+.ds-sub-heading {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #065f46;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.ds-intro-text {
+  font-size: 1.1rem;
+  color: #334155;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* === ALIMENTARY CANAL LAYOUT === */
+.ds-alimentary-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* STEPS LIST */
+.ds-canal-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ds-step-card {
+  background: white;
+  padding: 20px 24px;
+  border-radius: 16px;
+  border-left: 5px solid #10b981;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  transition: transform 0.3s ease;
+  animation: ds-slideInLeft 0.8s ease-out forwards;
+}
+
+.ds-step-card:hover {
+  transform: translateX(10px);
+  background: #f0fdfa;
+}
+
+.ds-step-marker {
+  display: block;
+  font-weight: 800;
+  color: #059669;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.ds-step-card p {
+  color: #475569;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* IMAGE COLUMN */
+.ds-digestive-img-card {
+  background: white;
+  padding: 20px;
+  border-radius: 24px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+  border: 4px solid #ecfdf5;
+  text-align: center;
+  position: sticky;
+  top: 20px;
+  animation: ds-zoomIn 1s ease-out;
+}
+
+.ds-digestive-img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  max-height: 600px;
+  object-fit: contain;
+}
+
+.ds-img-caption {
+  display: block;
+  margin-top: 15px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #10b981;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* === FEEDING PROCESS GRID === */
+.ds-process-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.ds-process-card {
+  background: white;
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  transition: all 0.3s ease;
+  animation: ds-fadeUp 0.8s ease-out forwards;
+}
+
+.ds-process-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(16, 185, 129, 0.1);
+  border-color: #34d399;
+}
+
+.ds-process-icon {
+  font-size: 1.8rem;
+  background: #ecfdf5;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ds-process-card p {
+  margin: 0;
+  color: #334155;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.ds-full-span {
+  grid-column: 1 / -1;
+  background: #f0fdfa;
+  border-color: #10b981;
+}
+
+/* === SEGMENTATION DATA GRID === */
+.ds-data-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.ds-data-item {
+  background: white;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  text-align: center;
+  border-top: 3px solid #10b981;
+  transition: transform 0.2s;
+  animation: ds-fadeUp 1s ease-out forwards;
+}
+
+.ds-data-item:hover {
+  transform: scale(1.03);
+}
+
+.ds-data-label {
+  display: block;
+  font-weight: 700;
+  color: #065f46;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+.ds-data-value {
+  display: block;
+  color: #10b981;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* === FACTS SECTION (HIGHLIGHTED) === */
+.ds-facts-container {
+  background: #064e3b; /* Dark Green Background */
+  padding: 40px;
+  border-radius: 24px;
+  color: white;
+  box-shadow: 0 15px 40px rgba(6, 78, 59, 0.3);
+  position: relative;
+  overflow: hidden;
+  animation: ds-slideInUp 1.2s ease-out;
+}
+
+/* Decorative Circle */
+.ds-facts-container::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 50%;
+}
+
+.ds-facts-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 30px;
+  color: #6ee7b7; /* Light Green text */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.ds-facts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.ds-fact-card {
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 16px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.ds-fact-bullet {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #34d399;
+}
+
+.ds-fact-card p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #e2e8f0;
+}
+
+/* ANIMATIONS */
+@keyframes ds-fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes ds-slideInLeft {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes ds-slideInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes ds-zoomIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes ds-fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================================
+   LAPTOP VIEW (1024px - 1366px)
+   ========================================= */
+@media (min-width: 1024px) and (max-width: 1366px) {
+  .ds-digestive-section { padding: 60px 5%; }
+  .ds-section-title { font-size: 2rem; }
+  .ds-sub-heading { font-size: 1.5rem; }
+  
+  .ds-alimentary-grid { gap: 30px; }
+  .ds-digestive-img { max-height: 450px; }
+  
+  .ds-process-card { padding: 18px; font-size: 0.9rem; }
+  .ds-data-item { padding: 12px; font-size: 0.9rem; }
+  .ds-facts-container { padding: 30px; }
+}
+
+/* =========================================
+   MOBILE / TABLET RESPONSIVENESS
+   ========================================= */
+@media (max-width: 900px) {
+  .ds-alimentary-grid {
+    grid-template-columns: 1fr; /* Stack text and image */
+  }
+  
+  .ds-alimentary-image-col {
+    order: -1; /* Image first on mobile */
+  }
+  
+  .ds-process-grid, .ds-data-grid, .ds-facts-grid {
+    grid-template-columns: 1fr; /* 1 column stacks */
+  }
+  
+  .ds-digestive-img-card {
+    position: static; /* Remove sticky on mobile */
+  }
+}
+
+@media (max-width: 600px) {
+  .ds-section-title { font-size: 1.8rem; }
+  .ds-step-card { padding: 15px; }
+  .ds-process-card { padding: 15px; }
+  .ds-facts-title { font-size: 1.8rem; }
+}
