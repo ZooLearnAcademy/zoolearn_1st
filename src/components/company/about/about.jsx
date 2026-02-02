@@ -221,7 +221,7 @@ const About = () => {
                     <p>UI/UX Designer</p>
                   </div>
                   <div className="person">
-                    <img loading="lazy" src="https://res.cloudinary.com/duibfmcw1/image/upload/v1765947727/logopng_2_webaac.png"></img>
+                    <img loading="lazy" src="https://res.cloudinary.com/duibfmcw1/image/upload/v1770016570/amirtharaj-removebg-preview_nhyhyp.png"></img>
                     <h3>Amirtharaj</h3>
                     <p>3D Head</p>
                   </div>
