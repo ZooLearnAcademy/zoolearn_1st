@@ -105,7 +105,7 @@ const About = () => {
                 <div className="person">
                   <img loading="lazy" src="https://res.cloudinary.com/duibfmcw1/image/upload/v1769757696/WhatsApp_Image_2026-01-29_at_11.38.56_PM-removebg-preview_naa5tx.png"></img>
                   <h3>Pranav Karthik</h3>
-                  <p>Founder & Chief Zoology Educator</p>
+                  <p>Founder</p>
                 </div>
               </div>
             </div>
