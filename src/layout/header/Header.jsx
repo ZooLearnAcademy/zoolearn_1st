@@ -41,6 +41,7 @@ export default function Header() {
     { name: "Taxonomy Tree", path: "/taxonomy-tree" },
     { name: "ZooHub", path: "/zoohub" },
     { name: "About", path: "/about" },
+    { name: "Living World", path: "/livingworld" },
   ];
 
   return (

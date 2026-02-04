@@ -22,7 +22,7 @@ const Homepage = () => {
       description:
         "Fundamentals of animal life, cell biology, and basic physiological structures.",
       icon: "https://res.cloudinary.com/duibfmcw1/image/upload/v1767780953/001-zoology_baecrg.png",
-      route: "/living-world",
+      route: "/livingworld",
     },
     {
       title: "Basic Features of Classification",

@@ -13,7 +13,7 @@ import { ToastProvider, Spinner, UnderDevelopment, ScrollToTop } from './compone
 const Home = lazy(() => import('./components/home/Home'));
 const Tree = lazy(() => import('./components/taxonomytree/tree'));
 const About = lazy(() => import('./components/company/about/about'));
-
+const TheLivingWorld = lazy(() => import('./components/home/concept/thelivingworld/TheLivingWorld'));
 function App() {
   const location = useLocation();
   const [isLoading, setIsLoading] = useState(true);
@@ -62,7 +62,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/taxonomy-tree" element={<Tree />} />
               <Route path="/about" element={<About />} />
-
+              <Route path="/livingworld" element={<TheLivingWorld />} />
               {/* All other routes - Under Development */}
               <Route path="*" element={<UnderDevelopment />} />
             </Routes>
