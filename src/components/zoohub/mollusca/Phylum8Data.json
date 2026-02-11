@@ -6,7 +6,7 @@
     "scientificName": "Chiton / Coat-of-mail shell",
     "description": "Chaetopleura is a marine mollusc with a flattened body. It has eight shell plates on the dorsal side. It lives attached to rocks.",
     "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770102611/Chaetopleura_wp6ppp.png",
-    "3d": "https://sketchfab.com/3d-models/chiton1-3a30d7b2c6b44997a033da338a5afa8f",
+    "3d": "https://sketchfab.com/3d-models/chiton1-3a30d7b2c6b44997a033da338a5afa8f/embed",
     "introduction": [
       "Chaetopleura is a benthic marine mollusc found on rocky shores.",
       "It moves slowly and grazes on algae.",
@@ -65,7 +65,7 @@
     "scientificName": "Coat-of-mail shell",
     "description": "Chiton is a marine mollusc with segmented shell plates. It firmly clings to rocks. It is a slow-moving grazer.",
     "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770102617/Chiton_btgiv5.png",
-    "3d": "https://sketchfab.com/3d-models/chiton-tuberculatus-5a77a7724b5147e59b6332366babeda3",
+    "3d": "https://sketchfab.com/3d-models/chiton-tuberculatus-5a77a7724b5147e59b6332366babeda3/embed",
     "introduction": [
       "Chiton lives on rocky sea shores.",
       "It feeds on algae scraped from surfaces.",
@@ -123,7 +123,7 @@
     "scientificName": "Tusk shell",
     "description": "Dentalium has a long tubular shell. It lives buried in sand. It is a marine burrowing mollusc.",
     "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770102631/Dentalium_ebjnqz.png",
-    "3d": "https://sketchfab.com/3d-models/dentalium-aprinum-5e927ad4b87e4f2dbc4414f6bca598dc",
+    "3d": "https://sketchfab.com/3d-models/dentalium-aprinum-5e927ad4b87e4f2dbc4414f6bca598dc/embed",
     "introduction": [
       "Dentalium inhabits sandy and muddy sea floors.",
       "It feeds on microscopic organisms.",
@@ -181,7 +181,7 @@
     "scientificName": "Apple snail",
     "description": "Pila globosa is a freshwater snail. It has a globular shell. It is amphibious in habit.",
     "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770102646/Pila_globosa_cxtyhi.png",
-    "3d": "https://sketchfab.com/3d-models/snail-71243ecf771e413199b9103b5a444b9c",
+    "3d": "https://sketchfab.com/3d-models/snail-71243ecf771e413199b9103b5a444b9c/embed",
     "introduction": [
       "Pila globosa lives in ponds and slow rivers.",
       "It feeds on aquatic plants.",
@@ -298,7 +298,7 @@
     "scientificName": "Marbled cone snail",
     "description": "Conus marmoreus is a venomous snail. It uses a harpoon-like radula. Found in coral reefs.",
     "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770102629/Conus_marmoreus_gkdqfv.png",
-    "3d": "https://sketchfab.com/3d-models/snail-conus-marmoreus-pri-76850-96870cd0220b46c68d66ea534a20626b",
+    "3d": "https://sketchfab.com/3d-models/snail-conus-marmoreus-pri-76850-96870cd0220b46c68d66ea534a20626b/embed",
     "introduction": [
       "Conus marmoreus lives in tropical seas.",
       "It is carnivorous and predatory.",
@@ -357,7 +357,7 @@
     "scientificName": "Freshwater mussel",
     "description": "Unio is a freshwater bivalve mollusc. Body is laterally compressed. Shell is heavy and thick.",
     "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770102657/Unio_iqhmtv.png",
-    "3d": "https://sketchfab.com/3d-models/unio-leopoldvillensis-b-a9b21c2a9bd54c2ba28e7fb6396243a6",
+    "3d": "https://sketchfab.com/3d-models/unio-leopoldvillensis-b-a9b21c2a9bd54c2ba28e7fb6396243a6/embed",
     "introduction": [
       "Unio lives buried in river and pond beds.",
       "It is sedentary and filter-feeding.",
@@ -415,7 +415,7 @@
     "scientificName": "Marine mussel",
     "description": "Mytilus is a marine bivalve. It attaches to rocks by byssus threads. Shell is elongated.",
     "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770102724/Mytilus_icxcpy.png",
-    "3d": "https://sketchfab.com/3d-models/mussels-at-wilder-ranch-6b1c5b9378e44cde8dca4a89eebdfdbb",
+    "3d": "https://sketchfab.com/3d-models/mussels-at-wilder-ranch-6b1c5b9378e44cde8dca4a89eebdfdbb/embed",
     "introduction": [
       "Mytilus inhabits rocky sea shores.",
       "It is sessile and filter-feeding.",
@@ -473,7 +473,7 @@
     "scientificName": "Freshwater pearl mussel",
     "description": "Lamellidens is a freshwater bivalve. Shell is large and thick. Known for pearl formation.",
     "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770102632/Lamellidens_ryycck.png",
-    "3d": "https://sketchfab.com/3d-models/unio-condai-117e9fbeaba545db8978a7af7b0b0c36",
+    "3d": "https://sketchfab.com/3d-models/unio-condai-117e9fbeaba545db8978a7af7b0b0c36/embed",
     "introduction": [
       "Lamellidens lives in ponds and rivers.",
       "It is sedentary and filter-feeding.",
@@ -531,7 +531,7 @@
     "scientificName": "Pearl oyster",
     "description": "Pinctada is a marine bivalve. Produces natural pearls. Shell is smooth and shiny.",
     "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770102649/Pinctada_em5bxg.png",
-    "3d": "https://sketchfab.com/3d-models/pearl-oyster-ed05f17cdfa346c6813fbb1a77c65534",
+    "3d": "https://sketchfab.com/3d-models/pearl-oyster-ed05f17cdfa346c6813fbb1a77c65534/embed",
     "introduction": [
       "Pinctada lives attached to rocks in seas.",
       "It is sedentary and filter-feeding.",
@@ -589,7 +589,7 @@
     "scientificName": "Thorny oyster",
     "description": "Spondylus has spiny shells. It is a marine bivalve. Shells are brightly coloured.",
     "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770102652/Spondylus_ygtqnu.png",
-    "3d": "https://sketchfab.com/3d-models/spondylus-aurantius-b2ae362c2390493398f7a1e441eed2db",
+    "3d": "https://sketchfab.com/3d-models/spondylus-aurantius-b2ae362c2390493398f7a1e441eed2db/embed",
     "introduction": [
       "Spondylus lives attached to hard substrates.",
       "It is sedentary and filter-feeding.",
@@ -647,7 +647,7 @@
     "scientificName": "Oyster",
     "description": "Ostrea is a marine bivalve. Shells are irregular and rough. Sessile filter feeder.",
     "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770103032/Ostrea_dibwmj.png",
-    "3d": "https://sketchfab.com/3d-models/bivalve-ostrea-sp-pri-70602-2c3af091783744058a89903c61da6910",
+    "3d": "https://sketchfab.com/3d-models/bivalve-ostrea-sp-pri-70602-2c3af091783744058a89903c61da6910/embed",
     "introduction": [
       "Ostrea lives attached to rocks.",
       "It feeds on plankton.",
@@ -705,7 +705,7 @@
     "scientificName": "Squid",
     "description": "Loligo is a fast-swimming cephalopod. It has ten arms. Ink sac present.",
     "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770102634/Loligo_xjtqbd.png",
-    "3d": "https://sketchfab.com/3d-models/blaschka-cephalopod-0636fd37b1fd449380de3cc181df6e4e",
+    "3d": "https://sketchfab.com/3d-models/blaschka-cephalopod-0636fd37b1fd449380de3cc181df6e4e/embed",
     "introduction": [
       "Loligo lives in open seas.",
       "It is active and carnivorous.",
@@ -763,7 +763,7 @@
     "scientificName": "Nautilus",
     "description": "Nautilus is a living fossil. Shell is coiled and chambered. Primitive cephalopod.",
     "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770102637/Nautilus_iuztri.png",
-    "3d": "https://sketchfab.com/3d-models/nautilus-e5b5085369674ed28354d2a08f027d91",
+    "3d": "https://sketchfab.com/3d-models/nautilus-e5b5085369674ed28354d2a08f027d91/embed",
     "introduction": [
       "Nautilus lives in deep marine waters.",
       "It is slow-moving and carnivorous.",
@@ -821,7 +821,7 @@
     "scientificName": "Octopus",
     "description": "Octopus has eight arms. Highly intelligent mollusc. Shell absent.",
     "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770102641/Octopus_pgsgai.png",
-    "3d": "https://sketchfab.com/3d-models/octopus-b686a6bcdacb4d138b535d6ead0aa67a",
+    "3d": "https://sketchfab.com/3d-models/octopus-b686a6bcdacb4d138b535d6ead0aa67a/embed",
     "introduction": [
       "Octopus lives in marine crevices.",
       "It is carnivorous and solitary.",
@@ -879,7 +879,7 @@
     "scientificName": "Cuttlefish",
     "description": "Sepia has an internal cuttlebone. Body is flattened. Excellent camouflage ability.",
     "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770102655/Sepia_wtpaco.png",
-    "3d": "https://sketchfab.com/3d-models/cc0-kisslip-cuttlefish-sepia-lycidas-4120214da5cc4be2ab912c490af28144",
+    "3d": "https://sketchfab.com/3d-models/cc0-kisslip-cuttlefish-sepia-lycidas-4120214da5cc4be2ab912c490af28144/embed",
     "introduction": [
       "Sepia lives in coastal seas.",
       "It is active and carnivorous.",
@@ -937,7 +937,7 @@
     "scientificName": "Giant squid",
     "description": "Architeuthes is the largest invertebrate. Lives in deep oceans. Rarely seen alive.",
     "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770102597/Architeuthes_m3fj02.png",
-    "3d": "https://sketchfab.com/3d-models/giant-squid-65067ab00ce04f0ba10bcc04a0b1da1b",
+    "3d": "https://sketchfab.com/3d-models/giant-squid-65067ab00ce04f0ba10bcc04a0b1da1b/embed",
     "introduction": [
       "Architeuthes inhabits deep sea.",
       "It is carnivorous and powerful.",
@@ -995,7 +995,7 @@
     "scientificName": "Living fossil mollusc",
     "description": "Neopilina galathea is a primitive mollusc. Shell is single and cap-like. Shows segmentation.",
     "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770102639/Neopilina_galathea_gebuh8.png",
-    "3d": "https://sketchfab.com/3d-models/cyrotonella-mitella-518655129cf74a30b8ec28586b9d159b",
+    "3d": "https://sketchfab.com/3d-models/cyrotonella-mitella-518655129cf74a30b8ec28586b9d159b/embed",
     "introduction": [
       "Neopilina lives in deep sea.",
       "It is slow-moving and detritivorous.",
