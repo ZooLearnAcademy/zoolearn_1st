@@ -55,7 +55,6 @@
       "Biodiversity: Represents an ancient lineage unchanged for millions of years (Living Fossil)."
     ]
   },
-  
   "palaemon": {
     "id": 2,
     "slug": "palaemon",
@@ -112,7 +111,6 @@
       "Economy: High commercial export value contributes significantly to the fisheries economy."
     ]
   },
-
   "macrobrachium": {
     "id": 3,
     "slug": "macrobrachium",
@@ -169,7 +167,6 @@
       "Livelihood: Provides significant income for inland fish farmers in tropical regions."
     ]
   },
-
   "cancer": {
     "id": 4,
     "slug": "cancer",
@@ -227,7 +224,6 @@
       "Used in ecological studies"
     ]
   },
-
   "lucifer": {
     "id": 5,
     "slug": "lucifer",
@@ -285,7 +281,6 @@
       "Ecological research importance"
     ]
   },
-
   "eupagurus": {
     "id": 6,
     "slug": "eupagurus",
@@ -343,7 +338,6 @@
       "Aquarium trade relevance"
     ]
   },
-
   "daphnia": {
     "id": 7,
     "slug": "daphnia",
@@ -401,7 +395,6 @@
       "Water quality indicator"
     ]
   },
-
   "cyclops": {
     "id": 8,
     "slug": "cyclops",
@@ -409,7 +402,7 @@
     "scientificName": "Copepod",
     "description": "Freshwater planktonic crustacean.\nNamed due to single median eye.",
     "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1768060474/cyclops_h6keae.png",
-    "3d": "https://sketchfab.com/3d-models/cyclops-copepoda-50b973d3b0fe4af8ba8347e95cedae38?utm_source=chatgpt.com/embed",
+    "3d": "https://sketchfab.com/3d-models/cyclops-copepoda-50b973d3b0fe4af8ba8347e95cedae38/embed",
     "introduction": [
       "Freshwater planktonic crustacean.",
       "Named due to single median eye."
@@ -459,7 +452,6 @@
       "Water quality indicator"
     ]
   },
-
   "astacus": {
     "id": 9,
     "slug": "astacus",
@@ -517,7 +509,6 @@
       "Research organism"
     ]
   },
-
   "palinurus": {
     "id": 10,
     "slug": "palinurus",
@@ -575,7 +566,6 @@
       "Export importance"
     ]
   },
-  
   "bombyx-mori": {
     "id": 11,
     "slug": "bombyx-mori",
@@ -635,7 +625,6 @@
       "Scientific research organism"
     ]
   },
-
   "lepisma-saccharina": {
     "id": 12,
     "slug": "lepisma-saccharina",
@@ -643,7 +632,7 @@
     "scientificName": "Silverfish",
     "description": "Small wingless insect.\nFound in human dwellings.",
     "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1768061543/lepsima-removebg-preview_frm809.png",
-    "3d": "https://sketchfab.com/3d-models/insect-silverfish-a0e0f0a1e8e94fb5ae505d4bd299d037?utm_source=chatgpt.com/embed",
+    "3d": "https://sketchfab.com/3d-models/insect-silverfish-a0e0f0a1e8e94fb5ae505d4bd299d037/embed",
     "introduction": [
       "Terrestrial insect living in moist areas.",
       "Feeds on starchy materials."
@@ -692,7 +681,6 @@
       "Household pest"
     ]
   },
-
   "antheraea-mylitta": {
     "id": 13,
     "slug": "antheraea-mylitta",
@@ -751,7 +739,6 @@
       "Silk industry importance"
     ]
   },
-
   "antheraea-paphia": {
     "id": 14,
     "slug": "antheraea-paphia",
@@ -810,7 +797,6 @@
       "Economic importance"
     ]
   },
-
   "antheraea-proylei": {
     "id": 15,
     "slug": "antheraea-proylei",
@@ -869,7 +855,6 @@
       "Commercial silk value"
     ]
   },
-
   "antheraea-assamensis": {
     "id": 16,
     "slug": "antheraea-assamensis",
@@ -928,7 +913,6 @@
       "High economic value"
     ]
   },
-
   "philosamia-ricini": {
     "id": 17,
     "slug": "philosamia-ricini",
@@ -987,7 +971,6 @@
       "Non-violent silk production with social value"
     ]
   },
-
   "periplaneta-americana": {
     "id": 18,
     "slug": "periplaneta-americana",
@@ -1044,7 +1027,6 @@
       "Disease carrier"
     ]
   },
-
   "apis-indica": {
     "id": 19,
     "slug": "apis-indica",
@@ -1102,7 +1084,6 @@
       "Crop yield improvement"
     ]
   },
-
   "musca-domestica": {
     "id": 20,
     "slug": "musca-domestica",
@@ -1159,7 +1140,6 @@
       "Public health importance"
     ]
   },
-
   "laccifer": {
     "id": 21,
     "slug": "laccifer",
@@ -1215,7 +1195,6 @@
       "Industrial importance"
     ]
   },
-
   "anopheles": {
     "id": 22,
     "slug": "anopheles",
@@ -1270,7 +1249,6 @@
       "Medical importance"
     ]
   },
-
   "culex": {
     "id": 23,
     "slug": "culex",
@@ -1325,7 +1303,6 @@
       "Public health concern"
     ]
   },
-
   "aedes": {
     "id": 24,
     "slug": "aedes",
@@ -1380,7 +1357,6 @@
       "Major medical importance"
     ]
   },
-
   "xenopsylla": {
     "id": 25,
     "slug": "xenopsylla",
@@ -1435,7 +1411,6 @@
       "Public health importance"
     ]
   },
-
   "glossina": {
     "id": 26,
     "slug": "glossina",
@@ -1490,7 +1465,6 @@
       "Medical importance"
     ]
   },
-
   "phlebotomus": {
     "id": 27,
     "slug": "phlebotomus",
@@ -1544,7 +1518,6 @@
       "Medical importance"
     ]
   },
-
   "locusta": {
     "id": 28,
     "slug": "locusta",
@@ -1599,7 +1572,6 @@
       "Agricultural loss"
     ]
   },
-  
   "araneus": {
     "id": 29,
     "slug": "araneus",
@@ -1657,7 +1629,6 @@
       "Used in behavioral studies"
     ]
   },
-
   "buthus": {
     "id": 30,
     "slug": "buthus",
@@ -1715,7 +1686,6 @@
       "Indicator species for arid habitats"
     ]
   },
-
   "palamneus": {
     "id": 31,
     "slug": "palamneus",
@@ -1773,7 +1743,6 @@
       "Ecological indicator"
     ]
   },
-  
   "scolopendra-hardwickei": {
     "id": 32,
     "slug": "scolopendra-hardwickei",
@@ -1832,7 +1801,6 @@
       "Ecological importance in soil habitats"
     ]
   },
-  
   "archispirostreptus-gigas": {
     "id": 33,
     "slug": "archispirostreptus-gigas",
@@ -1891,7 +1859,6 @@
       "Contributes to nutrient recycling"
     ]
   },
-  
   "limulus": {
     "id": 34,
     "slug": "limulus",
@@ -1949,6 +1916,4 @@
       "Evolutionary significance"
     ]
   }
-
-
 }
