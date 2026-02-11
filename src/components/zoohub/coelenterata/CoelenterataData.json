@@ -7,7 +7,7 @@
         "id": 1,
         "slug": "hydra",
         "name": "Hydra",
-        "scientificName": "Freshwater hydroid",
+        "scientificName": "Freshwater polyp",
         "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1767892096/Hydra_ljhbjv.png",
         "path": "/zoohub/coelenterata/hydra"
       },
@@ -15,7 +15,7 @@
         "id": 2,
         "slug": "obelia",
         "name": "Obelia",
-        "scientificName": "Sea fur",
+        "scientificName": "Sea fur / Sea moss",
         "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1767892152/Obelia_ovbvj3.png",
         "path": "/zoohub/coelenterata/obelia"
       },
@@ -51,7 +51,7 @@
         "id": 5,
         "slug": "adamsia",
         "name": "Adamsia",
-        "scientificName": "Cloak anemone",
+        "scientificName": "Sea anemone",
         "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1767892009/Adamsia_orkdvo.png",
         "path": "/zoohub/coelenterata/adamsia"
       },

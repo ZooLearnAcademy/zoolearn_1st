@@ -6,7 +6,7 @@
     "scientificName": "Velvet worm",
     "description": "A primitive, caterpillar-like terrestrial invertebrate known as a \"living fossil.\"",
     "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1768060363/Peripatus_o09obg.png",
-    "3d": "https://sketchfab.com/3d-models/peripatus-f57315b9a34a495d98c875da60d72a69",
+    "3d": "https://sketchfab.com/3d-models/peripatus-f57315b9a34a495d98c875da60d72a69/embed",
     "introduction": [
       "It is a nocturnal, carnivorous animal found in damp places like crevices of rocks, bark, and leaf litter. It is famously known as a connecting link between Annelida and Arthropoda, exhibiting characters of both phyla."
     ],
@@ -63,7 +63,7 @@
     "scientificName": "Prawn / Freshwater Prawn",
     "description": "A common crustacean found in freshwater and marine environments, widely studied as a type specimen for Arthropoda.",
     "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1768060541/Palaemon_zt97tj.png",
-    "3d": "https://sketchfab.com/3d-models/pacific-cleaner-shrimp-057bd6e0019b428dbe88443b79295fef",
+    "3d": "https://sketchfab.com/3d-models/pacific-cleaner-shrimp-057bd6e0019b428dbe88443b79295fef/embed",
     "introduction": [
       "It is a nocturnal, bottom-dwelling omnivore inhabiting freshwater rivers, ponds, and streams (some species are marine). It is economically significant as a food source and ecologically vital as a scavenger."
     ],
@@ -120,7 +120,7 @@
     "scientificName": "Giant Freshwater Prawn / Scampi / River Prawn",
     "description": "A genus of large freshwater crustaceans extensively farmed for food, commercially known as \"Scampi.\"",
     "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1768060529/Macrobactrum_k5rdik.png",
-    "3d": "https://sketchfab.com/3d-models/cc0-flat-tailed-freshwater-shrimp-6c1ab9644b8342b8a47ace33a8391704",
+    "3d": "https://sketchfab.com/3d-models/cc0-flat-tailed-freshwater-shrimp-6c1ab9644b8342b8a47ace33a8391704/embed",
     "introduction": [
       "It inhabits freshwater rivers, lakes, and canals, though larvae often require brackish water. It is nocturnal, bottom-dwelling, and highly aggressive, known for its massive growth potential in aquaculture."
     ],
@@ -177,7 +177,7 @@
     "scientificName": "True crab",
     "description": "Marine, benthic crustacean found in shallow seas.\nActive scavenger and predator with economic importance.",
     "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1768060461/cancer_tvitw9.png",
-    "3d": "https://sketchfab.com/3d-models/brown-crab-ea2530430ab04fccbd75363203dfaec3",
+    "3d": "https://sketchfab.com/3d-models/brown-crab-ea2530430ab04fccbd75363203dfaec3/embed",
     "introduction": [
       "Marine, benthic crustacean found in shallow seas.",
       "Active scavenger and predator with economic importance."
@@ -293,7 +293,7 @@
     "scientificName": "Hermit crab",
     "description": "Marine crustacean inhabiting gastropod shells.\nShows unique adaptive behaviour.",
     "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1768060501/euparugus_lbi0jb.png",
-    "3d": "https://sketchfab.com/3d-models/animated-hermit-crab-89c6e1f76498402d87f0c98717dda4b5",
+    "3d": "https://sketchfab.com/3d-models/animated-hermit-crab-89c6e1f76498402d87f0c98717dda4b5/embed",
     "introduction": [
       "Marine crustacean inhabiting gastropod shells.",
       "Shows unique adaptive behaviour."
@@ -351,7 +351,7 @@
     "scientificName": "Water flea",
     "description": "Freshwater planktonic crustacean.\nImportant in aquatic food chains.",
     "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1768060486/dafina_x1ngnw.png",
-    "3d": "https://sketchfab.com/3d-models/animated-daphnia-361a99c7afdd470d99fc1269ebf56044",
+    "3d": "https://sketchfab.com/3d-models/animated-daphnia-361a99c7afdd470d99fc1269ebf56044/embed",
     "introduction": [
       "Freshwater planktonic crustacean.",
       "Important in aquatic food chains."
@@ -409,7 +409,7 @@
     "scientificName": "Copepod",
     "description": "Freshwater planktonic crustacean.\nNamed due to single median eye.",
     "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1768060474/cyclops_h6keae.png",
-    "3d": "https://sketchfab.com/3d-models/cyclops-copepoda-50b973d3b0fe4af8ba8347e95cedae38?utm_source=chatgpt.com",
+    "3d": "https://sketchfab.com/3d-models/cyclops-copepoda-50b973d3b0fe4af8ba8347e95cedae38?utm_source=chatgpt.com/embed",
     "introduction": [
       "Freshwater planktonic crustacean.",
       "Named due to single median eye."
@@ -467,7 +467,7 @@
     "scientificName": "Crayfish",
     "description": "Freshwater decapod crustacean.\nLives in rivers and streams.",
     "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1768060445/astacus_ktbezp.png",
-    "3d": "https://sketchfab.com/3d-models/lobster-omar-c3d365ac8f074499b58b375dd21945de",
+    "3d": "https://sketchfab.com/3d-models/lobster-omar-c3d365ac8f074499b58b375dd21945de/embed",
     "introduction": [
       "Freshwater decapod crustacean.",
       "Lives in rivers and streams."
@@ -525,7 +525,7 @@
     "scientificName": "Spiny lobster",
     "description": "Marine crustacean found in rocky coasts.\nValued seafood species.",
     "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1768060556/palinurus_jc0k8t.png",
-    "3d": "https://sketchfab.com/3d-models/lobster-omar-c3d365ac8f074499b58b375dd21945de",
+    "3d": "https://sketchfab.com/3d-models/lobster-omar-c3d365ac8f074499b58b375dd21945de/embed",
     "introduction": [
       "Marine crustacean found in rocky coasts.",
       "Valued seafood species."
@@ -583,7 +583,7 @@
     "scientificName": "Mulberry silkworm",
     "description": "Small moth species.\nLarva produces mulberry silk.",
     "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1768060662/bombyx_mori_nzio0j.png",
-    "3d": "https://sketchfab.com/3d-models/cc0-silk-moth-bombyx-mori-398a2e6804224c099db989f10f53bbe5",
+    "3d": "https://sketchfab.com/3d-models/cc0-silk-moth-bombyx-mori-398a2e6804224c099db989f10f53bbe5/embed",
     "introduction": [
       "Terrestrial insect domesticated for silk production.",
       "Economically important in sericulture."
@@ -643,7 +643,7 @@
     "scientificName": "Silverfish",
     "description": "Small wingless insect.\nFound in human dwellings.",
     "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1768061543/lepsima-removebg-preview_frm809.png",
-    "3d": "https://sketchfab.com/3d-models/insect-silverfish-a0e0f0a1e8e94fb5ae505d4bd299d037?utm_source=chatgpt.com",
+    "3d": "https://sketchfab.com/3d-models/insect-silverfish-a0e0f0a1e8e94fb5ae505d4bd299d037?utm_source=chatgpt.com/embed",
     "introduction": [
       "Terrestrial insect living in moist areas.",
       "Feeds on starchy materials."
@@ -700,7 +700,7 @@
     "scientificName": "Tropical tasar silkworm",
     "description": "Wild silkworm found in tropical forests of India.\nProduces tasar silk of commercial importance.",
     "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1768060734/mylitta_fjo2ue.png",
-    "3d": "https://sketchfab.com/3d-models/cc0-oak-silkmoth-antheraea-yamamai-5e98803fdaa1419d82875213048d38a5",
+    "3d": "https://sketchfab.com/3d-models/cc0-oak-silkmoth-antheraea-yamamai-5e98803fdaa1419d82875213048d38a5/embed",
     "introduction": [
       "Wild silkworm found in tropical forests of India.",
       "Produces tasar silk of commercial importance."
@@ -995,7 +995,7 @@
     "scientificName": "Cockroach",
     "description": "Large brown insect.\nNocturnal scavenger.",
     "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1768060767/periplanta_jcvuxs.png",
-    "3d": "http://sketchfab.com/3d-models/american-cockroach-7c26fbd1de9443cf89b6f9f02ddcf015",
+    "3d": "http://sketchfab.com/3d-models/american-cockroach-7c26fbd1de9443cf89b6f9f02ddcf015/embed",
     "introduction": [
       "Terrestrial insect found in human habitats.",
       "Acts as a decomposer."
@@ -1052,7 +1052,7 @@
     "scientificName": "Indian honey bee",
     "description": "Social insect.\nLives in colonies.",
     "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1768060650/apis_indica_chxnke.png",
-    "3d": "https://sketchfab.com/3d-models/western-honey-bee-worker-f454c34050774077890dd4708a11ae82",
+    "3d": "https://sketchfab.com/3d-models/western-honey-bee-worker-f454c34050774077890dd4708a11ae82/embed",
     "introduction": [
       "Terrestrial pollinating insect.",
       "Important in agriculture."
@@ -1110,7 +1110,7 @@
     "scientificName": "Housefly",
     "description": "Common synanthropic insect.\nFound near human habitations.",
     "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1768060719/musca_domestica_luivou.png",
-    "3d": "https://sketchfab.com/3d-models/housefly-musca-domestica-08d80ef4bc2d4ab3a57b5b3ff227856d",
+    "3d": "https://sketchfab.com/3d-models/housefly-musca-domestica-08d80ef4bc2d4ab3a57b5b3ff227856d/embed",
     "introduction": [
       "Terrestrial insect associated with waste and filth.",
       "Acts as a mechanical disease carrier."
@@ -1223,7 +1223,7 @@
     "scientificName": "Malaria mosquito",
     "description": "Slender mosquito.\nFemale is blood-sucking.",
     "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1768060644/anopheles_buassy.png",
-    "3d": "https://sketchfab.com/3d-models/mosquito-vfx-d3d2216cddf54236bc4e138c3561c3b5",
+    "3d": "https://sketchfab.com/3d-models/mosquito-vfx-d3d2216cddf54236bc4e138c3561c3b5/embed",
     "introduction": [
       "Freshwater breeding insect.",
       "Vector of malaria."
@@ -1278,7 +1278,7 @@
     "scientificName": "Common mosquito",
     "description": "Widely distributed mosquito.\nFemale feeds on blood.",
     "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1768060667/culex_yy4abh.png",
-    "3d": "https://sketchfab.com/3d-models/mosquito-fce3bbae949c4966a6cfd9d757deba9b",
+    "3d": "https://sketchfab.com/3d-models/mosquito-fce3bbae949c4966a6cfd9d757deba9b/embed",
     "introduction": [
       "Breeds in stagnant water.",
       "Vector of filariasis."
@@ -1333,7 +1333,7 @@
     "scientificName": "Dengue mosquito",
     "description": "Day-biting mosquito.\nHighly active flier.",
     "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1768060627/aedes_qq40th.png",
-    "3d": "https://sketchfab.com/3d-models/mosquito-animated-589fe44dda6a40659abf7f2518c8daf7",
+    "3d": "https://sketchfab.com/3d-models/mosquito-animated-589fe44dda6a40659abf7f2518c8daf7/embed",
     "introduction": [
       "Breeds in clean water containers.",
       "Vector of viral diseases."
@@ -1388,7 +1388,7 @@
     "scientificName": "Rat flea",
     "description": "Wingless ectoparasite.\nLives on rodents.",
     "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1768060804/xenopsylla_tkxxlm.png",
-    "3d": "https://sketchfab.com/3d-models/flea-4130a25724d74783908d5653f915d7ae",
+    "3d": "https://sketchfab.com/3d-models/flea-4130a25724d74783908d5653f915d7ae/embed",
     "introduction": [
       "Parasitic insect of rats.",
       "Vector of plague."
@@ -1443,7 +1443,7 @@
     "scientificName": "Tsetse fly",
     "description": "Blood-sucking fly.\nRestricted to Africa.",
     "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1768060674/glossina_qf3duk.png",
-    "3d": "https://sketchfab.com/3d-models/tsetse-fly-textured-263750e5a9c54c56a77d63ac06f2f317",
+    "3d": "https://sketchfab.com/3d-models/tsetse-fly-textured-263750e5a9c54c56a77d63ac06f2f317/embed",
     "introduction": [
       "Terrestrial parasitic insect.",
       "Vector of sleeping sickness."
@@ -1552,7 +1552,7 @@
     "scientificName": "Locust",
     "description": "Large grasshopper.\nForms destructive swarms.",
     "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1768060708/locusta_cnspv6.png",
-    "3d": "https://sketchfab.com/3d-models/locusta-migratoria-4b0fa9aa4fbe4523a2582bd6411d2270",
+    "3d": "https://sketchfab.com/3d-models/locusta-migratoria-4b0fa9aa4fbe4523a2582bd6411d2270/embed",
     "introduction": [
       "Terrestrial herbivorous insect.",
       "Major agricultural pest."
@@ -1607,7 +1607,7 @@
     "scientificName": "Garden orb-weaver spider",
     "description": "Medium-sized spiders forming circular orb webs.\nCommonly found in gardens and fields.",
     "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1768060852/araneus_ybf4zq.png",
-    "3d": "https://sketchfab.com/3d-models/cc0-devil-spider-araneus-ventricosu-cbe47106f52f41adbc0b928d8b4d8a1e",
+    "3d": "https://sketchfab.com/3d-models/cc0-devil-spider-araneus-ventricosu-cbe47106f52f41adbc0b928d8b4d8a1e/embed",
     "introduction": [
       "Terrestrial arachnids living on vegetation.",
       "Important predators of insect pests."
@@ -1665,7 +1665,7 @@
     "scientificName": "Yellow scorpion",
     "description": "Small to medium-sized venomous scorpions.\nCommon in dry regions.",
     "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1768060858/buthus_rdfa8t.png",
-    "3d": "https://sketchfab.com/3d-models/scorpion-272cba3af11448538fb0f6fcac04b2d7",
+    "3d": "https://sketchfab.com/3d-models/scorpion-272cba3af11448538fb0f6fcac04b2d7/embed",
     "introduction": [
       "Terrestrial nocturnal arachnids.",
       "Known for mild to moderate venom."
@@ -1723,7 +1723,7 @@
     "scientificName": "Black scorpion",
     "description": "Large forest-dwelling scorpions.\nCommon in tropical regions.",
     "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1768060868/palamneus_duj4f9.png",
-    "3d": "https://sketchfab.com/3d-models/high-poly-pandinus-imperator-f21af380895c4c12a9a86ec909387391",
+    "3d": "https://sketchfab.com/3d-models/high-poly-pandinus-imperator-f21af380895c4c12a9a86ec909387391/embed",
     "introduction": [
       "Nocturnal terrestrial arachnids.",
       "Venom is less dangerous to humans."
@@ -1781,7 +1781,7 @@
     "scientificName": "Indian blue centipede",
     "description": "Terrestrial, nocturnal arthropod found under stones and logs.\nA fast-moving carnivorous predator with defensive venom.",
     "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1768060953/scolopendra_hardwickei_il2y1b.png",
-    "3d": "https://sketchfab.com/3d-models/amazonian-giant-centipede-24ec652237b14bb08aa524ce29f95244",
+    "3d": "https://sketchfab.com/3d-models/amazonian-giant-centipede-24ec652237b14bb08aa524ce29f95244/embed",
     "introduction": [
       "Terrestrial, nocturnal arthropod found under stones and logs.",
       "A fast-moving carnivorous predator with defensive venom."
@@ -1899,7 +1899,7 @@
     "scientificName": "Horseshoe crab",
     "description": "Marine living fossil arthropods.\nFound in shallow coastal waters.",
     "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1768061330/lemulus-removebg-preview_mke1gv.png",
-    "3d": "https://sketchfab.com/3d-models/limulus-polyphemus-18c02551b73545259884a2485521ae53",
+    "3d": "https://sketchfab.com/3d-models/limulus-polyphemus-18c02551b73545259884a2485521ae53/embed",
     "introduction": [
       "Marine benthic arthropods.",
       "Important in biomedical research."

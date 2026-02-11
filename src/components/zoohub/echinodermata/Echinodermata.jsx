@@ -1,68 +1,53 @@
-import React, { useState } from 'react';
-import './Echinodermata.css';
-import Asterias from './asteroidea/asterias/Asterias';
-import Astropecten from './asteroidea/astropecten/Astropecten';
-import Pentaceros from './asteroidea/pentaceros/Pentaceros';
-import Ophiothrix from './ophiuroidea/ophiothrix/Ophiothrix';
-import Ophiura from './ophiuroidea/ophiura/Ophiura';
-import Echinus from './echinoidea/echinus/Echinus';
-import Echinocardium from './echinoidea/echinocardium/Echinocardium';
-import Cucumaria from './holothuroidea/cucumaria/Cucumaria';
-import Holothuria from './holothuroidea/holothuria/Holothuria';
-import Antedon from './crinoidea/antedon/Antedon';
+import React from "react";
+import { Link } from "react-router-dom";
+import "./Echinodermata.css";
+import EchinodermataData from "./EchinodermataData.json";
 
 const Echinodermata = () => {
-  const [selectedOrganism, setSelectedOrganism] = useState(null);
-
-  const organisms = [
-    { key: 'asterias', label: 'Asterias', component: Asterias },
-    { key: 'astropecten', label: 'Astropecten', component: Astropecten },
-    { key: 'pentaceros', label: 'Pentaceros', component: Pentaceros },
-    { key: 'ophiothrix', label: 'Ophiothrix', component: Ophiothrix },
-    { key: 'ophiura', label: 'Ophiura', component: Ophiura },
-    { key: 'echinus', label: 'Echinus', component: Echinus },
-    { key: 'echinocardium', label: 'Echinocardium', component: Echinocardium },
-    { key: 'cucumaria', label: 'Cucumaria', component: Cucumaria },
-    { key: 'holothuria', label: 'Holothuria', component: Holothuria },
-    { key: 'antedon', label: 'Antedon', component: Antedon },
-  ];
-
-  const SelectedComponent = selectedOrganism
-    ? organisms.find(o => o.key === selectedOrganism)?.component
-    : null;
-
   return (
-    <div className="phylum-container">
-      <header className="phylum-header">
-        <h2>Echinodermata</h2>
-        <p>Echinoderms</p>
+    <div className="echi-container">
+      <header>
+        <h1>Phylum Echinodermata</h1>
+        <p className="echi-subtitle">Exploring the Ancient Sponges</p>
       </header>
 
-      <div className="organism-nav">
-        <h3>Select an Organism (3 classes)</h3>
-        <div className="organism-buttons">
-          {organisms.map(organism => (
-            <button
-              key={organism.key}
-              className={'organism-btn ' + (selectedOrganism === organism.key ? 'active' : '')}
-              onClick={() => setSelectedOrganism(organism.key)}
-            >
-              {organism.label}
-            </button>
-          ))}
-        </div>
-      </div>
+      {EchinodermataData.map((category) => (
+        <section key={category.id} className="echi-class-section">
 
-      <div className="organism-content">
-        {SelectedComponent ? (
-          <SelectedComponent />
-        ) : (
-          <div className="organism-placeholder">
-            <h3>Select an organism to view details</h3>
-            <p>Click on any organism above to learn more about its characteristics and taxonomy.</p>
+          <h2 className="echi-class-heading">
+            <div className="echi-bord"></div>
+            <span className="echi-class-badge">Class</span>
+            {category.className}
+          </h2>
+
+          <div className="echi-species-grid">
+            {category.species.map((animal) => (
+              <Link
+                key={animal.id}
+                to={animal.path}
+                className="echi-species-card"
+                style={{ textDecoration: "none" }}
+              >
+                <img
+                  src={animal.image}
+                  alt={animal.name}
+                  className="echi-species-image"
+                />
+
+                <div className="echi-species-info">
+                  <div>
+                    <div className="echi-species-name">{animal.name}</div>
+                    <div className="echi-species-name-scientific">
+                      {animal.scientificName}
+                    </div>
+                  </div>
+                </div>
+
+              </Link>
+            ))}
           </div>
-        )}
-      </div>
+        </section>
+      ))}
     </div>
   );
 };

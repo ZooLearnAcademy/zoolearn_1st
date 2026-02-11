@@ -65,7 +65,7 @@
     "scientificName": "Sheep liver fluke",
     "description": "Fasciola hepatica is a parasitic flatworm. It infects liver of sheep and cattle. Causes fascioliasis.",
     "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1767595716/Fasciola_hepatica_wso3xw.png",
-    "3d": "https://sketchfab.com/3d-models/fasciola-hepatica-27f5dceffef343fbb99d4674d228bd96",
+    "3d": "https://sketchfab.com/3d-models/fasciola-hepatica-27f5dceffef343fbb99d4674d228bd96/embed",
     "introduction": [
       "Fasciola hepatica lives as an endoparasite.",
       "It requires snail as intermediate host.",
@@ -125,7 +125,7 @@
     "scientificName": "Blood fluke",
     "description": "Schistosoma is a parasitic flatworm. Sexes are separate. Causes schistosomiasis.",
     "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1767595732/Schistosoma_ru8kzg.png",
-    "3d": "https://sketchfab.com/3d-models/schistosoma-japonicum-cb40199c4c2c4b608db84f36d7bccd17",
+    "3d": "https://sketchfab.com/3d-models/schistosoma-japonicum-cb40199c4c2c4b608db84f36d7bccd17/embed",
     "introduction": [
       "Schistosoma inhabits blood vessels of humans.",
       "Uses snail as intermediate host.",
@@ -244,7 +244,7 @@
     "scientificName": "Beef tapeworm",
     "description": "Taenia saginata is a parasitic tapeworm. Humans are definitive hosts. Does not cause cysticercosis.",
     "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1767595743/Taenia_saginata_xaxmpq.png",
-    "3d": "https://sketchfab.com/3d-models/taenia-saginata-tapeworm-f2deeec3d7d94984a9dbeedcb45a4347",
+    "3d": "https://sketchfab.com/3d-models/taenia-saginata-tapeworm-f2deeec3d7d94984a9dbeedcb45a4347/embed",
     "introduction": [
       "Taenia saginata inhabits human intestine.",
       "Cattle serve as intermediate host.",
@@ -304,7 +304,7 @@
     "scientificName": "Dog tapeworm",
     "description": "Echinococcus is a small parasitic tapeworm. Causes hydatid disease. Highly dangerous to humans.",
     "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1767595702/Echinococcus_pi8lv5.png",
-    "3d": "https://sketchfab.com/3d-models/hydatid-tapeworm-echinococcus-granulosus-c7f06534e2a24fcc936ca239046bf480",
+    "3d": "https://sketchfab.com/3d-models/hydatid-tapeworm-echinococcus-granulosus-c7f06534e2a24fcc936ca239046bf480/embed",
     "introduction": [
       "Echinococcus lives in intestine of dogs.",
       "Humans act as accidental hosts.",

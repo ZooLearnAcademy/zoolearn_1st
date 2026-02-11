@@ -5,120 +5,155 @@ import "./Phylum6.css";
 
 const Phylum6 = () => {
   const { slug } = useParams();
-  const data = Phylum6Data[slug];
+  const species = Phylum6Data[slug];
 
-  if (!data) {
-    return <h2 style={{ textAlign: "center", marginTop: "50px" }}>Species not found</h2>;
+  if (!species) {
+    return <h2>Species not found</h2>;
   }
 
+  // Convert classification array → object
+  const classificationMap = {};
+  species.classification.forEach(item => {
+    const [key, value] = item.split(":").map(str => str.trim());
+    classificationMap[key] = value;
+  });
+
   return (
-    <div className="genus-sycon-container">
+    <div className="phyl-genus-sycon-container">
 
-      {/* HEADER / HERO */}
-      <div className="hero">
-        <div className="hero-content">
-
-          <div className="hero-text">
+      {/* ========== HERO SECTION ========== */}
+      <div className="phyl-hero">
+        <div className="phyl-hero-content">
+          <div className="phyl-hero-text">
             <h1>
-              {data.scientificName} <i>({data.name})</i>
+              {species.name} <br />
+              <i>{species.scientificName}</i>
             </h1>
-            <p>
-              <b>{data.description}</b>
-            </p>
-            
+            <p>{species.description}</p>
           </div>
 
-          <div className="hero-image">
-            {data.image && <img src={data.image} alt={data.name} />}
-          </div>
-
+          {species.image && (
+            <div className="phyl-hero-image">
+              <img src={species.image} alt={species.name} />
+            </div>
+          )}
         </div>
       </div>
 
-      <section className="content-section">
+      {/* ========== CONTENT SECTION ========== */}
+      <div className="phyl-content-section">
 
-        {/* INTRO */}
-        <div className="card">
-          <h2> Introduction</h2>
+        {/* Introduction */}
+        <div className="phyl-card">
+          <h2>Introduction</h2>
           <ul>
-            {data.introduction.map((item, i) => (
-              <li key={i}>{item}</li>
+            {species.introduction.map((item, index) => (
+              <li key={index}>{item}</li>
             ))}
           </ul>
         </div>
 
-        {/* GENERAL FEATURES */}
-        <div className="card">
-          <h2>General features</h2>
+        {/* General Features (LABEL BEFORE : IN BOLD) */}
+        <div className="phyl-card">
+          <h2>General Features</h2>
           <ul>
-            {data.features.map((item, i) => (
-              <li key={i}>{item}</li>
-            ))}
+            {species.features.map((item, index) => {
+              const [label, ...rest] = item.split(":");
+              const value = rest.join(":");
+
+              return (
+                <li key={index}>
+                  <strong>{label.trim()}:</strong> {value.trim()}
+                </li>
+              );
+            })}
           </ul>
         </div>
 
-        {/* SIZE + STRUCTURE WITH 3D */}
-        <div className="card">
-          <h2>📏 Size & Structure (with 3D View)</h2>
+        {/* Size & Structure (WITH 3D MODEL INSIDE) */}
+        <div className="phyl-card">
+          <h2>Size & Structure</h2>
 
-          <div className="side-by-side">
+          <div className="phyl-side-by-side">
+            <ul>
+              {species.sizeStructure.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
 
-            <div>
-              <ul>
-                {data.sizeStructure.map((item, i) => (
-                  <li key={i}>{item}</li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="sketchfab-embed-wrapper">
-              {data["3d"] && (
+            {species["3d"] && (
+              <div className="phyl-sketchfab-embed-wrapper">
                 <iframe
-                  width="100%"
-                  height="500"
-                  frameborder="0"
-                  allowfullscreen
+                  title={`${species.name} 3D`}
+                  src={species["3d"]}
+                  frameBorder="0"
                   allow="autoplay; fullscreen; xr-spatial-tracking"
-                  src={data["3d"]}
-                  title={`${data.name} 3D Model`}
+                  allowFullScreen
                 ></iframe>
-              )}
-            </div>
-
+              </div>
+            )}
           </div>
         </div>
 
-        {/* CLASSIFICATION */}
-        <div className="card">
-          <h2>🧾 Classification</h2>
+        {/* Classification */}
+        <div className="phyl-card phyl-tree-container">
+          <h2>Classification</h2>
+
+          <div className="phyl-tree">
+            <ul>
+              <li>
+                <a data-level="Kingdom">{classificationMap["Kingdom"]}</a>
+                <ul>
+                  <li>
+                    <a data-level="Phylum">{classificationMap["Phylum"]}</a>
+                    <ul>
+                      <li>
+                        <a data-level="Class">{classificationMap["Class"]}</a>
+                        <ul>
+                          <li>
+                            <a data-level="Order">{classificationMap["Order"]}</a>
+                            <ul>
+                              <li>
+                                <a data-level="Family">{classificationMap["Family"]}</a>
+                                <ul>
+                                  <li>
+                                    <a data-level="Genus">{classificationMap["Genus"]}</a>
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Ecology */}
+        <div className="phyl-card">
+          <h2>Ecology</h2>
           <ul>
-            {data.classification.map((item, i) => (
-              <li key={i}>{item}</li>
+            {species.ecology.map((item, index) => (
+              <li key={index}>{item}</li>
             ))}
           </ul>
         </div>
 
-        {/* ECOLOGICAL IMPORTANCE */}
-        <div className="card">
-          <h2>🌍 Ecological Importance</h2>
+        {/* Economic Importance */}
+        <div className="phyl-card">
+          <h2>Economic Importance</h2>
           <ul>
-            {data.ecology.map((item, i) => (
-              <li key={i}>{item}</li>
+            {species.economy.map((item, index) => (
+              <li key={index}>{item}</li>
             ))}
           </ul>
         </div>
 
-        {/* ECONOMICAL IMPORTANCE */}
-        <div className="card">
-          <h2>💰 Economic Importance</h2>
-          <ul>
-            {data.economy.map((item, i) => (
-              <li key={i}>{item}</li>
-            ))}
-          </ul>
-        </div>
-
-      </section>
+      </div>
 
     </div>
   );

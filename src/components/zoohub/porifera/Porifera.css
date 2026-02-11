@@ -16,37 +16,28 @@
   --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
-  background-color: rgb(243, 248, 243);
-  color: var(--color-text-primary);
-  line-height: 1.6;
-}
 
-.container {
+
+
+.pori-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: var(--space-lg);
 }
 
-header {
+.pori-container header {
   text-align: center;
   margin-bottom: var(--space-xl);
   padding-bottom: var(--space-lg);
   border-bottom: 2px solid var(--color-border);
 }
 
-header h1 {
+.pori-container header h1 {
   color: rgb(6, 123, 6)
 }
 
-.logo {
+.pori-logo {
   font-size: 14px;
   font-weight: 600;
   color: var(--color-accent);
@@ -55,7 +46,7 @@ header h1 {
   margin-bottom: var(--space-md);
 }
 
-h1 {
+.pori-container h1 {
   font-size: 48px;
   font-weight: 700;
   color: var(--color-text-primary);
@@ -63,17 +54,17 @@ h1 {
   margin-bottom: var(--space-md);
 }
 
-.subtitle {
+.pori-subtitle {
   font-size: 16px;
   color: var(--color-text-secondary);
   font-style: italic;
 }
 
-.class-section {
+.pori-class-section {
   margin-bottom: var(--space-xl);
 }
 
-.class-heading {
+.pori-class-heading {
   font-size: 24px;
   font-weight: 600;
   color: var(--color-text-primary);
@@ -85,7 +76,7 @@ h1 {
   gap: var(--space-md);
 }
 
-.class-badge {
+.pori-class-badge {
   display: inline-block;
   background-color: var(--color-accent-light);
   color: var(--color-accent);
@@ -97,21 +88,21 @@ h1 {
   letter-spacing: 0.5px;
 }
 
-.bord {
+.pori-bord {
   width: 10px;
   height: 20px;
   background-color: var(--color-accent);
   border-radius: var(--radius-sm);
 }
 
-.species-grid {
+.pori-species-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: var(--space-lg);
   margin-bottom: var(--space-xl);
 }
 
-.species-card {
+.pori-species-card {
   border-radius: var(--radius-md);
   /* Removed overflow:hidden so the 3D shadow works */
   cursor: pointer;
@@ -119,7 +110,7 @@ h1 {
   flex-direction: column;
 }
 
-.species-image {
+.pori-species-image {
   width: 100%;
   height: 200px;
   object-fit: contain;
@@ -133,13 +124,13 @@ h1 {
   pointer-events: none;
 }
 
-.species-card:hover .species-image {
+.pori-species-card:hover .pori-species-image {
   /* Maja: Scale up + Drop Shadow */
   transform: scale(1.15);
   filter: drop-shadow(0 10px 15px rgba(45, 139, 143, 0.3));
 }
 
-.species-info {
+.pori-species-info {
   padding: var(--space-md);
   text-align: center;
   flex-grow: 1;
@@ -151,7 +142,7 @@ h1 {
   cursor: text;
 }
 
-.species-name {
+.pori-species-name {
   font-size: 16px;
   font-weight: 600;
   color: var(--color-text-primary);
@@ -159,7 +150,7 @@ h1 {
   user-select: text;
 }
 
-.species-name-scientific {
+.pori-species-name-scientific {
   font-size: 13px;
   color: var(--color-text-secondary);
   font-style: italic;
@@ -167,39 +158,31 @@ h1 {
   user-select: text;
 }
 
-footer {
-  text-align: center;
-  padding-top: var(--space-xl);
-  margin-top: var(--space-xl);
-  border-top: 2px solid var(--color-border);
-  font-size: 14px;
-  color: var(--color-text-secondary);
-}
 
 /* --- RESPONSIVE STYLES --- */
 
 /* Tablets (iPad, larger phones) */
 @media (max-width: 768px) {
-  .container {
+  .pori-container {
     padding: var(--space-md);
     /* Reduced container padding */
   }
 
-  h1 {
+  .pori-container h1 {
     font-size: 36px;
     /* Slightly smaller header */
   }
 
-  .class-heading {
+  .pori-class-heading {
     font-size: 20px;
   }
 
-  .species-grid {
+  .pori-species-grid {
     /* Keep standard grid behavior but adjust gap */
     gap: var(--space-md);
   }
 
-  .species-image {
+  .pori-species-image {
     height: 180px;
     /* Slightly smaller images */
   }
@@ -207,46 +190,46 @@ footer {
 
 /* Mobile Devices (Phones) */
 @media (max-width: 480px) {
-  header {
+  .pori-container header {
     margin-bottom: var(--space-lg);
   }
 
-  h1 {
+  .pori-container h1 {
     font-size: 28px;
     /* Mobile friendly header */
   }
 
-  .subtitle {
+  .pori-subtitle {
     font-size: 14px;
   }
 
-  .class-heading {
+  .pori-class-heading {
     font-size: 18px;
     margin-bottom: var(--space-md);
   }
 
-  .species-grid {
+  .pori-species-grid {
     /* Force 2 columns side-by-side for "App Gallery" feel */
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-sm);
   }
 
-  .species-image {
+  .pori-species-image {
     height: 140px;
     /* Reduce height to fit 2 columns nicely */
   }
 
-  .species-info {
+  .pori-species-info {
     padding: var(--space-sm);
     /* Reduce padding inside card */
   }
 
-  .species-name {
+  .pori-species-name {
     font-size: 14px;
     /* Compact text */
   }
 
-  .species-name-scientific {
+  .pori-species-name-scientific {
     font-size: 11px;
   }
 }

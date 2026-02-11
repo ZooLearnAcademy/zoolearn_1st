@@ -5,39 +5,39 @@ import CoelenterataData from "./CoelenterataData.json";
 
 const Coelenterata = () => {
   return (
-    <div className="container">
+    <div className="coel-container">
       <header>
         <h1>Phylum Coelenterata</h1>
-        <p className="subtitle">Exploring the Ancient Sponges</p>
+        <p className="coel-subtitle">Exploring the Ancient Sponges</p>
       </header>
 
       {CoelenterataData.map((category) => (
-        <section key={category.id} className="class-section">
+        <section key={category.id} className="coel-class-section">
 
-          <h2 className="class-heading">
-            <div className="bord"></div>
-            <span className="class-badge">Class</span>
+          <h2 className="coel-class-heading">
+            <div className="coel-bord"></div>
+            <span className="coel-class-badge">Class</span>
             {category.className}
           </h2>
 
-          <div className="species-grid">
+          <div className="coel-species-grid">
             {category.species.map((animal) => (
               <Link
                 key={animal.id}
                 to={animal.path}
-                className="species-card"
+                className="coel-species-card"
                 style={{ textDecoration: "none" }}
               >
                 <img
                   src={animal.image}
                   alt={animal.name}
-                  className="species-image"
+                  className="coel-species-image"
                 />
 
-                <div className="species-info">
+                <div className="coel-species-info">
                   <div>
-                    <div className="species-name">{animal.name}</div>
-                    <div className="species-name-scientific">
+                    <div className="coel-species-name">{animal.name}</div>
+                    <div className="coel-species-name-scientific">
                       {animal.scientificName}
                     </div>
                   </div>
