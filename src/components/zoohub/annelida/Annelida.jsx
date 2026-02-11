@@ -5,39 +5,39 @@ import AnnelidaData from "./AnnelidaData.json";
 
 const Annelida = () => {
   return (
-    <div className="container">
+    <div className="anne-container">
       <header>
         <h1>Phylum Annelida</h1>
-        <p className="subtitle">Exploring the Ancient Sponges</p>
+        <p className="anne-subtitle">Exploring the Ancient Sponges</p>
       </header>
 
       {AnnelidaData.map((category) => (
-        <section key={category.id} className="class-section">
+        <section key={category.id} className="anne-class-section">
 
-          <h2 className="class-heading">
-            <div className="bord"></div>
-            <span className="class-badge">Class</span>
+          <h2 className="anne-class-heading">
+            <div className="anne-bord"></div>
+            <span className="anne-class-badge">Class</span>
             {category.className}
           </h2>
 
-          <div className="species-grid">
+          <div className="anne-species-grid">
             {category.species.map((animal) => (
               <Link
                 key={animal.id}
                 to={animal.path}
-                className="species-card"
+                className="anne-species-card"
                 style={{ textDecoration: "none" }}
               >
                 <img
                   src={animal.image}
                   alt={animal.name}
-                  className="species-image"
+                  className="anne-species-image"
                 />
 
-                <div className="species-info">
+                <div className="anne-species-info">
                   <div>
-                    <div className="species-name">{animal.name}</div>
-                    <div className="species-name-scientific">
+                    <div className="anne-species-name">{animal.name}</div>
+                    <div className="anne-species-name-scientific">
                       {animal.scientificName}
                     </div>
                   </div>

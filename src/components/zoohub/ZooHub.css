@@ -1,4 +1,4 @@
-/* ZooHub.css */
+/* ZooHub.zooh-css */
 
 /* ===============================
    ZOO HUB PAGE - PROFESSIONAL DESIGN
@@ -16,18 +16,20 @@
   --zoo-radius: 16px;
 }
 
-.zoohub-page {
+.zooh-zoohub-page {
   background: linear-gradient(180deg, #f0f9f0 0%, #e8f5e8 50%, #f5f7f6 100%);
   min-height: 100vh;
   padding-bottom: 3rem;
 }
 
 /* ===============================
-   CLASS NAVIGATION BAR
+   CLASS NAVIGATION BAR (FIXED/STICKY)
 ================================ */
-.class-navbar {
-  position: sticky;
-  top: 64px;
+.zooh-class-navbar {
+  /* This keeps it in its original position until you scroll to it, 
+     then it sticks to the top. */
+  position: sticky; 
+  top: 0; /* CHANGED: Set to 0 so it sticks to the very top edge */
   z-index: 100;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(20px);
@@ -36,7 +38,7 @@
   padding: 0.5rem 1rem;
 }
 
-.class-scroll {
+.zooh-class-scroll {
   display: flex;
   gap: 0.5rem;
   overflow-x: auto;
@@ -47,11 +49,11 @@
   -ms-overflow-style: none;
 }
 
-.class-scroll::-webkit-scrollbar {
+.zooh-class-scroll::-webkit-scrollbar {
   display: none;
 }
 
-.class-scroll span {
+.zooh-class-scroll span {
   flex-shrink: 0;
   padding: 0.625rem 1.25rem;
   background: linear-gradient(135deg, #ffffff 0%, #f8faf8 100%);
@@ -65,15 +67,15 @@
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.class-scroll span:hover {
+.zooh-class-scroll span:hover {
   border-color: var(--zoo-primary);
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(47, 116, 50, 0.2);
   color: var(--zoo-primary);
 }
 
-.class-scroll span:active,
-.class-scroll span.active {
+.zooh-class-scroll span:active,
+.zooh-class-scroll span.active {
   background: var(--zoo-gradient);
   color: white;
   border-color: transparent;
@@ -83,14 +85,16 @@
 /* ===============================
    SEARCH SECTION - PROFESSIONAL
 ================================ */
-.search-section {
+.zooh-search-section {
   max-width: 700px;
   margin: 2rem auto;
   padding: 0 1.5rem;
-  display:fixed;
+  /* Fixed typo: display:fixed is invalid CSS, likely meant relative or block. 
+     Removed to prevent layout issues. */
+  position: relative; 
 }
 
-.search-container {
+.zooh-search-container {
   position: relative;
   display: flex;
   align-items: center;
@@ -101,12 +105,12 @@
   transition: all 0.3s ease;
 }
 
-.search-container:focus-within {
+.zooh-search-container:focus-within {
   border-color: var(--zoo-primary);
   box-shadow: 0 8px 40px rgba(47, 116, 50, 0.2), 0 0 0 4px rgba(47, 116, 50, 0.1);
 }
 
-.search-input-wrapper {
+.zooh-search-input-wrapper {
   display: flex;
   align-items: center;
   flex: 1;
@@ -114,13 +118,13 @@
   padding-left: 1.25rem;
 }
 
-.search-icon-text {
+.zooh-search-icon-text {
   font-size: 1.25rem;
   line-height: 1;
   opacity: 0.7;
 }
 
-.search-input-wrapper input {
+.zooh-search-input-wrapper input {
   flex: 1;
   padding: 1rem 0.5rem;
   font-size: 1rem;
@@ -132,12 +136,12 @@
   font-family: inherit;
 }
 
-.search-input-wrapper input::placeholder {
+.zooh-search-input-wrapper input::placeholder {
   color: var(--zoo-text-light);
   font-weight: 400;
 }
 
-.search-btn {
+.zooh-search-btn {
   flex-shrink: 0;
   display: flex;
   align-items: center;
@@ -156,17 +160,17 @@
   white-space: nowrap;
 }
 
-.search-btn:hover {
+.zooh-search-btn:hover {
   transform: scale(1.02);
   box-shadow: 0 4px 20px rgba(47, 116, 50, 0.4);
 }
 
-.search-btn:active {
+.zooh-search-btn:active {
   transform: scale(0.98);
 }
 
 /* Search Results Dropdown */
-.search-results {
+.zooh-search-results {
   position: absolute;
   top: calc(100% + 0.5rem);
   left: 0;
@@ -195,7 +199,7 @@
   }
 }
 
-.search-results li {
+.zooh-search-results li {
   padding: 0.875rem 1.25rem;
   font-size: 0.95rem;
   font-weight: 500;
@@ -209,12 +213,12 @@
   gap: 0.75rem;
 }
 
-.search-results li:hover {
+.zooh-search-results li:hover {
   background: linear-gradient(135deg, rgba(47, 116, 50, 0.08) 0%, rgba(48, 135, 169, 0.08) 100%);
   color: var(--zoo-primary);
 }
 
-.search-results .species-class {
+.zooh-search-results .zooh-species-class {
   font-size: 0.75rem;
   color: var(--zoo-text-light);
   background: rgba(47, 116, 50, 0.1);
@@ -229,14 +233,14 @@
 /* ===============================
    PAGE HEADER
 ================================ */
-.zoohub-header {
+.zooh-zoohub-header {
   text-align: center;
   padding: 1rem 1.5rem 0.5rem;
   max-width: 800px;
   margin: 0 auto;
 }
 
-.zoohub-header h1 {
+.zooh-zoohub-header h1 {
   font-size: 2.5rem;
   font-weight: 800;
   background: var(--zoo-gradient);
@@ -247,7 +251,7 @@
   letter-spacing: -0.5px;
 }
 
-.zoohub-header p {
+.zooh-zoohub-header p {
   font-size: 1.1rem;
   color: var(--zoo-text-light);
   line-height: 1.6;
@@ -256,7 +260,7 @@
 /* ===============================
    SECTIONS
 ================================ */
-.zoohub-page section {
+.zooh-zoohub-page section {
   scroll-margin-top: 160px;
 }
 
@@ -264,50 +268,50 @@
    RESPONSIVE DESIGN
 ================================ */
 @media (max-width: 768px) {
-  .class-navbar {
-    top: 64px;
+  .zooh-class-navbar {
+    top: 0; /* Updated for mobile too */
     padding: 0.5rem 0.75rem;
   }
 
-  .class-scroll span {
+  .zooh-class-scroll span {
     padding: 0.5rem 1rem;
     font-size: 0.8rem;
   }
 
-  .search-section {
+  .zooh-search-section {
     padding: 0 1rem;
     margin: 1.5rem auto;
   }
 
-  .search-container {
+  .zooh-search-container {
     flex-direction: column;
     border-radius: 20px;
     padding: 0.5rem;
   }
 
-  .search-input-wrapper {
+  .zooh-search-input-wrapper {
     width: 100%;
     padding: 0.5rem 1rem;
   }
 
-  .search-btn {
+  .zooh-search-btn {
     width: 100%;
     justify-content: center;
     margin: 0;
     border-radius: 12px;
   }
 
-  .zoohub-header h1 {
+  .zooh-zoohub-header h1 {
     font-size: 1.75rem;
   }
 
-  .zoohub-header p {
+  .zooh-zoohub-header p {
     font-size: 1rem;
   }
 }
 
 @media (max-width: 480px) {
-  .class-scroll span {
+  .zooh-class-scroll span {
     padding: 0.5rem 0.875rem;
     font-size: 0.75rem;
   }

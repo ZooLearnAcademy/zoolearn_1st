@@ -1,0 +1,702 @@
+[
+  {
+    "id": "urochordata",
+    "className": "Urochordata",
+    "species": [
+      {
+        "id": 1,
+        "slug": "ascidia",
+        "name": "Ascidia",
+        "scientificName": "Sea squirt",
+        "image": "media/image1.png",
+        "path": "/zoohub/chordata/ascidia"
+      },
+      {
+        "id": 2,
+        "slug": "herdmania",
+        "name": "Herdmania",
+        "scientificName": "Red sea squirt",
+        "image": "media/image2.png",
+        "path": "/zoohub/chordata/herdmania"
+      },
+      {
+        "id": 3,
+        "slug": "salpa",
+        "name": "Salpa",
+        "scientificName": "Salp",
+        "image": "media/image1.png",
+        "path": "/zoohub/chordata/salpa"
+      },
+      {
+        "id": 4,
+        "slug": "doliolum",
+        "name": "Doliolum",
+        "scientificName": "Doliolid",
+        "image": "media/image2.png",
+        "path": "/zoohub/chordata/doliolum"
+      },
+      {
+        "id": 5,
+        "slug": "pyrosoma",
+        "name": "Pyrosoma",
+        "scientificName": "Fire body",
+        "image": "media/image3.png",
+        "path": "/zoohub/chordata/pyrosoma"
+      }
+    ]
+  },
+  {
+    "id": "cephalochordata",
+    "className": "Cephalochordata",
+    "species": [
+      {
+        "id": 6,
+        "slug": "branchiostoma",
+        "name": "Branchiostoma",
+        "scientificName": "Lancelet / Amphioxus",
+        "image": "media/image4.png",
+        "path": "/zoohub/chordata/branchiostoma"
+      }
+    ]
+  },
+  {
+    "id": "cyclostomata",
+    "className": "Cyclostomata",
+    "species": [
+      {
+        "id": 7,
+        "slug": "petromyzon",
+        "name": "Petromyzon",
+        "scientificName": "Sea lamprey",
+        "image": "media/image1.png",
+        "path": "/zoohub/chordata/petromyzon"
+      },
+      {
+        "id": 8,
+        "slug": "myxine",
+        "name": "Myxine",
+        "scientificName": "Hagfish",
+        "image": "media/image2.png",
+        "path": "/zoohub/chordata/myxine"
+      }
+    ]
+  },
+  {
+    "id": "chondrichthyes",
+    "className": "Chondrichthyes",
+    "species": [
+      {
+        "id": 9,
+        "slug": "scoliodon",
+        "name": "Scoliodon",
+        "scientificName": "Dogfish / Spadenose shark",
+        "image": "media/image1.png",
+        "path": "/zoohub/chordata/scoliodon"
+      },
+      {
+        "id": 10,
+        "slug": "carcharodon",
+        "name": "Carcharodon",
+        "scientificName": "Great white shark",
+        "image": "media/image2.png",
+        "path": "/zoohub/chordata/carcharodon"
+      },
+      {
+        "id": 11,
+        "slug": "pristis",
+        "name": "Pristis",
+        "scientificName": "Sawfish",
+        "image": "media/image3.png",
+        "path": "/zoohub/chordata/pristis"
+      },
+      {
+        "id": 12,
+        "slug": "trygon",
+        "name": "Trygon",
+        "scientificName": "Stingray",
+        "image": "media/image4.png",
+        "path": "/zoohub/chordata/trygon"
+      },
+      {
+        "id": 13,
+        "slug": "torpedo",
+        "name": "Torpedo",
+        "scientificName": "Electric ray",
+        "image": "media/image5.png",
+        "path": "/zoohub/chordata/torpedo"
+      }
+    ]
+  },
+  {
+    "id": "actinopterygii",
+    "className": "Actinopterygii",
+    "species": [
+      {
+        "id": 14,
+        "slug": "exocoetus",
+        "name": "Exocoetus",
+        "scientificName": "Flying fish",
+        "image": "media/image1.png",
+        "path": "/zoohub/chordata/exocoetus"
+      },
+      {
+        "id": 15,
+        "slug": "hippocampus",
+        "name": "Hippocampus",
+        "scientificName": "Seahorse",
+        "image": "media/image2.png",
+        "path": "/zoohub/chordata/hippocampus"
+      },
+      {
+        "id": 16,
+        "slug": "labeo",
+        "name": "Labeo",
+        "scientificName": "Rohu",
+        "image": "media/image3.png",
+        "path": "/zoohub/chordata/labeo"
+      },
+      {
+        "id": 17,
+        "slug": "catla",
+        "name": "Catla",
+        "scientificName": "Catla",
+        "image": "media/image4.png",
+        "path": "/zoohub/chordata/catla"
+      },
+      {
+        "id": 18,
+        "slug": "clarias",
+        "name": "Clarias",
+        "scientificName": "Magur",
+        "image": "media/image5.png",
+        "path": "/zoohub/chordata/clarias"
+      },
+      {
+        "id": 19,
+        "slug": "echeneis",
+        "name": "Echeneis",
+        "scientificName": "Sucker fish / Remora",
+        "image": "media/image6.png",
+        "path": "/zoohub/chordata/echeneis"
+      },
+      {
+        "id": 20,
+        "slug": "betta",
+        "name": "Betta",
+        "scientificName": "Fighter fish",
+        "image": "media/image7.png",
+        "path": "/zoohub/chordata/betta"
+      },
+      {
+        "id": 21,
+        "slug": "pterophyllum",
+        "name": "Pterophyllum",
+        "scientificName": "Angel fish",
+        "image": "media/image8.png",
+        "path": "/zoohub/chordata/pterophyllum"
+      }
+    ]
+  },
+  {
+    "id": "sarcopterygii",
+    "className": "Sarcopterygii",
+    "species": [
+      {
+        "id": 22,
+        "slug": "latimeria",
+        "name": "Latimeria",
+        "scientificName": "Coelacanth",
+        "image": "media/image9.png",
+        "path": "/zoohub/chordata/latimeria"
+      },
+      {
+        "id": 23,
+        "slug": "protopterus",
+        "name": "Protopterus",
+        "scientificName": "African lungfish",
+        "image": "media/image10.png",
+        "path": "/zoohub/chordata/protopterus"
+      }
+    ]
+  },
+  {
+    "id": "amphibia",
+    "className": "Amphibia",
+    "species": [
+      {
+        "id": 24,
+        "slug": "bufo",
+        "name": "Bufo",
+        "scientificName": "Toad",
+        "image": "media/image1.png",
+        "path": "/zoohub/chordata/bufo"
+      },
+      {
+        "id": 25,
+        "slug": "alytes",
+        "name": "Alytes",
+        "scientificName": "Midwife toad",
+        "image": "media/image2.png",
+        "path": "/zoohub/chordata/alytes"
+      },
+      {
+        "id": 26,
+        "slug": "hyla",
+        "name": "Hyla",
+        "scientificName": "Tree frog",
+        "image": "media/image3.png",
+        "path": "/zoohub/chordata/hyla"
+      },
+      {
+        "id": 27,
+        "slug": "rhacophorus",
+        "name": "Rhacophorus",
+        "scientificName": "Flying frog",
+        "image": "media/image4.png",
+        "path": "/zoohub/chordata/rhacophorus"
+      },
+      {
+        "id": 28,
+        "slug": "rana",
+        "name": "Rana",
+        "scientificName": "Frog",
+        "image": "media/image5.png",
+        "path": "/zoohub/chordata/rana"
+      },
+      {
+        "id": 29,
+        "slug": "necturus",
+        "name": "Necturus",
+        "scientificName": "Mudpuppy",
+        "image": "media/image6.png",
+        "path": "/zoohub/chordata/necturus"
+      },
+      {
+        "id": 30,
+        "slug": "ambystoma",
+        "name": "Ambystoma",
+        "scientificName": "Tiger salamander",
+        "image": "media/image7.png",
+        "path": "/zoohub/chordata/ambystoma"
+      },
+      {
+        "id": 31,
+        "slug": "salamandra",
+        "name": "Salamandra",
+        "scientificName": "Fire salamander",
+        "image": "media/image8.png",
+        "path": "/zoohub/chordata/salamandra"
+      },
+      {
+        "id": 32,
+        "slug": "ichthyophis",
+        "name": "Ichthyophis",
+        "scientificName": "Caecilian",
+        "image": "media/image9.png",
+        "path": "/zoohub/chordata/ichthyophis"
+      }
+    ]
+  },
+  {
+    "id": "reptilia",
+    "className": "Reptilia",
+    "species": [
+      {
+        "id": 33,
+        "slug": "hemidactylus",
+        "name": "Hemidactylus",
+        "scientificName": "House lizard / Gecko",
+        "image": "media/image1.png",
+        "path": "/zoohub/chordata/hemidactylus"
+      },
+      {
+        "id": 34,
+        "slug": "calotes",
+        "name": "Calotes",
+        "scientificName": "Garden lizard",
+        "image": "media/image2.png",
+        "path": "/zoohub/chordata/calotes"
+      },
+      {
+        "id": 35,
+        "slug": "draco",
+        "name": "Draco",
+        "scientificName": "Flying lizard",
+        "image": "media/image3.png",
+        "path": "/zoohub/chordata/draco"
+      },
+      {
+        "id": 36,
+        "slug": "chamaeleon",
+        "name": "Chamaeleon",
+        "scientificName": "Chameleon",
+        "image": "media/image4.png",
+        "path": "/zoohub/chordata/chamaeleon"
+      },
+      {
+        "id": 37,
+        "slug": "phrynosoma",
+        "name": "Phrynosoma",
+        "scientificName": "Horned lizard",
+        "image": "media/image5.png",
+        "path": "/zoohub/chordata/phrynosoma"
+      },
+      {
+        "id": 38,
+        "slug": "varanus",
+        "name": "Varanus",
+        "scientificName": "Monitor lizard",
+        "image": "media/image6.png",
+        "path": "/zoohub/chordata/varanus"
+      },
+      {
+        "id": 39,
+        "slug": "sphenodon_punctatum",
+        "name": "Sphenodon punctatum",
+        "scientificName": "Tuatara",
+        "image": "media/image7.png",
+        "path": "/zoohub/chordata/sphenodon_punctatum"
+      },
+      {
+        "id": 40,
+        "slug": "chelone",
+        "name": "Chelone",
+        "scientificName": "Sea turtle",
+        "image": "media/image8.png",
+        "path": "/zoohub/chordata/chelone"
+      },
+      {
+        "id": 41,
+        "slug": "testudo",
+        "name": "Testudo",
+        "scientificName": "Tortoise",
+        "image": "media/image9.png",
+        "path": "/zoohub/chordata/testudo"
+      },
+      {
+        "id": 42,
+        "slug": "naja_naja",
+        "name": "Naja naja",
+        "scientificName": "Indian cobra",
+        "image": "media/image10.png",
+        "path": "/zoohub/chordata/naja_naja"
+      },
+      {
+        "id": 43,
+        "slug": "vipera_russelli",
+        "name": "Vipera russelli",
+        "scientificName": "Russell's viper",
+        "image": "media/image11.png",
+        "path": "/zoohub/chordata/vipera_russelli"
+      },
+      {
+        "id": 44,
+        "slug": "bungarus",
+        "name": "Bungarus",
+        "scientificName": "Krait",
+        "image": "media/image12.png",
+        "path": "/zoohub/chordata/bungarus"
+      },
+      {
+        "id": 45,
+        "slug": "hydrophis",
+        "name": "Hydrophis",
+        "scientificName": "Sea snake",
+        "image": "media/image13.png",
+        "path": "/zoohub/chordata/hydrophis"
+      },
+      {
+        "id": 46,
+        "slug": "typhlops",
+        "name": "Typhlops",
+        "scientificName": "Blind snake",
+        "image": "media/image14.png",
+        "path": "/zoohub/chordata/typhlops"
+      },
+      {
+        "id": 47,
+        "slug": "python",
+        "name": "Python",
+        "scientificName": "Python",
+        "image": "media/image15.png",
+        "path": "/zoohub/chordata/python"
+      },
+      {
+        "id": 48,
+        "slug": "crocodylus",
+        "name": "Crocodylus",
+        "scientificName": "Crocodile",
+        "image": "media/image16.png",
+        "path": "/zoohub/chordata/crocodylus"
+      },
+      {
+        "id": 49,
+        "slug": "gavialis_gangeticus",
+        "name": "Gavialis gangeticus",
+        "scientificName": "Gharial",
+        "image": "media/image17.png",
+        "path": "/zoohub/chordata/gavialis_gangeticus"
+      },
+      {
+        "id": 50,
+        "slug": "alligator",
+        "name": "Alligator",
+        "scientificName": "Alligator",
+        "image": "media/image18.png",
+        "path": "/zoohub/chordata/alligator"
+      }
+    ]
+  },
+  {
+    "id": "aves",
+    "className": "Aves",
+    "species": [
+      {
+        "id": 57,
+        "slug": "corvus",
+        "name": "Corvus",
+        "scientificName": "Crow",
+        "image": "media/image1.png",
+        "path": "/zoohub/chordata/corvus"
+      },
+      {
+        "id": 58,
+        "slug": "columba",
+        "name": "Columba",
+        "scientificName": "Pigeon",
+        "image": "media/image2.png",
+        "path": "/zoohub/chordata/columba"
+      },
+      {
+        "id": 59,
+        "slug": "psittacula",
+        "name": "Psittacula",
+        "scientificName": "Parakeet",
+        "image": "media/image3.png",
+        "path": "/zoohub/chordata/psittacula"
+      },
+      {
+        "id": 60,
+        "slug": "pavo_cristatus",
+        "name": "Pavo cristatus",
+        "scientificName": "Peacock",
+        "image": "media/image4.png",
+        "path": "/zoohub/chordata/pavo_cristatus"
+      },
+      {
+        "id": 61,
+        "slug": "aptenodytes_forsteri",
+        "name": "Aptenodytes forsteri",
+        "scientificName": "Emperor penguin",
+        "image": "media/image5.png",
+        "path": "/zoohub/chordata/aptenodytes_forsteri"
+      },
+      {
+        "id": 62,
+        "slug": "struthio_camelus",
+        "name": "Struthio camelus",
+        "scientificName": "Ostrich",
+        "image": "media/image6.png",
+        "path": "/zoohub/chordata/struthio_camelus"
+      },
+      {
+        "id": 63,
+        "slug": "rhea",
+        "name": "Rhea",
+        "scientificName": "Rhea",
+        "image": "media/image7.png",
+        "path": "/zoohub/chordata/rhea"
+      },
+      {
+        "id": 64,
+        "slug": "dromaius_novaehollandiae",
+        "name": "Dromaius novaehollandiae",
+        "scientificName": "Emu",
+        "image": "media/image8.png",
+        "path": "/zoohub/chordata/dromaius_novaehollandiae"
+      },
+      {
+        "id": 65,
+        "slug": "apteryx",
+        "name": "Apteryx",
+        "scientificName": "Kiwi",
+        "image": "media/image9.png",
+        "path": "/zoohub/chordata/apteryx"
+      },
+      {
+        "id": 66,
+        "slug": "casuarius",
+        "name": "Casuarius",
+        "scientificName": "Cassowary",
+        "image": "media/image10.png",
+        "path": "/zoohub/chordata/casuarius"
+      },
+      {
+        "id": 67,
+        "slug": "neophron",
+        "name": "Neophron",
+        "scientificName": "Egyptian vulture",
+        "image": "media/image11.png",
+        "path": "/zoohub/chordata/neophron"
+      },
+      {
+        "id": 68,
+        "slug": "passer",
+        "name": "Passer",
+        "scientificName": "Sparrow",
+        "image": "media/image12.png",
+        "path": "/zoohub/chordata/passer"
+      },
+      {
+        "id": 69,
+        "slug": "gallus_gallus",
+        "name": "Gallus gallus",
+        "scientificName": "Red jungle fowl",
+        "image": "media/image13.png",
+        "path": "/zoohub/chordata/gallus_gallus"
+      },
+      {
+        "id": 70,
+        "slug": "trochilus_colubris",
+        "name": "Trochilus colubris",
+        "scientificName": "Ruby-throated hummingbird",
+        "image": "media/image14.png",
+        "path": "/zoohub/chordata/trochilus_colubris"
+      },
+      {
+        "id": 71,
+        "slug": "chalcophaps_indica",
+        "name": "Chalcophaps indica",
+        "scientificName": "Emerald dove",
+        "image": "media/image15.png",
+        "path": "/zoohub/chordata/chalcophaps_indica"
+      },
+      {
+        "id": 72,
+        "slug": "pitohui_dichrous",
+        "name": "Pitohui dichrous",
+        "scientificName": "Hooded pitohui",
+        "image": "media/image16.png",
+        "path": "/zoohub/chordata/pitohui_dichrous"
+      }
+    ]
+  },
+  {
+    "id": "mammalia",
+    "className": "Mammalia",
+    "species": [
+      {
+        "id": 84,
+        "slug": "ornithorhynchus_anatinus",
+        "name": "Ornithorhynchus anatinus",
+        "scientificName": "Platypus",
+        "image": "media/image1.png",
+        "path": "/zoohub/chordata/ornithorhynchus_anatinus"
+      },
+      {
+        "id": 85,
+        "slug": "echidna",
+        "name": "Echidna",
+        "scientificName": "Spiny anteater",
+        "image": "media/image2.png",
+        "path": "/zoohub/chordata/echidna"
+      },
+      {
+        "id": 86,
+        "slug": "antechinus_flavipes",
+        "name": "Antechinus flavipes",
+        "scientificName": "Yellow-footed antechinus",
+        "image": "media/image3.png",
+        "path": "/zoohub/chordata/antechinus_flavipes"
+      },
+      {
+        "id": 87,
+        "slug": "macropus",
+        "name": "Macropus",
+        "scientificName": "Kangaroo",
+        "image": "media/image4.png",
+        "path": "/zoohub/chordata/macropus"
+      },
+      {
+        "id": 88,
+        "slug": "phascolarctos_cinereus",
+        "name": "Phascolarctos cinereus",
+        "scientificName": "Koala",
+        "image": "media/image5.png",
+        "path": "/zoohub/chordata/phascolarctos_cinereus"
+      },
+      {
+        "id": 89,
+        "slug": "vombatus",
+        "name": "Vombatus",
+        "scientificName": "Wombat",
+        "image": "media/image6.png",
+        "path": "/zoohub/chordata/vombatus"
+      },
+      {
+        "id": 90,
+        "slug": "perameles",
+        "name": "Perameles",
+        "scientificName": "Bandicoot",
+        "image": "media/image7.png",
+        "path": "/zoohub/chordata/perameles"
+      },
+      {
+        "id": 91,
+        "slug": "petaurus_breviceps",
+        "name": "Petaurus breviceps",
+        "scientificName": "Sugar glider",
+        "image": "media/image8.png",
+        "path": "/zoohub/chordata/petaurus_breviceps"
+      },
+      {
+        "id": 92,
+        "slug": "notoryctes",
+        "name": "Notoryctes",
+        "scientificName": "Marsupial mole",
+        "image": "media/image9.png",
+        "path": "/zoohub/chordata/notoryctes"
+      },
+      {
+        "id": 93,
+        "slug": "didelphis_marsupialis",
+        "name": "Didelphis marsupialis",
+        "scientificName": "Common opossum",
+        "image": "media/image10.png",
+        "path": "/zoohub/chordata/didelphis_marsupialis"
+      },
+      {
+        "id": 94,
+        "slug": "myrmecobius_fasciatus",
+        "name": "Myrmecobius fasciatus",
+        "scientificName": "Numbat",
+        "image": "media/image11.png",
+        "path": "/zoohub/chordata/myrmecobius_fasciatus"
+      },
+      {
+        "id": 95,
+        "slug": "thylacinus_cynocephalus",
+        "name": "Thylacinus cynocephalus",
+        "scientificName": "Tasmanian tiger",
+        "image": "media/image12.png",
+        "path": "/zoohub/chordata/thylacinus_cynocephalus"
+      },
+      {
+        "id": 96,
+        "slug": "spilocuscus_maculatus",
+        "name": "Spilocuscus maculatus",
+        "scientificName": "Spotted cuscus",
+        "image": "media/image13.png",
+        "path": "/zoohub/chordata/spilocuscus_maculatus"
+      },
+      {
+        "id": 97,
+        "slug": "dasyurus_maculatus",
+        "name": "Dasyurus maculatus",
+        "scientificName": "Spotted-tail quoll",
+        "image": "media/image14.png",
+        "path": "/zoohub/chordata/dasyurus_maculatus"
+      }
+    ]
+  }
+]

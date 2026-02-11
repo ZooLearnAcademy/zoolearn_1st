@@ -5,39 +5,39 @@ import CtenophoraData from "./CtenophoraData.json";
 
 const Ctenophora = () => {
   return (
-    <div className="container">
+    <div className="cten-container">
       <header>
         <h1>Phylum Ctenophora</h1>
-        <p className="subtitle">Exploring the Ancient Sponges</p>
+        <p className="cten-subtitle">Exploring the Ancient Sponges</p>
       </header>
 
       {CtenophoraData.map((category) => (
-        <section key={category.id} className="class-section">
+        <section key={category.id} className="cten-class-section">
 
-          <h2 className="class-heading">
-            <div className="bord"></div>
-            <span className="class-badge">Class</span>
+          <h2 className="cten-class-heading">
+            <div className="cten-bord"></div>
+            <span className="cten-class-badge">Class</span>
             {category.className}
           </h2>
 
-          <div className="species-grid">
+          <div className="cten-species-grid">
             {category.species.map((animal) => (
               <Link
                 key={animal.id}
                 to={animal.path}
-                className="species-card"
+                className="cten-species-card"
                 style={{ textDecoration: "none" }}
               >
                 <img
                   src={animal.image}
                   alt={animal.name}
-                  className="species-image"
+                  className="cten-species-image"
                 />
 
-                <div className="species-info">
+                <div className="cten-species-info">
                   <div>
-                    <div className="species-name">{animal.name}</div>
-                    <div className="species-name-scientific">
+                    <div className="cten-species-name">{animal.name}</div>
+                    <div className="cten-species-name-scientific">
                       {animal.scientificName}
                     </div>
                   </div>

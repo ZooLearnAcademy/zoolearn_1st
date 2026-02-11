@@ -5,39 +5,39 @@ import poriferaData from "./poriferaData.json";
 
 const Porifera = () => {
   return (
-    <div className="container">
+    <div className="pori-container">
       <header>
         <h1>Phylum Porifera</h1>
-        <p className="subtitle">Exploring the Ancient Sponges</p>
+        <p className="pori-subtitle">Exploring the Ancient Sponges</p>
       </header>
 
       {poriferaData.map((category) => (
-        <section key={category.id} className="class-section">
+        <section key={category.id} className="pori-class-section">
 
-          <h2 className="class-heading">
-            <div className="bord"></div>
-            <span className="class-badge">Class</span>
+          <h2 className="pori-class-heading">
+            <div className="pori-bord"></div>
+            <span className="pori-class-badge">Class</span>
             {category.className}
           </h2>
 
-          <div className="species-grid">
+          <div className="pori-species-grid">
             {category.species.map((animal) => (
               <Link
                 key={animal.id}
                 to={animal.path}
-                className="species-card"
+                className="pori-species-card"
                 style={{ textDecoration: "none" }}
               >
                 <img
                   src={animal.image}
                   alt={animal.name}
-                  className="species-image"
+                  className="pori-species-image"
                 />
 
-                <div className="species-info">
+                <div className="pori-species-info">
                   <div>
-                    <div className="species-name">{animal.name}</div>
-                    <div className="species-name-scientific">
+                    <div className="pori-species-name">{animal.name}</div>
+                    <div className="pori-species-name-scientific">
                       {animal.scientificName}
                     </div>
                   </div>

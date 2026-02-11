@@ -11,8 +11,10 @@ import Ctenophora from "./ctenophora/Ctenophora";
 import Aschelminthes from "./aschelminthes/Aschelminthes";
 import Annelida from "./annelida/Annelida";
 import Arthropoda from "./arthropoda/Arthropoda";
-
-
+import Mollusca from "./mollusca/Mollusca";
+import Echinodermata from "./echinodermata/Echinodermata";
+import Hemichordata from "./hemichordata/Hemichordata";
+// import Chordata from "./chordata/Chordata";
 
 function ZooHub() {
   const navigate = useNavigate();
@@ -168,18 +170,18 @@ function ZooHub() {
   };
 
   return (
-    <div className="zoohub-page">
+    <div className="zooh-zoohub-page">
       {/* 📌 PAGE HEADER */}
-      <div className="zoohub-header">
+      <div className="zooh-zoohub-header">
         <h1>🦎 ZooHub - Animal Kingdom Explorer</h1>
         <p>Discover and explore the fascinating world of animal classification. Search for species or browse by phylum.</p>
       </div>
 
       {/* 🔍 PROFESSIONAL SEARCH BAR */}
-      <div className="search-section">
-        <div className="search-container">
-          <div className="search-input-wrapper">
-            <span className="search-icon-text">🔍</span>
+      <div className="zooh-search-section">
+        <div className="zooh-search-container">
+          <div className="zooh-search-input-wrapper">
+            <span className="zooh-search-icon-text">🔍</span>
             <input
               type="text"
               placeholder="Search species (e.g., hydra, sycon, octopus...)"
@@ -188,15 +190,15 @@ function ZooHub() {
               onKeyDown={handleKeyDown}
             />
           </div>
-          <button className="search-btn" onClick={handleSearch}>
+          <button className="zooh-search-btn" onClick={handleSearch}>
             Search
           </button>
           {results.length > 0 && (
-            <ul className="search-results">
+            <ul className="zooh-search-results">
               {results.map((item, i) => (
                 <li key={i} onClick={() => handleSpeciesClick(item)}>
                   <span>{item.name}</span>
-                  <span className="species-class">{item.classKey}</span>
+                  <span className="zooh-species-class">{item.classKey}</span>
                 </li>
               ))}
             </ul>
@@ -205,8 +207,8 @@ function ZooHub() {
       </div>
 
       {/* 🔝 CLASS NAV */}
-      <div className="class-navbar">
-        <div className="class-scroll">
+      <div className="zooh-class-navbar">
+        <div className="zooh-class-scroll">
           {Object.keys(refs).map((key) => (
             <span key={key} onClick={() => scrollToClass(key)}>
               {key}
@@ -243,8 +245,21 @@ function ZooHub() {
       <section ref={refs.arthropoda}>
         <Arthropoda />
       </section>
+      <section ref={refs.mollusca}>
+        <Mollusca />
+      </section>
+      <section ref={refs.echinodermata}>
+        <Echinodermata />
+      </section>
 
+      <section ref={refs.hemichordata}>
+        <Hemichordata />
+      </section>
 
+      {/* <section ref={refs.chordata}>
+        <Chordata />
+      </section> */}
+      
 
 
       {/* 🔸 Remaining phyla - components to be added later */}

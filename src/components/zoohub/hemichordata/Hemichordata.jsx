@@ -1,54 +1,53 @@
-import React, { useState } from 'react';
-import './Hemichordata.css';
-import Balanoglossus from './enteropneusta/balanoglossus/Balanoglossus';
-import Saccoglossus from './enteropneusta/saccoglossus/Saccoglossus';
-import PtychoderaFlava from './enteropneusta/ptychodera-flava/PtychoderaFlava';
+import React from "react";
+import { Link } from "react-router-dom";
+import "./Hemichordata.css";
+import HemichordataData from "./HemichordataData.json";
 
 const Hemichordata = () => {
-  const [selectedOrganism, setSelectedOrganism] = useState(null);
-
-  const organisms = [
-    { key: 'balanoglossus', label: 'Balanoglossus', component: Balanoglossus },
-    { key: 'saccoglossus', label: 'Saccoglossus', component: Saccoglossus },
-    { key: 'ptychodera-flava', label: 'PtychoderaFlava', component: PtychoderaFlava },
-  ];
-
-  const SelectedComponent = selectedOrganism
-    ? organisms.find(o => o.key === selectedOrganism)?.component
-    : null;
-
   return (
-    <div className="phylum-container">
-      <header className="phylum-header">
-        <h2>Hemichordata</h2>
-        <p>Hemichordates</p>
+    <div className="hemi-container">
+      <header>
+        <h1>Phylum Hemichordata</h1>
+        <p className="hemi-subtitle">Exploring the Ancient Sponges</p>
       </header>
 
-      <div className="organism-nav">
-        <h3>Select an Organism (3 classes)</h3>
-        <div className="organism-buttons">
-          {organisms.map(organism => (
-            <button
-              key={organism.key}
-              className={'organism-btn ' + (selectedOrganism === organism.key ? 'active' : '')}
-              onClick={() => setSelectedOrganism(organism.key)}
-            >
-              {organism.label}
-            </button>
-          ))}
-        </div>
-      </div>
+      {HemichordataData.map((category) => (
+        <section key={category.id} className="hemi-class-section">
 
-      <div className="organism-content">
-        {SelectedComponent ? (
-          <SelectedComponent />
-        ) : (
-          <div className="organism-placeholder">
-            <h3>Select an organism to view details</h3>
-            <p>Click on any organism above to learn more about its characteristics and taxonomy.</p>
+          <h2 className="hemi-class-heading">
+            <div className="hemi-bord"></div>
+            <span className="hemi-class-badge">Class</span>
+            {category.className}
+          </h2>
+
+          <div className="hemi-species-grid">
+            {category.species.map((animal) => (
+              <Link
+                key={animal.id}
+                to={animal.path}
+                className="hemi-species-card"
+                style={{ textDecoration: "none" }}
+              >
+                <img
+                  src={animal.image}
+                  alt={animal.name}
+                  className="hemi-species-image"
+                />
+
+                <div className="hemi-species-info">
+                  <div>
+                    <div className="hemi-species-name">{animal.name}</div>
+                    <div className="hemi-species-name-scientific">
+                      {animal.scientificName}
+                    </div>
+                  </div>
+                </div>
+
+              </Link>
+            ))}
           </div>
-        )}
-      </div>
+        </section>
+      ))}
     </div>
   );
 };

@@ -14,7 +14,3 @@ function ArthropodaHub() {
 }
 
 export default ArthropodaHub;
-
-
-
-

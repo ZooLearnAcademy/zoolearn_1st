@@ -7,7 +7,7 @@
         "id": 1,
         "slug": "sycon",
         "name": "Sycon",
-        "scientificName": "Tube Sponge",
+        "scientificName": "Scypha sponge",
         "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1767671742/sycon_kzvnrx.png",
         "path": "/zoohub/porifera/sycon"
       },
@@ -15,7 +15,7 @@
         "id": 2,
         "slug": "leucosolenia",
         "name": "Leucosolenia",
-        "scientificName": "Calcareous Sponge",
+        "scientificName": "White tubular sponge",
         "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1767671721/Leucosolenia_lyznns.png",
         "path": "/zoohub/porifera/leucosolenia"
       },
@@ -23,7 +23,7 @@
         "id": 3,
         "slug": "grantia",
         "name": "Grantia",
-        "scientificName": "Ascon Sponge",
+        "scientificName": "Grant’s sponge",
         "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1767671622/Grantia_oxhw07.png",
         "path": "/zoohub/porifera/grantia"
       }
