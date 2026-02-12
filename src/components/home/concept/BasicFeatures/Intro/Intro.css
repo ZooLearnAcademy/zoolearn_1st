@@ -1,10 +1,12 @@
 /* HERO WRAPPER */
 .intro-hero {
   position: relative;
-  height: 720px;
+  min-height: 650px; /* changed from fixed height */
+  height: auto;
   display: flex;
-  align-items: center;
-  padding: 90px 60px;
+  /* align-items: center;  <-- REMOVED to stop vertical centering */
+  align-items: flex-start; /* align to top */
+  padding: 120px 60px 90px; /* increased top padding */
   overflow: hidden;
   font-family: "Inter", system-ui, sans-serif;
 
