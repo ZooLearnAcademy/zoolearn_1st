@@ -16,6 +16,7 @@ import MolluscaPhylum8 from "./components/zoohub/mollusca/Phylum8";
 import Echinodermata from "./components/zoohub/echinodermata/Phylum9";
 import Hemichordata from "./components/zoohub/hemichordata/Phylum10";
 // import Chordata from "./components/zoohub/chordata/Phylum11";
+import BasicFeatures from './components/home/concept/BasicFeatures/BasicFeatures';
 
 
 // Shared components
@@ -77,6 +78,7 @@ function App() {
               <Route path="/zoohub" element={<ZooHub />} />
               <Route path="/about" element={<About />} />
               <Route path="/livingworld" element={<TheLivingWorld />} />
+              <Route path="/basic-features-of-classification" element={<BasicFeatures />} />
 
               {/* Species Detail Routes */}
               <Route path="/zoohub/porifera/:slug" element={<PoriferaPhylum1 />} />
