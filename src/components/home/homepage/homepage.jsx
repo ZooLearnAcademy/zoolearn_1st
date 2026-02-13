@@ -36,7 +36,7 @@ const Homepage = () => {
       description:
         "Detailed study of internal organ systems, structure, and physiological functions.",
       icon: "https://res.cloudinary.com/duibfmcw1/image/upload/v1767780953/003-chaos_pfqepw.png",
-      route: "/anatomy",
+      route: "/patterns-of-complexities",
     },
     {
       title: "Kingdom of Animalia",

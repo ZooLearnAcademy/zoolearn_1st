@@ -17,6 +17,7 @@ import Echinodermata from "./components/zoohub/echinodermata/Phylum9";
 import Hemichordata from "./components/zoohub/hemichordata/Phylum10";
 // import Chordata from "./components/zoohub/chordata/Phylum11";
 import BasicFeatures from './components/home/concept/BasicFeatures/BasicFeatures';
+import Patterns from './components/home/concept/Patternsofcomplexities/Patterns';
 
 
 // Shared components
@@ -79,6 +80,7 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/livingworld" element={<TheLivingWorld />} />
               <Route path="/basic-features-of-classification" element={<BasicFeatures />} />
+              <Route path="/patterns-of-complexities" element={<Patterns />} />
 
               {/* Species Detail Routes */}
               <Route path="/zoohub/porifera/:slug" element={<PoriferaPhylum1 />} />

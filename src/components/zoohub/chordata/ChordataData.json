@@ -1,14 +1,14 @@
 [
   {
-    "id": "urochordata",
-    "className": "Urochordata",
+    "id": "Ascidiacea",
+    "className": "Ascidiacea",
     "species": [
       {
         "id": 1,
         "slug": "ascidia",
         "name": "Ascidia",
         "scientificName": "Sea squirt",
-        "image": "media/image1.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1767894433/Ascidia_jhgqzv.png",
         "path": "/zoohub/chordata/ascidia"
       },
       {
@@ -16,15 +16,21 @@
         "slug": "herdmania",
         "name": "Herdmania",
         "scientificName": "Red sea squirt",
-        "image": "media/image2.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1767894447/Herdmania_ecxear.png",
         "path": "/zoohub/chordata/herdmania"
-      },
+      }
+    ]
+  },
+  {
+    "id": "Thaliacea",
+    "className": "Thaliacea",
+    "species": [
       {
         "id": 3,
         "slug": "salpa",
         "name": "Salpa",
         "scientificName": "Salp",
-        "image": "media/image1.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1767895302/Salpa_v6xxui.png",
         "path": "/zoohub/chordata/salpa"
       },
       {
@@ -32,7 +38,7 @@
         "slug": "doliolum",
         "name": "Doliolum",
         "scientificName": "Doliolid",
-        "image": "media/image2.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1767895311/Doliolum_kcjpas.png",
         "path": "/zoohub/chordata/doliolum"
       },
       {
@@ -40,21 +46,21 @@
         "slug": "pyrosoma",
         "name": "Pyrosoma",
         "scientificName": "Fire body",
-        "image": "media/image3.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1767895306/Pyrosoma_xupmt9.png",
         "path": "/zoohub/chordata/pyrosoma"
       }
     ]
   },
   {
-    "id": "cephalochordata",
-    "className": "Cephalochordata",
+    "id": "Leptocardii",
+    "className": "Leptocardii",
     "species": [
       {
         "id": 6,
         "slug": "branchiostoma",
-        "name": "Branchiostoma",
+        "name": "Branchiostoma lanceolatum",
         "scientificName": "Lancelet / Amphioxus",
-        "image": "media/image4.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1767895339/Branchiostoma_lanceolatum_lnmage.png",
         "path": "/zoohub/chordata/branchiostoma"
       }
     ]
@@ -66,17 +72,17 @@
       {
         "id": 7,
         "slug": "petromyzon",
-        "name": "Petromyzon",
+        "name": "Petromyzon marinus",
         "scientificName": "Sea lamprey",
-        "image": "media/image1.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1767895415/Petromyzon_marinus_smue6p.png",
         "path": "/zoohub/chordata/petromyzon"
       },
       {
         "id": 8,
         "slug": "myxine",
-        "name": "Myxine",
-        "scientificName": "Hagfish",
-        "image": "media/image2.png",
+        "name": "Myxine glutinosa",
+        "scientificName": "Hagfish/slime eel",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1767895410/myxine_glutinosa_vyqwnl.png ",
         "path": "/zoohub/chordata/myxine"
       }
     ]
@@ -88,55 +94,55 @@
       {
         "id": 9,
         "slug": "scoliodon",
-        "name": "Scoliodon",
+        "name": "Scoliodon laticaudus",
         "scientificName": "Dogfish / Spadenose shark",
-        "image": "media/image1.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770196659/Scoliodon_laticaudus_onqoyb.png",
         "path": "/zoohub/chordata/scoliodon"
       },
       {
         "id": 10,
-        "slug": "carcharodon",
-        "name": "Carcharodon",
-        "scientificName": "Great white shark",
-        "image": "media/image2.png",
-        "path": "/zoohub/chordata/carcharodon"
-      },
-      {
-        "id": 11,
         "slug": "pristis",
         "name": "Pristis",
         "scientificName": "Sawfish",
-        "image": "media/image3.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770196645/Pristis_hv29co.png",
         "path": "/zoohub/chordata/pristis"
       },
       {
-        "id": 12,
+        "id": 11,
         "slug": "trygon",
         "name": "Trygon",
         "scientificName": "Stingray",
-        "image": "media/image4.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770196672/Trygon_jv0e3i.png",
         "path": "/zoohub/chordata/trygon"
       },
       {
-        "id": 13,
+        "id": 12,
         "slug": "torpedo",
         "name": "Torpedo",
         "scientificName": "Electric ray",
-        "image": "media/image5.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770196667/Torpedo_jk0rwb.png",
         "path": "/zoohub/chordata/torpedo"
+      },
+      {
+        "id": 13,
+        "slug": "carcharodon",
+        "name": "Carcharodon carcharias",
+        "scientificName": "Great white shark",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770196618/Carcharodon_carcharias_snql93.png",
+        "path": "/zoohub/chordata/carcharodon"
       }
     ]
   },
   {
-    "id": "actinopterygii",
-    "className": "Actinopterygii",
+    "id": "Osteichthyes",
+    "className": "Osteichthyes",
     "species": [
       {
         "id": 14,
         "slug": "exocoetus",
         "name": "Exocoetus",
         "scientificName": "Flying fish",
-        "image": "media/image1.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770197387/Exocoetus_kvnttp.png",
         "path": "/zoohub/chordata/exocoetus"
       },
       {
@@ -144,31 +150,31 @@
         "slug": "hippocampus",
         "name": "Hippocampus",
         "scientificName": "Seahorse",
-        "image": "media/image2.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770197390/Hippocampus_r4zr6o.png",
         "path": "/zoohub/chordata/hippocampus"
       },
       {
         "id": 16,
         "slug": "labeo",
-        "name": "Labeo",
+        "name": "Labeo rohita",
         "scientificName": "Rohu",
-        "image": "media/image3.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770197393/Labeo_rohita_g6zyn0.png",
         "path": "/zoohub/chordata/labeo"
       },
       {
         "id": 17,
         "slug": "catla",
-        "name": "Catla",
+        "name": "Catla catla",
         "scientificName": "Catla",
-        "image": "media/image4.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770197366/Catla_catla_algwyr.png",
         "path": "/zoohub/chordata/catla"
       },
       {
         "id": 18,
         "slug": "clarias",
-        "name": "Clarias",
+        "name": "Clarias batrachus",
         "scientificName": "Magur",
-        "image": "media/image5.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770197380/Clarias_batrachus_toqsqe.png",
         "path": "/zoohub/chordata/clarias"
       },
       {
@@ -176,49 +182,43 @@
         "slug": "echeneis",
         "name": "Echeneis",
         "scientificName": "Sucker fish / Remora",
-        "image": "media/image6.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770197384/Echeneis_rndj1u.png",
         "path": "/zoohub/chordata/echeneis"
       },
       {
         "id": 20,
         "slug": "betta",
-        "name": "Betta",
+        "name": "Betta splendens",
         "scientificName": "Fighter fish",
-        "image": "media/image7.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770197339/Betta_splendens_r5yyew.png",
         "path": "/zoohub/chordata/betta"
       },
       {
         "id": 21,
         "slug": "pterophyllum",
-        "name": "Pterophyllum",
+        "name": "Pterophyllum scalare",
         "scientificName": "Angel fish",
-        "image": "media/image8.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770197404/Pterophyllum_scalare_qfqoqn.png",
         "path": "/zoohub/chordata/pterophyllum"
-      }
-    ]
-  },
-  {
-    "id": "sarcopterygii",
-    "className": "Sarcopterygii",
-    "species": [
-      {
+      },{
         "id": 22,
         "slug": "latimeria",
-        "name": "Latimeria",
+        "name": "Latimeria chalumnae",
         "scientificName": "Coelacanth",
-        "image": "media/image9.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770197400/Latimeria_chalumnae_zlrae2.png",
         "path": "/zoohub/chordata/latimeria"
       },
       {
         "id": 23,
         "slug": "protopterus",
-        "name": "Protopterus",
+        "name": "Protopterus annectens",
         "scientificName": "African lungfish",
-        "image": "media/image10.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770197397/Protopterus_annectens_fc1lqr.png",
         "path": "/zoohub/chordata/protopterus"
       }
     ]
   },
+
   {
     "id": "amphibia",
     "className": "Amphibia",
@@ -228,7 +228,7 @@
         "slug": "bufo",
         "name": "Bufo",
         "scientificName": "Toad",
-        "image": "media/image1.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770197529/Bufo_iky9ot.png",
         "path": "/zoohub/chordata/bufo"
       },
       {
@@ -236,7 +236,7 @@
         "slug": "alytes",
         "name": "Alytes",
         "scientificName": "Midwife toad",
-        "image": "media/image2.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770197518/Alytes_oezmlf.png",
         "path": "/zoohub/chordata/alytes"
       },
       {
@@ -244,7 +244,7 @@
         "slug": "hyla",
         "name": "Hyla",
         "scientificName": "Tree frog",
-        "image": "media/image3.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770197544/Hyla_lbmzja.png",
         "path": "/zoohub/chordata/hyla"
       },
       {
@@ -252,7 +252,7 @@
         "slug": "rhacophorus",
         "name": "Rhacophorus",
         "scientificName": "Flying frog",
-        "image": "media/image4.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770197754/Rhacophorus_paaoef.png",
         "path": "/zoohub/chordata/rhacophorus"
       },
       {
@@ -260,23 +260,23 @@
         "slug": "rana",
         "name": "Rana",
         "scientificName": "Frog",
-        "image": "media/image5.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770197751/Rana_dpyid8.png",
         "path": "/zoohub/chordata/rana"
       },
       {
         "id": 29,
         "slug": "necturus",
-        "name": "Necturus",
+        "name": "Necturus maculosus",
         "scientificName": "Mudpuppy",
-        "image": "media/image6.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770197748/Necturus_maculosus_bymsxk.png",
         "path": "/zoohub/chordata/necturus"
       },
       {
         "id": 30,
         "slug": "ambystoma",
-        "name": "Ambystoma",
+        "name": "Ambystoma tigrinum",
         "scientificName": "Tiger salamander",
-        "image": "media/image7.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770197526/Ambystoma_tigrinum_ltgewv.png",
         "path": "/zoohub/chordata/ambystoma"
       },
       {
@@ -284,7 +284,7 @@
         "slug": "salamandra",
         "name": "Salamandra",
         "scientificName": "Fire salamander",
-        "image": "media/image8.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770197757/Salamandra_km1ahw.png",
         "path": "/zoohub/chordata/salamandra"
       },
       {
@@ -292,7 +292,7 @@
         "slug": "ichthyophis",
         "name": "Ichthyophis",
         "scientificName": "Caecilian",
-        "image": "media/image9.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770197557/Ichthyophis_oqw4wr.png",
         "path": "/zoohub/chordata/ichthyophis"
       }
     ]
@@ -306,7 +306,7 @@
         "slug": "hemidactylus",
         "name": "Hemidactylus",
         "scientificName": "House lizard / Gecko",
-        "image": "media/image1.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770197883/Hemidactylus_bqzpvf.png",
         "path": "/zoohub/chordata/hemidactylus"
       },
       {
@@ -314,7 +314,7 @@
         "slug": "calotes",
         "name": "Calotes",
         "scientificName": "Garden lizard",
-        "image": "media/image2.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770197855/Calotes_g8mz9s.png",
         "path": "/zoohub/chordata/calotes"
       },
       {
@@ -322,7 +322,7 @@
         "slug": "draco",
         "name": "Draco",
         "scientificName": "Flying lizard",
-        "image": "media/image3.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770197872/Draco_amkrks.png",
         "path": "/zoohub/chordata/draco"
       },
       {
@@ -330,7 +330,7 @@
         "slug": "chamaeleon",
         "name": "Chamaeleon",
         "scientificName": "Chameleon",
-        "image": "media/image4.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770197862/Chamaeleon_gtimfs.png",
         "path": "/zoohub/chordata/chamaeleon"
       },
       {
@@ -338,7 +338,7 @@
         "slug": "phrynosoma",
         "name": "Phrynosoma",
         "scientificName": "Horned lizard",
-        "image": "media/image5.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770197938/Phrynosoma_s02hd1.png",
         "path": "/zoohub/chordata/phrynosoma"
       },
       {
@@ -346,7 +346,7 @@
         "slug": "varanus",
         "name": "Varanus",
         "scientificName": "Monitor lizard",
-        "image": "media/image6.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770198076/Varanus_npexhs.png",
         "path": "/zoohub/chordata/varanus"
       },
       {
@@ -354,7 +354,7 @@
         "slug": "sphenodon_punctatum",
         "name": "Sphenodon punctatum",
         "scientificName": "Tuatara",
-        "image": "media/image7.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770198041/Sphenodon_punctatum_bx838s.png",
         "path": "/zoohub/chordata/sphenodon_punctatum"
       },
       {
@@ -362,7 +362,7 @@
         "slug": "chelone",
         "name": "Chelone",
         "scientificName": "Sea turtle",
-        "image": "media/image8.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770197859/Chelone_ea4fpo.png",
         "path": "/zoohub/chordata/chelone"
       },
       {
@@ -370,7 +370,7 @@
         "slug": "testudo",
         "name": "Testudo",
         "scientificName": "Tortoise",
-        "image": "media/image9.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770198055/Testudo_p5k79t.png",
         "path": "/zoohub/chordata/testudo"
       },
       {
@@ -378,7 +378,7 @@
         "slug": "naja_naja",
         "name": "Naja naja",
         "scientificName": "Indian cobra",
-        "image": "media/image10.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770197893/Naja_naja_zlcckg.png",
         "path": "/zoohub/chordata/naja_naja"
       },
       {
@@ -386,7 +386,7 @@
         "slug": "vipera_russelli",
         "name": "Vipera russelli",
         "scientificName": "Russell's viper",
-        "image": "media/image11.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770198072/Vipera_russelli_kbzx1t.png",
         "path": "/zoohub/chordata/vipera_russelli"
       },
       {
@@ -394,7 +394,7 @@
         "slug": "bungarus",
         "name": "Bungarus",
         "scientificName": "Krait",
-        "image": "media/image12.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770197852/Bungarus_bypmqc.png",
         "path": "/zoohub/chordata/bungarus"
       },
       {
@@ -402,7 +402,7 @@
         "slug": "hydrophis",
         "name": "Hydrophis",
         "scientificName": "Sea snake",
-        "image": "media/image13.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770197889/Hydrophis_hyllg4.png",
         "path": "/zoohub/chordata/hydrophis"
       },
       {
@@ -410,7 +410,7 @@
         "slug": "typhlops",
         "name": "Typhlops",
         "scientificName": "Blind snake",
-        "image": "media/image14.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770198061/Typhlops_ctg0fa.png",
         "path": "/zoohub/chordata/typhlops"
       },
       {
@@ -418,7 +418,7 @@
         "slug": "python",
         "name": "Python",
         "scientificName": "Python",
-        "image": "media/image15.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770198037/Python_kvqhuq.png",
         "path": "/zoohub/chordata/python"
       },
       {
@@ -426,7 +426,7 @@
         "slug": "crocodylus",
         "name": "Crocodylus",
         "scientificName": "Crocodile",
-        "image": "media/image16.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770197865/Crocodylus_kw1m5m.png",
         "path": "/zoohub/chordata/crocodylus"
       },
       {
@@ -434,7 +434,7 @@
         "slug": "gavialis_gangeticus",
         "name": "Gavialis gangeticus",
         "scientificName": "Gharial",
-        "image": "media/image17.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770197879/Gavialis_gangeticus_opbcsy.png",
         "path": "/zoohub/chordata/gavialis_gangeticus"
       },
       {
@@ -442,7 +442,7 @@
         "slug": "alligator",
         "name": "Alligator",
         "scientificName": "Alligator",
-        "image": "media/image18.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770197838/Alligator_pbeml9.png",
         "path": "/zoohub/chordata/alligator"
       }
     ]

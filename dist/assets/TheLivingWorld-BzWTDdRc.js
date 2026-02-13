@@ -1,4 +1,4 @@
-import{b as e,h as t,x as n}from"./index-lr2dLpbK.js";var r=n(e(),1),i=[{id:`monera`,title:`Kingdom Monera`,label:`BACTERIA`,color:`#A8DADC`,icon:`https://res.cloudinary.com/duibfmcw1/image/upload/v1767847552/bacteria_k8yvy1.png`,short:`Prokaryotic, unicellular organisms`,details:`
+import{b as e,h as t,x as n}from"./index-0AEeDKR6.js";var r=n(e(),1),i=[{id:`monera`,title:`Kingdom Monera`,label:`BACTERIA`,color:`#A8DADC`,icon:`https://res.cloudinary.com/duibfmcw1/image/upload/v1767847552/bacteria_k8yvy1.png`,short:`Prokaryotic, unicellular organisms`,details:`
 • Prokaryotic cells
 • No true nucleus
 • Binary fission
