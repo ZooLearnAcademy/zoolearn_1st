@@ -39,7 +39,7 @@
   --patt-shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
 
   /* Layout */
-  --patt-header-height: var(--header-height);
+  --patt-header-height: var(--header-height, 80px);
   --patt-sidebar-width: 280px;
   --patt-transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
