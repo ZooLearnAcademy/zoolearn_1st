@@ -4,15 +4,20 @@ import "./About.css";
 import React, {useEffect } from "react";
 import { useLocation } from "react-router-dom"
 const About = () => {
-   const loaction = useLocation();
-   useEffect( () => {
-    if(loaction.hash){ 
-      setTimeout(() => {
-        element.scrollIntoView ({behavior : "smooth"});
-      },100);
+  useEffect(() => {
+  const handleScroll = () => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      } else {
+        setTimeout(handleScroll, 300);
+      }
     }
-   } ,[location]
-  )
+  };
+
+  handleScroll();
+}, [location]);
 
   return (
     <>
