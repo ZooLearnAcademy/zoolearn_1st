@@ -444,6 +444,54 @@
         "scientificName": "Alligator",
         "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770197838/Alligator_pbeml9.png",
         "path": "/zoohub/chordata/alligator"
+      },
+      {
+        "id": 51,
+        "slug": "ichthyosaurus_communis",
+        "name": "Ichthyosaurus communis",
+        "scientificName": "Fish lizard",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770197886/Ichthyosaurus_communis_%EF%B8%8E_mxckvr.png",
+        "path": "/zoohub/chordata/ichthyosaurus"
+      },
+      {
+        "id": 52,
+        "slug": "triceratops_horridus",
+        "name": "Triceratops horridus",
+        "scientificName": "Three-horned face",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770198064/Triceratops_horridus_%EF%B8%8E_bvpicd.png",
+        "path": "/zoohub/chordata/triceratops"
+      },
+      {
+        "id": 53,
+        "slug": "stegosaurus_stenops",
+        "name": "Stegosaurus stenops",
+        "scientificName": "Roofed lizard",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770198051/Stegosaurus_stenops_%EF%B8%8E_au7ji4.png",
+        "path": "/zoohub/chordata/stegosaurus"
+      },
+      {
+        "id": 54,
+        "slug": "brachiosaurus_altithorax",
+        "name": "Brachiosaurus altithorax",
+        "scientificName": "Arm lizard",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770197841/Brachiosaurus_altithorax_%EF%B8%8E_mouin2.png",
+        "path": "/zoohub/chordata/brachiosaurus"
+      },
+      {
+        "id": 55,
+        "slug": "tyrannosaurus_rex",
+        "name": "Tyrannosaurus rex",
+        "scientificName": "Tyrant lizard king",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1770198067/Tyrannosaurus_rex_%EF%B8%8E_cjrciq.png",
+        "path": "/zoohub/chordata/tyrannosaurus"
+      },
+      {
+        "id": 56,
+        "slug": "",
+        "name": "",
+        "scientificName": "",
+        "image": "",
+        "path": ""
       }
     ]
   },
