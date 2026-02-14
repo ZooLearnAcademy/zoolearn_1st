@@ -1,7 +1,19 @@
+import { element } from "prop-types";
 import "./About.css";
 // import HomePage from "./HomePage"
-import React from "react";
+import React, {useEffect } from "react";
+import { useLocation } from "react-router-dom"
 const About = () => {
+   const loaction = useLocation();
+   useEffect( () => {
+    if(loaction.hash){ 
+      setTimeout(() => {
+        element.scrollIntoView ({behavior : "smooth"});
+      },100);
+    }
+   } ,[location]
+  )
+
   return (
     <>
       <div className="about-container">
@@ -113,8 +125,8 @@ const About = () => {
               <h2>Development Department</h2>
               <div className="team-profile">
                 <div className="lead">
-                  <div className="person" id="Vikram">
-                    <img loading="lazy" src="https://res.cloudinary.com/duibfmcw1/image/upload/v1769757711/1710902792982_-_Vikram_A-removebg-preview_kwlbgr.png"></img>
+                  <div className="person" >
+                    <img loading="lazy" id="Vikram" src="https://res.cloudinary.com/duibfmcw1/image/upload/v1769757711/1710902792982_-_Vikram_A-removebg-preview_kwlbgr.png"></img>
                     <h3>Vikram</h3>
                     <p>Technical Lead</p>
                   </div>
