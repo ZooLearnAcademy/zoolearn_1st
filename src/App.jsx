@@ -33,7 +33,7 @@ const ZooHub = lazy(() => import('./components/zoohub/ZooHub'));
 const PoriferaPhylum1 = lazy(() => import('./components/zoohub/porifera/Phylum1'));
 const CoelenterataPhylum2 = lazy(() => import('./components/zoohub/coelenterata/Phylum2'));
 const CtenophoraPhylum3 = lazy(() => import('./components/zoohub/ctenophora/Phylum3'));
-const PlatyhelminthesPhylum4 = lazy(() => import('./components/zoohub/Plathyhelminthes/Phylum4'));
+const PlatyhelminthesPhylum4 = lazy(() => import('./components/zoohub/platyhelminthes/Phylum4'));
 const AschelminthesPhylum5 = lazy(() => import('./components/zoohub/aschelminthes/Phylum5'));
 const AnnelidaPhylum6 = lazy(() => import('./components/zoohub/annelida/Phylum6'));
 const ArthropodaPhylum7 = lazy(() => import('./components/zoohub/arthropoda/Phylum7'));
