@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { Search, X, ArrowRight, Dna, Bug, Fish, Bird, Leaf, BookOpen } from 'lucide-react';
 import './SearchBar.css';
 
@@ -34,12 +34,20 @@ const typeLabels = {
 
 const SearchBar = ({ onClose, isOpen }) => {
     const navigate = useNavigate();
+    const location = useLocation();
     const [query, setQuery] = useState('');
     const [results, setResults] = useState([]);
     const [selectedIndex, setSelectedIndex] = useState(0);
     const [isLoading, setIsLoading] = useState(false);
     const inputRef = useRef(null);
     const resultsRef = useRef(null);
+
+    // Auto-close search bar on route change
+    useEffect(() => {
+        if (isOpen) {
+            onClose?.();
+        }
+    }, [location.pathname]);
 
     // Build Search Index
     const searchIndex = useMemo(() => {
@@ -307,7 +315,9 @@ const SearchBar = ({ onClose, isOpen }) => {
                             <X size={18} />
                         </button>
                     )}
-                    <kbd className="sb-kbd">ESC</kbd>
+                    <button className="sb-close-btn" onClick={onClose} aria-label="Close search">
+                        <X size={20} />
+                    </button>
                 </div>
 
                 {/* Results */}
@@ -356,16 +366,16 @@ const SearchBar = ({ onClose, isOpen }) => {
                     <div className="sb-suggestions">
                         <div className="sb-suggestions-header">Quick Links</div>
                         <div className="sb-suggestions-grid">
-                            <button className="sb-suggestion" onClick={() => navigate('/zoohub')}>
+                            <button className="sb-suggestion" onClick={() => { navigate('/zoohub'); onClose?.(); }}>
                                 🦎 ZooHub
                             </button>
-                            <button className="sb-suggestion" onClick={() => navigate('/zoohub/chordata')}>
+                            <button className="sb-suggestion" onClick={() => { navigate('/zoohub/chordata'); onClose?.(); }}>
                                 🦴 Chordata
                             </button>
-                            <button className="sb-suggestion" onClick={() => navigate('/zoohub/arthropoda')}>
+                            <button className="sb-suggestion" onClick={() => { navigate('/zoohub/arthropoda'); onClose?.(); }}>
                                 🦂 Arthropoda
                             </button>
-                            <button className="sb-suggestion" onClick={() => navigate('/living-world')}>
+                            <button className="sb-suggestion" onClick={() => { navigate('/living-world'); onClose?.(); }}>
                                 🌍 Living World
                             </button>
                         </div>
