@@ -41,13 +41,15 @@ const SearchBar = ({ onClose, isOpen }) => {
     const [isLoading, setIsLoading] = useState(false);
     const inputRef = useRef(null);
     const resultsRef = useRef(null);
+    const onCloseRef = useRef(onClose);
+    onCloseRef.current = onClose;
 
     // Auto-close search bar on route change
     useEffect(() => {
         if (isOpen) {
-            onClose?.();
+            onCloseRef.current?.();
         }
-    }, [location.pathname]);
+    }, [location.pathname, isOpen]);
 
     // Build Search Index
     const searchIndex = useMemo(() => {

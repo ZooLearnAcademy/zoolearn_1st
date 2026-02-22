@@ -17,7 +17,7 @@ function Footer() {
           </div>
 
           <p className="foo-zl-tagline">
-            Empowering students and NEET aspirants with interactive zoology education. 
+            Empowering students and NEET aspirants with interactive zoology education.
             Master biology through visual taxonomy and structured learning paths.
           </p>
         </div>
@@ -49,10 +49,10 @@ function Footer() {
                 <Link to="/about">About Us</Link>
               </li>
               <li>
-                <Link to="/contact">Contact</Link>
+                <a href="mailto:academy.zoolearn@gmail.com">Contact</a>
               </li>
               <li>
-                <Link to="/support">Support</Link>
+                <a href="mailto:academy.zoolearn@gmail.com">Support</a>
               </li>
             </ul>
           </div>
@@ -62,13 +62,13 @@ function Footer() {
             <h3>Legal</h3>
             <ul>
               <li>
-                <Link to="/legal#privacy-policy">Privacy Policy</Link>
+                <Link to="/about">Privacy Policy</Link>
               </li>
               <li>
-                <Link to="/legal#terms-of-services">Terms of Service</Link>
+                <Link to="/about">Terms of Service</Link>
               </li>
               <li>
-                <Link to="/legal#cookie-policy">Cookie Policy</Link>
+                <Link to="/about">Cookie Policy</Link>
               </li>
             </ul>
           </div>
