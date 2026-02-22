@@ -118,3 +118,5 @@ dist
 
 # Vite
 .vite/
+.vercel
+.env*.local
