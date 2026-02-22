@@ -5,7 +5,7 @@ import './ZooHub.css';
 
 // Components
 import Porifera from "./porifera/Porifera";
-import Platyhelminthes from "./Plathyhelminthes/Platyhelminthes";
+import Platyhelminthes from "./platyhelminthes/Platyhelminthes";
 import Coelenterata from "./coelenterata/Coelenterata";
 import Ctenophora from "./ctenophora/Ctenophora";
 import Aschelminthes from "./aschelminthes/Aschelminthes";

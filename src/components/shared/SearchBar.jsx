@@ -7,7 +7,7 @@ import './SearchBar.css';
 import poriferaData from '../zoohub/porifera/Phylum1Data.json';
 import coelenterataData from '../zoohub/coelenterata/Phylum2Data.json';
 import ctenophoraData from '../zoohub/ctenophora/Phylum3Data.json';
-import platyhelminthesData from '../zoohub/Plathyhelminthes/Phylum4Data.json';
+import platyhelminthesData from '../zoohub/platyhelminthes/Phylum4Data.json';
 import aschelminthesData from '../zoohub/aschelminthes/Phylum5Data.json';
 import annelidaData from '../zoohub/annelida/Phylum6Data.json';
 import arthropodaData from '../zoohub/arthropoda/Phylum7Data.json';

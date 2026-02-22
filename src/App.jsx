@@ -15,15 +15,15 @@ const Tree = lazy(() => import('./components/taxonomytree/tree'));
 const About = lazy(() => import('./components/company/about/about'));
 const TheLivingWorld = lazy(() => import('./components/home/concept/thelivingworld/TheLivingWorld'));
 const BasicFeatures = lazy(() => import('./components/home/concept/BasicFeatures/BasicFeatures'));
-const Patterns = lazy(() => import('./components/home/concept/pattern/Patterns'));
+const Patterns = lazy(() => import('./components/home/concept/Patterns/Patterns'));
 // const KingdomAnimalia = lazy(() => import('./components/home/concept/KingdomAnimalia/KingdomAnimalia'));
 const ZoologyImmersive = lazy(() => import('./components/showcase/ZoologyImmersive'));
 const Leech = lazy(() => import('./components/home/Organisms/leech/LeechLayout'));
 const Rabbit = lazy(() => import('./components/home/Organisms/rabbit/Rabbit'));
 const HoneyBee = lazy(() => import('./components/home/Organisms/honeybee/HoneyBee'));
 const Cockroach = lazy(() => import('./components/home/Organisms/cockroach/Cockroachcontent'));
-const CareerPath = lazy(() => import('./components/career path/CareerPath'));
-const CareerCategory = lazy(() => import('./components/career path/CareerCategory'));
+const CareerPath = lazy(() => import('./components/career-path/CareerPath'));
+const CareerCategory = lazy(() => import('./components/career-path/CareerCategory'));
 
 
 // ZooHub Main
