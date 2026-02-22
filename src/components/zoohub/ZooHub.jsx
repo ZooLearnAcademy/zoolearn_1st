@@ -399,13 +399,13 @@ function ZooHub() {
         </section>
       </ScrollReveal>
 
-      <ScrollReveal animation="fade-up" duration={600}>
+      <ScrollReveal animation="fade-up" duration={600} rootMargin="0px" threshold={0.05}>
         <section ref={refs.hemichordata}>
           <Hemichordata />
         </section>
       </ScrollReveal>
 
-      <ScrollReveal animation="fade-up" duration={600}>
+      <ScrollReveal animation="fade-up" duration={600} rootMargin="0px" threshold={0.05}>
         <section ref={refs.chordata}>
           <Chordata />
         </section>
