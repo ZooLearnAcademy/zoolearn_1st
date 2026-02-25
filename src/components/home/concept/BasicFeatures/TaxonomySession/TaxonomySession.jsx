@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import AnimaliaFlow from "./tree/animaliaFlow"; 
+import AnimaliaFlow from "./tree/AnimaliaFlow"; 
 import "./TaxonomySession.css";
 
 const TaxonomySession = () => {
