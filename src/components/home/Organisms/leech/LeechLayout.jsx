@@ -4,7 +4,7 @@ import {
   Tag, Bug, Search, Ruler, Layers, Footprints,
   Droplets, Wind, HeartPulse, Brain, Trash2, Dna, Syringe
 } from 'lucide-react';
-import "./Leech.css";
+import "./leech.css";
 import "./sections/sections-responsive.css";
 
 // Import Sections
