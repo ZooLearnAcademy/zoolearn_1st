@@ -1,4 +1,4 @@
-import { Handle, Position } from "@xyflow/react";
+import { Handle, Position } from "reactflow";
 
 type CustomNodeData = {
   label: string;
@@ -33,13 +33,22 @@ export default function CustomNode({ data }: { data: CustomNodeData }) {
 
         transition: "all 0.3s ease",
         userSelect: "none",
+        border: "1px solid rgba(255,255,255,0.1)",
       }}
     >
       {data.label}
 
       {/* Connection Handles */}
-      <Handle type="target" position={Position.Top} />
-      <Handle type="source" position={Position.Bottom} />
+      <Handle
+        type="target"
+        position={Position.Top}
+        style={{ background: "#ffffff", width: 6, height: 6, opacity: 0.8 }}
+      />
+      <Handle
+        type="source"
+        position={Position.Bottom}
+        style={{ background: "#ffffff", width: 6, height: 6, opacity: 0.8 }}
+      />
     </div>
   );
 }
