@@ -49,7 +49,7 @@ const SearchBar = ({ onClose, isOpen }) => {
         if (isOpen) {
             onCloseRef.current?.();
         }
-    }, [location.pathname, isOpen]);
+    }, [location.pathname]); // Removed isOpen from dependencies to prevent immediate close when opening
 
     // Build Search Index
     const searchIndex = useMemo(() => {
