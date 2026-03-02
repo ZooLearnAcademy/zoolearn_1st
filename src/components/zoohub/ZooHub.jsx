@@ -399,6 +399,7 @@ function ZooHub() {
 
   // Track if sticky bar should be visible
   const [isSticky, setIsSticky] = useState(false);
+  const [stickyTop, setStickyTop] = useState(72);
   const bannerRef = useRef(null);
 
 
@@ -422,20 +423,30 @@ function ZooHub() {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
   const [isSearching, setIsSearching] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 900);
 
 
 
-  // Track scroll to make sticky bar appear after banner
+  // Track scroll to make sticky bar appear after banner & stay attached to header
   useEffect(() => {
     const handleScroll = () => {
+      // Use the header's actual bottom position — this naturally handles:
+      // - Header at full height (72px)
+      // - Header shrunk on scroll (60px)
+      // - Header hidden on mobile (bottom = 0 or negative)
+      const headerEl = document.querySelector('.hea-header');
+      const headerBottom = headerEl ? Math.max(0, headerEl.getBoundingClientRect().bottom) : 72;
+      setStickyTop(headerBottom);
+
       if (bannerRef.current) {
         const bannerBottom = bannerRef.current.getBoundingClientRect().bottom;
-        // When banner scrolls above viewport, show sticky bar
-        setIsSticky(bannerBottom <= 100);
+        setIsSticky(bannerBottom <= headerBottom);
       }
+
+      setIsMobile(window.innerWidth <= 900);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -555,8 +566,10 @@ function ZooHub() {
         </div>
       </div>
 
-      {/* 🔍 STICKY NAV + SEARCH */}
-      <div className={`zoohub-sticky-bar ${isSticky ? 'is-sticky' : ''}`}>
+      <div
+        className={`zoohub-sticky-bar ${isSticky ? 'is-sticky' : ''}`}
+        style={isSticky ? { top: `${stickyTop}px` } : undefined}
+      >
         {/* Class Navigation */}
         <div className="class-navbar">
           <div className="class-scroll">
@@ -575,7 +588,7 @@ function ZooHub() {
               <span className="search-icon-text">🔍</span>
               <input
                 type="text"
-                placeholder="Search species or phylum (e.g., hydra, chordata, octopus...)"
+                placeholder={isMobile ? "Search species..." : "Search species or phylum (e.g., hydra, chordata, octopus...)"}
                 value={query}
                 onChange={handleSearchChange}
                 onKeyDown={handleKeyDown}
