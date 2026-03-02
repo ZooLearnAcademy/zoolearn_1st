@@ -1,4 +1,4 @@
-import{r as y,j as e}from"./index-C0IeoqRL.js";const m=[{id:"monera",title:"Kingdom Monera",label:"BACTERIA",color:"#A8DADC",icon:"https://res.cloudinary.com/duibfmcw1/image/upload/v1767847552/bacteria_k8yvy1.png",short:"Prokaryotic, unicellular organisms",details:`
+import{r as y,j as e}from"./index-CbkBKfAY.js";const m=[{id:"monera",title:"Kingdom Monera",label:"BACTERIA",color:"#A8DADC",icon:"https://res.cloudinary.com/duibfmcw1/image/upload/v1767847552/bacteria_k8yvy1.png",short:"Prokaryotic, unicellular organisms",details:`
 • Prokaryotic cells
 • No true nucleus
 • Binary fission
