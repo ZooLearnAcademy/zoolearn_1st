@@ -3,7 +3,7 @@ import { Menu, X, ChevronLeft, ChevronRight, ArrowUp } from 'lucide-react';
 import './Cockroachcontent.css';
 
 // ------------------------------------------------------------
-// CONTENT DATA
+// CONTENT DATA – exactly matching the Word document
 // ------------------------------------------------------------
 const cockroachContent = {
   general: {
@@ -63,6 +63,12 @@ const cockroachContent = {
           "It is enclosed within a head capsule.",
           "The head is attached to the thorax by a flexible neck, allowing free movement."
         ]
+      },
+      // ---------- added missing "Sense Organs" heading ----------
+      {
+        heading: "Sense Organs",
+        isSubtopic: true,
+        content: []  // just a heading, no bullet points
       },
       {
         heading: "Antennae",
@@ -152,7 +158,8 @@ const cockroachContent = {
         isSubSubtopic: true,
         content: [
           "Repugnatorial glands are present between abdominal segments.",
-          "They produce a foul‑smelling secretion for defence."
+          "They produce a foul‑smelling secretion.",
+          "This secretion helps in defence."
         ]
       }
     ]
@@ -307,7 +314,7 @@ const cockroachContent = {
           "The body cavity (haemocoel) is divided into three sinuses:",
           "  1. Pericardial sinus (dorsal) – contains the heart and aorta",
           "  2. Perivisceral sinus (middle) – contains the digestive organs",
-          "  3. Perineural sinus (ventral)"
+          "  3. Perineural sinus (ventral) – contains the ventral nerve cord"
         ],
         image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1771507996/Circulation_system_fye7ui.jpg",
         imageCaption: "Body sinuses"
@@ -356,7 +363,8 @@ const cockroachContent = {
         heading: "Mechanism of Excretion",
         isSubtopic: true,
         content: [
-          "The main nitrogenous waste is uric acid – cockroach is uricotelic.",
+          "The main nitrogenous waste is uric acid.",
+          "Therefore, cockroach is uricotelic.",
           "Uric acid passes from the haemolymph into the Malpighian tubules.",
           "It is then released into the hindgut.",
           "In the hindgut, water is reabsorbed, forming dry excreta.",
@@ -459,7 +467,8 @@ const cockroachContent = {
         heading: "Testes",
         isSubtopic: true,
         content: [
-          "A pair of testes is present; each testis is elongated and lobed.",
+          "A pair of testes is present.",
+          "Each testis is elongated and lobed.",
           "Their main function is the production of sperms."
         ]
       },
@@ -493,8 +502,12 @@ const cockroachContent = {
         isSubtopic: true,
         content: [
           "Located at the junction of the vasa deferentia and ejaculatory duct.",
-          "It consists of utricular majores and utricular breviore.",
-          "Secretes a fluid that nourishes sperms and helps in the formation of the spermatophore."
+          "It consists of:",
+          "  - Utriculi majores",
+          "  - Utriculi breviores",
+          "Secretes a fluid that:",
+          "  - Nourishes sperms",
+          "  - Helps in the formation of the spermatophore."
         ]
       },
       {
@@ -511,15 +524,16 @@ const cockroachContent = {
         isSubtopic: true,
         content: [
           "The genital pouch is bounded dorsally by the 9th and 10th terga, ventrally by the 9th sternum.",
-          "It contains the anus, male genital pore, and male genital structures.",
-          "Plays an important role in copulation and sperm transfer."
+          "It contains: anus, male genital pore, and male genital structures.",
+          "It plays an important role in copulation and sperm transfer."
         ]
       },
       {
         heading: "External Genitalia",
         isSubtopic: true,
         content: [
-          "Around the male genital pore, there are three hard, chitinous plates called phallomeres.",
+          "Around the male genital pore, there are three hard, chitinous plates.",
+          "These plates are called phallomeres.",
           "Together, the phallomeres form the phallic organs (gonapophyses).",
           "Their main function is to assist in copulation."
         ]
@@ -550,7 +564,9 @@ const cockroachContent = {
           "A pair of ovaries is present in the 2nd to 6th abdominal segments.",
           "Each ovary is made up of eight ovarian tubules called ovarioles.",
           "Each ovariole is blind at one end.",
-          "Ova are arranged in acroptal order: youngest eggs at the tip, oldest eggs near the base."
+          "Ova are arranged in acropetal order, meaning:",
+          "  - Youngest eggs are present at the tip",
+          "  - Oldest eggs are present near the base"
         ]
       },
       {
@@ -619,7 +635,7 @@ const cockroachContent = {
 };
 
 // ------------------------------------------------------------
-// MAIN COMPONENT – Rabbit-style layout
+// MAIN COMPONENT – Rabbit-style layout (unchanged)
 // ------------------------------------------------------------
 const Cockroach = () => {
   const [activeTab, setActiveTab] = useState('general');

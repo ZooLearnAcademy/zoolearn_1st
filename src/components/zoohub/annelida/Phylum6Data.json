@@ -1,9 +1,9 @@
 {
-  "neanthes": {
+  "nereis": {
     "id": 1,
-    "slug": "neanthes",
-    "name": "Neanthes",
-    "scientificName": "Sand worm",
+    "slug": "nereis",
+    "name": "Nereis",
+    "scientificName": "Rag worm",
     "description": "Neanthes is a free-living marine annelid.\nBody is segmented with parapodia.\nPredatory polychaete worm.",
     "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1768984042/Neanthes_bsotgt.png",
     "3d": "",

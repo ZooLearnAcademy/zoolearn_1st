@@ -5,11 +5,11 @@
     "species": [
       {
         "id": 1,
-        "slug": "neanthes",
-        "name": "Neanthes",
-        "scientificName": "Sand worm",
+        "slug": "nereis",
+        "name": "Nereis",
+        "scientificName": "Rag worm",
         "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1768984042/Neanthes_bsotgt.png",
-        "path": "/zoohub/annelida/neanthes"
+        "path": "/zoohub/annelida/nereis"
       },
       {
         "id": 2,
