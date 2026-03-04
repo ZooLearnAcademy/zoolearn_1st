@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;700;800&display=swap');
+
+.zoolearn-section {
+  background-color: #F4F1EC; /* Slightly deepened for better contrast with cards */
+  background-image: radial-gradient(#E8E3DA 1px, transparent 1px);
+  background-size: 32px 32px; /* Subtle dot matrix for a structural/scientific feel */
+  color: #2C2A28;
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  padding: 100px 20px;
+  overflow-x: hidden;
+}
+
+/* Header Styling */
+.zoolearn-header {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.zoolearn-domain {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 0.8rem;
+  color: #8C7B6B;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.zoolearn-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 700;
+  margin: 0 0 16px 0;
+  color: #1A1918;
+  letter-spacing: -1px;
+}
+
+.zoolearn-subtitle {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #6D665E;
+  margin: 0;
+}
+
+/* Timeline Layout */
+.timeline-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: rgba(140, 123, 107, 0.2); 
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.timeline-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #D4AF37 0%, #8C7B6B 100%); /* Premium gold/earthy gradient */
+}
+
+.timeline-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Changed to center for better vertical balance */
+  position: relative;
+  width: 100%;
+  margin-bottom: 150px;
+}
+
+.timeline-pane {
+  width: 42%; /* Slightly reduced to give the center line more breathing room */
+}
+
+/* Alignment Classes */
+.content-group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.align-right {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.align-left {
+  align-items: flex-start;
+  text-align: left;
+}
+
+/* Central Marker */
+.timeline-marker {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #F4F1EC; 
+  background-color: #2C2A28; 
+  padding: 10px 24px;
+  border-radius: 40px; 
+  z-index: 2;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border: 2px solid #D4AF37; /* Premium accent border */
+}
+
+/* Typography & Imagery */
+.phylum-name {
+  font-family: 'Libre Baskerville', serif; /* Matched to header for consistency */
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+  color: #171A21;
+  line-height: 1.2;
+}
+
+/* New Glass Card for Text */
+.glass-card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+.phylum-desc {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #4A453F;
+  margin: 0;
+  white-space: pre-line; 
+}
+
+/* Enhanced Image Wrapper */
+.phylum-image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  margin-top: 10px;
+  perspective: 1000px;
+}
+
+.image-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
+  z-index: 0;
+  border-radius: 50%;
+  filter: blur(20px);
+}
+
+.phylum-image-wrapper img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.6s ease;
+}
+
+/* Hover Animation */
+.content-group:hover .phylum-image-wrapper img {
+  transform: translateY(-12px) scale(1.05) rotateY(5deg); 
+  filter: drop-shadow(0 25px 25px rgba(0, 0, 0, 0.2));
+}
+
+/* Responsive Layout */
+@media (max-width: 900px) {
+  .timeline-line {
+    left: 40px; 
+  }
+  
+  .timeline-marker {
+    left: 40px;
+    font-size: 0.85rem;
+    padding: 8px 16px;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+    padding-left: 90px;
+    margin-bottom: 100px;
+    align-items: flex-start;
+  }
+
+  .timeline-pane {
+    width: 100%;
+  }
+  
+  .content-group.align-right,
+  .content-group.align-left {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .glass-card {
+    padding: 20px;
+  }
+
+  .pane-left {
+    order: 1;
+  }
+  .pane-right {
+    order: 2;
+  }
+}

@@ -16,7 +16,7 @@ const About = lazy(() => import('./components/company/about/about'));
 const TheLivingWorld = lazy(() => import('./components/home/concept/thelivingworld/TheLivingWorld'));
 const BasicFeatures = lazy(() => import('./components/home/concept/BasicFeatures/BasicFeatures'));
 const Patterns = lazy(() => import('./components/home/concept/Patterns/Patterns'));
-// const KingdomAnimalia = lazy(() => import('./components/home/concept/KingdomAnimalia/KingdomAnimalia'));
+const KingdomAnimalia = lazy(() => import('./components/home/concept/KingdomofAnimalia/KingdomofAnimalia'));
 const ZoologyImmersive = lazy(() => import('./components/showcase/ZoologyImmersive'));
 const Leech = lazy(() => import('./components/home/Organisms/leech/LeechLayout'));
 const Rabbit = lazy(() => import('./components/home/Organisms/rabbit/Rabbit'));
@@ -66,7 +66,7 @@ function App() {
               <Route path="/living-world" element={<TheLivingWorld />} />
               <Route path="/basic-features-of-classification" element={<BasicFeatures />} />
               <Route path="/anatomy" element={<Patterns />} />
-              {/* <Route path="/kingdom-animalia" element={<KingdomAnimalia />} /> */}
+              <Route path="/kingdom-animalia" element={<KingdomAnimalia />} />
               <Route path="/leech" element={<Leech />} />
               <Route path="/rabbit" element={<Rabbit />} />
               <Route path="/honeybee" element={<HoneyBee />} />

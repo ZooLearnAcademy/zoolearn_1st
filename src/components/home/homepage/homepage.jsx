@@ -34,11 +34,11 @@ const Homepage = () => {
       route: "/anatomy",
     },
     {
-      title: "Kingdom of Animalia (Under Development)",
+      title: "Kingdom of Animalia",
       description:
-        "This module is currently under development. Stay tuned for updates!",
+        "",
       icon: "https://res.cloudinary.com/duibfmcw1/image/upload/v1767780954/005-wild-animals_gikq7m.png",
-      route: null,
+      route: "/kingdom-animalia",
     },
     {
       title: "Evolution",
