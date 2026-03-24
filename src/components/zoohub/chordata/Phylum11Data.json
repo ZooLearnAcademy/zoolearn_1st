@@ -6156,7 +6156,7 @@
     "name": "Hyracotherium",
     "scientificName": "Eohippus (Dawn horse)",
     "description": "Hyracotherium is the earliest known horse ancestor. It was small and forest-dwelling. Had multiple toes.",
-    "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1771228545/Hyracotherium_%EF%B8%8E_mi78ms.png",
+    "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1774340466/Hyracotherium_%EF%B8%8E_mi78ms.png",
     "3d": "https://sketchfab.com/3d-models/eohippus-309c5b3b450743088521ee8a5663ae75/embed",
     "introduction": [
       "Lived during the Eocene epoch (~55 million years ago).",
@@ -6214,7 +6214,7 @@
     "name": "Orohippus",
     "scientificName": "Early Eocene horse",
     "description": "Orohippus evolved from Hyracotherium. Slightly larger body. Adapted for faster running.",
-    "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1771228644/Orohippus_%EF%B8%8E_moxn95.png",
+    "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1774340398/Orohippus_%EF%B8%8E_moxn95.png",
     "3d": "",
     "introduction": [
       "Lived in the Eocene epoch.",
@@ -6271,7 +6271,7 @@
     "name": "Mesohippus",
     "scientificName": "Middle horse",
     "description": "Mesohippus was larger and faster. Had three toes on each foot. Adapted to open woodlands.",
-    "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1771228636/Mesohippus_%EF%B8%8E_hld5dm.png",
+    "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1774340493/Mesohippus_%EF%B8%8E_hld5dm.png",
     "3d": "https://sketchfab.com/3d-models/mesohippus-edaba9891512461c9e95437dd81181e7/embed",
     "introduction": [
       "Lived in Oligocene epoch.",
@@ -6328,7 +6328,7 @@
     "name": "Miohippus",
     "scientificName": "Advanced Mesohippus",
     "description": "Miohippus was larger than Mesohippus. Improved teeth for grazing. More adapted to grasslands.",
-    "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1771228640/Miohippus_%EF%B8%8E_cq5med.png",
+    "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1774340521/Miohippus_%EF%B8%8E_cq5med.png",
     "3d": "",
     "introduction": [
       "Lived during late Oligocene.",
@@ -6384,7 +6384,7 @@
     "name": "Parahippus",
     "scientificName": "Early grazing horse",
     "description": "Parahippus was a Miocene horse ancestor. It showed clear adaptation toward grazing. Represents transition from forest browser to grassland grazer.",
-    "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1771228686/Parahippus_%EF%B8%8E_vcq6jw.png",
+    "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1774340564/Parahippus_%EF%B8%8E_vcq6jw.png",
     "3d": "",
     "introduction": [
       "Parahippus lived during the early Miocene epoch (~24–17 million years ago).",
@@ -6443,7 +6443,7 @@
     "name": "Merychippus",
     "scientificName": "True grazing horse",
     "description": "Merychippus was a major evolutionary stage in horse history. It had advanced grazing teeth. Represents radiation of grazing horses.",
-    "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1771228618/Merychippus_%EF%B8%8E_ry9izt.png",
+    "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1774340595/Merychippus_%EF%B8%8E_ry9izt.png",
     "3d": "",
     "introduction": [
       "Merychippus lived during the Miocene epoch (~17–11 million years ago).",
@@ -6502,7 +6502,7 @@
     "name": "Pliohippus",
     "scientificName": "Single-toed horse",
     "description": "Pliohippus closely resembled the modern horse. It had a single functional toe. Considered near ancestor of Equus.",
-    "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1771228714/Pliohippus_%EF%B8%8E_u0clzq.png",
+    "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1774341033/Pliohippus_%EF%B8%8E_u0clzq.png",
     "3d": "",
     "introduction": [
       "Pliohippus lived during the late Miocene (~12–6 million years ago).",
@@ -6561,7 +6561,7 @@
     "name": "Callippus",
     "scientificName": "Slender grazing horse",
     "description": "Callippus was a slender Miocene horse. It specialized in grassland habitats. Represents side branch of horse evolution.",
-    "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1771226488/Callippus_%EF%B8%8E_rz4br6.png",
+    "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1774340615/Callippus_%EF%B8%8E_rz4br6.png",
     "3d": "",
     "introduction": [
       "Callippus lived during the Miocene epoch.",
@@ -6620,7 +6620,7 @@
     "name": "Equus ferus",
     "scientificName": "horse",
     "description": "Large grazing mammal. Single-toed hoof. Fast runner.",
-    "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1771228322/Equus_ferus_vk3fio.png",
+    "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1774341098/Equus_ferus_vk3fio.png",
     "3d": "https://sketchfab.com/3d-models/horse-spanish-mustang-dun-15e0faf8e6c44dfea3f462d0ea2de2a2/embed",
     "introduction": [
       "Lives in grasslands.",
