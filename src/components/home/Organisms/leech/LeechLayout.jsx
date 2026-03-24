@@ -11,7 +11,6 @@ import "./sections/sections-responsive.css";
 import Taxonomy from "./sections/Taxonomy";
 import ExternalMorphology from "./sections/ExternalMorphology";
 import BodyWall from "./sections/BodyWall";
-import BodyDivisions from "./sections/BodyDivisions";
 import Locomotion from "./sections/Locomotion";
 import DigestiveSystem from "./sections/DigestiveSystem";
 import RespiratorySystem from "./sections/RespiratorySystem";
@@ -35,7 +34,6 @@ export default function LeechLayout() {
     { id: 'taxonomy', label: 'Taxonomy', icon: <Tag size={18} />, component: <Taxonomy /> },
     { id: 'morphology', label: 'External Morphology', icon: <Bug size={18} />, component: <ExternalMorphology /> },
     { id: 'anatomy', label: 'Interactive Anatomy', icon: <Search size={18} />, component: <LeechAnatomyInteractive /> },
-    { id: 'divisions', label: 'Body Divisions', icon: <Ruler size={18} />, component: <BodyDivisions /> },
     { id: 'bodywall', label: 'Body Wall', icon: <Layers size={18} />, component: <BodyWall /> },
     { id: 'locomotion', label: 'Locomotion', icon: <Footprints size={18} />, component: <Locomotion /> },
     { id: 'digestive', label: 'Digestive System', icon: <Droplets size={18} />, component: <DigestiveSystem /> },

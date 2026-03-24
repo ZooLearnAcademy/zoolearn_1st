@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./LeechAnotomyInteractive.css";
+import BodyDivisions from "./BodyDivisions";
 
 // Image URL
 const LEECH_IMAGE_URL =
@@ -84,7 +85,8 @@ export default function LeechAnatomyInteractive() {
   };
 
   return (
-    <div className="leech-anatomy-container"  id="interactive-anatomy">
+    <>
+      <div className="leech-anatomy-container"  id="interactive-anatomy">
       <header className="leech-header-section">
         <div className="leech-badge">Interactive Anatomy</div>
         <h2>Ventral View (33 Segments)</h2>
@@ -190,5 +192,7 @@ export default function LeechAnatomyInteractive() {
         </aside>
       </div>
     </div>
+      <BodyDivisions />
+    </>
   );
 }
