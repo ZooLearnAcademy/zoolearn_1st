@@ -11,7 +11,7 @@
   background-position: center;
   background-repeat: no-repeat;
   color: #e2e8f0;
-  overflow: hidden;
+  overflow: visible;
   position: relative;
   border-top: 4px solid #2F7433;
 }
