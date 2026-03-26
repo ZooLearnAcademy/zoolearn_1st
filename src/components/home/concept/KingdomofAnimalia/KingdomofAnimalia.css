@@ -1,0 +1,524 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+/* ==========================================
+   ZOOLEARN THEME VARIABLES
+   ========================================== */
+.w3-layout-wrapper {
+  --zl-primary: #15803d;
+  --zl-primary-light: #f0fdf4;
+  --zl-primary-dark: #166534;
+  --zl-primary-hover: #16a34a;
+  --zl-accent: #04AA6D;
+  --zl-text-main: #1f2937;
+  --zl-text-secondary: #4b5563;
+  --zl-text-muted: #9ca3af;
+  --zl-border: #e2e8f0;
+  --zl-shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+  --zl-shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+  --zl-shadow-lg: 0 10px 30px rgba(0,0,0,0.10);
+  --zl-radius: 12px;
+  --zl-transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --zl-sidebar-width: 265px;
+  --zl-header-top: 70px;
+
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--zl-text-main);
+  background-color: #ffffff;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.w3-layout-wrapper * {
+  box-sizing: border-box;
+}
+
+.w3-main-container {
+  display: block;
+  width: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+  min-height: 100vh;
+}
+
+/* ==========================================
+   SIDEBAR — Zoolearn Glassmorphism Style
+   ========================================== */
+.w3-sidebar {
+  width: var(--zl-sidebar-width);
+  position: fixed !important;
+  left: 0;
+  top: var(--zl-header-top);
+  bottom: 0;
+  overflow-y: auto;
+  z-index: 1000;
+  display: flex !important;
+  flex-direction: column;
+  opacity: 1 !important;
+  visibility: visible !important;
+
+  /* Glassmorphism panel */
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-right: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 4px 0 28px rgba(21, 128, 61, 0.06);
+
+  scrollbar-width: thin;
+  scrollbar-color: #dcfce7 transparent;
+}
+
+.w3-sidebar::-webkit-scrollbar {
+  width: 4px;
+}
+.w3-sidebar::-webkit-scrollbar-track { background: transparent; }
+.w3-sidebar::-webkit-scrollbar-thumb {
+  background: #bbf7d0;
+  border-radius: 10px;
+}
+
+/* ---- Sidebar Header ---- */
+.w3-sidebar-header {
+  padding: 1.4rem 1.25rem 1.1rem;
+  border-bottom: 1px solid var(--zl-border);
+  background: linear-gradient(135deg, var(--zl-primary-light) 0%, #fff 100%);
+  flex-shrink: 0;
+}
+
+.w3-sidebar-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--zl-primary-dark);
+  margin: 0 0 4px 0;
+  letter-spacing: -0.01em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.w3-sidebar-title::before {
+  content: '🌿';
+  font-size: 1rem;
+}
+
+.w3-sidebar-subtitle {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--zl-primary);
+  margin: 0;
+}
+
+/* ---- Progress Bar ---- */
+.w3-sidebar-progress {
+  padding: 0.85rem 1.25rem;
+  border-bottom: 1px solid var(--zl-border);
+  background: #fafffe;
+  flex-shrink: 0;
+}
+
+.w3-progress-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--zl-text-muted);
+  margin-bottom: 6px;
+}
+
+.w3-progress-track {
+  height: 5px;
+  background: #e2e8f0;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.w3-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--zl-primary-light), var(--zl-primary));
+  border-radius: 10px;
+  transition: width 0.5s var(--zl-transition);
+}
+
+.w3-progress-text {
+  font-size: 0.7rem;
+  color: var(--zl-text-muted);
+  text-align: right;
+}
+
+/* ---- Nav List ---- */
+.w3-sidebar-list {
+  list-style: none;
+  padding: 0.65rem 0.65rem;
+  margin: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.w3-sidebar-btn {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  border-radius: var(--zl-radius);
+  padding: 9px 14px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--zl-text-secondary);
+  font-family: 'Inter', inherit;
+  transition: background var(--zl-transition), color var(--zl-transition), transform 0.15s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-left: 3px solid transparent;
+}
+
+.w3-sidebar-btn:hover {
+  background: var(--zl-primary-light);
+  color: var(--zl-primary-dark);
+  transform: translateX(2px);
+}
+
+/* Active State */
+.w3-active-side {
+  background: linear-gradient(90deg, #dcfce7 0%, #f0fdf4 100%) !important;
+  color: var(--zl-primary-dark) !important;
+  border-left-color: var(--zl-primary) !important;
+  font-weight: 700 !important;
+}
+
+/* Colored dot per phylum */
+.w3-sidebar-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+/* ==========================================
+   MAIN CONTENT AREA
+   ========================================== */
+.w3-content {
+  margin-left: var(--zl-sidebar-width) !important;
+  width: calc(100% - var(--zl-sidebar-width));
+  padding: 0; /* Remove inner padding for edge-to-edge look */
+  background: transparent; /* No inner white box */
+  min-height: 100vh;
+}
+
+.w3-page-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--zl-text-main);
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+/* ---- Timeline Custom Header ---- */
+.timeline-header-section {
+  text-align: center;
+  padding: 6rem 0 0; /* Increase top padding for the elegant look */
+  background-color: #f3f0e9; /* Match Timeline background precisely */
+  border-radius: 0;
+  margin-bottom: 0px !important;
+}
+
+.timeline-site-tag {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  color: #999; /* Subtle grey in reference */
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  font-family: 'Inter', sans-serif;
+}
+
+.timeline-main-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem; /* Large and elegant como in reference */
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 15px 0;
+  letter-spacing: -0.01em;
+}
+
+.timeline-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #666;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+/* ---- Pagination ---- */
+.w3-pagination-top,
+.w3-pagination-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.w3-pagination-bottom {
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+
+.w3-btn-nav {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #fff;
+  color: var(--zl-primary-dark);
+  border: 1.5px solid var(--zl-border);
+  padding: 9px 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: 'Inter', inherit;
+  border-radius: var(--zl-radius);
+  cursor: pointer;
+  box-shadow: var(--zl-shadow-sm);
+  transition: all var(--zl-transition);
+}
+
+.w3-btn-nav:hover {
+  background: var(--zl-primary);
+  color: #fff;
+  border-color: var(--zl-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(21, 128, 61, 0.25);
+}
+
+/* ---- Green Highlight Card ---- */
+.w3-green-box {
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  border: 1px solid #bbf7d0;
+  border-radius: 20px;
+  padding: 2rem 2.25rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 20px rgba(21, 128, 61, 0.06);
+}
+
+.w3-green-box h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--zl-primary-dark);
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
+}
+
+.w3-green-box p {
+  font-size: 0.98rem;
+  line-height: 1.75;
+  color: var(--zl-text-secondary);
+  margin-bottom: 0.75rem;
+}
+
+.w3-btn-start {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--zl-primary);
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: 'Inter', inherit;
+  border-radius: var(--zl-radius);
+  cursor: pointer;
+  margin-top: 0.75rem;
+  box-shadow: 0 6px 20px rgba(21, 128, 61, 0.3);
+  transition: all var(--zl-transition);
+}
+
+.w3-btn-start:hover {
+  background: var(--zl-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(21, 128, 61, 0.35);
+}
+
+/* ---- Divider ---- */
+.w3-divider {
+  border: 0;
+  border-top: 1px solid var(--zl-border);
+  margin: 2rem 0;
+}
+
+/* ---- Phylum Details ---- */
+.w3-phylum-details {
+  background: transparent;
+  border-radius: 0;
+  border: none;
+  padding: 2rem 0;
+  box-shadow: none;
+}
+
+.w3-phylum-details h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--zl-text-main);
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+.w3-content-split {
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
+}
+
+.w3-text-content {
+  flex: 1;
+  font-size: 0.97rem;
+  line-height: 1.8;
+  color: var(--zl-text-secondary);
+}
+
+.w3-text-content p {
+  margin-bottom: 0.75rem;
+}
+
+.w3-text-content strong {
+  color: var(--zl-text-main);
+  font-weight: 600;
+}
+
+.w3-image-content {
+  width: 260px;
+  flex-shrink: 0;
+  padding: 1.25rem;
+  background: var(--zl-primary-light);
+  border-radius: 16px;
+  text-align: center;
+  border: 1px solid #bbf7d0;
+  box-shadow: 0 4px 16px rgba(21, 128, 61, 0.08);
+  transition: transform var(--zl-transition), box-shadow var(--zl-transition);
+}
+
+.w3-image-content:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(21, 128, 61, 0.14);
+}
+
+.w3-image-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 16px rgba(0,0,0,0.1));
+  transition: transform 0.5s ease;
+}
+
+.w3-image-content:hover img {
+  transform: scale(1.04) translateY(-4px);
+}
+
+/* ==========================================
+   MOBILE RESPONSIVENESS
+   ========================================== */
+@media (max-width: 850px) {
+  .w3-sidebar {
+    position: static !important;
+    width: 100%;
+    height: auto;
+    bottom: auto;
+    max-height: 280px;
+    flex-direction: column;
+    border-right: none;
+    border-bottom: 1px solid var(--zl-border);
+    backdrop-filter: none;
+    background: #fff;
+  }
+
+  .w3-content {
+    margin-left: 0 !important;
+    width: 100%;
+    padding: 1.25rem 1rem 3rem;
+  }
+
+  .w3-content-split {
+    flex-direction: column;
+  }
+
+  .w3-image-content {
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+  }
+}
+
+/* ==========================================================================
+   UNIFIED EXAM FOCUS & ANATOMY STYLES (Used across all 11 Phyla)
+   ========================================================================== */
+.exam-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  border: 1px solid #e2e8f0;
+  border-left: 6px solid #ef4444; /* Alert Red for high yield */
+  box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);
+  margin-top: 15px;
+}
+
+.exam-card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.exam-list li {
+  margin-bottom: 12px;
+  line-height: 1.6;
+  color: #334155;
+  font-size: 1.05rem;
+}
+
+.exam-list strong {
+  color: #0f172a;
+  background: #f1f5f9;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 700;
+  margin-right: 5px;
+}
+
+.anatomy-diagram-wrapper {
+  background: #f8fafc;
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px inset #e2e8f0;
+  text-align: center;
+}
+
+.anatomy-img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 12px;
+  mix-blend-mode: multiply; /* Helps diagrams blend with bg */
+  transition: transform 0.3s ease;
+}
+
+.anatomy-img:hover {
+  transform: scale(1.02);
+}
