@@ -20,3 +20,8 @@
   padding-top: var(--header-height, 100px);
   /* Global top padding to clear fixed header */
 }
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
