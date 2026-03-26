@@ -3,6 +3,74 @@ import { Menu, X, ChevronLeft, ChevronRight, ArrowUp, Loader } from 'lucide-reac
 import RabbitData from './RabbitData.json';
 import './Rabbit.css';
 
+// --- REUSABLE COMPONENTS ---
+
+const SectionHeader = ({ title, icon }) => (
+    <div className="rab-section-title">
+        <span className="rab-section-marker"></span>
+        <span style={{ fontSize: '1.5rem' }}>{icon}</span>
+        <span>{title}</span>
+    </div>
+);
+
+const Card = ({ title, children, className = '' }) => (
+    <div className={`rab-info-card ${className}`}>
+        {title && <div className="rab-card-title">{title}</div>}
+        {children}
+    </div>
+);
+
+const Model3D = ({ src, title }) => (
+    <div className="rab-model-container">
+        <iframe
+            key={src}
+            title={title}
+            className="rab-sketchfab-embed"
+            src={src}
+            allow="autoplay; fullscreen; vr"
+            allowFullScreen
+        />
+    </div>
+);
+
+const Flow = ({ steps }) => (
+    <div className="rab-flow-container">
+        {steps.map((step, idx) => (
+            <React.Fragment key={idx}>
+                <div className="rab-flow-step">{step}</div>
+                {idx < steps.length - 1 && <div className="rab-flow-arrow">↓</div>}
+            </React.Fragment>
+        ))}
+    </div>
+);
+
+const PointList = ({ items }) => (
+    <ul className="rab-point-list">
+        {items.map((item, idx) => {
+            let content = item;
+            if (typeof item === 'object' && item.text) {
+                if (item.strong) {
+                    const parts = item.text.split(item.strong);
+                    content = (
+                        <>
+                            {parts[0]}<strong>{item.strong}</strong>{parts[1]}
+                        </>
+                    );
+                } else {
+                    content = item.text;
+                }
+            }
+
+            return (
+                <li key={idx} className="rab-list-item">
+                    <span className="rab-bullet"></span>
+                    {content}
+                </li>
+            );
+        })}
+    </ul>
+);
+
 const Rabbit = () => {
     const [activeTab, setActiveTab] = useState('habit');
     const [reproGender, setReproGender] = useState('female');
@@ -79,84 +147,6 @@ const Rabbit = () => {
         }
         setIsMobileMenuOpen(false);
     }, [activeTab]);
-
-    // --- REUSABLE COMPONENTS ---
-
-    const SectionHeader = ({ title, icon }) => (
-        <div className="rab-section-title">
-            <span className="rab-section-marker"></span>
-            <span style={{ fontSize: '1.5rem' }}>{icon}</span>
-            <span>{title}</span>
-        </div>
-    );
-
-    const Card = ({ title, children, className = '' }) => (
-        <div className={`rab-info-card ${className}`}>
-            {title && <div className="rab-card-title">{title}</div>}
-            {children}
-        </div>
-    );
-
-    const Model3D = ({ src, title }) => {
-        const [isLoading, setIsLoading] = useState(true);
-
-        return (
-            <div className="rab-model-container">
-                {isLoading && (
-                    <div className="rab-model-loader">
-                        <Loader className="rab-spinner" size={32} />
-                        <span>Loading 3D Model...</span>
-                    </div>
-                )}
-                <iframe
-                    title={title}
-                    className={`rab-sketchfab-embed ${isLoading ? 'hidden' : ''}`}
-                    src={src}
-                    allow="autoplay; fullscreen; vr"
-                    allowFullScreen
-                    onLoad={() => setIsLoading(false)}
-                />
-            </div>
-        );
-    };
-
-    const Flow = ({ steps }) => (
-        <div className="rab-flow-container">
-            {steps.map((step, idx) => (
-                <React.Fragment key={idx}>
-                    <div className="rab-flow-step">{step}</div>
-                    {idx < steps.length - 1 && <div className="rab-flow-arrow">↓</div>}
-                </React.Fragment>
-            ))}
-        </div>
-    );
-
-    const PointList = ({ items }) => (
-        <ul className="rab-point-list">
-            {items.map((item, idx) => {
-                let content = item;
-                if (typeof item === 'object' && item.text) {
-                    if (item.strong) {
-                        const parts = item.text.split(item.strong);
-                        content = (
-                            <>
-                                {parts[0]}<strong>{item.strong}</strong>{parts[1]}
-                            </>
-                        );
-                    } else {
-                        content = item.text;
-                    }
-                }
-
-                return (
-                    <li key={idx} className="rab-list-item">
-                        <span className="rab-bullet"></span>
-                        {content}
-                    </li>
-                );
-            })}
-        </ul>
-    );
 
     // --- MAIN RENDER ---
 
