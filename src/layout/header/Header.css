@@ -42,21 +42,10 @@
 /* Scroll-hide on mobile disabled — navbar is always visible */
 
 .hea-header.hea-scrolled {
-  height: 60px;
-  /* Fixed height instead of vh */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  /* Stronger shadow when scrolled */
 }
 
-/* Adjust contained elements when scrolled */
-.hea-header.hea-scrolled .hea-logo-wrapper {
-  width: 2.2rem;
-  height: 2.2rem;
-}
-
-.hea-header.hea-scrolled .hea-brand {
-  font-size: 1.25rem;
-}
+/* Removed logo wrapper and brand shrinking logic */
 
 /* =========================================
    SCROLLED HEADER STYLES - Logo/Brand/Nav sizes adjusted
@@ -620,32 +609,7 @@
   }
 }
 
-/* =========================================
-   SCROLLED HEADER - RESPONSIVE HEIGHTS
-========================================= */
-@media (max-width: 992px) {
-  .hea-header.hea-scrolled {
-    height: 65px;
-  }
-}
-
-@media (max-width: 768px) {
-  .hea-header.hea-scrolled {
-    height: 60px;
-  }
-
-  /* Nav menu positioning below header */
-  .hea-nav-links {
-    top: var(--header-height);
-    height: calc(100vh - var(--header-height));
-  }
-
-  /* NEW: Adjust menu position when header is scrolled/shrunk */
-  .hea-header.hea-scrolled .hea-nav-links {
-    top: 60px;
-    height: calc(100vh - 60px);
-  }
-}
+/* Removed responsive scrolled heights since height remains constant now */
 
 /* Fix green underline alignment in mobile sidebar navigation */
 @media (max-width: 768px) {
