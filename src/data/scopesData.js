@@ -1,6 +1,6 @@
 import { 
-    Microscope, PawPrint, Droplets, Bone, FlaskConical, Bug, Pickaxe, 
-    Brain, Dna, Leaf, TestTube, BookOpen, Landmark, Activity, Briefcase, HeartHandshake, Globe 
+    Microscope, Trees, Waves, Stethoscope, Dna, Microscope as MicroIcon, Search, 
+    Brain, Fingerprint, Globe, Beaker, GraduationCap, Landmark, HeartPulse, Building2, Heart, Globe as World 
 } from 'lucide-react';
 
 export const courseDetails = {
@@ -165,7 +165,7 @@ export const careerCategories = [
         id: "wildlife-ecology",
         name: "Wildlife, Ecology & Environmental Careers",
         description: "Explore professional careers and academic pathways in Wildlife, Ecology & Environmental Careers.",
-        icon: PawPrint,
+        icon: Trees,
         theme: {'primary': '#ea580c', 'secondary': '#7c2d12', 'accent': '#fff7ed', 'gradient': 'linear-gradient(135deg, #ea580c 0%, #7c2d12 100%)'},
         careers: [
             {title:"Wildlife Biologist / Wildlife Conservationist",desc:"Study wild animals and protect endangered species.",bsc:["B.Sc. Zoology","B.Sc. Biotechnology","B.Sc. Life Sciences"],msc:["M.Sc. Wildlife Biology","M.Sc. Wildlife Science","M.Sc. Conservation Biology"],phd:["Ph.D. Wildlife Biology","Ph.D. Wildlife Conservation"],salary:"3–6 LPA"},
@@ -190,7 +190,7 @@ export const careerCategories = [
         id: "marine-fisheries",
         name: "Marine, Aquatic & Fisheries Sciences",
         description: "Explore professional careers and academic pathways in Marine, Aquatic & Fisheries Sciences.",
-        icon: Droplets,
+        icon: Waves,
         theme: {'primary': '#0284c7', 'secondary': '#0c4a6e', 'accent': '#f0f9ff', 'gradient': 'linear-gradient(135deg, #0284c7 0%, #0c4a6e 100%)'},
         careers: [
             {title:"Marine Biologist",desc:"Research marine organisms and ecosystems.",bsc:["B.Sc. Zoology","B.Sc. Biotechnology","B.Sc. Life Sciences"],msc:["M.Sc. Marine Biology","M.Sc. Oceanography"],phd:["Ph.D. Marine Biology"],salary:"4–8 LPA"},
@@ -210,7 +210,7 @@ export const careerCategories = [
         id: "animal-health",
         name: "Animal Health & Medical Sciences",
         description: "Explore professional careers and academic pathways in Animal Health & Medical Sciences.",
-        icon: Bone,
+        icon: Stethoscope,
         theme: {'primary': '#059669', 'secondary': '#064e3b', 'accent': '#ecfdf5', 'gradient': 'linear-gradient(135deg, #059669 0%, #064e3b 100%)'},
         careers: [
             {title:"Veterinarian (with further qualification)",desc:"Diagnoses and treats animal diseases, performs surgeries, advises on animal care.",bsc:["B.V.Sc & AH","B.Sc. Zoology","B.Sc. Animal Science"],msc:["M.V.Sc in specialization","M.Sc. Veterinary Science"],phd:["Ph.D. Veterinary Sciences"],salary:"6–12 LPA"},
@@ -232,7 +232,7 @@ export const careerCategories = [
         id: "biotechnology",
         name: "Biotechnology & Modern Technology Careers",
         description: "Explore professional careers and academic pathways in Biotechnology & Modern Technology Careers.",
-        icon: FlaskConical,
+        icon: Dna,
         theme: {'primary': '#7c3aed', 'secondary': '#4c1d95', 'accent': '#f5f3ff', 'gradient': 'linear-gradient(135deg, #7c3aed 0%, #4c1d95 100%)'},
         careers: [
             {title:"Biotechnologist",desc:"Develop biotech products.",bsc:["B.Sc. Zoology","B.Sc. Biotechnology","B.Sc. Life Sciences"],msc:["M.Sc. Biotechnology"],phd:["Ph.D. Biotechnology"],salary:"4–10 LPA"},
@@ -253,7 +253,7 @@ export const careerCategories = [
         id: "microbiology",
         name: "Microbiology, Immunology & Parasitology",
         description: "Explore professional careers and academic pathways in Microbiology, Immunology & Parasitology.",
-        icon: Bug,
+        icon: MicroIcon,
         theme: {'primary': '#8b5cf6', 'secondary': '#4c1d95', 'accent': '#f5f3ff', 'gradient': 'linear-gradient(135deg, #8b5cf6 0%, #4c1d95 100%)'},
         careers: [
             {title:"Microbiologist",desc:"Study microorganisms.",bsc:["B.Sc. Zoology","B.Sc. Biotechnology","B.Sc. Life Sciences"],msc:["M.Sc. Microbiology"],phd:["Ph.D. Microbiology"],salary:"3–6 LPA"},
@@ -271,7 +271,7 @@ export const careerCategories = [
         id: "entomology",
         name: "Entomology & Invertebrate Specializations",
         description: "Explore professional careers and academic pathways in Entomology & Invertebrate Specializations.",
-        icon: Bug,
+        icon: Search,
         theme: {'primary': '#b45309', 'secondary': '#78350f', 'accent': '#fffbeb', 'gradient': 'linear-gradient(135deg, #b45309 0%, #78350f 100%)'},
         careers: [
             {title:"Entomologist",desc:"Study insects.",bsc:["B.Sc. Zoology","B.Sc. Biotechnology","B.Sc. Life Sciences"],msc:["M.Sc. Entomology"],phd:["Ph.D. Entomology"],salary:"3–6 LPA"},
@@ -289,7 +289,7 @@ export const careerCategories = [
         id: "paleontology",
         name: "Paleontology & Evolution Careers",
         description: "Explore professional careers and academic pathways in Paleontology & Evolution Careers.",
-        icon: Pickaxe,
+        icon: Search,
         theme: {'primary': '#78350f', 'secondary': '#451a03', 'accent': '#fffbeb', 'gradient': 'linear-gradient(135deg, #78350f 0%, #451a03 100%)'},
         careers: [
             {title:"Paleontologist",desc:"Studies fossils to understand ancient life and evolutionary history.",bsc:["B.Sc. Geology","B.Sc. Zoology","B.Sc. Earth Sciences"],msc:["M.Sc. Paleontology","M.Sc. Geology"],phd:["Ph.D. Paleontology"],salary:"5–10 LPA"},
@@ -319,7 +319,7 @@ export const careerCategories = [
         id: "forensic",
         name: "Forensic & Applied Sciences",
         description: "Explore professional careers and academic pathways in Forensic & Applied Sciences.",
-        icon: Dna,
+        icon: Fingerprint,
         theme: {'primary': '#475569', 'secondary': '#1e293b', 'accent': '#f8fafc', 'gradient': 'linear-gradient(135deg, #475569 0%, #1e293b 100%)'},
         careers: [
             {title:"Forensic Biologist",desc:"Use biology in crime investigation.",bsc:["B.Sc. Zoology","B.Sc. Biotechnology","B.Sc. Life Sciences"],msc:["M.Sc. Forensic Science"],phd:["Ph.D. Forensic Science"],salary:"4–8 LPA"},
@@ -334,7 +334,7 @@ export const careerCategories = [
         id: "environmental",
         name: "Environmental & Ecological Specializations",
         description: "Explore professional careers and academic pathways in Environmental & Ecological Specializations.",
-        icon: Leaf,
+        icon: Globe,
         theme: {'primary': '#16a34a', 'secondary': '#14532d', 'accent': '#f0fdf4', 'gradient': 'linear-gradient(135deg, #16a34a 0%, #14532d 100%)'},
         careers: [
             {title:"Environmental Scientist",desc:"Studies environmental systems, pollution, and conservation.",bsc:["B.Sc. Environmental Science","B.Sc. Zoology","B.Sc. Life Sciences"],msc:["M.Sc. Environmental Science","M.Sc. Ecology"],phd:["Ph.D. Environmental Science"],salary:"4–8 LPA"},
@@ -351,7 +351,7 @@ export const careerCategories = [
         id: "lab-industrial",
         name: "Lab-Based & Industrial Careers",
         description: "Explore professional careers and academic pathways in Lab-Based & Industrial Careers.",
-        icon: TestTube,
+        icon: Beaker,
         theme: {'primary': '#0891b2', 'secondary': '#164e63', 'accent': '#ecfeff', 'gradient': 'linear-gradient(135deg, #0891b2 0%, #164e63 100%)'},
         careers: [
             {title:"Research Associate",desc:"Conducts research in academic, government, or industrial laboratories.",bsc:["B.Sc. Zoology","B.Sc. Biotechnology","B.Sc. Life Sciences"],msc:["M.Sc. Zoology","M.Sc. Biotechnology","M.Sc. Specialization"],phd:["Optional","Ph.D. in specialization"],salary:"4–8 LPA"},
@@ -369,7 +369,7 @@ export const careerCategories = [
         id: "education",
         name: "Education & Science Communication",
         description: "Explore professional careers and academic pathways in Education & Science Communication.",
-        icon: BookOpen,
+        icon: GraduationCap,
         theme: {'primary': '#4f46e5', 'secondary': '#312e81', 'accent': '#eef2ff', 'gradient': 'linear-gradient(135deg, #4f46e5 0%, #312e81 100%)'},
         careers: [
             {title:"Academician / Professor / Research Scientist",desc:"Teaching and research.",bsc:["B.Sc. Zoology","B.Sc. Biotechnology","B.Sc. Life Sciences"],msc:["M.Sc. Zoology","M.Sc. Specialization"],phd:["Ph.D. Zoology","Ph.D. Life Sciences"],salary:"6–10 LPA"},
@@ -404,7 +404,7 @@ export const careerCategories = [
         id: "public-health",
         name: "Public Health & Epidemiology",
         description: "Explore professional careers and academic pathways in Public Health & Epidemiology.",
-        icon: Activity,
+        icon: HeartPulse,
         theme: {'primary': '#dc2626', 'secondary': '#7f1d1d', 'accent': '#fef2f2', 'gradient': 'linear-gradient(135deg, #dc2626 0%, #7f1d1d 100%)'},
         careers: [
             {title:"Public Health Researcher",desc:"Conducts research on population health, diseases, and healthcare systems.",bsc:["B.Sc. Zoology","B.Sc. Public Health","B.Sc. Life Sciences"],msc:["M.Sc. Public Health","M.Sc. Epidemiology"],phd:["Ph.D. Public Health","Ph.D. Epidemiology"],salary:"5–11 LPA"},
@@ -418,7 +418,7 @@ export const careerCategories = [
         id: "corporate",
         name: "Corporate & Business Careers",
         description: "Explore professional careers and academic pathways in Corporate & Business Careers.",
-        icon: Briefcase,
+        icon: Building2,
         theme: {'primary': '#2563eb', 'secondary': '#1e3a8a', 'accent': '#f1f5f9', 'gradient': 'linear-gradient(135deg, #2563eb 0%, #1e3a8a 100%)'},
         careers: [
             {title:"Life Science Consultant",desc:"Consultant for pharmaceutical, biotech, and healthcare companies.",bsc:["B.Sc. Zoology","B.Sc. Biotechnology","B.Sc. Business"],msc:["M.Sc. Business Administration","M.Sc. Specialization"],phd:["Optional","Ph.D. in specialization"],salary:"6–15 LPA"},
@@ -434,7 +434,7 @@ export const careerCategories = [
         id: "animal-welfare",
         name: "Animal Care, Welfare & Zoo Careers",
         description: "Explore professional careers and academic pathways in Animal Care, Welfare & Zoo Careers.",
-        icon: HeartHandshake,
+        icon: Heart,
         theme: {'primary': '#d97706', 'secondary': '#78350f', 'accent': '#fffbeb', 'gradient': 'linear-gradient(135deg, #d97706 0%, #78350f 100%)'},
         careers: [
             {title:"Zoo Curator / Zoo Educator",desc:"Zoo management and education.",bsc:["B.Sc. Zoology","B.Sc. Biotechnology","B.Sc. Life Sciences"],msc:["M.Sc. Zoology","M.Sc. Wildlife Science"],phd:["Ph.D. Zoology"],salary:"3–5 LPA"},
@@ -450,7 +450,7 @@ export const careerCategories = [
         id: "international",
         name: "International & Future-Oriented Roles",
         description: "Explore professional careers and academic pathways in International & Future-Oriented Roles.",
-        icon: Globe,
+        icon: World,
         theme: {'primary': '#0d9488', 'secondary': '#134e4a', 'accent': '#f0fdfa', 'gradient': 'linear-gradient(135deg, #0d9488 0%, #134e4a 100%)'},
         careers: [
             {title:"UN Biodiversity Consultant",desc:"Consultant for United Nations biodiversity programs and conventions.",bsc:["B.Sc. Zoology","B.Sc. Environmental Science","B.Sc. International Relations"],msc:["M.Sc. International Development","M.Sc. Conservation Biology"],phd:["Ph.D. Conservation Biology","Ph.D. International Relations"],salary:"10–25 LPA"},

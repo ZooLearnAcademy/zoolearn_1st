@@ -2,7 +2,7 @@
 import React, { useMemo, useState } from 'react';
 import ReactFlow, { Background, Handle, Position, BezierEdge } from 'reactflow';
 import 'reactflow/dist/style.css';
-import { X, Info, Calendar, Trophy, Layers } from 'lucide-react';
+import { X, Info, FileText, Timer, Target, Calendar, Trophy, Layers } from 'lucide-react';
 import { courseDetails } from '../../data/scopesData';
 
 /* ─── Level Config ─────────────────────────────────────────────────────────── */
@@ -36,11 +36,16 @@ const nodeTypes = { custom: CustomNode };
 function buildGraph(career, category, handleCourseClick) {
     const nodes = [];
     const edges = [];
-    const CW = 1300; // canvas width
+    
+    // Scale structural canvas tightly for mobile screens
+    const isMobile = window.innerWidth <= 768;
+    const CW = isMobile ? 550 : 1300; 
+    const yStep = isMobile ? 140 : 230;
+    const startY = isMobile ? 20 : 0;
 
     const spreadX = (i, total) => {
         if (total === 1) return CW / 2;
-        const margin = 160;
+        const margin = isMobile ? 80 : 160;
         const step = (CW - margin * 2) / (total - 1);
         return margin + i * step;
     };
@@ -49,7 +54,7 @@ function buildGraph(career, category, handleCourseClick) {
     nodes.push({
         id: 'root',
         type: 'custom',
-        position: { x: CW / 2 - 90, y: 0 },
+        position: { x: CW / 2 - 90, y: startY },
         data: { label: `${category.name} Hub`.toUpperCase(), levelKey: 'root' }
     });
 
@@ -60,7 +65,7 @@ function buildGraph(career, category, handleCourseClick) {
         bscIds.push(id);
         nodes.push({
             id, type: 'custom',
-            position: { x: spreadX(i, career.bsc.length) - 90, y: 200 },
+            position: { x: spreadX(i, career.bsc.length) - 90, y: startY + yStep },
             data: { label: course.toUpperCase(), levelKey: 'bsc', onClick: handleCourseClick }
         });
         /* root → each BSc */
@@ -79,7 +84,7 @@ function buildGraph(career, category, handleCourseClick) {
         mscIds.push(id);
         nodes.push({
             id, type: 'custom',
-            position: { x: spreadX(i, career.msc.length) - 90, y: 430 },
+            position: { x: spreadX(i, career.msc.length) - 90, y: startY + yStep * 2 },
             data: { label: course.toUpperCase(), levelKey: 'msc', onClick: handleCourseClick }
         });
 
@@ -111,7 +116,7 @@ function buildGraph(career, category, handleCourseClick) {
         const id = `phd-${i}`;
         nodes.push({
             id, type: 'custom',
-            position: { x: spreadX(i, career.phd.length) - 90, y: 660 },
+            position: { x: spreadX(i, career.phd.length) - 90, y: startY + yStep * 3 },
             data: { label: course.toUpperCase(), levelKey: 'phd', onClick: handleCourseClick }
         });
 
@@ -159,18 +164,18 @@ const PathwayExplorer = ({ career, category, onClose }) => {
 
     return (
         <div className="modal-overlay" onClick={onClose}>
-            <div className="modal-content" onClick={e => e.stopPropagation()}>
-                <button className="modal-close" onClick={onClose}><X size={20} /></button>
+            <div className="modal-content modal-content--dark" onClick={e => e.stopPropagation()}>
+                <button className="modal-close modal-close--white" onClick={onClose}><X size={20} /></button>
 
                 {/* Header */}
                 <div className="modal-header">
-                    <div style={{ color: category.theme.primary, fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.15em', marginBottom: 6, fontSize: '0.7rem' }}>
+                    <div className="modal-header-subtitle" style={{ color: category.theme.primary }}>
                         Career Pathway Explorer
                     </div>
-                    <h2 style={{ fontSize: '2rem', fontWeight: 950, marginBottom: 8, letterSpacing: '-0.03em', color: '#0f172a' }}>
+                    <h2 className="modal-header-title">
                         {career.title}
                     </h2>
-                    <p style={{ color: '#64748b', maxWidth: 820, fontSize: '1rem', lineHeight: 1.5, fontWeight: 500, margin: 0 }}>
+                    <p className="modal-header-desc">
                         {career.desc}
                     </p>
                 </div>
@@ -185,81 +190,82 @@ const PathwayExplorer = ({ career, category, onClose }) => {
                     ))}
                 </div>
 
-                {/* Dark flow canvas */}
                 <div className="pathway-explorer-wrapper dark-theme">
                     <div className="taxonomy-instruction">
                         CLICK A NODE TO VIEW COURSE DETAILS
                     </div>
 
-                    <div className="pathway-flow-container">
+                    <div className="pathway-flow-container" style={{ width: '100%', height: '100%', flex: 1, position: 'relative' }}>
                         <ReactFlow
                             nodes={nodes}
                             edges={edges}
                             nodeTypes={nodeTypes}
+                            style={{ width: '100%', height: '100%' }}
                             fitView
-                            fitViewOptions={{ padding: 0.18 }}
-                            minZoom={0.4}
+                            fitViewOptions={{ padding: 0.05 }}
+                            minZoom={0.05}
                             maxZoom={1.6}
                             attributionPosition="bottom-right"
                         >
                             <Background color="#1e293b" gap={28} size={1} variant="dots" />
                         </ReactFlow>
                     </div>
-
-                    {/* Info Sidebar */}
-                    {selectedCourse && (
-                        <div className="info-sidebar">
-                            <div className="info-sidebar-header">
-                                <div>
-                                    <h4 className="info-course-name">{selectedCourse.name}</h4>
-                                    <div className="info-course-label" style={{ color: category.theme.primary }}>
-                                        Course Insights
-                                    </div>
-                                </div>
-                                <button
-                                    onClick={() => setSelectedCourse(null)}
-                                    className="info-close-btn"
-                                >
-                                    <X size={16} />
-                                </button>
-                            </div>
-
-                            <div className="info-sidebar-body">
-                                {/* Overview */}
-                                <div className="info-section">
-                                    <div className="info-section-label">
-                                        <Info size={13} /> Overview
-                                    </div>
-                                    <p className="info-section-text">{selectedCourse.exp}</p>
-                                </div>
-
-                                {/* Stats grid */}
-                                <div className="info-stats-grid">
-                                    <div className="info-stat-card">
-                                        <div className="info-stat-label"><Calendar size={12} /> Duration</div>
-                                        <div className="info-stat-value">{selectedCourse.dur}</div>
-                                    </div>
-                                    <div className="info-stat-card">
-                                        <div className="info-stat-label"><Trophy size={12} /> Outcome</div>
-                                        <div className="info-stat-desc">{selectedCourse.imp}</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    )}
                 </div>
 
+                {/* Info Sidebar (Bottom Sheet on Mobile) */}
+                {selectedCourse && (
+                    <div className="info-sidebar">
+                        <div className="info-sidebar-handle" />
+                        <div className="info-sidebar-header">
+                            <div>
+                                <h4 className="info-course-name">{selectedCourse.name}</h4>
+                                <div className="info-course-label" style={{ color: category.theme.primary }}>
+                                    Course Insights
+                                </div>
+                            </div>
+                            <button
+                                onClick={() => setSelectedCourse(null)}
+                                className="info-close-btn"
+                            >
+                                <X size={16} />
+                            </button>
+                        </div>
+
+                        <div className="info-sidebar-body">
+                            {/* Overview */}
+                            <div className="info-section">
+                                <div className="info-section-label">
+                                    <FileText size={13} /> Overview
+                                </div>
+                                <p className="info-section-text">{selectedCourse.exp}</p>
+                            </div>
+
+                            {/* Stats grid */}
+                            <div className="info-stats-grid">
+                                <div className="info-stat-card">
+                                    <div className="info-stat-label"><Timer size={12} /> Duration</div>
+                                    <div className="info-stat-value">{selectedCourse.dur}</div>
+                                </div>
+                                <div className="info-stat-card">
+                                    <div className="info-stat-label"><Target size={12} /> Outcome</div>
+                                    <div className="info-stat-desc">{selectedCourse.imp}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                )}
+
                 {/* Salary Footer */}
-                <div className="salary-footer" style={{ background: category.theme.gradient }}>
-                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4 }}>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+                <div className="salary-footer" style={{ background: category.theme.gradient || category.theme.primary }}>
+                    <div className="salary-footer-content">
+                        <div className="salary-footer-main">
                             <div className="salary-icon">₹</div>
                             <span>
-                                Academic Outcome Value:&nbsp;
-                                <strong style={{ fontSize: '1.5rem', marginLeft: 6 }}>{career.salary}</strong>
+                                Academic Outcome Value:
+                                <strong>{career.salary}</strong>
                             </span>
                         </div>
-                        <div style={{ fontSize: '0.65rem', opacity: 0.75, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                        <div className="salary-footer-note">
                             * Indicative salary ranges based on industry averages
                         </div>
                     </div>
