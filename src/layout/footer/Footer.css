@@ -23,8 +23,6 @@
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 48px;
-  opacity: 0;
-  animation: fadeInUp 1s ease-out forwards;
 }
 
 /* BRAND SECTION */
@@ -44,7 +42,6 @@
   width: 64px;
   height: 64px;
   filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
-  animation: float 6s ease-in-out infinite;
 }
 
 .foo-zl-logo h1 {
@@ -73,15 +70,7 @@
   gap: 40px;
 }
 
-.foo-zl-col {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.8s ease forwards;
-}
-
-.foo-zl-col:nth-child(1) { animation-delay: 0.2s; }
-.foo-zl-col:nth-child(2) { animation-delay: 0.4s; }
-.foo-zl-col:nth-child(3) { animation-delay: 0.6s; }
+/* .foo-zl-col animations removed */
 
 .foo-zl-col h3 {
   font-size: 1rem;
@@ -145,17 +134,6 @@
 .foo-zl-copyright-content {
   font-size: 0.85rem;
   color: #94a3b8;
-}
-
-/* KEYFRAMES */
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(40px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes float {
-  0%,100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
 }
 
 @keyframes growLine {

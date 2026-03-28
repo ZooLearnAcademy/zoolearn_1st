@@ -39,12 +39,7 @@
    SCROLL BEHAVIORS
 ========================================= */
 
-/* Mobile ONLY scroll hide behavior */
-@media (max-width: 768px) {
-  .hea-header.hea-hidden-mobile {
-    transform: translateY(-100%);
-  }
-}
+/* Scroll-hide on mobile disabled — navbar is always visible */
 
 .hea-header.hea-scrolled {
   height: 60px;
