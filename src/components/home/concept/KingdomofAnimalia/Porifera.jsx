@@ -1,324 +1,221 @@
 import React from 'react';
-import './Ctenophora.css';
-import GlossaryTooltip from './GlossaryTooltip';
-import QuickQuiz from './QuickQuiz';
+import {
+  Layers,
+  ShieldCheck,
+  Microscope,
+  Waves,
+  CheckCircle2,
+  Droplets,
+  RefreshCw
+} from 'lucide-react';
+import { ScrollReveal } from '../../../shared/ScrollReveal';
+import PhylumTaxonomyTree from './PhylumTaxonomyTree';
+import './Porifera.css';
 
-// --- QUIZ DATA ---
-const poriferaQuestions = [
+const majorClasses = [
   {
-    questionText: 'What are members of Phylum Porifera commonly known as?',
-    answerOptions: [
-      { answerText: 'Comb jellies', isCorrect: false },
-      { answerText: 'Sponges', isCorrect: true },
-      { answerText: 'Jellyfish', isCorrect: false },
-      { answerText: 'Sea anemones', isCorrect: false },
-    ],
+    name: 'Class Calcarea',
+    description: 'Calcareous sponges. Skeleton consists of spicules made of calcium carbonate.',
+    examples: ['Sycon (Scypha)', 'Grantia']
   },
   {
-    questionText: 'What is the level of body organization in Porifera?',
-    answerOptions: [
-      { answerText: 'Tissue level', isCorrect: false },
-      { answerText: 'Cellular level', isCorrect: true },
-      { answerText: 'Organ level', isCorrect: false },
-      { answerText: 'Organ-system level', isCorrect: false },
-    ],
+    name: 'Class Hexactinellida',
+    description: 'Glass sponges. Skeleton composed of siliceous (glassy) six-rayed spicules.',
+    examples: ['Euplectella (Venus flower basket)']
   },
   {
-    questionText: 'Which cells are characteristic of Porifera and create water currents?',
-    answerOptions: [
-      { answerText: 'Cnidocytes', isCorrect: false },
-      { answerText: 'Choanocytes (collar cells)', isCorrect: true },
-      { answerText: 'Pinacocytes', isCorrect: false },
-      { answerText: 'Amoebocytes', isCorrect: false },
-    ],
-  },
-  {
-    questionText: 'The central cavity of a sponge is called:',
-    answerOptions: [
-      { answerText: 'Spongocoel', isCorrect: true },
-      { answerText: 'Gastrovascular cavity', isCorrect: false },
-      { answerText: 'Coelom', isCorrect: false },
-      { answerText: 'Osculum', isCorrect: false },
-    ],
-  },
-  {
-    questionText: 'Through which openings does water enter the sponge body?',
-    answerOptions: [
-      { answerText: 'Oscula', isCorrect: false },
-      { answerText: 'Ostia', isCorrect: true },
-      { answerText: 'Nephridia', isCorrect: false },
-      { answerText: 'Spiracles', isCorrect: false },
-    ],
-  },
-  {
-    questionText: 'What is the skeleton of sponges made of?',
-    answerOptions: [
-      { answerText: 'Chitin', isCorrect: false },
-      { answerText: 'Spicules or spongin fibres', isCorrect: true },
-      { answerText: 'Bony plates', isCorrect: false },
-      { answerText: 'Cartilage', isCorrect: false },
-    ],
-  },
-  {
-    questionText: 'Sponges are mainly:',
-    answerOptions: [
-      { answerText: 'Free-swimming predators', isCorrect: false },
-      { answerText: 'Sessile filter feeders', isCorrect: true },
-      { answerText: 'Parasitic worms', isCorrect: false },
-      { answerText: 'Burrowing molluscs', isCorrect: false },
-    ],
-  },
-  {
-    questionText: 'How do sponges reproduce asexually during unfavourable conditions?',
-    answerOptions: [
-      { answerText: 'By forming gemmules', isCorrect: true },
-      { answerText: 'By binary fission', isCorrect: false },
-      { answerText: 'By regeneration only', isCorrect: false },
-      { answerText: 'By producing spores', isCorrect: false },
-    ],
-  },
-  {
-    questionText: 'Which class of Porifera has a skeleton of six‑rayed siliceous spicules?',
-    answerOptions: [
-      { answerText: 'Calcarea', isCorrect: false },
-      { answerText: 'Hexactinellida', isCorrect: true },
-      { answerText: 'Demospongiae', isCorrect: false },
-      { answerText: 'Scyphozoa', isCorrect: false },
-    ],
-  },
-  {
-    questionText: 'The study of sponges is known as:',
-    answerOptions: [
-      { answerText: 'Parazoology', isCorrect: true },
-      { answerText: 'Cnidology', isCorrect: false },
-      { answerText: 'Malacology', isCorrect: false },
-      { answerText: 'Helminthology', isCorrect: false },
-    ],
-  },
-  {
-    questionText: 'Sponges are:',
-    answerOptions: [
-      { answerText: 'Diploblastic and acoelomate', isCorrect: true },
-      { answerText: 'Triploblastic and coelomate', isCorrect: false },
-      { answerText: 'Diploblastic and pseudocoelomate', isCorrect: false },
-      { answerText: 'Triploblastic and acoelomate', isCorrect: false },
-    ],
-  },
-  {
-    questionText: 'What type of digestion occurs in sponges?',
-    answerOptions: [
-      { answerText: 'Extracellular only', isCorrect: false },
-      { answerText: 'Intracellular only', isCorrect: true },
-      { answerText: 'Both extracellular and intracellular', isCorrect: false },
-      { answerText: 'No digestion', isCorrect: false },
-    ],
-  },
-  {
-    questionText: 'The outer layer of the sponge body wall is called:',
-    answerOptions: [
-      { answerText: 'Choanoderm', isCorrect: false },
-      { answerText: 'Mesohyl', isCorrect: false },
-      { answerText: 'Pinacoderm', isCorrect: true },
-      { answerText: 'Epidermis', isCorrect: false },
-    ],
-  },
-  {
-    questionText: 'Which larval stage is typical in sponges?',
-    answerOptions: [
-      { answerText: 'Planula', isCorrect: false },
-      { answerText: 'Cydippid', isCorrect: false },
-      { answerText: 'Amphiblastula or parenchymula', isCorrect: true },
-      { answerText: 'Trochophore', isCorrect: false },
-    ],
-  },
-  {
-    questionText: 'Sponges are ecologically important because they:',
-    answerOptions: [
-      { answerText: 'Form coral reefs', isCorrect: false },
-      { answerText: 'Contribute to reef formation and silica deposits', isCorrect: true },
-      { answerText: 'Fix nitrogen', isCorrect: false },
-      { answerText: 'Produce oxygen', isCorrect: false },
-    ],
+    name: 'Class Demospongiae',
+    description: 'Horny sponges. Skeleton made of spongin fibres, siliceous spicules, or both. Includes the only freshwater sponges.',
+    examples: ['Spongilla (Freshwater sponge)', 'Euspongia (Bath sponge)']
   }
 ];
 
 const Porifera = () => {
   return (
-    <div className="phylum-container porifera-theme"> {/* class name can stay or be adapted */}
-      {/* Decorative background glow */}
+    <div className="phylum-container">
       <div className="hero-glow"></div>
 
-      <header className="phylum-header animate-fade-up" style={{ animationDelay: '0s' }}>
-        <div className="badge">Phylum 1</div>
-        <h1 className="phylum-title">Porifera</h1>
-        <p className="phylum-subtitle">(Porous – pore; ferre – to bear)</p>
-        <p className="phylum-intro">
-          Commonly known as <strong>sponges</strong>, they are among the <strong>oldest living multicellular animals</strong>.
-          Originating in the Precambrian era, about <strong>8,550 species</strong> are known worldwide.
-          Sponges reached their greatest diversity during the Cretaceous period and play an important ecological role
-          in <strong>reef formation</strong> and as a source of <strong>biogenic silica</strong>.
-          They are ubiquitous in oceans across all latitudes. The scientific study of sponges is called <strong>Parazoology</strong>.
-        </p>
-      </header>
+      {/* --- HERO SECTION --- */}
+      <section className="phylum-hero">
+        <ScrollReveal animation="fade-up">
+          <div className="hero-content">
+            <div className="hero-badge-group">
+              <span className="hero-badge">Phylum 01</span>
+              <span className="hero-badge marine">The Pore Bearers</span>
+            </div>
 
-      <section className="phylum-section animate-fade-up" style={{ animationDelay: '0.1s' }}>
-        <h2 className="section-title">
-          <svg className="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-          General Features
-        </h2>
-        <div className="features-grid">
-          <div className="feature-card">
-            <span className="feature-label">Level of Organisation</span>
-            <span className="feature-value">Cellular level</span>
+            <h1 className="hero-title">Phylum Porifera</h1>
+            <p className="hero-tagline">(porus – pore; ferre – to bear)</p>
+
+            <div className="hero-intro-text">
+              <p>
+                Members of this phylum are commonly known as <strong>sponges</strong>. They are primitive multicellular animals known for their unique porous body structure.
+              </p>
+              <p>
+                Sponges are generally marine, though some exist in freshwater (e.g., <em>Spongilla</em>). They are primarily asymmetrical animals, spending their adult lives anchored to solid surfaces (sessile).
+              </p>
+            </div>
           </div>
-          <div className="feature-card">
-            <span className="feature-label">Germ Layer</span>
-            <span className="feature-value">
-              <GlossaryTooltip term="Diploblastic" definition="Having a body derived from only two embryonic cell layers (ectoderm and endoderm), lacking a mesoderm.">
-                Diploblastic (functionally)
-              </GlossaryTooltip>
-            </span>
+        </ScrollReveal>
+
+        <ScrollReveal animation="fade-up" delay={200}>
+          <div className="hero-visual">
+            <div className="visual-container">
+              <div className="visual-mesh"></div>
+              <img
+                src="https://res.cloudinary.com/duibfmcw1/image/upload/v1775034268/banner_image_cti1k2.png"
+                alt="Porifera Banner showing diverse sponges"
+                className="hero-main-img"
+              />
+            </div>
           </div>
-          <div className="feature-card">
-            <span className="feature-label">Body Symmetry</span>
-            <span className="feature-value">Mostly asymmetrical</span>
-          </div>
-          <div className="feature-card">
-            <span className="feature-label">Coelom</span>
-            <span className="feature-value">
-              <GlossaryTooltip term="Acoelomate" definition="An animal that lacks a fluid-filled body cavity (coelom) between the body wall and digestive tract.">
-                Absent (acoelomate)
-              </GlossaryTooltip>
-            </span>
-          </div>
-          <div className="feature-card">
-            <span className="feature-label">Body Plan</span>
-            <span className="feature-value">Cell aggregate</span>
-          </div>
-          <div className="feature-card">
-            <span className="feature-label">Respiration</span>
-            <span className="feature-value">Body surface diffusion</span>
-          </div>
-          <div className="feature-card">
-            <span className="feature-label">Circulatory System</span>
-            <span className="feature-value">Water canal system</span>
-          </div>
-          <div className="feature-card">
-            <span className="feature-label">Excretion</span>
-            <span className="feature-value">
-              <GlossaryTooltip term="Ammonotelic" definition="Animals that excrete nitrogenous waste primarily in the form of ammonia.">
-                Diffusion (Ammonotelic)
-              </GlossaryTooltip>
-            </span>
-          </div>
-          <div className="feature-card">
-            <span className="feature-label">Nervous System</span>
-            <span className="feature-value">Absent</span>
-          </div>
-          <div className="feature-card">
-            <span className="feature-label">Reproduction</span>
-            <span className="feature-value">Internal fertilisation</span>
-          </div>
-        </div>
+        </ScrollReveal>
       </section>
 
-      <section className="phylum-section split-section animate-fade-up" style={{ animationDelay: '0.2s' }}>
-        <div className="text-content">
+      {/* --- GENERAL FEATURES GRID --- */}
+      <section className="phylum-section">
+        <ScrollReveal animation="fade-up">
           <h2 className="section-title">
-            <svg className="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-            Characteristic Features
+            <div className="title-icon-wrapper"><Layers className="section-icon" /></div>
+            Core Biological Blueprint
           </h2>
-          <ul className="feature-list premium-list">
-            <li>
-              <strong>Sessile Habit:</strong> Adult sponges are sessile and attached to a substratum.
-            </li>
-            <li>
-              <strong>Body Wall Structure:</strong> Composed of outer <strong>pinacoderm</strong> (with pinacocytes and porocytes), inner <strong>choanoderm</strong> (with choanocytes), and a gelatinous <strong>mesohyl</strong> containing spicules, spongin fibres, and amoebocytes.
-            </li>
-            <li>
-              <strong>Water Canal System:</strong> Water enters through numerous <strong>ostia</strong>, passes into the <strong>spongocoel</strong> (or canal system), and exits via one or more <strong>oscula</strong>. This system supports feeding, respiration, excretion, and gamete transfer.
-            </li>
-            <li>
-              <strong>Choanocytes (Collar Cells):</strong> Flagellated cells lining the inner cavities that create water currents and capture food particles (intracellular digestion).
-            </li>
-            <li>
-              <strong>Skeleton:</strong> Internal framework of <strong>calcareous spicules</strong> (calcium carbonate), <strong>siliceous spicules</strong> (silica), and/or <strong>spongin fibres</strong>.
-            </li>
-            <li>
-              <strong>Reproduction:</strong> Both asexual (fragmentation, budding, and internal buds called <strong>gemmules</strong>) and sexual (hermaphroditic, internal fertilisation, indirect development with larval stages like <strong>amphiblastula</strong> and <strong>parenchymula</strong>).
-            </li>
-          </ul>
-        </div>
-        <div className="image-content premium-image-wrapper">
-          <div className="image-backdrop"></div>
-          {/* [Image of Porifera anatomy diagram – e.g., sponge structure with ostia, spongocoel, osculum] */}
-        </div>
-      </section>
 
-      <section className="phylum-section animate-fade-up" style={{ animationDelay: '0.3s' }}>
-        <h2 className="section-title">
-          <svg className="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1zM4 22v-7"/></svg>
-          Canal System (Water Canal System)
-        </h2>
-        <div className="info-banner">
-          <div className="banner-icon">💧</div>
-          <div className="banner-text">
-            The water canal system is a hallmark of Porifera. Water flows through the sponge body in a volume that may reach <strong>up to 20,000 times its body volume per day</strong>. This system is vital for food gathering, respiration, excretion (mainly ammonia), and the transfer of gametes by choanocytes.
-          </div>
-        </div>
-      </section>
-
-      <section className="phylum-section animate-fade-up" style={{ animationDelay: '0.4s' }}>
-        <h2 className="section-title">
-          <svg className="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
-          Classification
-        </h2>
-        <p className="classification-intro">Phylum Porifera is divided into three main classes based on the nature of the skeleton:</p>
-
-        <div className="classification-cards">
-          <div className="class-card theme-purple">
-            <div className="card-header">
-              <div className="icon-wrapper">🟣</div>
-              <h3>Class Calcarea</h3>
+          <div className="features-grid">
+            <div className="feature-card">
+              <span className="feature-label">Level of Organisation</span>
+              <span className="feature-value">Cellular Level</span>
             </div>
-            <ul className="card-list">
-              <li>Skeleton of <strong>calcium carbonate spicules</strong>.</li>
-              <li>Exclusively marine, mostly shallow coastal waters.</li>
-              <li>About <strong>400 species</strong> described.</li>
+            <div className="feature-card">
+              <span className="feature-label">Germ Layer</span>
+              <span className="feature-value">Diploblastic</span>
+            </div>
+            <div className="feature-card">
+              <span className="feature-label">Body Symmetry</span>
+              <span className="feature-value">Mostly Asymmetrical</span>
+            </div>
+            <div className="feature-card">
+              <span className="feature-label">Coelom</span>
+              <span className="feature-value">Acoelomate</span>
+            </div>
+            <div className="feature-card">
+              <span className="feature-label">Digestive System</span>
+              <span className="feature-value">Absent (Intracellular)</span>
+            </div>
+            <div className="feature-card">
+              <span className="feature-label">Physiology (Resp/Exc)</span>
+              <span className="feature-value">Simple Diffusion</span>
+            </div>
+            <div className="feature-card">
+              <span className="feature-label">Skeleton</span>
+              <span className="feature-value">Spicules / Spongin fibres</span>
+            </div>
+            <div className="feature-card">
+              <span className="feature-label">Nervous System</span>
+              <span className="feature-value">Absent</span>
+            </div>
+          </div>
+        </ScrollReveal>
+      </section>
+
+      {/* --- WATER CANAL SYSTEM & DIAGRAM --- */}
+      <section className="phylum-section">
+        <ScrollReveal animation="fade-up">
+          <h2 className="section-title">
+            <div className="title-icon-wrapper"><Waves className="section-icon" /></div>
+            The Water Transport (Canal) System
+          </h2>
+          <div className="split-section">
+            <div className="text-content">
+              <p style={{marginBottom: '20px', fontSize: '1.1rem', color: '#334155'}}>
+                Sponges lack complex organ systems, relying entirely on a unique water transport mechanism for their survival needs.
+              </p>
+              <ul className="premium-list">
+                <li><strong>Pathway:</strong> Water enters through minute pores called <strong>Ostia</strong> in the body wall.</li>
+                <li><strong>Central Cavity:</strong> It flows into a central cavity called the <strong>Spongocoel</strong>.</li>
+                <li><strong>Exit Point:</strong> The water finally exits through a large opening called the <strong>Osculum</strong>.</li>
+                <li><strong>Choanocytes:</strong> The spongocoel and canals are lined by specialized flagellated cells called <strong>choanocytes (collar cells)</strong> that maintain the water current.</li>
+                <li><strong>Functions:</strong> This system is critical for food gathering, respiratory exchange, and removal of waste.</li>
+              </ul>
+            </div>
+            <div className="anatomy-diagram-wrapper">
+              <img
+                src="https://res.cloudinary.com/duibfmcw1/image/upload/v1775034275/Water_canal_system_qcbj11.png"
+                alt="Water Canal System Anatomy"
+                className="anatomy-img hero-main-img"
+              />
+            </div>
+          </div>
+        </ScrollReveal>
+      </section>
+
+      {/* --- REPRODUCTION --- */}
+      <section className="phylum-section">
+        <ScrollReveal animation="fade-up">
+          <h2 className="section-title">
+            <div className="title-icon-wrapper"><RefreshCw className="section-icon" /></div>
+            Reproduction & Development
+          </h2>
+          <div className="split-section reverse">
+            <div className="anatomy-diagram-wrapper">
+              <img
+                src="https://res.cloudinary.com/duibfmcw1/image/upload/v1775034267/reproduction_mtc9ku.jpg"
+                alt="Sponge Reproduction Cycle"
+                className="anatomy-img hero-main-img"
+              />
+            </div>
+            <div className="text-content">
+              <ul className="premium-list">
+                <li><strong>Hermaphrodites:</strong> Sponges are monoecious; eggs and sperms are produced by the same individual.</li>
+                <li><strong>Asexual Reproduction:</strong> Occurs primarily through <strong>fragmentation</strong>.</li>
+                <li><strong>Sexual Reproduction:</strong> Occurs by the formation of gametes.</li>
+                <li><strong>Fertilization:</strong> Fertilization is strictly <strong>internal</strong>.</li>
+                <li><strong>Development:</strong> Development is <strong>indirect</strong>, passing through a distinct larval stage (e.g., Parenchymula or Amphiblastula) that is morphologically distinct from the adult.</li>
+              </ul>
+            </div>
+          </div>
+        </ScrollReveal>
+      </section>
+
+      {/* --- EXAM HIGH-YIELD POINTS --- */}
+      <section className="phylum-section">
+        <ScrollReveal animation="fade-up">
+          <div className="exam-card">
+            <h2 className="exam-card-title">
+              <CheckCircle2 className="section-icon" style={{color: '#ef4444', width: '32px', height: '32px'}} />
+              High-Yield Target Points
+            </h2>
+            <ul className="premium-list" style={{marginBottom: 0}}>
+              <li><strong>Choanocytes (Collar Cells):</strong> The defining, unique cell type of Porifera lining the spongocoel and canals.</li>
+              <li><strong>Cellular Level of Organisation:</strong> Sponges are the only animals in the kingdom that lack true tissues.</li>
+              <li><strong>Spongocoel vs. Coelom:</strong> The spongocoel is simply a water cavity, <strong>not</strong> a true body cavity (coelom). Therefore, sponges are acoelomates.</li>
+              <li><strong>Osmoregulation:</strong> Like many primitive aquatic organisms, sponges excrete waste primarily as ammonia (Ammonotelic).</li>
             </ul>
           </div>
-
-          <div className="class-card theme-blue">
-            <div className="card-header">
-              <div className="icon-wrapper">🔵</div>
-              <h3>Class Hexactinellida</h3>
-            </div>
-            <ul className="card-list">
-              <li>Skeleton of <strong>six‑rayed siliceous spicules</strong> (glass sponges).</li>
-              <li>Exclusively marine, mainly deep‑sea (200 m or more).</li>
-              <li>Approximately <strong>680 species</strong> known.</li>
-            </ul>
-          </div>
-
-          <div className="class-card theme-green">
-            <div className="card-header">
-              <div className="icon-wrapper">🟢</div>
-              <h3>Class Demospongiae</h3>
-            </div>
-            <ul className="card-list">
-              <li>Skeleton of <strong>spongin fibres, siliceous spicules (not six‑rayed), or both</strong>.</li>
-              <li>Contains <strong>&gt;90% of all sponge species</strong>; marine and freshwater.</li>
-              <li>Divided into several subclasses based on skeletal and canal system features.</li>
-            </ul>
-          </div>
-        </div>
+        </ScrollReveal>
       </section>
 
-      <section className="animate-fade-up" style={{ animationDelay: '0.5s' }}>
-        {/* Passes a theme colour that matches Porifera (e.g., a soft blue/green) */}
-        <QuickQuiz questions={poriferaQuestions} themeColor="#4db8ac" />
-      </section>
+      {/* --- CLASSIFICATION --- */}
+      <section className="phylum-section">
+        <ScrollReveal animation="fade-up">
+          <h2 className="section-title">
+            <div className="title-icon-wrapper"><ShieldCheck className="section-icon" /></div>
+            Classification
+          </h2>
+          
+          <div className="info-banner" style={{ marginBottom: '30px' }}>
+            <div className="banner-icon"><Microscope className="section-icon" /></div>
+            <div className="banner-text">
+              The Phylum Porifera is broadly classified based on the chemical composition and structure of their internal skeleton (spicules or spongin fibres).
+            </div>
+          </div>
 
+          <PhylumTaxonomyTree
+            phylumName="Porifera"
+            phylumDescription="Classified primarily based on skeletal structure (Calcarea, Hexactinellida, Demospongiae)."
+            majorClasses={majorClasses}
+          />
+        </ScrollReveal>
+      </section>
     </div>
   );
 };
