@@ -118,14 +118,15 @@ const Homepage = () => {
       hours: 25,
       route: "/evolution",
     },
-    /* {
+    {
        id: "horse",
        name: "Horse Evolution",
        scientificName: "Equus ferus caballus",
        classification: "Class: Mammalia",
        image: "https://img.icons8.com/fluency/96/trotting-horse.png",
        hours: 14,
-     }, */
+       route: "/horse-evolution",
+     }
   ];
 
   return (
