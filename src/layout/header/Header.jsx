@@ -11,7 +11,6 @@ export default function Header() {
   
   // New state variables for scroll behavior
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isHidden, setIsHidden] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
@@ -43,14 +42,6 @@ export default function Header() {
 
       // Add shadow/resize when scrolled down a bit
       setIsScrolled(currentScrollY > 50);
-
-      // Hide on scroll down, show on scroll up (only active past 100px)
-      if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        setIsHidden(true); // Scrolling down
-      } else {
-        setIsHidden(false); // Scrolling up
-      }
-
       setLastScrollY(currentScrollY);
     };
 
@@ -81,13 +72,14 @@ export default function Header() {
     { name: "Home", path: "/" },
     { name: "Taxonomy Tree", path: "/taxonomy-tree" },
     { name: "ZooHub", path: "/zoohub" },
+    { name: "Scopes", path: "/scopes" },
     { name: "About", path: "/about" },
   ];
 
   return (
     <>
       {/* Dynamic classes applied here */}
-      <header className={`hea-header ${isScrolled ? "hea-scrolled" : ""} ${isHidden ? "hea-hidden-mobile" : ""}`}>
+      <header className={`hea-header ${isScrolled ? "hea-scrolled" : ""}`}>
         <div className="hea-header-container">
 
           {/* --- LEFT: LOGO + SEARCH --- */}
