@@ -190,14 +190,12 @@ const HorseEvolution = () => {
             <div
               className={`horse-timeline-item ${isEven ? 'horse-item-left' : 'horse-item-right'}`}
               key={horse.name}
-              onClick={() => setSelectedHorse(horse)}
-              style={{ cursor: 'pointer' }}
             >
 
               {/* Left Pane */}
               <div className="horse-timeline-pane horse-pane-left">
                 {isEven ? (
-                  <div className="horse-photo-card">
+                  <div className="horse-photo-card" onClick={() => setSelectedHorse(horse)} style={{ cursor: 'pointer' }}>
                     <div className="horse-image-wrapper">
                       <img src={horse.img} alt={horse.name} loading="lazy" />
                     </div>
@@ -223,7 +221,7 @@ const HorseEvolution = () => {
                     <span className="horse-era-year">{horse.era}</span>
                   </div>
                 ) : (
-                  <div className="horse-photo-card">
+                  <div className="horse-photo-card" onClick={() => setSelectedHorse(horse)} style={{ cursor: 'pointer' }}>
                     <div className="horse-image-wrapper">
                       <img src={horse.img} alt={horse.name} loading="lazy" />
                     </div>
