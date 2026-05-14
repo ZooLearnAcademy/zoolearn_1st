@@ -427,6 +427,31 @@ function ZooHub() {
 
 
 
+  // 💾 Restore scroll position instantly on mount (refresh or back from species)
+  useEffect(() => {
+    const saved = sessionStorage.getItem('zoohub-scroll');
+    if (saved !== null) {
+      // Use requestAnimationFrame to ensure DOM is fully painted before restoring
+      requestAnimationFrame(() => {
+        window.scrollTo({ top: parseInt(saved, 10), behavior: 'instant' });
+      });
+    }
+  }, []);
+
+  // 💾 Save scroll position on every scroll & on unmount
+  useEffect(() => {
+    const saveScroll = () => {
+      sessionStorage.setItem('zoohub-scroll', window.scrollY);
+    };
+
+    window.addEventListener('scroll', saveScroll, { passive: true });
+    return () => {
+      // Also save on unmount (navigating away)
+      sessionStorage.setItem('zoohub-scroll', window.scrollY);
+      window.removeEventListener('scroll', saveScroll);
+    };
+  }, []);
+
   // Track scroll to make sticky bar appear after banner & stay attached to header
   useEffect(() => {
     const handleScroll = () => {
@@ -450,17 +475,7 @@ function ZooHub() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // 🔗 Auto-scroll based on URL route
-  useEffect(() => {
-    const pathParts = location.pathname.split('/');
-    const phylumFromUrl = pathParts[pathParts.length - 1];
 
-    if (phylumFromUrl && refs[phylumFromUrl]) {
-      setTimeout(() => {
-        refs[phylumFromUrl]?.current?.scrollIntoView({ behavior: "smooth" });
-      }, 300);
-    }
-  }, [location.pathname]);
 
 
 

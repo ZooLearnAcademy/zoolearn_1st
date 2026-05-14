@@ -86,7 +86,6 @@
   /* Soft mild green/blue glow to match user request */
   filter: drop-shadow(0 0 20px rgba(134, 239, 172, 0.3))
     drop-shadow(0 10px 20px rgba(147, 197, 253, 0.3));
-  animation: zooFloat 4s ease-in-out infinite;
 }
 
 .zoohub-banner-brand {
@@ -120,17 +119,6 @@
   margin-top: 1rem;
   font-weight: 500;
   text-align: center;
-}
-
-@keyframes zooFloat {
-  0%,
-  100% {
-    transform: translateY(0px) scale(1);
-  }
-
-  50% {
-    transform: translateY(-15px) scale(1.02);
-  }
 }
 
 /* ===============================
