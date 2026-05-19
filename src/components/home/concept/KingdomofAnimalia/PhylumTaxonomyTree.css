@@ -85,6 +85,63 @@
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .phylum-tree-wrapper {
-    height: 350px;
+    height: 320px;
+    overflow: hidden;
+  }
+
+  .phylum-tree-node {
+    padding: 7px 10px;
+    min-width: 100px;
+    border-radius: 10px;
+  }
+
+  .node-label {
+    font-size: 10px;
+  }
+
+  .tree-details-panel {
+    padding: 18px;
+    min-height: 90px;
+  }
+
+  .details-title {
+    font-size: 1.15rem;
+  }
+
+  .details-description {
+    font-size: 0.85rem;
+  }
+
+  .tree-hint {
+    font-size: 8px;
+    top: 10px;
+    right: 10px;
+  }
+
+  .phylum-taxonomy-container {
+    border-radius: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .phylum-tree-wrapper {
+    height: 280px;
+  }
+
+  .phylum-tree-node {
+    padding: 6px 8px;
+    min-width: 80px;
+  }
+
+  .node-label {
+    font-size: 9px;
+  }
+
+  .tree-details-panel {
+    padding: 14px;
+  }
+
+  .details-title {
+    font-size: 1rem;
   }
 }

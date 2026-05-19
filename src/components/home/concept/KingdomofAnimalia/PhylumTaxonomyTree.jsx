@@ -110,10 +110,19 @@ const PhylumTreeContent = ({ phylumName, majorClasses, selectedId, onSelect }) =
   );
 };
 
-const PhylumTaxonomyTree = ({ phylumName, phylumDescription, majorClasses }) => {
+const PhylumTaxonomyTree = ({ phylumName, phylumDescription, majorClasses, onClassSelect }) => {
   const [selectedId, setSelectedId] = useState('root');
 
   if (!majorClasses || majorClasses.length === 0) return null;
+
+  const handleSelect = (nodeId) => {
+    setSelectedId(nodeId);
+    // Notify parent when a class node (not root) is selected
+    if (nodeId !== 'root' && onClassSelect) {
+      const classIndex = parseInt(nodeId.split('-')[1]);
+      onClassSelect(classIndex);
+    }
+  };
 
   const selectedData = selectedId === 'root' 
     ? { name: phylumName, description: phylumDescription }
@@ -126,14 +135,14 @@ const PhylumTaxonomyTree = ({ phylumName, phylumDescription, majorClasses }) => 
           phylumName={phylumName} 
           majorClasses={majorClasses} 
           selectedId={selectedId}
-          onSelect={setSelectedId}
+          onSelect={handleSelect}
         />
       </ReactFlowProvider>
       
       <div className="tree-details-panel">
         <h3 className="details-title">{selectedData.name}</h3>
         <p className="details-description">{selectedData.description}</p>
-        {selectedData.examples && (
+        {selectedData.examples && selectedData.examples.length > 0 && (
           <div className="details-examples">
             <strong>Examples:</strong> {selectedData.examples.join(', ')}
           </div>

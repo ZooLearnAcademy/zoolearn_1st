@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import './KingdomofAnimalia.css';
 
 // Import sub-components for Kingdom Animalia
@@ -39,11 +39,22 @@ const animaliaPhylaList = [
   { id: 11, title: "PHYLUM 11", name: "Chordata", des: "Animals with a notochord, a dorsal hollow nerve cord, and paired pharyngeal gill slits. This includes all vertebrates (fish, amphibians, reptiles, birds, mammals).", img: "https://images.unsplash.com/photo-1444464666168-49d633b867ad?q=80&w=2069&auto=format&fit=crop", theme: "#8b5cf6" }
 ];
 
+// Import lucide icons for menu
+import { Menu, X } from 'lucide-react';
+
 const AnimalKingdom = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const sidebarRef = useRef(null);
   const containerRef = useRef(null); // Ref for timeline container
   const [lineHeight, setLineHeight] = useState(0); // Scrolled percentage for timeline
+  const [lightboxSrc, setLightboxSrc] = useState(null); // Lightbox modal image src
+  const [lightboxAlt, setLightboxAlt] = useState('');
+
+  // Close menu when tab changes on mobile
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [currentIndex]);
 
   // Scroll to the top of the window when a new tab is clicked
   useEffect(() => {
@@ -60,8 +71,6 @@ const AnimalKingdom = () => {
       const { top, height } = containerRef.current.getBoundingClientRect();
       const viewportHeight = window.innerHeight;
       
-      // Calculate how much of the timeline is scrolled past the top
-      // 0% when top of container is at viewport middle, 100% when bottom is at viewport middle
       const scrollStart = viewportHeight / 2;
       const progress = ((scrollStart - top) / height) * 100;
       setLineHeight(Math.min(100, Math.max(0, progress)));
@@ -95,6 +104,25 @@ const AnimalKingdom = () => {
       window.removeEventListener('scroll', updateSidebarBottom);
       window.removeEventListener('resize', updateSidebarBottom);
     };
+  }, []);
+
+  // Global lightbox event listener — any child img can dispatch 'zl:lightbox' to open
+  useEffect(() => {
+    const handleLightboxEvent = (e) => {
+      if (e.detail && e.detail.src) {
+        setLightboxSrc(e.detail.src);
+        setLightboxAlt(e.detail.alt || '');
+        document.body.style.overflow = 'hidden';
+      }
+    };
+    window.addEventListener('zl:lightbox', handleLightboxEvent);
+    return () => window.removeEventListener('zl:lightbox', handleLightboxEvent);
+  }, []);
+
+  const closeLightbox = useCallback(() => {
+    setLightboxSrc(null);
+    setLightboxAlt('');
+    document.body.style.overflow = '';
   }, []);
 
   const currentData = animaliaPhylaList[currentIndex];
@@ -140,27 +168,53 @@ const AnimalKingdom = () => {
     <div className="w3-layout-wrapper">
       <div className="w3-main-container">
         
-        {/* LEFT SIDEBAR - Permanently Fixed Menu */}
-        <aside className="w3-sidebar" ref={sidebarRef}>
-          {/* Header Removed as per "menu bar no need that" */}
+        {/* MOBILE SIDEBAR OVERLAY */}
+        <div 
+          className={`w3-sidebar-overlay ${isMobileMenuOpen ? 'show' : ''}`}
+          onClick={() => setIsMobileMenuOpen(false)}
+          aria-hidden="true"
+        />
 
-          {/* Progress */}
+        {/* LEFT SIDEBAR - Permanently Fixed Menu */}
+        <aside className={`w3-sidebar ${isMobileMenuOpen ? 'open' : ''}`} ref={sidebarRef}>
+
+          {/* Progress Bar */}
           <div className="w3-sidebar-progress">
             <div className="w3-progress-label">Exploration Progress</div>
             <div className="w3-progress-track">
               <div
                 className="w3-progress-fill"
-                style={{ width: `${((currentIndex + 1) / animaliaPhylaList.length) * 100}%` }}
+                style={{ width: `${(currentIndex / (animaliaPhylaList.length - 1)) * 100}%` }}
               />
             </div>
-            <div className="w3-progress-text">Topic {currentIndex + 1} of {animaliaPhylaList.length}</div>
+            <div className="w3-progress-text">
+              {currentIndex === 0
+                ? 'Classification History'
+                : `Phylum ${currentIndex} of 11`}
+            </div>
           </div>
+
           <ul className="w3-sidebar-list">
-            {animaliaPhylaList.slice(1).map((phylum, index) => (
+            {/* Classification History — item #0 */}
+            <li key="ch-0">
+              <button
+                className={`w3-sidebar-btn w3-sidebar-btn--history ${currentIndex === 0 ? 'w3-active-side' : ''}`}
+                onClick={() => setCurrentIndex(0)}
+              >
+                <span className="w3-sidebar-dot" style={{ background: '#04AA6D' }} />
+                Classification History
+              </button>
+            </li>
+
+            {/* Divider */}
+            <li className="w3-sidebar-divider" aria-hidden="true" />
+
+            {/* All 11 Phyla */}
+            {animaliaPhylaList.slice(1).map((phylum) => (
               <li key={phylum.id}>
                 <button
-                  className={`w3-sidebar-btn ${currentIndex === (index + 1) ? 'w3-active-side' : ''}`}
-                  onClick={() => setCurrentIndex(index + 1)}
+                  className={`w3-sidebar-btn ${currentIndex === phylum.id ? 'w3-active-side' : ''}`}
+                  onClick={() => setCurrentIndex(phylum.id)}
                 >
                   <span
                     className="w3-sidebar-dot"
@@ -190,6 +244,35 @@ const AnimalKingdom = () => {
 
         </main>
       </div>
+
+      {/* ===== GLOBAL LIGHTBOX MODAL ===== */}
+      {lightboxSrc && (
+        <div
+          className="zl-lightbox-overlay"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Image preview"
+          onClick={closeLightbox}
+        >
+          <button className="zl-lightbox-close" onClick={closeLightbox} aria-label="Close">
+            ✕
+          </button>
+          <div className="zl-lightbox-inner" onClick={(e) => e.stopPropagation()}>
+            <img src={lightboxSrc} alt={lightboxAlt} className="zl-lightbox-img" />
+            {lightboxAlt && <p className="zl-lightbox-caption">{lightboxAlt}</p>}
+          </div>
+        </div>
+      )}
+
+      {/* ===== MOBILE MENU FAB ===== */}
+      <button 
+        className={`zl-mobile-menu-fab ${isMobileMenuOpen ? 'active' : ''}`}
+        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        aria-label="Toggle Navigation Menu"
+      >
+        {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+      </button>
+
     </div>
   );
 };

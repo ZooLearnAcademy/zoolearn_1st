@@ -1,33 +1,30 @@
-/* --- THEME VARIABLES --- */
-:root {
-  --cten-main: #a855f7;   /* Purple-500 */
-  --cten-light: #f3e8ff;  /* Purple-50 */
-  --cten-dark: #7e22ce;   /* Purple-700 */
-  --text-main: #0f172a;
-  --text-muted: #475569;
-}
+/* ============================================================
+   CTENOPHORA – PURPLE THEME
+   All rules scoped under .phylum-ctenophora to prevent
+   cross-page CSS leaks.
+   ============================================================ */
 
 /* --- ANIMATIONS --- */
-@keyframes float {
+@keyframes cten-float {
   0% { transform: translateY(0px); }
   50% { transform: translateY(-12px); }
   100% { transform: translateY(0px); }
 }
 
-@keyframes pulse-glow {
+@keyframes cten-pulse-glow {
   0% { opacity: 0.15; transform: scale(1); }
   50% { opacity: 0.25; transform: scale(1.02); }
   100% { opacity: 0.15; transform: scale(1); }
 }
 
-/* --- BASE STYLES --- */
-.phylum-container {
+/* --- BASE CONTAINER --- */
+.phylum-ctenophora {
   position: relative;
-  max-width: 1200px; /* Widened slightly for a bigger banner feel */
+  max-width: 1200px;
   margin: 0 auto;
   padding: 40px 30px 80px;
   font-family: 'Inter', system-ui, sans-serif;
-  color: var(--text-main);
+  color: #0f172a;
   background-color: transparent;
   background-image: radial-gradient(#e2e8f0 1.2px, transparent 1.2px);
   background-size: 30px 30px;
@@ -35,7 +32,7 @@
 }
 
 /* Background mesh glow */
-.hero-glow {
+.phylum-ctenophora .hero-glow {
   position: absolute;
   top: -100px;
   left: 50%;
@@ -48,34 +45,34 @@
   pointer-events: none;
 }
 
-/* --- HERO BANNER (UPDATED FOR BIG LAYOUT) --- */
-.phylum-hero {
-  display: flex;
-  flex-direction: column;
+/* --- HERO BANNER (SIDE-BY-SIDE: CONTENT LEFT, IMAGE RIGHT) --- */
+.phylum-ctenophora .phylum-hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 50px;
   align-items: center;
-  text-align: center;
-  gap: 3rem;
   margin-bottom: 90px;
   padding: 2rem 0;
   position: relative;
   z-index: 1;
 }
 
-.hero-content {
-  max-width: 850px;
+.phylum-ctenophora .hero-content {
+  max-width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  text-align: left;
 }
 
-.hero-badge-group {
+.phylum-ctenophora .hero-badge-group {
   display: flex;
   gap: 12px;
   margin-bottom: 24px;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
-.hero-badge {
+.phylum-ctenophora .hero-badge {
   padding: 8px 18px;
   background: #fff;
   border: 1px solid #e2e8f0;
@@ -88,15 +85,15 @@
   box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
 }
 
-.hero-badge.marine {
+.phylum-ctenophora .hero-badge.marine {
   background: #f3e8ff;
   border-color: #d8b4fe;
-  color: var(--cten-dark);
+  color: #7e22ce;
 }
 
-.hero-title {
+.phylum-ctenophora .hero-title {
   font-family: 'Playfair Display', serif;
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 800;
   color: #0f172a;
   margin-bottom: 12px;
@@ -104,28 +101,28 @@
   letter-spacing: -0.03em;
 }
 
-.hero-tagline {
-  font-size: 1.4rem;
+.phylum-ctenophora .hero-tagline {
+  font-size: 1.3rem;
   font-weight: 600;
-  color: var(--cten-dark);
-  margin-bottom: 32px;
+  color: #7e22ce;
+  margin-bottom: 28px;
   font-style: italic;
 }
 
-.hero-intro-text p {
-  font-size: 1.15rem;
+.phylum-ctenophora .hero-intro-text p {
+  font-size: 1.08rem;
   line-height: 1.8;
   color: #334155;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
-/* --- VISUAL CONTAINER (MASSIVE BANNER) --- */
-.hero-visual {
+/* --- VISUAL CONTAINER (RIGHT SIDE BANNER) --- */
+.phylum-ctenophora .hero-visual {
   width: 100%;
-  max-width: 1100px;
+  max-width: 100%;
 }
 
-.visual-container {
+.phylum-ctenophora .visual-container {
   position: relative;
   padding: 20px;
   width: 100%;
@@ -134,25 +131,24 @@
   align-items: center;
 }
 
-/* Decorative backdrop for the banner */
-.visual-container::before {
+.phylum-ctenophora .visual-container::before {
   content: '';
   position: absolute;
   inset: 5px;
   border-radius: 30px;
-  background: linear-gradient(135deg, var(--cten-main), var(--cten-light));
+  background: linear-gradient(135deg, #a855f7, #f3e8ff);
   filter: blur(35px);
   opacity: 0.25;
   z-index: 0;
-  animation: pulse-glow 6s infinite ease-in-out;
+  animation: cten-pulse-glow 6s infinite ease-in-out;
 }
 
-.visual-mesh {
+.phylum-ctenophora .visual-mesh {
   position: absolute;
   inset: 0;
-  background: 
-    linear-gradient(45deg, var(--cten-light) 25%, transparent 25%),
-    linear-gradient(-45deg, var(--cten-light) 25%, transparent 25%);
+  background:
+    linear-gradient(45deg, #f3e8ff 25%, transparent 25%),
+    linear-gradient(-45deg, #f3e8ff 25%, transparent 25%);
   background-size: 20px 20px;
   opacity: 0.6;
   border-radius: 30px;
@@ -161,33 +157,34 @@
   border: 1px solid rgba(168, 85, 247, 0.2);
 }
 
-.hero-main-img {
+.phylum-ctenophora .hero-main-img {
   width: 100%;
-  height: 450px; /* Forces a wide, cinematic banner aspect ratio */
+  height: 420px;
   object-fit: cover;
-  object-position: center; /* Keeps the subject centered */
+  object-position: center;
   border-radius: 24px;
   border: 4px solid rgba(255, 255, 255, 0.95);
   box-shadow: 0 30px 60px -15px rgba(168, 85, 247, 0.3), 0 0 0 1px rgba(226, 232, 240, 0.6);
   position: relative;
   z-index: 2;
-  animation: float 6s ease-in-out infinite;
+  animation: cten-float 6s ease-in-out infinite;
 }
 
-/* For the secondary diagram in the anatomy section */
-.anatomy-img.hero-main-img {
-  height: auto; /* Remove the fixed height for diagrams so they don't get cropped */
-  animation: float 7s ease-in-out infinite reverse; 
+.phylum-ctenophora .anatomy-img.hero-main-img {
+  height: auto;
+  max-height: 500px;
+  object-fit: contain;
+  animation: cten-float 7s ease-in-out infinite reverse;
 }
 
 /* --- SECTIONS --- */
-.phylum-section {
+.phylum-ctenophora .phylum-section {
   margin-bottom: 60px;
   padding: 40px 0;
   border-top: 1px solid #f1f5f9;
 }
 
-.section-title {
+.phylum-ctenophora .section-title {
   display: flex;
   align-items: center;
   gap: 15px;
@@ -197,30 +194,30 @@
   color: #0f172a;
 }
 
-.title-icon-wrapper {
+.phylum-ctenophora .title-icon-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 50px;
   height: 50px;
-  background: var(--cten-light);
+  background: #f3e8ff;
   border-radius: 12px;
   border: 1px solid #e9d5ff;
 }
 
-.section-icon {
+.phylum-ctenophora .section-icon {
   width: 26px;
   height: 26px;
-  color: var(--cten-dark);
+  color: #7e22ce;
 }
 
-.features-grid {
+.phylum-ctenophora .features-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 24px;
 }
 
-.feature-card {
+.phylum-ctenophora .feature-card {
   background: #ffffff;
   padding: 24px 28px;
   border-radius: 16px;
@@ -230,13 +227,13 @@
   box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);
 }
 
-.feature-card:hover {
+.phylum-ctenophora .feature-card:hover {
   transform: translateY(-4px);
-  border-left-color: var(--cten-main);
+  border-left-color: #a855f7;
   box-shadow: 0 12px 24px -8px rgba(168, 85, 247, 0.15);
 }
 
-.feature-label {
+.phylum-ctenophora .feature-label {
   display: block;
   font-size: 0.8rem;
   font-weight: 700;
@@ -246,15 +243,15 @@
   letter-spacing: 0.05em;
 }
 
-.feature-value {
+.phylum-ctenophora .feature-value {
   display: block;
   font-size: 1.15rem;
   font-weight: 600;
   color: #1e293b;
 }
 
-/* --- SPLIT SECTION --- */
-.split-section {
+/* --- SPLIT SECTION (CONTENT LEFT, IMAGE RIGHT) --- */
+.phylum-ctenophora .split-section {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 50px;
@@ -262,21 +259,21 @@
 }
 
 /* --- PREMIUM LIST --- */
-.premium-list {
+.phylum-ctenophora .premium-list {
   list-style: none;
   padding: 0;
 }
 
-.premium-list li {
+.phylum-ctenophora .premium-list li {
   position: relative;
   padding-left: 45px;
   margin-bottom: 24px;
   line-height: 1.8;
   font-size: 1.05rem;
-  color: var(--text-muted);
+  color: #475569;
 }
 
-.premium-list li::before {
+.phylum-ctenophora .premium-list li::before {
   content: '';
   position: absolute;
   left: 5px;
@@ -289,10 +286,10 @@
 }
 
 /* --- INFO BANNER --- */
-.info-banner {
+.phylum-ctenophora .info-banner {
   display: flex;
   gap: 25px;
-  background: var(--cten-light);
+  background: #f3e8ff;
   padding: 35px;
   border-radius: 20px;
   border: 1px solid #d8b4fe;
@@ -300,7 +297,7 @@
   align-items: center;
 }
 
-.banner-icon {
+.phylum-ctenophora .banner-icon {
   flex-shrink: 0;
   width: 60px;
   height: 60px;
@@ -313,51 +310,201 @@
   border: 1px solid #f3e8ff;
 }
 
-.banner-text {
+.phylum-ctenophora .banner-text {
   font-size: 1.15rem;
   line-height: 1.7;
-  color: var(--cten-dark);
+  color: #7e22ce;
 }
 
-/* --- CONCLUSION FLAT --- */
-.conclusion-flat .info-banner {
-  background: #f8fafc;
-  border-color: #e2e8f0;
-  box-shadow: none;
+/* --- CLASSIFICATION CARDS --- */
+.phylum-ctenophora .class-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 28px;
 }
-.conclusion-flat .banner-text {
+
+.phylum-ctenophora .class-detail-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-top: 4px solid #a855f7;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 4px 12px -4px rgba(168, 85, 247, 0.08);
+  transition: all 0.3s ease;
+}
+
+.phylum-ctenophora .class-detail-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px -8px rgba(168, 85, 247, 0.18);
+}
+
+.phylum-ctenophora .class-detail-card h3 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 16px;
+}
+
+.phylum-ctenophora .class-detail-card p {
+  font-size: 1rem;
+  line-height: 1.7;
   color: #475569;
+  margin-bottom: 12px;
+  font-style: italic;
 }
-.conclusion-flat .section-icon {
-  color: #64748b;
+
+/* --- HIGHLIGHTED CARD (tree → card interaction) --- */
+@keyframes cten-highlight-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(168, 85, 247, 0.4); }
+  50% { box-shadow: 0 0 20px 6px rgba(168, 85, 247, 0.25); }
+  100% { box-shadow: 0 0 0 0 rgba(168, 85, 247, 0.4); }
 }
-.conclusion-flat .banner-icon {
-  border-color: #e2e8f0;
-  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+
+.phylum-ctenophora .class-detail-card.highlighted {
+  border-color: #a855f7;
+  border-top-color: #a855f7;
+  border-width: 2px;
+  border-top-width: 4px;
+  background: #faf5ff;
+  transform: translateY(-6px);
+  animation: cten-highlight-pulse 1.5s ease-in-out 2;
+  box-shadow: 0 14px 28px -8px rgba(168, 85, 247, 0.25);
+}
+
+.phylum-ctenophora .class-detail-card.highlighted h3 {
+  color: #7e22ce;
+}
+
+/* --- PLAIN NESTED LIST --- */
+.phylum-ctenophora .plain-list {
+  list-style: disc;
+  padding-left: 24px;
+  margin: 0;
+}
+
+.phylum-ctenophora .plain-list li {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #475569;
+  margin-bottom: 6px;
+}
+
+/* --- ANATOMY DIAGRAM WRAPPER --- */
+.phylum-ctenophora .anatomy-diagram-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.phylum-ctenophora .anatomy-img-clickable {
+  cursor: zoom-in;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.phylum-ctenophora .anatomy-img-clickable:hover {
+  transform: scale(1.02);
+  box-shadow: 0 20px 40px -10px rgba(168, 85, 247, 0.25);
+}
+
+/* --- CALLOUT BOX --- */
+.phylum-ctenophora .callout-box {
+  background: #f3e8ff;
+  border-left: 4px solid #a855f7;
+  border-radius: 10px;
+  padding: 18px 22px;
+  font-size: 1rem;
+  color: #7e22ce;
+  line-height: 1.7;
+  margin-top: 28px;
 }
 
 /* --- RESPONSIVE --- */
 @media (max-width: 992px) {
-  .split-section {
+  .phylum-ctenophora .phylum-hero {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+  .phylum-ctenophora .hero-content {
+    align-items: center;
+    text-align: center;
+  }
+  .phylum-ctenophora .hero-badge-group {
+    justify-content: center;
+  }
+  .phylum-ctenophora .split-section {
     grid-template-columns: 1fr;
     gap: 40px;
   }
-  .hero-title {
-    font-size: 4rem;
+  .phylum-ctenophora .hero-title {
+    font-size: 3.5rem;
+  }
+  .phylum-ctenophora .class-cards-grid {
+    grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 768px) {
-  .hero-title {
-    font-size: 3.2rem;
+  .phylum-ctenophora .hero-title {
+    font-size: 2.6rem;
   }
-  .phylum-container {
-    padding: 30px 20px 60px;
+  .phylum-ctenophora {
+    padding: 24px 16px 50px;
   }
-  .features-grid {
+  .phylum-ctenophora .features-grid {
     grid-template-columns: 1fr;
   }
-  .hero-main-img {
-    height: 300px; /* Reduce banner height on mobile */
+  .phylum-ctenophora .hero-main-img {
+    height: 260px;
+  }
+  .phylum-ctenophora .section-title {
+    font-size: 1.5rem;
+    gap: 10px;
+  }
+  .phylum-ctenophora .title-icon-wrapper {
+    width: 40px;
+    height: 40px;
+  }
+  .phylum-ctenophora .section-icon {
+    width: 20px;
+    height: 20px;
+  }
+  .phylum-ctenophora .hero-tagline {
+    font-size: 1.1rem;
+  }
+  .phylum-ctenophora .hero-intro-text p {
+    font-size: 0.95rem;
+  }
+  .phylum-ctenophora .premium-list li {
+    padding-left: 36px;
+    font-size: 0.95rem;
+    margin-bottom: 18px;
+  }
+  .phylum-ctenophora .premium-list li::before {
+    width: 20px;
+    height: 20px;
+  }
+  .phylum-ctenophora .feature-card {
+    padding: 18px 20px;
+  }
+  .phylum-ctenophora .feature-value {
+    font-size: 1rem;
+  }
+  .phylum-ctenophora .info-banner {
+    padding: 22px;
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+  .phylum-ctenophora .class-detail-card {
+    padding: 20px;
+  }
+  .phylum-ctenophora .callout-box {
+    padding: 14px 16px;
+    font-size: 0.92rem;
+  }
+  .phylum-ctenophora .phylum-section {
+    margin-bottom: 40px;
+    padding: 28px 0;
   }
 }

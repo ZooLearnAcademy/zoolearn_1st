@@ -36,46 +36,48 @@ const Chordata = () => {
       
       {/* --- HERO SECTION --- */}
       <section className="phylum-hero">
-        <ScrollReveal animation="fade-right">
-          <div className="hero-content">
-            <div className="hero-badge-group">
-              <span className="hero-badge">Phylum 11</span>
-              <span className="hero-badge chordate">The Vertices</span>
-            </div>
-            
-            <h1 className="hero-title">Chordata</h1>
-            <p className="hero-tagline">The Pinnacles of Animal Evolution</p>
-            
-            <div className="hero-intro-text">
-              <p>
-                <strong>Chordata</strong> is the most advanced animal phylum, characterized by the 
-                presence of a <strong>notochord</strong> at some stage in their lifecycle. This group 
-                ranges from the primitive lancelets to complex vertebrates like humans.
-              </p>
-              <p>
-                All chordates share four fundamental structural signatures: a dorsal hollow nerve 
-                cord, pharyngeal gill slits, a post-anal tail, and of course, the notochord. 
-                They represent the height of neurological and physiological complexity.
-              </p>
+        <ScrollReveal animation="fade-up">
+          <div className="hero-split">
+            {/* LEFT: Text */}
+            <div className="hero-content">
+              <div className="hero-badge-group">
+                <span className="hero-badge">Phylum 11</span>
+                <span className="hero-badge chordate">The Vertebrates</span>
+              </div>
+
+              <h1 className="hero-title">Chordata</h1>
+              <p className="hero-tagline">The Pinnacles of Animal Evolution</p>
+
+              <div className="hero-intro-text">
+                <p>
+                  <strong>Chordata</strong> is the most advanced animal phylum, characterized by the
+                  presence of a <strong>notochord</strong> at some stage in their lifecycle. This group
+                  ranges from the primitive lancelets to complex vertebrates like humans.
+                </p>
+                <p>
+                  All chordates share four fundamental structural signatures: a dorsal hollow nerve
+                  cord, pharyngeal gill slits, a post-anal tail, and of course, the notochord.
+                  They represent the height of neurological and physiological complexity.
+                </p>
+              </div>
+
+              <div className="hero-academic-note">
+                <strong>Crucial Distinction:</strong> "All vertebrates are chordates, but all
+                chordates are NOT vertebrates." (e.g., Protochordates).
+              </div>
             </div>
 
-            <div className="hero-academic-note">
-              <strong>Crucial Distinction:</strong> "All vertebrates are chordates, but all 
-              chordates are NOT vertebrates." (e.g., Protochordates).
-            </div>
-          </div>
-        </ScrollReveal>
-
-        <ScrollReveal animation="fade-left">
-          <div className="hero-visual">
-            <div className="visual-container">
-              <div className="visual-mesh"></div>
-              <img 
-                src="https://images.unsplash.com/photo-1444464666168-49d633b867ad?auto=format&fit=crop&q=80&w=2000" 
-                alt="Representative Chordate (Bird)" 
-                className="hero-main-img" 
-              />
-              <p className="visual-caption">REPRESENTATIVE CHORDATE (AVES)</p>
+            {/* RIGHT: Banner Image */}
+            <div className="hero-visual">
+              <div className="visual-container">
+                <div className="visual-mesh"></div>
+                <img
+                  src="https://images.unsplash.com/photo-1444464666168-49d633b867ad?auto=format&fit=crop&q=80&w=2000"
+                  alt="Representative Chordate (Bird)"
+                  className="hero-main-img"
+                />
+                <p className="visual-caption">REPRESENTATIVE CHORDATE (AVES)</p>
+              </div>
             </div>
           </div>
         </ScrollReveal>

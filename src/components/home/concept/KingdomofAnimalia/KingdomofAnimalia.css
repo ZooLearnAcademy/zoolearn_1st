@@ -430,20 +430,84 @@
 }
 
 /* ==========================================
+   MOBILE FAB MENU & OVERLAY
+   ========================================== */
+.zl-mobile-menu-fab {
+  display: none;
+}
+
+.w3-sidebar-overlay {
+  display: none;
+}
+
+/* ==========================================
    MOBILE RESPONSIVENESS
    ========================================== */
 @media (max-width: 850px) {
+  .zl-mobile-menu-fab {
+    display: flex;
+    position: fixed;
+    bottom: 24px;
+    left: 24px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #b45309 0%, #d97706 100%);
+    color: white;
+    border: none;
+    box-shadow: 0 4px 15px rgba(180, 83, 9, 0.4);
+    z-index: 10001;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .zl-mobile-menu-fab:active {
+    transform: scale(0.92);
+  }
+
+  .w3-sidebar-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    top: 0;
+    left: 0;
+    background: rgba(15, 23, 42, 0.5);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .w3-sidebar-overlay.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
   .w3-sidebar {
-    position: static !important;
-    width: 100%;
-    height: auto;
-    bottom: auto;
-    max-height: 280px;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    height: 100vh !important;
+    max-height: 100vh !important;
+    width: 300px !important;
+    max-width: 80vw !important;
     flex-direction: column;
-    border-right: none;
-    border-bottom: 1px solid var(--zl-border);
-    backdrop-filter: none;
-    background: #fff;
+    border-right: 1px solid var(--zl-border);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    z-index: 10000;
+    transform: translateX(-100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .w3-sidebar.open {
+    transform: translateX(0);
+    box-shadow: 10px 0 30px rgba(0,0,0,0.15);
   }
 
   .w3-content {
@@ -504,21 +568,483 @@
 }
 
 .anatomy-diagram-wrapper {
-  background: #f8fafc;
-  padding: 20px;
-  border-radius: 20px;
-  border: 1px inset #e2e8f0;
   text-align: center;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .anatomy-img {
   width: 100%;
-  max-width: 450px;
-  border-radius: 12px;
-  mix-blend-mode: multiply; /* Helps diagrams blend with bg */
+  max-width: none;
   transition: transform 0.3s ease;
 }
 
 .anatomy-img:hover {
   transform: scale(1.02);
+}
+
+/* ==========================================
+   SIDEBAR DIVIDER & HISTORY BUTTON
+   ========================================== */
+.w3-sidebar-divider {
+  height: 1px;
+  background: var(--zl-border);
+  margin: 6px 10px;
+  padding: 0 !important;
+  pointer-events: none;
+}
+
+/* Classification History has a slightly different visual weight */
+.w3-sidebar-btn--history {
+  font-style: italic;
+  font-size: 0.82rem;
+}
+
+/* ==========================================
+   GLOBAL LIGHTBOX MODAL
+   ========================================== */
+@keyframes zl-fade-in {
+  from { opacity: 0; transform: scale(0.94); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.zl-lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  background: rgba(10, 10, 20, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  cursor: zoom-out;
+}
+
+.zl-lightbox-inner {
+  position: relative;
+  max-width: min(90vw, 1100px);
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  animation: zl-fade-in 0.25s ease;
+  cursor: default;
+}
+
+.zl-lightbox-img {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 16px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  display: block;
+}
+
+.zl-lightbox-caption {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.9rem;
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+  margin: 0;
+  max-width: 600px;
+}
+
+.zl-lightbox-close {
+  position: fixed;
+  top: 18px;
+  right: 22px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+  z-index: 10001;
+  backdrop-filter: blur(4px);
+  line-height: 1;
+  padding: 0;
+}
+
+.zl-lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(1.1) rotate(90deg);
+}
+
+/* ==========================================
+   CLICKABLE ANATOMY IMAGES (lightbox trigger)
+   ========================================== */
+.anatomy-img-clickable {
+  cursor: zoom-in;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.anatomy-img-clickable:hover {
+  transform: scale(1.03) translateY(-2px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18);
+}
+
+/* ==========================================
+   FEATURE CARD TOOLTIP (info icon on hover)
+   ========================================== */
+.feature-card[data-tooltip] {
+  position: relative;
+}
+
+.feature-card[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1e293b;
+  color: #f1f5f9;
+  font-size: 0.78rem;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+  padding: 8px 14px;
+  border-radius: 8px;
+  white-space: normal;
+  max-width: 260px;
+  width: max-content;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 100;
+  text-align: center;
+}
+
+.feature-card[data-tooltip]:hover::after {
+  opacity: 1;
+}
+
+/* ==========================================
+/* ==========================================
+   EDTECH CLEAN TABLE FOR FEATURES
+   ========================================== */
+.phylum-section .features-grid {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0 !important;
+  border-left: none !important;
+  padding-left: 0 !important;
+  margin-top: 24px !important;
+  margin-bottom: 24px !important;
+  margin-left: 0 !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  background: #ffffff !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05) !important;
+}
+
+.phylum-section .feature-card {
+  display: flex !important;
+  align-items: center !important;
+  flex-direction: row !important;
+  gap: 20px !important;
+  background: #ffffff !important;
+  border: none !important;
+  border-bottom: 1px solid #f1f5f9 !important;
+  box-shadow: none !important;
+  padding: 16px 24px !important;
+  position: relative !important;
+  justify-content: flex-start !important;
+  cursor: default !important;
+  min-height: auto !important;
+  transition: background 0.25s ease !important;
+  border-radius: 0 !important;
+}
+
+.phylum-section .feature-card:last-child {
+  border-bottom: none !important;
+}
+
+.phylum-section .feature-card:nth-child(even) {
+  background: #fafaf9 !important; /* Subtle zebra striping */
+}
+
+.phylum-section .feature-card:hover {
+  transform: none !important;
+  background: #f1f5f9 !important; /* Clean hover highlight */
+}
+
+/* Remove custom bullet */
+.phylum-section .feature-card::before {
+  content: none !important;
+}
+
+.phylum-section .feature-label {
+  font-weight: 600 !important;
+  color: #475569 !important; /* Soft dark gray */
+  font-size: 1.05rem !important;
+  width: 200px !important;
+  flex-shrink: 0 !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+  margin-bottom: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.phylum-section .feature-label::after {
+  content: "" !important; /* Remove the colon for modern table look */
+}
+
+.phylum-section .feature-value {
+  color: #0f172a !important; /* Very dark rich hue */
+  font-size: 1.05rem !important;
+  font-weight: 600 !important;
+  margin-bottom: 0 !important;
+  width: 240px !important; /* Fixed width for Value */
+  flex-shrink: 0 !important;
+}
+
+/* Clean Hover Description */
+.phylum-section .feature-card[data-tooltip]::after {
+  position: static !important;
+  content: attr(data-tooltip) !important;
+  display: block !important;
+  background: transparent !important;
+  color: #64748b !important;
+  font-size: 0.95rem !important;
+  line-height: 1.5 !important;
+  padding: 0 !important;
+  padding-left: 20px !important;
+  border-left: 1px solid #cbd5e1 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  max-width: none !important;
+  width: auto !important;
+  flex: 1 !important;
+  margin: 0 !important;
+  text-align: left !important;
+  opacity: 0 !important;
+  transform: translateX(-5px) !important;
+  transition: opacity 0.3s ease, transform 0.3s ease !important;
+  pointer-events: none !important;
+  font-style: italic !important;
+}
+
+.phylum-section .feature-card[data-tooltip]:hover::after {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+}
+
+/* ==========================================
+   STAGGERED FEATURE CARD ANIMATION
+   ========================================== */
+@keyframes card-stagger-fade-in {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.reveal-visible .features-grid .feature-card {
+  animation: card-stagger-fade-in 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) backwards !important;
+}
+
+.reveal-visible .features-grid .feature-card:nth-child(1) { animation-delay: 50ms !important; }
+.reveal-visible .features-grid .feature-card:nth-child(2) { animation-delay: 100ms !important; }
+.reveal-visible .features-grid .feature-card:nth-child(3) { animation-delay: 150ms !important; }
+.reveal-visible .features-grid .feature-card:nth-child(4) { animation-delay: 200ms !important; }
+.reveal-visible .features-grid .feature-card:nth-child(5) { animation-delay: 250ms !important; }
+.reveal-visible .features-grid .feature-card:nth-child(6) { animation-delay: 300ms !important; }
+.reveal-visible .features-grid .feature-card:nth-child(7) { animation-delay: 350ms !important; }
+.reveal-visible .features-grid .feature-card:nth-child(8) { animation-delay: 400ms !important; }
+.reveal-visible .features-grid .feature-card:nth-child(9) { animation-delay: 450ms !important; }
+.reveal-visible .features-grid .feature-card:nth-child(10){ animation-delay: 500ms !important; }
+
+/* ==========================================
+   EDTECH TABLE MOBILE RESPONSIVENESS
+   ========================================== */
+@media (max-width: 950px) {
+  .phylum-section .feature-card {
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+  }
+  .phylum-section .feature-label {
+    width: 40% !important;
+  }
+  .phylum-section .feature-value {
+    width: 55% !important;
+  }
+  .phylum-section .feature-card[data-tooltip]::after {
+    width: 100% !important;
+    flex: none !important;
+    padding-left: 0 !important;
+    border-left: none !important;
+    border-top: 1px dashed #e2e8f0 !important;
+    padding-top: 8px !important;
+    margin-top: 4px !important;
+    opacity: 1 !important; /* Always visible on touch devices */
+    transform: none !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .phylum-section .features-grid {
+    border-radius: 8px !important;
+  }
+  .phylum-section .feature-card {
+    padding: 12px 16px !important;
+  }
+  .phylum-section .feature-label {
+    width: 100% !important;
+    margin-bottom: 2px !important;
+    color: #64748b !important;
+    font-size: 0.95rem !important;
+  }
+  .phylum-section .feature-value {
+    width: 100% !important;
+  }
+}
+
+/* ==========================================================================
+   GLOBAL PATTERNS OF RESPONSIVENESS (ALL-COMPONENT SCALING)
+   Applying Patterns.css structural breakpoints globally to all 11 Phyla
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .hero-title { 
+    font-size: 3.5rem !important; 
+  }
+  .phylum-section-title, .section-title {
+    font-size: 2.2rem !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-title { 
+    font-size: 3rem !important; 
+  }
+  .split-section, .split-section.reverse {
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+  }
+  .hero-main-img {
+    max-width: 80% !important;
+    margin: 0 auto !important;
+  }
+  .hero-content {
+    align-items: center !important;
+    text-align: center !important;
+  }
+  .hero-badge-group {
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .phylum-container {
+    padding: 20px 15px 40px !important;
+  }
+  .hero-title {
+    font-size: 2.5rem !important;
+  }
+  .hero-tagline {
+    font-size: 1.1rem !important;
+  }
+  .examples-grid, .class-cards-grid {
+    grid-template-columns: 1fr !important;
+    gap: 15px !important;
+  }
+  .premium-list, .exam-list, .w3-text-content, .hero-intro-text {
+    font-size: 0.95rem !important;
+  }
+  .premium-list li {
+    padding-left: 36px !important;
+  }
+  .premium-list li::before {
+    width: 20px !important;
+    height: 20px !important;
+    top: 4px !important;
+  }
+  .phylum-hero {
+    gap: 1.5rem !important;
+    margin-bottom: 40px !important;
+  }
+  .hero-visual {
+    padding: 0 10px !important;
+  }
+  .visual-container {
+    padding: 12px !important;
+  }
+  .visual-container::before, .visual-mesh, .hero-main-img {
+    border-radius: 20px !important;
+  }
+  .hero-main-img {
+    height: 280px !important; /* Fixed height for consistent mobile aesthetics rather than auto stretching */
+    width: 100% !important;
+    max-width: 100% !important;
+    object-fit: cover !important;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15) !important;
+  }
+  .visual-caption {
+    font-size: 0.75rem !important;
+    margin-top: 10px !important;
+  }
+  .info-banner {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 16px !important;
+    padding: 24px !important;
+  }
+  .w3-content-split {
+    flex-direction: column !important;
+    gap: 20px !important;
+  }
+  .phylum-section {
+    padding: 10px 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.2rem !important;
+    line-height: 1.1 !important;
+  }
+  .hero-tagline {
+    font-size: 1.05rem !important;
+    margin-bottom: 20px !important;
+  }
+  .hero-main-img {
+    height: 220px !important; /* Slightly smaller for very small screen */
+  }
+  .phylum-section-title, .section-title {
+    font-size: 1.65rem !important;
+  }
+  .exam-card-title {
+    font-size: 1.3rem !important;
+  }
+  .exam-card {
+    padding: 15px !important;
+  }
+  .w3-image-content {
+    padding: 0.8rem !important;
+    max-width: 100% !important;
+  }
+  .anatomy-diagram-wrapper {
+    max-width: 100% !important;
+  }
+  .w3-content {
+    padding: 1rem 0.5rem 2rem !important;
+  }
+  .info-banner .banner-icon {
+    width: 48px !important;
+    height: 48px !important;
+  }
+  .info-banner .banner-text {
+    font-size: 1rem !important;
+  }
 }
