@@ -6,21 +6,23 @@
 /* Local header-specific variables */
 .hea-header {
   --hea-bg: #f5f7f6;
-  --hea-teal: #2a6b6e;
-  --hea-teal-light: #3d8b8e;
-  --hea-text: #2c3e50;
+  --hea-teal: #2f7432;
+  --hea-teal-light: #4ade80;
+  --hea-text: #1e293b;
   --hea-text-muted: #64748b;
-  --hea-accent: #4ecdc4;
-  --hea-border: rgba(42, 107, 110, 0.15);
+  --hea-accent: #10b981;
+  --hea-border: rgba(47, 116, 50, 0.15);
   --hea-transition: var(--transition-smooth, 0.3s cubic-bezier(0.4, 0, 0.2, 1));
 }
 
-/* HEADER BASE - LIGHT GRAY */
+/* HEADER BASE - PREMIUM GLASSMORPHISM */
 .hea-header {
   width: 100%;
   height: var(--header-height);
-  /* Use global variable */
-  background: var(--hea-bg);
+  /* Use glassmorphism background */
+  background: rgba(245, 247, 246, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--hea-border);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
   z-index: 10000;
@@ -32,7 +34,7 @@
   left: 0;
 
   /* ANIMATION & TRANSITION */
-  transition: transform 0.3s ease, height 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, height 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
 /* =========================================
@@ -43,6 +45,7 @@
 
 .hea-header.hea-scrolled {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  background: rgba(245, 247, 246, 0.92);
 }
 
 /* Removed logo wrapper and brand shrinking logic */

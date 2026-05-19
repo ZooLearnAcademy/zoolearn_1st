@@ -25,71 +25,40 @@
 .scopes-container {
     padding: 80px 4% 40px;
     min-height: 100vh;
-    background: radial-gradient(circle at 10% 10%, #f0fdf4 0%, #ffffff 40%, #f8fafc 100%);
+    background: #f8fafc;
     position: relative;
     overflow-x: hidden;
 }
 
-.scopes-container::after {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-    opacity: 0.015;
-    pointer-events: none;
-    z-index: 1;
-}
-
-.scopes-bg-blob {
-    position: absolute;
-    background: radial-gradient(circle, var(--scopes-primary-glow) 0%, transparent 70%);
-    z-index: 0;
-    pointer-events: none;
-    border-radius: 50%;
-    filter: blur(100px);
-    transition: all 1s ease-in-out;
-}
-
-.blob-1 { width: 800px; height: 800px; top: -300px; right: -200px; animation: float 25s infinite alternate; }
-.blob-2 { width: 600px; height: 600px; bottom: -200px; left: -100px; animation: float 30s infinite alternate-reverse; opacity: 0.6; }
-
-@keyframes float {
-    0% { transform: translate(0, 0) rotate(0deg) scale(1); }
-    100% { transform: translate(150px, 100px) rotate(15deg) scale(1.15); }
-}
-
 .scopes-header {
     text-align: center;
-    margin-bottom: 36px;
+    margin-bottom: 48px;
     position: relative;
     z-index: 10;
 }
 
 .scopes-header h1 {
-    font-size: 2.6rem;
-    font-weight: 900;
-    margin-bottom: 14px;
-    background: linear-gradient(135deg, #0f172a 0%, #1faa59 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    letter-spacing: -0.03em;
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 16px;
+    color: #0f172a;
+    letter-spacing: -0.04em;
     line-height: 1.1;
 }
 
 .scopes-header p {
-    font-size: 1rem;
-    color: var(--scopes-text-sub);
-    max-width: 600px;
+    font-size: 1.1rem;
+    color: #475569;
+    max-width: 650px;
     margin: 0 auto;
     line-height: 1.6;
-    font-weight: 500;
+    font-weight: 450;
 }
 
 .scopes-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
     padding: 0;
     max-width: 1300px;
     margin: 0 auto;
@@ -97,48 +66,40 @@
     z-index: 10;
 }
 
-@keyframes slideUpFade {
-    0% { opacity: 0; transform: translateY(30px); }
-    100% { opacity: 1; transform: translateY(0); }
-}
-
 .scope-card {
     background: #ffffff;
-    border: 1px solid rgba(0,0,0,0.07);
-    border-radius: 18px;
-    padding: 24px;
+    border: 1px solid #f1f5f9;
+    border-radius: 20px;
+    padding: 32px;
     text-decoration: none;
-    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
-    box-shadow: 0 2px 10px -4px rgba(0,0,0,0.04);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
     cursor: pointer;
     overflow: hidden;
     position: relative;
-    opacity: 0;
-    animation: slideUpFade 0.6s cubic-bezier(0.23, 1, 0.32, 1) forwards;
 }
 
 .scope-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 14px 32px -12px rgba(0,0,0,0.1), 0 0 0 1px var(--card-primary);
-    border-color: transparent;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+    border-color: #e2e8f0;
 }
 
 .scope-icon-wrapper {
-    width: 48px;
-    height: 48px;
-    border-radius: 14px;
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    background: #f8fafc;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 18px;
-    transition: all 0.35s ease;
+    margin-bottom: 24px;
+    transition: all 0.3s ease;
     color: var(--card-primary);
-    position: relative;
-    z-index: 1;
 }
 
 .scope-card:hover .scope-icon-wrapper {
