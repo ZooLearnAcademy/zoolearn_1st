@@ -744,6 +744,27 @@
     font-size: 0.9rem;
 }
 
+/* Horizontal Flow Variant */
+.rab-flow-horizontal {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 1.5rem 1rem;
+}
+
+.rab-flow-horizontal::before {
+    display: none;
+}
+
+.rab-flow-horizontal .rab-flow-arrow-h {
+    margin: 0;
+    width: 28px;
+    height: 28px;
+    font-size: 1rem;
+}
+
 /* Gender Toggle */
 .rab-toggle-group {
     display: flex;

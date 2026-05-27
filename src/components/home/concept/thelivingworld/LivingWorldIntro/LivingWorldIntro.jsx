@@ -35,35 +35,7 @@ const LivingWorldIntro = () => {
             the systematic organization of organisms through taxonomy.
           </p>
 
-          <div className="lwi-hero-actions">
-
-            <div className="lwi-hero-sub-actions">
-              {/* Scrolls to Circle Section */}
-              <button
-                className="lwi-btn-secondary"
-                onClick={() => scrollToSection("circle-section")}
-              >
-                Circle
-              </button>
-
-              {/* Scrolls to Nomenclature Section */}
-              <button
-                className="lwi-btn-secondary"
-                onClick={() => scrollToSection("nomenclature-section")}
-              >
-                Nomenclature
-              </button>
-
-              {/* Scrolls to Pyramid Section */}
-              <button
-                className="lwi-btn-secondary"
-                onClick={() => scrollToSection("pyramid-section")}
-              >
-                Pyramid
-              </button>
-            </div>
-
-          </div>
+           
         </div>
 
         {/* RIGHT IMAGE */}

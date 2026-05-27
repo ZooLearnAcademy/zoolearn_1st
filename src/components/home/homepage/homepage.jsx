@@ -63,7 +63,7 @@ const Homepage = () => {
       scientificName: "Hirudinaria granulosa",
       classification: "Phylum: Annelida",
       image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1766035779/004-leech-therapy_puotxa.png",
-      hours: 9,
+      hours: 2,
       route: "/leech",
     },
     {
@@ -72,7 +72,7 @@ const Homepage = () => {
       scientificName: "Oryctolagus cuniculus",
       classification: "Class: Mammalia",
       image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1766035803/006-rabbit_apbtkw.png",
-      hours: 15,
+      hours: 3,
       route: "/rabbit",
     },
     /* {
@@ -89,7 +89,7 @@ const Homepage = () => {
       scientificName: "Periplaneta americana",
       classification: "Phylum: Arthropoda",
       image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1766035805/007-cockroach_zzavof.png",
-      hours: 10,
+      hours: 2,
       route: "/cockroach",
     },
     /* {
@@ -106,7 +106,7 @@ const Homepage = () => {
       scientificName: "Apis mellifera",
       classification: "Class: Insecta",
       image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1767780954/007-holidays_tgjy05.png",
-      hours: 9,
+      hours: 2,
       route: "/honeybee",
     },
     {
@@ -115,7 +115,7 @@ const Homepage = () => {
       scientificName: "Homo sapiens",
       classification: "Class: Mammalia",
       image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1766035808/008-evolution_o5byjy.png",
-      hours: 25,
+      hours: 3,
       route: "/evolution",
     },
     {
@@ -124,7 +124,7 @@ const Homepage = () => {
        scientificName: "Equus ferus caballus",
        classification: "Class: Mammalia",
        image: "https://img.icons8.com/fluency/96/trotting-horse.png",
-       hours: 14,
+       hours: 3,
        route: "/horse-evolution",
      }
   ];

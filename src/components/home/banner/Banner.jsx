@@ -58,48 +58,36 @@ export default function ZoologyHero() {
         {/* LEFT CONTENT */}
         <div className="banner-left">
 
-          <h1 className="banner-title">
-            Learn Zoology
-            <span className="banner-highlight"> the Smart Way</span>
-          </h1>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '1.5rem', marginTop: '-1rem' }}>
+            <img 
+              src="https://res.cloudinary.com/duibfmcw1/image/upload/v1765947727/logopng_2_webaac.png" 
+              alt="ZooLearn Logo" 
+              style={{ width: '160px', height: '160px', filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.15))' }}
+            />
+            <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+              <div style={{ fontSize: '6rem', fontWeight: 800, letterSpacing: '-2px', lineHeight: 1 }}>
+                <span style={{ color: '#265C30' }}>Zoo</span>
+                <span style={{ color: '#2B83BA' }}>Learn</span>
+              </div>
+              <div style={{ fontSize: '2.16rem', fontWeight: 700, color: '#265C30', marginTop: '0.2rem', letterSpacing: '0.09em', textAlign: 'justify', textAlignLast: 'justify' }}>
+                Learn.Explore .Certify
+              </div>
+            </div>
+          </div>
 
-          <p className="banner-desc">
-            Build strong biological concepts using visual explanations,
-            organism-based learning and exam-focused structure. Master animal
-            classification, anatomy, and ecology with interactive lessons.
+          <div style={{ height: '3rem' }}></div>
+
+          {/* <h1 className="banner-title" style={{ fontSize: '2.5rem', lineHeight: '1.2', marginTop: 0 }}>
+            Learn Zoology <span className="banner-highlight">the Smart Way</span> with ZooLearn
+          </h1> */}
+
+          <p className="banner-desc" style={{ fontSize: '1.125rem', marginTop: '1.25rem', marginBottom: '2rem' }}>
+            Build strong zoology concepts through visual learning, interactive models, and exam-focused content — designed for students and researchers.
           </p>
-
-          <div className="banner-ctas">
-            <button className="banner-btn-primary" onClick={() => navigate('/zoohub')}>
-              Explore Species
-            </button>
-            <button className="banner-btn-secondary" onClick={() => navigate('/anatomy')}>
-              View Patterns
-            </button>
-          </div>
-
-          {/* STATS SECTION WITH ANIMATION */}
-          <div className="banner-stats">
-            <div className="banner-stat-item">
-              <span className="banner-stat-number">
-                <CountUp end={200} duration={2000} />+
-              </span>
-              <span className="banner-stat-label">Species</span>
-            </div>
-
-            <div className="banner-stat-divider"></div>
-
-            <div className="banner-stat-item">
-              <span className="banner-stat-number">
-                <CountUp end={100} duration={2000} />+
-              </span>
-              <span className="banner-stat-label">3D Models</span>
-            </div>
-          </div>
         </div>
 
-        {/* RIGHT IMAGE SLIDER */}
-        <div className="banner-right">
+        {/* RIGHT IMAGE SLIDER & STATS */}
+        <div className="banner-right" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2rem' }}>
           <div className="banner-slider">
             <div className="banner-image-wrapper">
               <img
@@ -130,6 +118,34 @@ export default function ZoologyHero() {
                   aria-current={i === index}
                 />
               ))}
+            </div>
+          </div>
+
+          {/* STATS SECTION MOVED BELOW IMAGES */}
+          <div className="banner-stats" style={{ display: 'flex', justifyContent: 'center', width: '100%', marginTop: '3rem' }}>
+            <div className="banner-stat-item" style={{ alignItems: 'center' }}>
+              <span className="banner-stat-number">
+                <CountUp end={100} duration={2000} />+
+              </span>
+              <span className="banner-stat-label">3D Models</span>
+            </div>
+
+            <div className="banner-stat-divider"></div>
+
+            <div className="banner-stat-item">
+              <span className="banner-stat-number">
+                <CountUp end={200} duration={2000} />+
+              </span>
+              <span className="banner-stat-label">Species</span>
+            </div>
+
+            <div className="banner-stat-divider"></div>
+
+            <div className="banner-stat-item">
+              <span className="banner-stat-number">
+                <CountUp end={300} duration={2000} />+
+              </span>
+              <span className="banner-stat-label">Images</span>
             </div>
           </div>
         </div>

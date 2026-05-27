@@ -23,7 +23,7 @@
         {
             "id": "habit",
             "label": "Habit & Habitat",
-            "icon": "🌿",
+            "icon": "",
             "overview": [
                 {
                     "text": "Gentle and timid animals living in burrows.",
@@ -47,17 +47,17 @@
             ],
             "facts": [
                 {
-                    "icon": "🦘",
+                    "icon": "",
                     "label": "Movement",
                     "value": "Leaping"
                 },
                 {
-                    "icon": "🌱",
+                    "icon": "",
                     "label": "Diet",
                     "value": "Herbivore"
                 },
                 {
-                    "icon": "👥",
+                    "icon": "",
                     "label": "Social",
                     "value": "Gregarious"
                 }
@@ -66,7 +66,7 @@
         {
             "id": "morphology",
             "label": "External Morphology",
-            "icon": "🐰",
+            "icon": "",
             "content": {
                 "shapeSize": [
                     "Elongated, cylindrical body.",
@@ -84,7 +84,7 @@
         {
             "id": "digestive",
             "label": "Digestive System",
-            "icon": "🥕",
+            "icon": "",
             "content": {
                 "alimentaryCanal": [
                     "Mouth",
@@ -128,7 +128,7 @@
         {
             "id": "respiratory",
             "label": "Respiratory System",
-            "icon": "🫁",
+            "icon": "",
             "content": {
                 "pathway": [
                     "Nostrils",
@@ -155,7 +155,7 @@
         {
             "id": "circulatory",
             "label": "Circulatory System",
-            "icon": "❤️",
+            "icon": "",
             "content": {
                 "heart": [
                     "4-Chambered Heart.",
@@ -171,7 +171,7 @@
         {
             "id": "nervous",
             "label": "Nervous System",
-            "icon": "🧠",
+            "icon": "",
             "facts": [
                 {
                     "label": "CNS",
@@ -204,7 +204,7 @@
         {
             "id": "urinogenital",
             "label": "Urinogenital System",
-            "icon": "🧬",
+            "icon": "",
             "content": {
                 "excretory": "Kidneys (Metanephric) filter blood. Urea is the main nitrogenous waste (Ureotelic).",
                 "reproductive": {

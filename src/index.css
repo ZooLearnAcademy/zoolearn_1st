@@ -204,6 +204,7 @@ a {
     --header-height: 110px;
   }
 }
+
 body {
   display: flex;
   flex-direction: column;

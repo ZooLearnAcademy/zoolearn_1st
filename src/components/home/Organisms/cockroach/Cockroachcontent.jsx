@@ -8,7 +8,6 @@ import './Cockroachcontent.css';
 const cockroachContent = {
   general: {
     title: "General Characteristics",
-    icon: "🪳",
     sections: [
       {
         heading: "General Characteristics",
@@ -26,7 +25,6 @@ const cockroachContent = {
   },
   morphology: {
     title: "External Morphology",
-    icon: "🔬",
     sections: [
       {
         heading: "External Morphology & Body Organization",
@@ -166,7 +164,6 @@ const cockroachContent = {
   },
   digestive: {
     title: "Digestive System",
-    icon: "🍽️",
     sections: [
       {
         heading: "Digestive System in Cockroach",
@@ -232,7 +229,6 @@ const cockroachContent = {
   },
   respiratory: {
     title: "Respiratory System",
-    icon: "💨",
     sections: [
       {
         heading: "Respiratory System in Cockroach",
@@ -275,7 +271,6 @@ const cockroachContent = {
   },
   circulatory: {
     title: "Circulatory System",
-    icon: "🫀",
     sections: [
       {
         heading: "Circulatory System in Cockroach",
@@ -338,7 +333,6 @@ const cockroachContent = {
   },
   excretory: {
     title: "Excretory System",
-    icon: "🧪",
     sections: [
       {
         heading: "Excretory System in Cockroach",
@@ -394,7 +388,6 @@ const cockroachContent = {
   },
   nervous: {
     title: "Nervous System",
-    icon: "🧠",
     sections: [
       {
         heading: "Nervous System in Cockroach",
@@ -455,7 +448,6 @@ const cockroachContent = {
   },
   maleRepro: {
     title: "Male Reproductive System",
-    icon: "♂️",
     sections: [
       {
         heading: "Male Reproductive System in Cockroach",
@@ -549,7 +541,6 @@ const cockroachContent = {
   },
   femaleRepro: {
     title: "Female Reproductive System",
-    icon: "♀️",
     sections: [
       {
         heading: "Female Reproductive System in Cockroach",
@@ -790,7 +781,6 @@ const Cockroach = () => {
                 className={`coc-nav-btn ${activeTab === key ? 'active' : ''}`}
                 onClick={() => setActiveTab(key)}
               >
-                <span className="coc-nav-icon">{cockroachContent[key].icon}</span>
                 <span>{cockroachContent[key].title}</span>
               </button>
             ))}

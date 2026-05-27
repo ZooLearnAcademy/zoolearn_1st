@@ -275,7 +275,7 @@ const Rabbit = () => {
                         {/* 1. HABIT & HABITAT */}
                         {activeTab === 'habit' && (
                             <div className="rab-content-section">
-                                <SectionHeader title="Overview" icon="🌿" />
+                                <SectionHeader title="Overview" icon="" />
                                 <Card>
                                     <PointList items={sections[0].overview} />
                                 </Card>
@@ -295,7 +295,7 @@ const Rabbit = () => {
                         {/* 2. MORPHOLOGY */}
                         {activeTab === 'morphology' && (
                             <div className="rab-content-section">
-                                <SectionHeader title="Body Structure" icon="🐰" />
+                                <SectionHeader title="Body Structure" icon="" />
 
                                 <div className="rab-split-view">
                                     <div className="rab-text-column">
@@ -318,7 +318,7 @@ const Rabbit = () => {
                         {/* 3. DIGESTIVE */}
                         {activeTab === 'digestive' && (
                             <div className="rab-content-section">
-                                <SectionHeader title="Digestive System" icon="🥕" />
+                                <SectionHeader title="Digestive System" icon="" />
 
                                 <div className="rab-split-view">
                                     <div className="rab-text-column">
@@ -354,15 +354,12 @@ const Rabbit = () => {
                         {/* 4. RESPIRATORY */}
                         {activeTab === 'respiratory' && (
                             <div className="rab-content-section">
-                                <SectionHeader title="Respiratory System" icon="🫁" />
+                                <SectionHeader title="Respiratory System" icon="" />
 
                                 <div className="rab-split-view">
                                     <div className="rab-text-column">
-                                        <Card title="Pathway">
-                                            <Flow steps={sections[3].content.pathway} />
-                                        </Card>
                                         <Card title="Lungs Scheme">
-                                            <div className="rab-facts-grid">
+                                            <div className="rab-facts-grid" style={{ gridTemplateColumns: 'repeat(2, 1fr)' }}>
                                                 {sections[3].content.lungs.map((lung, idx) => (
                                                     <div key={idx} className="rab-fact-card">
                                                         <span className="rab-fact-label">{lung.label}</span>
@@ -377,13 +374,26 @@ const Rabbit = () => {
                                     </div>
                                     <Model3D src={models.respiratory} title="Respiratory System" />
                                 </div>
+
+                                <Card title="Pathway">
+                                    <div className="rab-flow-container rab-flow-horizontal">
+                                        {sections[3].content.pathway.map((step, idx) => (
+                                            <React.Fragment key={idx}>
+                                                <div className="rab-flow-step">{step}</div>
+                                                {idx < sections[3].content.pathway.length - 1 && (
+                                                    <div className="rab-flow-arrow rab-flow-arrow-h">→</div>
+                                                )}
+                                            </React.Fragment>
+                                        ))}
+                                    </div>
+                                </Card>
                             </div>
                         )}
 
                         {/* 5. CIRCULATORY */}
                         {activeTab === 'circulatory' && (
                             <div className="rab-content-section">
-                                <SectionHeader title="Circulatory System" icon="❤️" />
+                                <SectionHeader title="Circulatory System" icon="" />
 
                                 <div className="rab-split-view">
                                     <div className="rab-text-column">
@@ -402,7 +412,7 @@ const Rabbit = () => {
                         {/* 6. NERVOUS */}
                         {activeTab === 'nervous' && (
                             <div className="rab-content-section">
-                                <SectionHeader title="Nervous System" icon="🧠" />
+                                <SectionHeader title="Nervous System" icon="" />
                                 <div className="rab-facts-grid">
                                     {sections[5].facts.map((fact, idx) => (
                                         <div key={idx} className="rab-fact-card">
@@ -422,7 +432,7 @@ const Rabbit = () => {
                         {/* 7. URINOGENITAL */}
                         {activeTab === 'urinogenital' && (
                             <div className="rab-content-section">
-                                <SectionHeader title="Urinogenital System" icon="🧬" />
+                                <SectionHeader title="Urinogenital System" icon="" />
 
                                 <div className="rab-split-view">
                                     <div className="rab-text-column">

@@ -141,6 +141,8 @@
 .banner-stat-item {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .banner-stat-number {
@@ -188,14 +190,14 @@
 .banner-slider {
   position: relative;
   width: 100%;
-  max-width: 600px;
+  max-width: 530px;
   perspective: 1200px;
 }
 
 /* Image */
 .banner-image {
   width: 100%;
-  height: 400px;
+  height: 350px;
   object-fit: cover;
   border-radius: 22px;
   box-shadow:

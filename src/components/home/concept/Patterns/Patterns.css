@@ -92,6 +92,18 @@
    Professional, desaturated, distinction without distraction.
    ========================================= */
 
+/* INTRO - Emerald Teal */
+.patt-zoo-page.theme-intro {
+  --patt-primary: #0f766e;
+  /* teal 700 */
+  --patt-primary-light: #f0fdfa;
+  /* pale mint */
+  --patt-primary-dark: #115e59;
+  --patt-primary-hover: #14b8a6;
+  --patt-hero-primary: #0f766e;
+  --patt-hero-bg: linear-gradient(180deg, #f0fdfa 0%, #ffffff 60%, #ccfbf1 100%);
+}
+
 /* DIGESTIVE - Warm Ochre (Earth tones) */
 .patt-zoo-page.theme-digestive {
   --patt-primary: #b45309;
@@ -1190,9 +1202,32 @@
   margin-bottom: 1rem;
   border-radius: 0.75rem;
   overflow: hidden;
-  border: 1px solid var(--patt-border-color);
-  box-shadow: var(--patt-shadow-sm);
-  background-color: #fff;
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+}
+
+/* Image floated to the right, no border box */
+.patt-image-right {
+  border: none;
+  box-shadow: none;
+  background: transparent;
+  float: right;
+  width: 45%;
+  margin: 0 0 1rem 1.5rem;
+}
+
+.patt-image-right .patt-section-image {
+  max-width: 100%;
+  max-height: 350px;
+}
+
+@media (max-width: 768px) {
+  .patt-image-right {
+    float: none;
+    width: 100%;
+    margin: 1rem 0;
+  }
 }
 
 /* Gradient border effect removed */
@@ -1216,9 +1251,9 @@
 
 /* SCOPED: Card Design for RESPIRATORY SYSTEM only */
 .theme-respiratory .patt-section-image-wrapper {
-  background: linear-gradient(135deg, #f0fdfa 0%, #ffffff 100%);
-  border: 1px solid #ccfbf1;
-  box-shadow: 0 10px 15px -3px rgba(15, 118, 110, 0.1), 0 4px 6px -2px rgba(15, 118, 110, 0.05);
+  background: transparent;
+  border: none;
+  box-shadow: none;
   transform: translateY(0);
   transition: all 0.3s ease;
 
@@ -1252,7 +1287,7 @@
 
 .theme-respiratory .patt-section-image-wrapper:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 25px -5px rgba(15, 118, 110, 0.15), 0 10px 10px -5px rgba(15, 118, 110, 0.04);
+  box-shadow: none;
 }
 
 .theme-respiratory .patt-image-caption {
@@ -1294,6 +1329,109 @@
   text-align: center;
   border-top: 1px solid var(--patt-border-color);
   font-style: italic;
+}
+
+.patt-figure-label {
+  font-weight: 700;
+  color: var(--patt-primary);
+  font-style: normal;
+  margin-right: 0.15rem;
+}
+
+/* --- Clickable Image Cursor --- */
+.patt-clickable-image {
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.patt-clickable-image:hover {
+  opacity: 0.85;
+  transform: scale(1.02);
+}
+
+/* --- Image Lightbox Modal --- */
+.patt-lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: patt-lightbox-fade-in 0.25s ease;
+}
+
+.patt-lightbox-close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.5rem;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: #fff;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+  z-index: 10001;
+}
+
+.patt-lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.patt-lightbox-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 90vw;
+  max-height: 90vh;
+  animation: patt-lightbox-zoom-in 0.3s ease;
+}
+
+.patt-lightbox-image {
+  max-width: 90vw;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.patt-lightbox-caption {
+  margin-top: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1rem;
+  font-style: italic;
+  text-align: center;
+  max-width: 600px;
+}
+
+@keyframes patt-lightbox-fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes patt-lightbox-zoom-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 /* --- Animation --- */
@@ -2335,12 +2473,12 @@
    =================================================================== */
 .patt-section-image-wrapper {
   border-radius: 16px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .patt-section-image-wrapper:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: none;
 }
 
 /* ===================================================================

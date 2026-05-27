@@ -9,6 +9,7 @@ const Patterns = () => {
   const [sidebarHeight, setSidebarHeight] = useState('calc(100vh - 13vh)');
   const [showSidebar, setShowSidebar] = useState(false); // NEW: Control sidebar visibility
   const [showBackToTop, setShowBackToTop] = useState(false); // Back to top button visibility
+  const [lightboxImage, setLightboxImage] = useState(null); // Lightbox modal state
   const sidebarRef = useRef(null);
 
 
@@ -188,14 +189,11 @@ const Patterns = () => {
           content: [
             "The body wall must be thin and permeable to gases.",
             "Oxygen dissolves in the moisture on the body surface and diffuses inward; CO₂ diffuses outward.",
-            "Only works in small or flattened animals with a high surface-area-to-volume ratio."
+            "Only works in small or flattened animals with a high surface-area-to-volume ratio.",
+            "Examples: Porifera (sponges), Cnidaria, Platyhelminthes."
           ],
           image: "https://res.cloudinary.com/duibfmcw1/image/upload/w_500,q_auto,f_auto/v1768293404/body_surface_respiration_glucgw.png",
-          examples: [
-            "Porifera (sponges) — through the entire body surface",
-            "Cnidaria — through the body wall and gastrodermis",
-            "Platyhelminthes — flattened body increases surface area"
-          ]
+          imageRight: true
         },
         {
           heading: "Cutaneous Respiration",
@@ -203,13 +201,11 @@ const Patterns = () => {
           content: [
             "Skin glands secrete mucus to keep the surface moist at all times.",
             "Blood flowing through dermal capillaries picks up O₂ and releases CO₂.",
-            "Often supplemented by other respiratory modes (lungs, buccopharyngeal cavity)."
+            "Often supplemented by other respiratory modes (lungs, buccopharyngeal cavity).",
+            "Examples: Annelida — Earthworm, Amphibia — Frog (dominant during hibernation)."
           ],
           image: "https://res.cloudinary.com/duibfmcw1/image/upload/w_500,q_auto,f_auto/v1768293431/cutaneous_respiration_hq9bzq.png",
-          examples: [
-            "Annelida — Earthworm (skin kept moist by coelomic fluid)",
-            "Amphibia — Frog (skin respiration is dominant during hibernation)"
-          ]
+          imageRight: true
         },
         {
           heading: "Branchial Respiration",
@@ -217,14 +213,11 @@ const Patterns = () => {
           content: [
             "Gills may be external (exposed, e.g. in larval amphibians) or internal (protected by an operculum in bony fishes).",
             "Water flows over the gill filaments, and oxygen diffuses into the blood while CO₂ diffuses out.",
-            "Counter-current flow in fish gills maximises oxygen extraction — water flows in one direction and blood flows in the opposite direction."
+            "Counter-current flow in fish gills maximises oxygen extraction — water flows in one direction and blood flows in the opposite direction.",
+            "Examples: Arthropoda — Crustacea, Mollusca — Ctenidia, Chordata — Pisces."
           ],
           image: "https://res.cloudinary.com/duibfmcw1/image/upload/w_500,q_auto,f_auto/v1768293422/branchial_respiration_fnxxn5.png",
-          examples: [
-            "Arthropoda — Crustacea (book gills in Limulus, gills in crabs)",
-            "Mollusca — Ctenidia (comb-like gills in Pila, Octopus)",
-            "Chordata — Pisces (internal gills with operculum)"
-          ]
+          imageRight: true
         },
         {
           heading: "Tracheal Respiration",
@@ -233,12 +226,11 @@ const Patterns = () => {
             "Tracheae branch into finer tracheoles that reach every cell directly.",
             "Blood (haemolymph) does NOT transport oxygen — gases are delivered directly by the tracheae.",
             "This is the most efficient respiratory system for small terrestrial animals, allowing rapid gas exchange.",
-            "Ventilation is aided by rhythmic body movements that pump air in and out."
+            "Ventilation is aided by rhythmic body movements that pump air in and out.",
+            "Examples: Arthropoda — Insecta (cockroach, grasshopper, beetle)."
           ],
           image: "https://res.cloudinary.com/duibfmcw1/image/upload/w_500,q_auto,f_auto/v1768293447/tracheal_respiration_xri7am.png",
-          examples: [
-            "Arthropoda — Insecta (cockroach, grasshopper, beetle)"
-          ]
+          imageRight: true
         },
         {
           heading: "Pulmonary Respiration",
@@ -247,15 +239,11 @@ const Patterns = () => {
             "Air is drawn in through the nose/mouth and travels via the trachea, bronchi, and bronchioles to the alveoli (in mammals).",
             "Gas exchange occurs across the thin alveolar walls — O₂ enters the blood, and CO₂ is expelled.",
             "Lung complexity increases from amphibians (simple sac-like lungs) → reptiles (partially septate) → mammals (highly alveolar, maximising surface area).",
-            "Birds have a unique flow-through lung system with air sacs, allowing continuous gas exchange during both inhalation and exhalation."
+            "Birds have a unique flow-through lung system with air sacs, allowing continuous gas exchange during both inhalation and exhalation.",
+            "Examples: Amphibia, Reptilia, Aves, Mammalia."
           ],
           image: "https://res.cloudinary.com/duibfmcw1/image/upload/w_500,q_auto,f_auto/v1768293439/Pulmonary_Respiration_yko92j.png",
-          examples: [
-            "Amphibia — simple sac-like lungs (supplemented by skin)",
-            "Reptilia — more complex, partially divided lungs",
-            "Aves — parabronchi + air sacs (most efficient vertebrate lungs)",
-            "Mammalia — highly alveolar lungs (e.g. ~300 million alveoli in humans)"
-          ]
+          imageRight: true
         },
         {
           heading: "Buccopharyngeal Respiration",
@@ -263,12 +251,11 @@ const Patterns = () => {
           content: [
             "The floor of the mouth rhythmically moves up and down, ventilating the buccopharyngeal cavity.",
             "Oxygen diffuses through the thin mucosal lining into underlying blood capillaries.",
-            "Used especially when the frog is at rest on land."
+            "Used especially when the frog is at rest on land.",
+            "Examples: Amphibia — Frogs (used alongside cutaneous and pulmonary respiration)."
           ],
           image: "https://res.cloudinary.com/duibfmcw1/image/upload/w_500,q_auto,f_auto/v1768293426/buccopharyngeal_respiration_ueppcn.png",
-          examples: [
-            "Amphibia — Frogs (used alongside cutaneous and pulmonary respiration)"
-          ]
+          imageRight: true
         },
         {
           heading: "Key Concept: Evolutionary Trend",
@@ -326,7 +313,8 @@ const Patterns = () => {
             "Present only in Porifera.",
             "Helps in feeding, respiration, excretion, and reproduction."
           ],
-          image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1768297422/Water_canal_system_nyjn5h.png"
+          image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1768297422/Water_canal_system_nyjn5h.png",
+          imageRight: true
         },
         {
           heading: "Gastrovascular System",
@@ -335,7 +323,8 @@ const Patterns = () => {
             "Present in Cnidaria and Ctenophora.",
             "Same cavity for digestion and distribution."
           ],
-          image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1768297413/Gastro_vascular_system_dvqyff.png"
+          image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1768297413/Gastro_vascular_system_dvqyff.png",
+          imageRight: true
         },
         {
           heading: "Water Vascular System",
@@ -344,7 +333,8 @@ const Patterns = () => {
             "Present in Echinoderms.",
             "Helps in locomotion, respiration, and feeding."
           ],
-          image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1768297427/Water_Vascular_System_ywsead.png"
+          image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1768297427/Water_Vascular_System_ywsead.png",
+          imageRight: true
         },
         {
           heading: "Type II – With Blood",
@@ -476,7 +466,8 @@ const Patterns = () => {
         },
         {
           isSubtopic: true,
-          image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1768297504/incomplete_double_circulation_system_2_z2jiti.png"
+          image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1768297504/incomplete_double_circulation_system_2_z2jiti.png",
+          imageCaption: "Figure: Incomplete Double Circulation System"
         },
         {
           heading: "Double Circulation (4-Chambered)",
@@ -539,7 +530,8 @@ const Patterns = () => {
             "Waste diffuses out through:General body surface,Tube feet and papulae (in echinoderms)",
             "Aquatic habitat provides abundant water for dilution"
           ],
-          image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1768320265/Excretion_by_Diffusion_xjz0f3.png"
+          image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1768320265/Excretion_by_Diffusion_xjz0f3.png",
+          imageRight: true
         },
         {
           isSubtopic: true,
@@ -568,7 +560,8 @@ const Patterns = () => {
             "Found in Platyhelminthes and some annelids.",
             "Cilia beat like a flame and drive waste fluid out."
           ],
-          image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1768320275/flame_cells_sxokcx.png"
+          image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1768320275/flame_cells_sxokcx.png",
+          imageRight: true
         },
         {
           heading: "Solenocytes (with flagella)",
@@ -577,7 +570,8 @@ const Patterns = () => {
             "Found in Cephalochordata",
             "Function similar to flame cells but use flagella"
           ],
-          image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1768320337/solenocytes_giwwfx.png"
+          image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1768320337/solenocytes_giwwfx.png",
+          imageRight: true
         },
         {
           heading: "Stage 3: Glandular Excretory Structures",
@@ -630,15 +624,18 @@ const Patterns = () => {
               ["Arachnids", "Coxal glands"]
             ]
           },
-          image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1768320308/Malpighian_tubules_sgruep.png"
+          image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1768320308/Malpighian_tubules_sgruep.png",
+          imageRight: true
         },
         {
           isSubtopic: true,
-          image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1768320295/green_gland_xhgzkl.png"
+          image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1768320295/green_gland_xhgzkl.png",
+          imageCaption: "Figure: Green Gland (Antennary Gland)"
         },
         {
           isSubtopic: true,
-          image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1768320258/coxwl_gland_qos8wx.png"
+          image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1768320258/coxwl_gland_qos8wx.png",
+          imageCaption: "Figure: Coxal Gland"
         },
         {
           heading: "Stage 6: Kidney – Advanced Excretory Organ",
@@ -886,7 +883,8 @@ const Patterns = () => {
           examples: [
             "Cartilaginous and bony skeleton of vertebrates (fish, frog, humans)"
           ],
-          image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1768412652/exo_and_endo_skeleton_cfmuvg.png"
+          image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1768412652/exo_and_endo_skeleton_cfmuvg.png",
+          imageRight: true
         },
         {
           heading: "Comparison Table",
@@ -1015,7 +1013,8 @@ const Patterns = () => {
           ]
         },
         {
-          image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1768415124/homo_and_hetro_pd0unc.png"
+          image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1768415124/homo_and_hetro_pd0unc.png",
+          imageCaption: "Figure: Homonomous vs Heteronomous Metamerism"
         }
       ]
     },
@@ -1057,7 +1056,8 @@ const Patterns = () => {
             "No brain or ganglia.",
             "Impulses can travel in all directions."
           ],
-          image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1768806540/Diffuse_Nervous_System_ya6k5s.png"
+          image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1768806540/Diffuse_Nervous_System_ya6k5s.png",
+          imageRight: true
         },
         {
           heading: "Beginning of Centralization (Nerve Ring + Nerve Cords)"
@@ -1072,6 +1072,7 @@ const Patterns = () => {
             "Often described as a ladder-like nervous system."
           ],
           image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1768806530/Beginning_of_Centralization_s2cmzl.png",
+          imageRight: true,
           text: "This allows directional movement and better coordination."
         },
         {
@@ -1087,6 +1088,7 @@ const Patterns = () => {
             "The nerve cord has segmentally arranged ganglia."
           ],
           image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1768806805/Further_Centralization_and_Segmentation_gqin79.png",
+          imageRight: true,
           text: "This arrangement provides precise control of segmented body movements."
         },
         {
@@ -1110,6 +1112,7 @@ const Patterns = () => {
             </p>
           ],
           image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1768806812/Ganglionic_Nervous_System_with_Commissures_uwddmx.png",
+          imageRight: true,
           text: "This allows higher coordination and learning ability."
         },
         {
@@ -1130,6 +1133,7 @@ const Patterns = () => {
             "No true brain."
           ],
           image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1768806822/Radial_Nervous_System_hcn78a.png",
+          imageRight: true,
           text: "Suitable for radially symmetrical body plan."
         },
         {
@@ -1149,6 +1153,7 @@ const Patterns = () => {
             </p>
           ],
           image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1768806802/Diffuse_with_Nerve_Cords_dfnsko.png",
+          imageRight: true,
           text: "Represents a transitional condition."
         },
         {
@@ -1172,6 +1177,7 @@ const Patterns = () => {
             "Spinal cord is protected by the vertebral column."
           ],
           image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1768806818/Highly_Centralized_Nervous_System_dvylee.png",
+          imageRight: true,
           text: "This allows advanced behavior, learning, and rapid responses."
         },
         {
@@ -1224,7 +1230,8 @@ const Patterns = () => {
           examples: [
             "Protozoans (Amoeba, Paramecium)"
           ],
-          image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1768827203/Screenshot_2026-01-19_182113_w2h4tq.png"
+          image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1768827203/Screenshot_2026-01-19_182113_w2h4tq.png",
+          imageRight: true
         },
         {
           heading: "Multiple Fission",
@@ -1233,21 +1240,24 @@ const Patterns = () => {
           examples: [
             "Protozoans (Plasmodium)"
           ],
-          image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1768827203/Screenshot_2026-01-19_182201_qslxlh.png"
+          image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1768827203/Screenshot_2026-01-19_182201_qslxlh.png",
+          imageRight: true
         },
         {
           heading: "Budding",
           isSubSubtopic: true,
           text: "A small outgrowth (bud) forms on the parent and later separates.",
           examples: ["Cnidaria (Hydra)"],
-          image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1768827203/Screenshot_2026-01-19_182224_sauk4z.png"
+          image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1768827203/Screenshot_2026-01-19_182224_sauk4z.png",
+          imageRight: true
         },
         {
           heading: "Fragmentation",
           isSubSubtopic: true,
           text: "The body breaks into pieces, and each piece develops into a new individual.",
           examples: ["Porifera (Sponges), some Annelids"],
-          image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1768827203/Screenshot_2026-01-19_182244_pq8n1a.png"
+          image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1768827203/Screenshot_2026-01-19_182244_pq8n1a.png",
+          imageRight: true
         },
         {
           heading: "Sexual Reproduction",
@@ -1294,7 +1304,8 @@ const Patterns = () => {
             "Arthropoda",
             "Most vertebrates (fishes, birds, mammals)"
           ],
-          image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1768828698/Screenshot_2026-01-19_184735_q1ybcj.png"
+          image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1768828698/Screenshot_2026-01-19_184735_q1ybcj.png",
+          imageRight: true
         },
         {
           heading: "Bisexual (Monoecious / Hermaphrodite) Animals",
@@ -1308,7 +1319,8 @@ const Patterns = () => {
             "Annelida (Earthworm)",
             "Some Molluscs"
           ],
-          image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1768828697/Screenshot_2026-01-19_184755_b7wunj.png"
+          image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1768828697/Screenshot_2026-01-19_184755_b7wunj.png",
+          imageRight: true
         },
         {
           heading: "Evolutionary Trend in Reproduction",
@@ -1352,42 +1364,39 @@ const Patterns = () => {
           ]
         },
         {
-          heading: "Types of Fertilization (Based on Place)"
-        },
-        {
-          heading: "1. External Fertilization",
-          isSubtopic: true,
-          text: "Sperms and eggs are released into the external environment (usually water), and fertilization happens outside the body. This is called spawning.",
-          content: [
-            "Common in aquatic animals where water acts as a medium for gamete transport.",
-            "A very large number of gametes must be produced because many are lost to predation, currents, and dilution.",
-            "There is no parental protection of eggs or embryos in most cases.",
-            "Advantage: requires no physical contact between mates."
-          ],
-          examples: [
-            "Many aquatic invertebrates (starfish, sea urchins)",
-            "Bony fishes (Rohu, Catla)",
-            "Amphibians (frogs — eggs laid in water)"
-          ],
-          image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1768831239/Screenshot_2026-01-19_193008_afkwql.png"
-        },
-        {
-          heading: "2.Internal Fertilization",
-          isSubtopic: true,
-          text: "Internal fertilization occurs when the fusion of sperm and egg takes place inside the female reproductive tract.",
-          content: [
-            "Common in terrestrial animals",
-            "Also seen in some aquatic vertebrates",
-            "Produces fewer gametes but has a higher success rate",
-            "Fertilization occurs inside the body."
-          ],
-          examples: [
-            "Reptiles",
-            "Birds",
-            "Mammals",
-            "Some fishes (e.g., sharks)"
-          ],
-          image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1768831239/Screenshot_2026-01-19_193021_l2gqtj.png"
+          heading: "Types of Fertilization (Based on Place)",
+          customContent: (
+            <div className="patt-comparison-grid">
+              <div className="patt-comparison-col">
+                <strong>1. External Fertilization</strong>
+                <p className="patt-section-text" style={{ borderLeft: 'none', paddingLeft: 0 }}>Sperms and eggs are released into the external environment (usually water), and fertilization happens outside the body. This is called spawning.</p>
+                <ul>
+                  <li>Common in aquatic animals where water acts as a medium for gamete transport.</li>
+                  <li>A very large number of gametes must be produced because many are lost to predation, currents, and dilution.</li>
+                  <li>There is no parental protection of eggs or embryos in most cases.</li>
+                  <li>Advantage: requires no physical contact between mates.</li>
+                </ul>
+                <div className="patt-comparison-examples" style={{ marginBottom: '1rem' }}>
+                  <strong>Examples:</strong> Many aquatic invertebrates (starfish, sea urchins), Bony fishes (Rohu, Catla), Amphibians (frogs — eggs laid in water)
+                </div>
+                <img src="https://res.cloudinary.com/duibfmcw1/image/upload/v1768831239/Screenshot_2026-01-19_193008_afkwql.png" alt="External Fertilization" style={{ width: '100%', height: 'auto', border: 'none', boxShadow: 'none', marginTop: 'auto', objectFit: 'contain' }} />
+              </div>
+              <div className="patt-comparison-col">
+                <strong>2. Internal Fertilization</strong>
+                <p className="patt-section-text" style={{ borderLeft: 'none', paddingLeft: 0 }}>Internal fertilization occurs when the fusion of sperm and egg takes place inside the female reproductive tract.</p>
+                <ul>
+                  <li>Common in terrestrial animals</li>
+                  <li>Also seen in some aquatic vertebrates</li>
+                  <li>Produces fewer gametes but has a higher success rate</li>
+                  <li>Fertilization occurs inside the body.</li>
+                </ul>
+                <div className="patt-comparison-examples" style={{ marginBottom: '1rem' }}>
+                  <strong>Examples:</strong> Reptiles, Birds, Mammals, Some fishes (e.g., sharks)
+                </div>
+                <img src="https://res.cloudinary.com/duibfmcw1/image/upload/v1768831239/Screenshot_2026-01-19_193021_l2gqtj.png" alt="Internal Fertilization" style={{ width: '100%', height: 'auto', border: 'none', boxShadow: 'none', marginTop: 'auto', objectFit: 'contain' }} />
+              </div>
+            </div>
+          )
         },
         {
           heading: "Types of Fertilization (Based on Parents)"
@@ -1498,36 +1507,37 @@ const Patterns = () => {
         },
         {
           heading: "Types of Development (Based on Life Cycle)",
-          text: "Development is further classified into two types based on whether a larval stage is present."
-        },
-        {
-          heading: "4.Direct Development",
-          text: "In direct development:",
-          content: [
-            "There is no larval stage",
-            "The young one resembles the adult",
-            "Only growth and maturation occur"
-          ],
-          examples: [
-            "Reptiles",
-            "Birds",
-            "Mammals"
-          ],
-          image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1768837329/Screenshot_2026-01-19_211018_qkxizo.png"
-        },
-        {
-          heading: "5.Indirect Development",
-          text: "In indirect development:",
-          content: [
-            "Development includes one or more larval stages",
-            "Larva differs greatly from adult",
-            "Larva undergoes metamorphosis to become adult"
-          ],
-          examples: [
-            "Frog (tadpole → frog)",
-            "Insects (butterfly, mosquito)"
-          ],
-          image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1768837329/Screenshot_2026-01-19_211035_pzvkco.png"
+          text: "Development is further classified into two types based on whether a larval stage is present.",
+          customContent: (
+            <div className="patt-comparison-grid">
+              <div className="patt-comparison-col">
+                <strong>4. Direct Development</strong>
+                <p className="patt-section-text" style={{ borderLeft: 'none', paddingLeft: 0 }}>In direct development:</p>
+                <ul>
+                  <li>There is no larval stage</li>
+                  <li>The young one resembles the adult</li>
+                  <li>Only growth and maturation occur</li>
+                </ul>
+                <div className="patt-comparison-examples" style={{ marginBottom: '1rem' }}>
+                  <strong>Examples:</strong> Reptiles, Birds, Mammals
+                </div>
+                <img src="https://res.cloudinary.com/duibfmcw1/image/upload/v1768837329/Screenshot_2026-01-19_211018_qkxizo.png" alt="Direct Development" style={{ width: '100%', height: 'auto', border: 'none', boxShadow: 'none', marginTop: 'auto', objectFit: 'contain' }} />
+              </div>
+              <div className="patt-comparison-col">
+                <strong>5. Indirect Development</strong>
+                <p className="patt-section-text" style={{ borderLeft: 'none', paddingLeft: 0 }}>In indirect development:</p>
+                <ul>
+                  <li>Development includes one or more larval stages</li>
+                  <li>Larva differs greatly from adult</li>
+                  <li>Larva undergoes metamorphosis to become adult</li>
+                </ul>
+                <div className="patt-comparison-examples" style={{ marginBottom: '1rem' }}>
+                  <strong>Examples:</strong> Frog (tadpole → frog), Insects (butterfly, mosquito)
+                </div>
+                <img src="https://res.cloudinary.com/duibfmcw1/image/upload/v1768837329/Screenshot_2026-01-19_211035_pzvkco.png" alt="Indirect Development" style={{ width: '100%', height: 'auto', border: 'none', boxShadow: 'none', marginTop: 'auto', objectFit: 'contain' }} />
+              </div>
+            </div>
+          )
         }
       ]
     },
@@ -1671,7 +1681,7 @@ const Patterns = () => {
             </div>
 
             <div className="patt-hero-actions">
-              <button
+              {/*<button
                 className="patt-hero-btn patt-hero-btn-primary"
                 onClick={() => setActiveTab('digestive')}
               >
@@ -1688,7 +1698,7 @@ const Patterns = () => {
                 onClick={() => setActiveTab('nervous')}
               >
                 Nervous
-              </button>
+              </button> */}
             </div>
           </div>
 
@@ -1843,6 +1853,22 @@ const Patterns = () => {
                       {section.heading}
                     </h3>
 
+                    {/* Render imageRight images BEFORE content so float works */}
+                    {section.image && section.imageRight && (
+                      <figure className="patt-section-image-wrapper patt-image-right">
+                        <img
+                          src={section.image}
+                          alt={section.heading}
+                          className="patt-section-image patt-clickable-image"
+                          loading="lazy"
+                          onClick={() => setLightboxImage({ src: section.image, alt: section.heading, caption: section.imageCaption || section.heading })}
+                        />
+                        <figcaption className="patt-image-caption">
+                          {section.imageCaption || (section.heading && <><span className="patt-figure-label">Figure:</span> {section.heading}</>)}
+                        </figcaption>
+                      </figure>
+                    )}
+
                     {section.text && (
                       <p className="patt-section-text">{section.text}</p>
                     )}
@@ -1864,21 +1890,24 @@ const Patterns = () => {
                       </div>
                     )}
 
-                    {section.image && (
+                    {/* Render non-imageRight images after content (default) */}
+                    {section.image && !section.imageRight && (
                       <figure className="patt-section-image-wrapper">
                         <img
                           src={section.image}
                           alt={section.heading}
-                          className="patt-section-image"
-                          loading="lazy" /* Lazy load content images */
+                          className="patt-section-image patt-clickable-image"
+                          loading="lazy"
+                          onClick={() => setLightboxImage({ src: section.image, alt: section.heading, caption: section.imageCaption || section.heading })}
                         />
-                        {section.imageCaption && (
-                          <figcaption className="patt-image-caption">
-                            {section.imageCaption}
-                          </figcaption>
-                        )}
+                        <figcaption className="patt-image-caption">
+                          {section.imageCaption || (section.heading && <><span className="patt-figure-label">Figure:</span> {section.heading}</>)}
+                        </figcaption>
                       </figure>
                     )}
+
+                    {/* Clear float for imageRight sections */}
+                    {section.imageRight && <div style={{ clear: 'both' }} />}
 
                     {section.table && (
                       <div className="patt-table-container">
@@ -1955,6 +1984,29 @@ const Patterns = () => {
       >
         <ArrowUp size={24} />
       </button>
+
+      {/* IMAGE LIGHTBOX MODAL */}
+      {lightboxImage && (
+        <div className="patt-lightbox-overlay" onClick={() => setLightboxImage(null)}>
+          <button
+            className="patt-lightbox-close"
+            onClick={() => setLightboxImage(null)}
+            aria-label="Close lightbox"
+          >
+            <X size={28} />
+          </button>
+          <div className="patt-lightbox-content" onClick={(e) => e.stopPropagation()}>
+            <img
+              src={lightboxImage.src}
+              alt={lightboxImage.alt}
+              className="patt-lightbox-image"
+            />
+            {lightboxImage.caption && (
+              <p className="patt-lightbox-caption">{lightboxImage.caption}</p>
+            )}
+          </div>
+        </div>
+      )}
     </div >
   );
 };
