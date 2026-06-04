@@ -51,6 +51,46 @@
   animation: bannerFadeUp 1s ease;
 }
 
+/* =====================================================
+   LOGO COMPONENT
+===================================================== */
+.banner-logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 1.5rem;
+  margin-top: -1rem;
+}
+
+.banner-logo-img {
+  width: 160px;
+  height: 160px;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.15));
+}
+
+.banner-logo-text-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.banner-brand-name {
+  font-size: 6rem;
+  font-weight: 800;
+  letter-spacing: -2px;
+  line-height: 1;
+}
+
+.banner-brand-tagline {
+  font-size: 2.16rem;
+  font-weight: 700;
+  color: #265C30;
+  margin-top: 0.2rem;
+  letter-spacing: 0.09em;
+  text-align: justify;
+  text-align-last: justify;
+}
+
 /* Audience badge */
 .banner-badge {
   display: inline-block;
@@ -187,88 +227,79 @@
   justify-content: center;
 }
 
-.banner-slider {
+.banner-slider.carousel-container {
   position: relative;
   width: 100%;
-  max-width: 530px;
+  max-width: 600px;
+  height: 480px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   perspective: 1200px;
 }
 
-/* Image */
-.banner-image {
-  width: 100%;
-  height: 350px;
-  object-fit: cover;
-  border-radius: 22px;
-  box-shadow:
-    0 30px 60px rgba(27, 95, 120, 0.45),
-    0 12px 28px rgba(27, 95, 120, 0.25);
-  backface-visibility: hidden;
-  animation: bannerFlip 0.9s ease;
-  transition: opacity 0.3s ease;
-}
-
-.banner-image.loading {
-  opacity: 0.7;
-  filter: blur(2px);
-}
-
-.banner-image.loaded {
-  opacity: 1;
-  filter: blur(0);
-}
-
-/* =====================================================
-   IMAGE FLIP ANIMATION
-===================================================== */
-@keyframes bannerFlip {
-  from {
-    transform: rotateY(90deg) scale(0.95);
-    opacity: 0;
-  }
-
-  to {
-    transform: rotateY(0deg) scale(1);
-    opacity: 1;
-  }
-}
-
-/* =====================================================
-   SLIDER NAV BUTTONS
-===================================================== */
-.banner-nav {
+/* Image Base */
+.banner-image.carousel-img {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  border: none;
-  background: #ffffff;
-  color: var(--banner-blue-dark);
-  font-size: 1.6rem;
-  cursor: pointer;
-  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.22);
-  transition: all 0.25s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 10;
+  width: 65%;
+  height: 300px;
+  object-fit: contain;
+  border-radius: 22px;
+  background-color: transparent;
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform, opacity, filter;
+  animation: none;
 }
 
-.banner-nav:hover {
-  background: var(--banner-green);
-  color: #ffffff;
-  transform: translateY(-50%) scale(1.08);
+/* Active / Center Image */
+.carousel-img.active {
+  transform: translateX(0) scale(1.1) translateY(0);
+  z-index: 3;
+  opacity: 1;
+  filter: drop-shadow(0 20px 30px rgba(27, 95, 120, 0.35));
 }
 
-.banner-prev {
-  left: -22px;
+/* Next / Right Image (Behind) */
+.carousel-img.next {
+  transform: translateX(180px) scale(0.85) translateY(50px) rotate(15deg);
+  z-index: 2;
+  opacity: 0.7;
+  filter: blur(3px) drop-shadow(0 10px 15px rgba(27, 95, 120, 0.2));
 }
 
-.banner-next {
-  right: -22px;
+/* Previous / Left Image (Behind) */
+.carousel-img.prev {
+  transform: translateX(-180px) scale(0.85) translateY(50px) rotate(-15deg);
+  z-index: 2;
+  opacity: 0.7;
+  filter: blur(3px) drop-shadow(0 10px 15px rgba(27, 95, 120, 0.2));
 }
+
+/* Next 2 / Far Right Image */
+.carousel-img.next2 {
+  transform: translateX(320px) scale(0.65) translateY(160px) rotate(30deg);
+  z-index: 1;
+  opacity: 0.4;
+  filter: blur(5px) drop-shadow(0 5px 10px rgba(27, 95, 120, 0.1));
+}
+
+/* Previous 2 / Far Left Image */
+.carousel-img.prev2 {
+  transform: translateX(-320px) scale(0.65) translateY(160px) rotate(-30deg);
+  z-index: 1;
+  opacity: 0.4;
+  filter: blur(5px) drop-shadow(0 5px 10px rgba(27, 95, 120, 0.1));
+}
+
+/* Hidden Images */
+.carousel-img.hidden {
+  transform: translateX(0) scale(0.4) translateY(200px);
+  z-index: 0;
+  opacity: 0;
+  filter: blur(8px);
+}
+
+/* Removed slider navigation buttons since they are no longer in DOM */
 
 /* Slider indicators */
 .banner-slider-indicators {
@@ -299,6 +330,105 @@
 
 .banner-indicator:hover {
   background: var(--banner-blue);
+}
+
+/* =====================================================
+   RESPONSIVE DESIGN
+===================================================== */
+
+@media (max-width: 1024px) {
+  .banner-title {
+    font-size: 2.8rem;
+  }
+
+  .banner-slider.carousel-container {
+    height: 380px;
+  }
+
+  .banner-image.carousel-img {
+    height: 260px;
+  }
+
+  .banner-brand-name { font-size: 5rem; }
+  .banner-brand-tagline { font-size: 1.8rem; }
+  .banner-logo-img { width: 130px; height: 130px; }
+}
+
+@media (max-width: 768px) {
+  .banner-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 4rem;
+  }
+
+  .banner-title {
+    font-size: 2.4rem;
+  }
+
+  .banner-desc {
+    margin: 1.5rem auto 2.5rem;
+  }
+
+  .banner-logo-wrapper {
+    justify-content: center;
+    margin-top: 0;
+  }
+  
+  .banner-brand-name { font-size: 4.5rem; }
+  .banner-brand-tagline { font-size: 1.6rem; }
+  .banner-logo-img { width: 110px; height: 110px; }
+
+  .banner-slider.carousel-container {
+    height: 320px;
+    max-width: 100%;
+  }
+
+  .banner-image.carousel-img {
+    width: 60%;
+    height: 220px;
+  }
+
+  .carousel-img.next { transform: translateX(120px) scale(0.85) translateY(40px) rotate(15deg); }
+  .carousel-img.prev { transform: translateX(-120px) scale(0.85) translateY(40px) rotate(-15deg); }
+  .carousel-img.next2 { transform: translateX(200px) scale(0.65) translateY(100px) rotate(30deg); }
+  .carousel-img.prev2 { transform: translateX(-200px) scale(0.65) translateY(100px) rotate(-30deg); }
+  
+  .banner-stats {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  
+  .banner-stat-divider {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-hero {
+    padding-top: 3rem;
+  }
+
+  .banner-title {
+    font-size: 2rem;
+  }
+
+  .banner-brand-name { font-size: 3.5rem; letter-spacing: -1px; }
+  .banner-brand-tagline { font-size: 1.25rem; letter-spacing: 0.05em; }
+  .banner-logo-img { width: 90px; height: 90px; }
+
+  .banner-slider.carousel-container {
+    height: 260px;
+  }
+
+  .banner-image.carousel-img {
+    width: 70%;
+    height: 180px;
+  }
+
+  .carousel-img.next { transform: translateX(80px) scale(0.8) translateY(30px) rotate(10deg); }
+  .carousel-img.prev { transform: translateX(-80px) scale(0.8) translateY(30px) rotate(-10deg); }
+  .carousel-img.next2 { transform: translateX(140px) scale(0.6) translateY(70px) rotate(20deg); }
+  .carousel-img.prev2 { transform: translateX(-140px) scale(0.6) translateY(70px) rotate(-20deg); }
 }
 
 /* =====================================================
@@ -344,9 +474,14 @@
     margin: 2rem auto 0;
   }
 
-  .banner-image {
-    height: 300px;
-    margin-top: 2rem;
+  .banner-slider.carousel-container {
+    height: 350px;
+    margin-top: 1.5rem;
+  }
+
+  .banner-image.carousel-img {
+    height: 240px;
+    margin-top: 0;
   }
 
   .banner-nav {
@@ -417,7 +552,11 @@
     font-size: 1.6rem;
   }
 
-  .banner-image {
-    height: 200px;
+  .banner-slider.carousel-container {
+    height: 250px;
+  }
+
+  .banner-image.carousel-img {
+    height: 180px;
   }
 }

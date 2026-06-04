@@ -816,7 +816,7 @@
       {
         "id": 89,
         "slug": "notoryctes",
-        "name": "Notoryctes",
+        "name": "Notoryctes typhlops",
         "scientificName": "Marsupial mole",
         "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1771061203/Notoryctes_bqojtj.png",
         "path": "/zoohub/chordata/notoryctes"
@@ -1080,9 +1080,9 @@
       {
         "id": 122,
         "slug": "lynx",
-        "name": "Lynx",
-        "scientificName": "Lynx",
-        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1771228591/Lynx_u612f1.png",
+        "name": "Lynx rufus",
+        "scientificName": "Bobcat",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1777280918/Lynx_u612f1.png",
         "path": "/zoohub/chordata/lynx"
       },
       {
@@ -1104,7 +1104,7 @@
       {
         "id": 125,
         "slug": "talpa",
-        "name": "Talpa",
+        "name": "Talpa europaea",
         "scientificName": "Mole",
         "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1771228842/Talpa_gpikln.png",
         "path": "/zoohub/chordata/talpa"
@@ -1170,7 +1170,7 @@
         "slug": "macaca",
         "name": "Macaca",
         "scientificName": "Macaque",
-        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1771228600/Macaca_rj1ozb.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1777279757/Macaca_rj1ozb.png",
         "path": "/zoohub/chordata/macaca"
       },
       {
@@ -1184,17 +1184,25 @@
       {
         "id": 135,
         "slug": "dryopithecus",
-        "name": "Dryopithecus",
+        "name": "Dryopithecus africanus",
         "scientificName": "Early fossil ape",
-        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1771226566/Dryopithecus_africanus_%EF%B8%8E_rlifox.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1777278865/Dryopithecus_africanus_%EF%B8%8E_rlifox.png",
         "path": "/zoohub/chordata/dryopithecus"
+      },
+      {
+        "id":152,
+        "slug":"Proconsul_africanus",
+        "name":"Proconsul africanus",
+        "scientificName":"Early Ape",
+        "image":"https://res.cloudinary.com/duibfmcw1/image/upload/v1777280197/Proconsul_africanus_%EF%B8%8E_n0uopd.png",
+        "path":""
       },
       {
         "id": 136,
         "slug": "kenyapithecus_wickeri",
         "name": "Kenyapithecus wickeri",
         "scientificName": "Early Miocene ape",
-        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1771228553/Kenyapithecus_wickeri_%EF%B8%8E_vkg0um.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1777279703/Kenyapithecus_wickeri_%EF%B8%8E_vkg0um.png",
         "path": "/zoohub/chordata/kenyapithecus_wickeri"
       },
       {
@@ -1202,7 +1210,7 @@
         "slug": "sivapithecus",
         "name": "Sivapithecus",
         "scientificName": "Fossil Miocene ape",
-        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1771228838/Sivapithecus_%EF%B8%8E_gvckdm.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1777280440/Sivapithecus_%EF%B8%8E_gvckdm.png",
         "path": "/zoohub/chordata/sivapithecus"
       },
       {
@@ -1210,7 +1218,7 @@
         "slug": "ramapithecus",
         "name": "Ramapithecus",
         "scientificName": "Early hominid (fossil ape)",
-        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1771228760/Ramapithecus_%EF%B8%8E_pof5qv.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1777280382/Ramapithecus_%EF%B8%8E_pof5qv.png",
         "path": "/zoohub/chordata/ramapithecus"
       },
       {
@@ -1234,15 +1242,23 @@
         "slug": "pan_troglodytes",
         "name": "Pan troglodytes",
         "scientificName": "Chimpanzee",
-        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1771228658/Pan_troglodytes_dxd9zx.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1777279810/Pan_troglodytes_dxd9zx.png",
         "path": "/zoohub/chordata/pan_troglodytes"
+      },
+      {
+        "id":151,
+        "slug":"Ardipithecus ramidus",
+        "name":"Ardipithecus ramidus",
+        "scientificName":"Black skull",
+        "image":"https://res.cloudinary.com/duibfmcw1/image/upload/v1777278563/Ardipithecus_ramidus_%EF%B8%8E_ymr86r.png",
+        "path":""
       },
       {
         "id": 142,
         "slug": "australopithecus_afarensis",
         "name": "Australopithecus afarensis",
         "scientificName": "Lucy species",
-        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1771226358/Australopithecus_afarensis_%EF%B8%8E_lbxcxk.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1777278638/Australopithecus_afarensis_%EF%B8%8E_lbxcxk.png",
         "path": "/zoohub/chordata/australopithecus_afarensis"
       },
       {
@@ -1250,7 +1266,7 @@
         "slug": "australopithecus_africanus",
         "name": "Australopithecus africanus",
         "scientificName": "Southern ape",
-        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1771226383/Australopithecus_africanus_%EF%B8%8E_tplmgv.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1777278724/Australopithecus_africanus_%EF%B8%8E_tplmgv.png",
         "path": "/zoohub/chordata/australopithecus_africanus"
       },
       {
@@ -1258,7 +1274,7 @@
         "slug": "australopithecus_boisei",
         "name": "Australopithecus boisei",
         "scientificName": "Robust australopithecine",
-        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1771226406/Australopithecus_boisei_%EF%B8%8E_xisccy.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1777279909/Australopithecus_boisei_%EF%B8%8E_xisccy.png",
         "path": "/zoohub/chordata/australopithecus_boisei"
       },
       {
@@ -1266,7 +1282,7 @@
         "slug": "australopithecus_robustus",
         "name": "Australopithecus robustus",
         "scientificName": "Robust australopithecine",
-        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1771226441/Australopithecus_robustus_%EF%B8%8E_ynzrfo.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1777280009/Australopithecus_robustus_%EF%B8%8E_ynzrfo.png",
         "path": "/zoohub/chordata/australopithecus_robustus"
       },
       {
@@ -1274,7 +1290,7 @@
         "slug": "homo_habilis",
         "name": "Homo habilis",
         "scientificName": "Handy man",
-        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1771228500/Homo_habilis_%EF%B8%8E_gtjyot.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1777279003/Homo_habilis_%EF%B8%8E_gtjyot.png",
         "path": "/zoohub/chordata/homo_habilis"
       },
       {
@@ -1282,15 +1298,22 @@
         "slug": "homo_erectus",
         "name": "Homo erectus",
         "scientificName": "Upright man",
-        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1771228497/Homo_erectus_%EF%B8%8E_tgx2w4.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1777278933/Homo_erectus_%EF%B8%8E_tgx2w4.png",
         "path": "/zoohub/chordata/homo_erectus"
+      },
+      {
+        "id":150,
+        "slug":"homo_heidelbergensis",
+        "name": "Homo heidelbergensis",
+        "scientificName": " Heidelberg man",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1777279119/Homo_heidelbergensis_%EF%B8%8E_xvszto.png"
       },
       {
         "id": 148,
         "slug": "homo_neanderthalensis",
         "name": "Homo neanderthalensis",
         "scientificName": "Neanderthal",
-        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1771228516/Homo_neanderthalensis_%EF%B8%8E_quqisx.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1777279510/Homo_neanderthalensis_%EF%B8%8E_quqisx.png",
         "path": "/zoohub/chordata/homo_neanderthalensis"
       },
       {
@@ -1298,7 +1321,7 @@
         "slug": "homo_sapiens",
         "name": "Homo sapiens",
         "scientificName": "Human",
-        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1771228525/Homo_sapiens_gwfpme.png",
+        "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1777279566/Homo_sapiens_gwfpme.png",
         "path": "/zoohub/chordata/homo_sapiens"
       }
     ]

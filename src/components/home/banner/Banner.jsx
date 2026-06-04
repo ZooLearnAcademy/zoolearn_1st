@@ -1,20 +1,77 @@
-import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useEffect, useState, useMemo } from "react";
 import "./Banner.css";
 import CountUp from "../../shared/CountUp";
 
-// Static data moved outside component to prevent re-creation on every render
-const images = [
-  "https://images.unsplash.com/photo-1456926631375-92c8ce872def?q=80&w=1200&auto=format&fit=crop", // Snow Leopard
-  "https://images.unsplash.com/photo-1616128417859-3a984dd35f02?q=80&w=1200&auto=format&fit=crop", // Shoebill Stork
-  "https://images.unsplash.com/photo-1504173010664-32509aeebb62?q=80&w=1200&auto=format&fit=crop", // Mandrill
-  "https://images.unsplash.com/photo-1527118732049-c88155f2107c?q=80&w=1200&auto=format&fit=crop", // Red Panda
-  "https://images.unsplash.com/photo-1560275619-4662e36fa65c?q=80&w=1200&auto=format&fit=crop", // Whale Shark
-  "https://images.unsplash.com/photo-1454991727061-be514eae86f7?q=80&w=1200&auto=format&fit=crop", // Blue Whale
-];
+import poriferaData from "../../zoohub/porifera/poriferaData.json";
+import coelenterataData from "../../zoohub/coelenterata/CoelenterataData.json";
+import ctenophoraData from "../../zoohub/ctenophora/ctenophoradata.json";
+import platyhelminthesData from "../../zoohub/platyhelminthes/Platyhelminthesdata.json";
+import aschelminthesData from "../../zoohub/aschelminthes/AschelminthesData.json";
+import annelidaData from "../../zoohub/annelida/AnnelidaData.json";
+import arthropodaData from "../../zoohub/arthropoda/ArthropodaData.json";
+import molluscaData from "../../zoohub/mollusca/MolluscaData.json";
+import echinodermataData from "../../zoohub/echinodermata/EchinodermataData.json";
+import hemichordataData from "../../zoohub/hemichordata/HemichordataData.json";
+import chordataData from "../../zoohub/chordata/ChordataData.json";
+
+const extractImages = (data) => {
+  let images = [];
+  if (Array.isArray(data)) {
+    data.forEach(cls => {
+      if (cls.species && Array.isArray(cls.species)) {
+        cls.species.forEach(sp => {
+          if (sp.image) {
+            images.push(sp.image);
+          }
+        });
+      }
+    });
+  }
+  return images;
+};
+
+const phylumData = {
+  Porifera: extractImages(poriferaData),
+  Coelenterata: extractImages(coelenterataData),
+  Ctenophora: extractImages(ctenophoraData),
+  Platyhelminthes: extractImages(platyhelminthesData),
+  Aschelminthes: extractImages(aschelminthesData),
+  Annelida: extractImages(annelidaData),
+  Arthropoda: extractImages(arthropodaData),
+  Mollusca: extractImages(molluscaData),
+  Echinodermata: extractImages(echinodermataData),
+  Hemichordata: extractImages(hemichordataData),
+  Chordata: extractImages(chordataData)
+};
+
+function generatePhylumPlaylist() {
+  const phylums = Object.keys(phylumData);
+  const pools = {};
+  let maxLen = 0;
+  
+  phylums.forEach(phylum => {
+    pools[phylum] = [...phylumData[phylum]].sort(() => Math.random() - 0.5);
+    if (pools[phylum].length > maxLen) {
+      maxLen = pools[phylum].length;
+    }
+  });
+
+  const playlist = [];
+  
+  for (let i = 0; i < maxLen; i++) {
+    const roundPhylums = [...phylums].sort(() => Math.random() - 0.5);
+    roundPhylums.forEach(phylum => {
+      if (pools[phylum].length > 0) {
+        playlist.push(pools[phylum].shift());
+      }
+    });
+  }
+  
+  return playlist;
+}
 
 export default function ZoologyHero() {
-  const navigate = useNavigate();
+  const images = useMemo(() => generatePhylumPlaylist(), []);
 
   const [index, setIndex] = useState(0);
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -35,51 +92,30 @@ export default function ZoologyHero() {
     img.src = images[nextIndex];
   }, [index]);
 
-  const next = () => {
-    setIndex((i) => (i + 1) % images.length);
-    setImageLoaded(false);
-  };
-
-  const prev = () => {
-    setIndex((i) => (i - 1 + images.length) % images.length);
-    setImageLoaded(false);
-  };
-
-  const goToSlide = (slideIndex) => {
-    setIndex(slideIndex);
-    setImageLoaded(false);
-  };
-
-
-
   return (
     <section className="banner-hero" aria-label="Zoology Learning Platform Hero Banner">
       <div className="banner-container">
         {/* LEFT CONTENT */}
         <div className="banner-left">
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '1.5rem', marginTop: '-1rem' }}>
+          <div className="banner-logo-wrapper">
             <img 
               src="https://res.cloudinary.com/duibfmcw1/image/upload/v1765947727/logopng_2_webaac.png" 
               alt="ZooLearn Logo" 
-              style={{ width: '160px', height: '160px', filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.15))' }}
+              className="banner-logo-img"
             />
-            <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-              <div style={{ fontSize: '6rem', fontWeight: 800, letterSpacing: '-2px', lineHeight: 1 }}>
+            <div className="banner-logo-text-group">
+              <div className="banner-brand-name">
                 <span style={{ color: '#265C30' }}>Zoo</span>
                 <span style={{ color: '#2B83BA' }}>Learn</span>
               </div>
-              <div style={{ fontSize: '2.16rem', fontWeight: 700, color: '#265C30', marginTop: '0.2rem', letterSpacing: '0.09em', textAlign: 'justify', textAlignLast: 'justify' }}>
+              <div className="banner-brand-tagline">
                 Learn.Explore .Certify
               </div>
             </div>
           </div>
 
           <div style={{ height: '3rem' }}></div>
-
-          {/* <h1 className="banner-title" style={{ fontSize: '2.5rem', lineHeight: '1.2', marginTop: 0 }}>
-            Learn Zoology <span className="banner-highlight">the Smart Way</span> with ZooLearn
-          </h1> */}
 
           <p className="banner-desc" style={{ fontSize: '1.125rem', marginTop: '1.25rem', marginBottom: '2rem' }}>
             Build strong zoology concepts through visual learning, interactive models, and exam-focused content — designed for students and researchers.
@@ -88,37 +124,24 @@ export default function ZoologyHero() {
 
         {/* RIGHT IMAGE SLIDER & STATS */}
         <div className="banner-right" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2rem' }}>
-          <div className="banner-slider">
-            <div className="banner-image-wrapper">
-              <img
-                key={index}
-                src={images[index]}
-                alt="Rare species showcase"
-                className={`banner-image ${imageLoaded ? 'loaded' : 'loading'}`}
-                onLoad={() => setImageLoaded(true)}
-                onError={() => {
-                  console.error(`Failed to load image: ${images[index]}`);
-                  setImageLoaded(true);
-                }}
-              />
-            </div>
+          <div className="banner-slider carousel-container">
+            {images.map((src, i) => {
+              let position = 'hidden';
+              if (i === index) position = 'active';
+              else if (i === (index + 1) % images.length) position = 'next';
+              else if (i === (index + 2) % images.length) position = 'next2';
+              else if (i === (index - 1 + images.length) % images.length) position = 'prev';
+              else if (i === (index - 2 + images.length) % images.length) position = 'prev2';
 
-            {/* SLIDER NAVIGATION */}
-            <button className="banner-nav banner-prev" onClick={prev} aria-label="Previous">‹</button>
-            <button className="banner-nav banner-next" onClick={next} aria-label="Next">›</button>
-
-            {/* INDICATORS */}
-            <div className="banner-slider-indicators">
-              {images.map((_, i) => (
-                <button
+              return (
+                <img
                   key={i}
-                  className={`banner-indicator ${i === index ? 'active' : ''}`}
-                  onClick={() => goToSlide(i)}
-                  aria-label={`View slide ${i + 1}`}
-                  aria-current={i === index}
+                  src={src}
+                  alt={`Species ${i + 1}`}
+                  className={`banner-image carousel-img ${position}`}
                 />
-              ))}
-            </div>
+              );
+            })}
           </div>
 
           {/* STATS SECTION MOVED BELOW IMAGES */}

@@ -63,18 +63,6 @@ The molar teeth showed the beginning of enamel ridges.`,
     extraImage: ""
   },
   {
-    era: "Miocene Epoch",
-    name: "Merychippus",
-    sci: "Ruminating horse",
-    desc: `Merychippus is known as the ruminating horse. It evolved from Mesohippus.
-It appeared during the Miocene epoch, about 2 crore years ago. It was about the size of a small pony. The height was about 100 cm at the shoulders.
-It had a longer neck. The forelimbs and hind limbs had three fingers/toes each. The middle finger and toe were longer and supported most of the body weight. The side toes were reduced.
-The teeth were longer and covered with cement, with well-developed enamel ridges.`,
-    facts: ["3 Toes (Side toes reduced)", "~100 cm tall", "Size of a small pony", "Teeth covered with cement"],
-    img: "https://res.cloudinary.com/duibfmcw1/image/upload/v1774340595/Merychippus_%EF%B8%8E_ry9izt.png",
-    extraImage: "https://res.cloudinary.com/duibfmcw1/image/upload/q_auto/f_auto/v1775119684/14478513-2745-435f-89cd-dac8fdfdf9db.png"
-  },
-  {
     era: "Miocene (~15 MYA)",
     name: "Callippus",
     sci: "Slender grazing horse",
@@ -85,6 +73,18 @@ The teeth were longer and covered with cement, with well-developed enamel ridges
     facts: ["Side-Branch", "Grassland Specialist", "Extinct Lineage"],
     img: "https://res.cloudinary.com/duibfmcw1/image/upload/v1774340615/Callippus_%EF%B8%8E_rz4br6.png",
     extraImage: ""
+  },
+  {
+    era: "Miocene Epoch",
+    name: "Merychippus",
+    sci: "Ruminating horse",
+    desc: `Merychippus is known as the ruminating horse. It evolved from Mesohippus.
+It appeared during the Miocene epoch, about 2 crore years ago. It was about the size of a small pony. The height was about 100 cm at the shoulders.
+It had a longer neck. The forelimbs and hind limbs had three fingers/toes each. The middle finger and toe were longer and supported most of the body weight. The side toes were reduced.
+The teeth were longer and covered with cement, with well-developed enamel ridges.`,
+    facts: ["3 Toes (Side toes reduced)", "~100 cm tall", "Size of a small pony", "Teeth covered with cement"],
+    img: "https://res.cloudinary.com/duibfmcw1/image/upload/v1774340595/Merychippus_%EF%B8%8E_ry9izt.png",
+    extraImage: "https://res.cloudinary.com/duibfmcw1/image/upload/q_auto/f_auto/v1775119684/14478513-2745-435f-89cd-dac8fdfdf9db.png"
   },
   {
     era: "Late Miocene Epoch",
@@ -188,7 +188,7 @@ const HorseEvolution = () => {
 
           return (
             <div
-              className={`horse-timeline-item ${isEven ? 'horse-item-left' : 'horse-item-right'}`}
+              className={`horse-timeline-item ${isEven ? 'horse-item-left' : 'horse-item-right'} ${horse.name === 'Callippus' ? 'horse-branch-item' : ''}`}
               key={horse.name}
             >
 
@@ -213,6 +213,11 @@ const HorseEvolution = () => {
               <div className="horse-timeline-marker">
                 <span className="horse-marker-dot"></span>
               </div>
+
+              {/* Branch Line for Callippus */}
+              {horse.name === "Callippus" && (
+                <div className="horse-branch-line-right"></div>
+              )}
 
               {/* Right Pane */}
               <div className="horse-timeline-pane horse-pane-right">

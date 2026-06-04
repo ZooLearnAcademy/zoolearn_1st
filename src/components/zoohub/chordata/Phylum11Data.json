@@ -5389,7 +5389,7 @@
   "notoryctes": {
     "id": 92,
     "slug": "notoryctes",
-    "name": "Notoryctes",
+    "name": "Notoryctes typhlops",
     "scientificName": "Marsupial mole",
     "description": "Blind burrowing marsupial. Lives underground in deserts. Highly specialized animal.",
     "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1771061203/Notoryctes_bqojtj.png",
@@ -6679,7 +6679,7 @@
     "name": "Macaca",
     "scientificName": "Macaque",
     "description": "Macaca is a medium-sized primate. Highly social and intelligent. Mostly omnivorous.",
-    "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1771228600/Macaca_rj1ozb.png",
+    "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1777279757/Macaca_rj1ozb.png",
     "3d": "https://sketchfab.com/3d-models/rhesus-macaque-monkey-70c740b6a79d4b758b5d372ac89981c4/embed",
     "introduction": [
       "Found in Asia and North Africa.",
@@ -7599,10 +7599,10 @@
   "lynx": {
     "id": 130,
     "slug": "lynx",
-    "name": "Lynx",
-    "scientificName": "Lynx",
+    "name": "Lynx rufus",
+    "scientificName": "Bobcat",
     "description": "Medium-sized wild cat. Carnivorous predator. Sharp hearing ability.",
-    "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1771228591/Lynx_u612f1.png",
+    "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1777280918/Lynx_u612f1.png",
     "3d": "https://sketchfab.com/3d-models/animated-stylized-lynx-3d-animal-model-a5ec45f761d14b81a0dc44763c400763/embed",
     "introduction": [
       "Lives in forests and cold regions.",
@@ -7818,7 +7818,7 @@
     "name": "Pan troglodytes",
     "scientificName": "Chimpanzee",
     "description": "Highly intelligent ape. Uses tools. Closest relative to humans.",
-    "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1771228658/Pan_troglodytes_dxd9zx.png",
+    "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1777279810/Pan_troglodytes_dxd9zx.png",
     "3d": "https://sketchfab.com/3d-models/chimpanzee-79783566724645ceaba896848b949da7/embed",
     "introduction": [
       "Lives in African forests.",
@@ -7992,7 +7992,7 @@
   "talpa": {
     "id": 137,
     "slug": "talpa",
-    "name": "Talpa",
+    "name": "Talpa europaea",
     "scientificName": "Mole",
     "description": "Talpa is a small burrowing mammal. Highly adapted for underground life. Feeds mainly on earthworms and insects.",
     "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1771228842/Talpa_gpikln.png",
@@ -8053,7 +8053,7 @@
     "name": "Dryopithecus  africanus",
     "scientificName": "Extict Ape",
     "description": "Dryopithecus is an extinct Miocene ape. It showed primitive ape characters. Considered an early ancestor of modern apes.",
-    "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1771226566/Dryopithecus_africanus_%EF%B8%8E_rlifox.png",
+    "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1777278865/Dryopithecus_africanus_%EF%B8%8E_rlifox.png",
     "3d": "",
     "introduction": [
       "Dryopithecus lived during the Miocene epoch.",
@@ -8112,7 +8112,7 @@
     "name": "Kenyapithecus wickeri",
     "scientificName": "Early Miocene ape",
     "description": "Kenyapithecus wickeri is an extinct fossil ape. It lived during the Miocene epoch. Considered important in early hominoid evolution.",
-    "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1771228553/Kenyapithecus_wickeri_%EF%B8%8E_vkg0um.png",
+    "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1777279703/Kenyapithecus_wickeri_%EF%B8%8E_vkg0um.png",
     "3d": "",
     "introduction": [
       "Kenyapithecus wickeri lived about 14–16 million years ago.",
@@ -8171,7 +8171,7 @@
     "name": "Ramapithecus",
     "scientificName": "Early hominid (fossil ape)",
     "description": "Ramapithecus is an extinct Miocene primate. It showed some human-like jaw features. Once considered an early human ancestor.",
-    "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1771228760/Ramapithecus_%EF%B8%8E_pof5qv.png",
+    "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1777280382/Ramapithecus_%EF%B8%8E_pof5qv.png",
     "3d": "",
     "introduction": [
       "Ramapithecus lived during the Miocene epoch.",
@@ -8230,7 +8230,7 @@
     "name": "Sivapithecus",
     "scientificName": "Fossil Miocene ape",
     "description": "Sivapithecus is an extinct Miocene ape. It showed features similar to modern orangutans. Important in hominoid evolution.",
-    "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1771228838/Sivapithecus_%EF%B8%8E_gvckdm.png",
+    "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1777280440/Sivapithecus_%EF%B8%8E_gvckdm.png",
     "3d": "",
     "introduction": [
       "Sivapithecus lived about 12–8 million years ago.",
@@ -8289,7 +8289,7 @@
     "name": "Australopithecus africanus",
     "scientificName": "Southern ape",
     "description": "Australopithecus africanus was an early hominin. It showed clear bipedal locomotion. Considered an important ancestor in human evolution.",
-    "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1771226383/Australopithecus_africanus_%EF%B8%8E_tplmgv.png",
+    "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1777278724/Australopithecus_africanus_%EF%B8%8E_tplmgv.png",
     "3d": "",
     "introduction": [
       "Australopithecus africanus lived about 3–2 million years ago.",
@@ -8348,7 +8348,7 @@
     "name": "Australopithecus afarensis",
     "scientificName": "Lucy species",
     "description": "Australopithecus afarensis is a well-known early hominin. Famous fossil \"Lucy\" belongs to this species. Clearly bipedal but retained ape-like traits.",
-    "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1771226358/Australopithecus_afarensis_%EF%B8%8E_lbxcxk.png",
+    "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1777278638/Australopithecus_afarensis_%EF%B8%8E_lbxcxk.png",
     "3d": "",
     "introduction": [
       "Lived about 3.9–3 million years ago.",
@@ -8407,7 +8407,7 @@
     "name": "Australopithecus boisei",
     "scientificName": "Robust australopithecine",
     "description": "Australopithecus boisei had strong jaws. Specialized for heavy chewing. Part of robust hominin group.",
-    "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1771226406/Australopithecus_boisei_%EF%B8%8E_xisccy.png",
+    "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1777279909/Australopithecus_boisei_%EF%B8%8E_xisccy.png",
     "3d": "",
     "introduction": [
       "Lived about 2.3–1.2 million years ago.",
@@ -8466,7 +8466,7 @@
     "name": "Australopithecus robustus",
     "scientificName": "Robust australopithecine",
     "description": "Australopithecus robustus had strong skull features. Specialized for heavy plant chewing. Part of side branch of human evolution.",
-    "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1771226441/Australopithecus_robustus_%EF%B8%8E_ynzrfo.png",
+    "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1777280009/Australopithecus_robustus_%EF%B8%8E_ynzrfo.png",
     "3d": "",
     "introduction": [
       "Lived about 2–1.2 million years ago.",
@@ -8525,7 +8525,7 @@
     "name": "Homo habilis",
     "scientificName": "Handy man",
     "description": "Homo habilis was an early human species. It is known for making simple stone tools. Shows increase in brain size compared to Australopithecus.",
-    "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1771228500/Homo_habilis_%EF%B8%8E_gtjyot.png",
+    "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1777279003/Homo_habilis_%EF%B8%8E_gtjyot.png",
     "3d": "",
     "introduction": [
       "Homo habilis lived about 2.4–1.4 million years ago.",
@@ -8584,7 +8584,7 @@
     "name": "Homo erectus",
     "scientificName": "Upright man",
     "description": "Homo erectus showed fully upright posture. It used advanced stone tools. First hominin to migrate out of Africa.",
-    "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1771228497/Homo_erectus_%EF%B8%8E_tgx2w4.png",
+    "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1777278933/Homo_erectus_%EF%B8%8E_tgx2w4.png",
     "3d": "",
     "introduction": [
       "Homo erectus lived about 1.9 million–140,000 years ago.",
@@ -8643,7 +8643,7 @@
     "name": "Homo neanderthalensis",
     "scientificName": "Neanderthal",
     "description": "Homo neanderthalensis was a close relative of modern humans. Adapted to cold climates. Had large brain capacity.",
-    "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1771228516/Homo_neanderthalensis_%EF%B8%8E_quqisx.png",
+    "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1777279510/Homo_neanderthalensis_%EF%B8%8E_quqisx.png",
     "3d": "",
     "introduction": [
       "Neanderthals lived about 400,000–40,000 years ago.",
@@ -8702,7 +8702,7 @@
     "name": "Homo sapiens",
     "scientificName": "Human",
     "description": "Highly intelligent primate. Upright posture. Complex language ability.",
-    "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1771228525/Homo_sapiens_gwfpme.png",
+    "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1777279566/Homo_sapiens_gwfpme.png",
     "3d": "https://sketchfab.com/3d-models/fantasy-modern-man-1bfd0e40ca304a6dbeb779f3dbe5ef17/embed",
     "introduction": [
       "Found worldwide.",

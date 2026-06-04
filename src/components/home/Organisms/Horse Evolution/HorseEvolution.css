@@ -158,6 +158,32 @@
   box-shadow: 0 0 0 8px rgba(160, 82, 45, .15), 0 4px 25px rgba(160, 82, 45, .3);
 }
 
+.horse-branch-line-right {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: calc(50% + 8vw - 260px); /* calculated to stop exactly before the 400px wide card */
+  max-width: 600px;
+  min-width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #a0522d 0%, rgba(160, 82, 45, .8) 80%, rgba(160, 82, 45, 0) 100%);
+  z-index: -1;
+}
+
+.horse-branch-item .horse-pane-right {
+  justify-content: flex-end;
+  width: 50%; /* stretch to the absolute right of the container */
+  transform: translateX(8vw); /* Push it further out to the right */
+}
+
+@media (max-width: 900px) {
+  .horse-branch-line-right {
+    left: 30px;
+    width: calc(100% - 260px);
+  }
+}
+
 /* ─── ERA LABEL ─── */
 .horse-era-label {
   display: flex;

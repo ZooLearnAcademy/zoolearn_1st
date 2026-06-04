@@ -475,8 +475,8 @@
 
   "lumbricus": {
     "id": 9,
-    "slug": "lumbricus",
-    "name": "Lumbricus",
+    "slug": "lumbricus terrestris",
+    "name": "Lumbricus terrestris",
     "scientificName": "Earthworm",
     "description": "Lumbricus is a terrestrial annelid.\nImportant soil-dwelling worm.\nCommon in temperate regions.",
     "image": "https://res.cloudinary.com/duibfmcw1/image/upload/v1768984035/Lumbricus_wfhpyb.png",
