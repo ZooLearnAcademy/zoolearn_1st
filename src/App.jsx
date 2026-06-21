@@ -27,6 +27,8 @@ const CareerCategory = lazy(() => import('./components/career-path/CareerCategor
 const HorseEvolution = lazy(() => import('./components/home/Organisms/Horse Evolution/HorseEvolution'));
 const Scopes = lazy(() => import('./components/scopes/Scopes'));
 const ScopeCategory = lazy(() => import('./components/scopes/ScopeCategory'));
+const BlogIndex = lazy(() => import('./components/blog/BlogIndex'));
+const GiraffeBlog = lazy(() => import('./components/blog/giraffe/GiraffeBlog'));
 
 
 // ZooHub Main
@@ -80,6 +82,8 @@ function App() {
               <Route path="/career-path/:categoryId" element={<CareerCategory />} />
               <Route path="/scopes" element={<Scopes />} />
               <Route path="/scopes/:categoryId" element={<ScopeCategory />} />
+              <Route path="/blog" element={<BlogIndex />} />
+              <Route path="/blog/giraffe" element={<GiraffeBlog />} />
 
 
 
