@@ -26,21 +26,21 @@
             "icon": "",
             "overview": [
                 {
-                    "text": "Gentle and timid animals living in burrows.",
+                    "text": "Gentle and timid animals.",
                     "highlight": false
                 },
                 {
-                    "text": "Shows leaping movement (saltatory).",
+                    "text": "Showsleaping movementand live in burrows.",
                     "highlight": true,
                     "strong": "leaping movement"
                 },
                 {
-                    "text": "Herbivorous (plant eaters).",
+                    "text": "Herbivorousanimal.",
                     "highlight": true,
                     "strong": "Herbivorous"
                 },
                 {
-                    "text": "Gregarious (live in groups).",
+                    "text": "hey areGregariousanimals (move in groups) .",
                     "highlight": true,
                     "strong": "Gregarious"
                 }
@@ -69,16 +69,32 @@
             "icon": "",
             "content": {
                 "shapeSize": [
-                    "Elongated, cylindrical body.",
-                    "Length: ~45 cm, Weight: ~2.25 kg.",
-                    "Body Division: Head, Neck, Trunk, Tail."
+                    "Elongated and cylindrical body.",
+                    "Males and females are same size.",
+                    "They grow about 45 cm in length and weigh about 2.25 kg as adult."
                 ],
+                "colour": "Varies from white to black.",
+                "bodyDivision": "The body is divided into the head, neck, trunk and tail.",
                 "head": [
-                    "Ovoid, flattened with truncate snout.",
-                    "Large movable pinnae (ears).",
-                    "Vibrissae (whiskers) for sensing."
+                    "It is ovoid, flattened and bears a truncate snout.",
+                    "Contains mouth, external nares, eyes, ears and vibrissae.",
+                    "Mouth is a transverse slit-like bounded by upper lip and lower lip.",
+                    "Just above the mouth are two oblique openings called nostrils. From each side of the upper lip tactile hairs or vibrissae (whiskers) project outwards.",
+                    "A pair of large, movable external ear or pinnae is situated at the top of the head."
                 ],
-                "integument": "Covered with fur. Contains sweat, sebaceous, and mammary glands. Claws and nails present."
+                "neck": "The neck connects the head with the trunk. It helps to turn the head.",
+                "trunk": [
+                    "It is divided into an anterior thorax and a posterior abdomen.",
+                    "The trunk bears two pairs of pentadactyl limbs. The forelimbs are shorter than the hind limbs.",
+                    "In females on the ventral side a slit like vulva is present. In males penis is present in the ventral side of anus."
+                ],
+                "tail": "The tail is short. It is used to give signals to other rabbits in the event of danger.",
+                "integument": "It forms the outer covering of the body. The structures which are derived from it are hairs, claws, nails and glands like sweat glands, sebaceous glands and mammary glands.",
+                "coelom": [
+                    "The body is divisible into thoracic cavity and abdominal cavity separated by diaphragm.",
+                    "Lungs and heart lie in the thoracic cavity.",
+                    "Abdominal cavity encloses digestive and urinogenital system."
+                ]
             }
         },
         {
@@ -86,20 +102,36 @@
             "label": "Digestive System",
             "icon": "",
             "content": {
+                "overview": [
+                    "Includes the alimentary canal and the associated digestive glands.",
+                    "The alimentary canal consists of mouth, buccal cavity, pharynx, oesophagus, stomach, small intestine, caecum, large intestine and anus."
+                ],
                 "alimentaryCanal": [
                     "Mouth",
+                    "Buccal cavity",
                     "Pharynx",
                     "Oesophagus",
                     "Stomach",
-                    "Small Intestine",
-                    "Caecum",
-                    "Large Intestine",
+                    "Small intestine",
+                    "Large intestine",
+                    "Rectum",
                     "Anus"
                 ],
-                "caecum": "Large sac at junction of small/large intestine. Contains bacteria for cellulose digestion.",
+                "caecum": "Caecum is a thin walled sac present at the junction of small intestine and large intestine. It contains bacteria that helps in digestion of cellulose.",
+                "digestiveGlands": [
+                    "The digestive glands are salivary glands, gastric glands, liver, pancreas and intestinal glands.",
+                    "The secretions of digestive glands help in digestion of food in the alimentary canal."
+                ],
                 "dentition": {
                     "formula": "2033/1023",
-                    "description": "Diastema present (gap due to absent canines).",
+                    "description": "Canines are absent. The gap between the incisors and premolar is called diastema. It helps in mastication and chewing of food in herbivorous animals.",
+                    "details": [
+                        "The rabbit has two sets of teeth. The existence of two sets of teeth in the life of an animal is called Diphyodont dentition.",
+                        "i) Milk teeth (young ones) ii) Permanent teeth (in adults).",
+                        "In rabbit, the teeth are of different types. Hence, the dentition is called heterodont.",
+                        "Four kinds of teeth in mammals: Incisors (I), canines (C), premolars (PM) and molars (M).",
+                        "Dental formula is the simple method of representing the teeth of a mammal."
+                    ],
                     "visual": [
                         {
                             "label": "I",
@@ -130,14 +162,16 @@
             "label": "Respiratory System",
             "icon": "",
             "content": {
+                "overview": [
+                    "The rabbit's respiratory system, involves in air entering nostrils, passing through nasal chambers (with warm/moistening turbinates), larynx, trachea, bronchi.",
+                    "The lungs for gas exchange, functioning like other mammals but with key features like being obligate nose breathers (epiglottis placement) and specific lung lobe counts (Right: 4 lobes, Left: 2 lobes), emphasizing efficient oxygen uptake for their high metabolism."
+                ],
                 "pathway": [
-                    "Nostrils",
-                    "Nasal Passage",
+                    "External nostrils",
+                    "Nasal passages",
                     "Pharynx",
-                    "Larynx",
-                    "Trachea",
-                    "Bronchi",
-                    "Lungs"
+                    "Glottis",
+                    "Windpipe"
                 ],
                 "lungs": [
                     {
@@ -149,7 +183,18 @@
                         "value": "2 Lobes"
                     }
                 ],
-                "note": "Obligate nose breathers due to epiglottis position."
+                "pleura": "Each lung is enclosed in a double-membranous layer called the pleura.",
+                "details": [
+                    "Larynx (Voice Box): Located at the front of the windpipe; supported by four cartilaginous plates. It contains vocal cords that vibrate to produce sound.",
+                    "Trachea (Windpipe): Supported by cartilage rings to keep the airway open.",
+                    "Epiglottis: A flap that prevents food from entering the trachea through the glottis.",
+                    "Bronchial Tree: The trachea divides into two bronchi (one for each lung), which further branch into bronchioles and end in alveoli."
+                ],
+                "breathing": [
+                    "Inspiration: The process of breathing in; classified as an active process.",
+                    "Expiration: The process of breathing out; classified as a passive process.",
+                    "Gas Exchange: These events allow for the exchange of oxygen and carbon dioxide within lungs."
+                ]
             }
         },
         {
@@ -157,14 +202,17 @@
             "label": "Circulatory System",
             "icon": "",
             "content": {
-                "heart": [
-                    "4-Chambered Heart.",
-                    "Double Circulation.",
-                    "Enclosed in Pericardium."
-                ],
+                "overview": "The circulatory system is formed of blood, blood vessels and heart. The heart is pear shaped and lies in the thoracic cavity in between the lungs. It is enclosed by pericardium, a double layered membrane.",
                 "valves": [
-                    "Right: Tricuspid Valve.",
-                    "Left: Bicuspid (Mitral) Valve."
+                    "Right Side: The right auricle opens into the right ventricle via the tricuspid valve.",
+                    "Left Side: The left auricle opens into the left ventricle via the bicuspid (mitral) valve.",
+                    "Arteries: The openings of the pulmonary artery and aorta are protected by semilunar valves."
+                ],
+                "circulation": [
+                    "Right Auricle: Receives deoxygenated blood from the body via two precaval (superior vena cava) and one postcaval (inferior vena cava) veins.",
+                    "Left Auricle: Receives oxygenated blood from the lungs through pulmonary veins.",
+                    "Right Ventricle: Pumps deoxygenated blood to the lungs through the pulmonary trunk.",
+                    "Left Ventricle: Pumps oxygenated blood to the body through the systemic arch (aorta)."
                 ]
             }
         },
@@ -172,6 +220,10 @@
             "id": "nervous",
             "label": "Nervous System",
             "icon": "",
+            "overview": [
+                "The nervous system in rabbit is formed of the central nervous system (CNS), peripheral nervous system (PNS) and autonomic nervous system (ANS).",
+                "CNS consists of brain and spinal cord. PNS is formed of 12 pairs of cranial nerves and 37 pairs of spinal nerves. ANS comprises sympathetic and parasympathetic nerves."
+            ],
             "facts": [
                 {
                     "label": "CNS",
@@ -179,26 +231,21 @@
                 },
                 {
                     "label": "PNS",
-                    "value": "12 Cranial Nerves"
+                    "value": "12 Cranial + 37 Spinal Nerves"
                 },
                 {
                     "label": "ANS",
-                    "value": "Sympathetic & Para."
+                    "value": "Sympathetic & Parasympathetic"
                 }
             ],
+            "brainDetails": [
+                "Location and Protection: The brain is located in the cranial cavity and is protected by three membranes: the outer duramater, middle arachnoid, and inner piamater.",
+                "Major Divisions: The brain is divided into three primary regions known as the forebrain (prosencephalon), midbrain (mesencephalon), and hindbrain (rhombencephalon).",
+                "Forebrain Structure: The forebrain consists of olfactory lobes, cerebral hemispheres, and the diencephalon, with the two hemispheres connected by a nerve tissue band called the corpus callosum."
+            ],
             "brainRegions": [
-                {
-                    "text": "Forebrain: Olfactory lobes, Cerebrum, Diencephalon.",
-                    "strong": "Forebrain:"
-                },
-                {
-                    "text": "Midbrain: Optic lobes.",
-                    "strong": "Midbrain:"
-                },
-                {
-                    "text": "Hindbrain: Cerebellum, Pons, Medulla.",
-                    "strong": "Hindbrain:"
-                }
+                "The brain is situated within the cranial cavity and is shielded by three membranes: the outer duramater, the middle arachnoid membrane, and the inner piamater.",
+                "The brain is divided into three parts: the forebrain (consisting of olfactory lobes, cerebral hemispheres connected by the corpus callosum, and diencephalon), the midbrain (including optic lobes), and the hindbrain (consisting of the cerebellum, pons varolii, and medulla oblongata)."
             ]
         },
         {
@@ -206,29 +253,38 @@
             "label": "Urinogenital System",
             "icon": "",
             "content": {
-                "excretory": "Kidneys (Metanephric) filter blood. Urea is the main nitrogenous waste (Ureotelic).",
+                "overview": [
+                    "It comprises the urinary or excretory system and the genital or reproductive system. Therefore, they are usually described as urinogenital system in vertebrates."
+                ],
+                "excretory": "Excretory system: Each kidney is composed of numerous nephrons that filter nitrogenous wastes from the blood to be excreted as urea.",
+                "reproGeneral": "Rabbits show sexual dimorphism, meaning males and females look different and have separate sexes.",
                 "reproductive": {
                     "male": [
-                        {
-                            "text": "Testes: In scrotal sacs.",
-                            "strong": "Testes:"
-                        },
-                        {
-                            "text": "Path: Epididymis → Vas Deferens → Urethra.",
-                            "strong": "Path:"
-                        }
+                        "Testes: A pair of ovoid organs in scrotal sacs containing seminiferous tubules.",
+                        "Sperm Path: Sperm moves through the epididymis to the vas deferens, which joins the urethra below the bladder.",
+                        "Accessory Glands: Includes the prostate, cowper's, and perineal glands."
                     ],
                     "female": [
-                        {
-                            "text": "Ovaries: Located behind kidneys.",
-                            "strong": "Ovaries:"
-                        },
-                        {
-                            "text": "Uterus: Double uterus (duplex).",
-                            "strong": "Uterus:"
-                        }
+                        "Ovaries: These are small, ovoid (egg-shaped) structures located in the abdominal cavity, positioned behind the kidneys.",
+                        "Oviducts & Fallopian Tubes: A pair of oviducts opens into the body cavity through funnel-shaped openings next to each ovary. The anterior (front) portion of the oviduct is specifically called the Fallopian tube.",
+                        "Uterus: The Fallopian tubes lead into wider tubes known as the uterus.",
+                        "Vagina: The two sides of the uterus join together to form a single median tube called the vagina."
                     ]
-                }
+                },
+                "commonPassageways": [
+                    "Urinogenital Canal (Vestibule): This is a common tube formed by the union of the urinary bladder and the vagina.",
+                    "Vulva: The urinogenital canal runs backward and opens to the outside of the body through a slit-like opening called the vulva."
+                ],
+                "femaleGlands": [
+                    "The female rabbit has two primary accessory glands:",
+                    "1. Cowper's gland",
+                    "2. Perineal gland"
+                ],
+                "generalFacts": [
+                    "Warm-blooded: Rabbits are warm-blooded vertebrates.",
+                    "Dentition: Canine teeth are entirely absent in rabbits.",
+                    "Respiration: Breathing takes place through a pair of lungs."
+                ]
             }
         }
     ]

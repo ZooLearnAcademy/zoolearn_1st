@@ -101,18 +101,14 @@ export default function ZoologyHero() {
           <div className="banner-logo-wrapper">
             <img 
               src="https://res.cloudinary.com/duibfmcw1/image/upload/v1765947727/logopng_2_webaac.png" 
-              alt="ZooLearn Logo" 
+              alt="ZooLearn Logo Symbol" 
               className="banner-logo-img"
             />
-            <div className="banner-logo-text-group">
-              <div className="banner-brand-name">
-                <span style={{ color: '#265C30' }}>Zoo</span>
-                <span style={{ color: '#2B83BA' }}>Learn</span>
-              </div>
-              <div className="banner-brand-tagline">
-                Learn.Explore .Certify
-              </div>
-            </div>
+            <img 
+              src="https://res.cloudinary.com/dstunh4mx/image/upload/v1781102458/name_alone-removebg-preview_o8wt5i.png" 
+              alt="ZooLearn Brand Name" 
+              className="banner-logo-text-img"
+            />
           </div>
 
           <div style={{ height: '3rem' }}></div>

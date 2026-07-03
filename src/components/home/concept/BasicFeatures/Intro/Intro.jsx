@@ -48,7 +48,7 @@ const BasicFeaturesIndex = () => {
           <div className="intro-hero-actions">
 
             {/* Navigation Buttons */}
-            <div className="intro-hero-sub-actions intro-secondary-row">
+            {/* <div className="intro-hero-sub-actions intro-secondary-row">
 
               <button
                 className="intro-btn-secondary"
@@ -85,7 +85,7 @@ const BasicFeaturesIndex = () => {
                 Classification of Tree
               </button>
 
-            </div>
+            </div> */}
           </div>
 
         </div>

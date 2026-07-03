@@ -517,6 +517,13 @@
     border-color: var(--rab-primary-light);
 }
 
+.rab-highlight-card {
+    background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%);
+    border-left: 4px solid var(--rab-primary);
+    border-color: rgba(13, 148, 136, 0.2);
+    border-left: 4px solid var(--rab-primary);
+}
+
 .rab-card-title {
     font-size: 1.1rem;
     font-weight: 700;

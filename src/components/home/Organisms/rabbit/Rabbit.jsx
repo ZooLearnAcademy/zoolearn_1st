@@ -302,15 +302,38 @@ const Rabbit = () => {
                                         <Card title="Shape & Size">
                                             <PointList items={sections[1].content.shapeSize} />
                                         </Card>
-                                        <Card title="Head">
-                                            <PointList items={sections[1].content.head} />
+                                        <Card title="Colour">
+                                            <p className="rab-list-item">{sections[1].content.colour}</p>
+                                        </Card>
+                                        <Card title="Body-division">
+                                            <p className="rab-list-item">{sections[1].content.bodyDivision}</p>
                                         </Card>
                                     </div>
                                     <Model3D src={models.morphology} title="Rabbit Morphology" />
                                 </div>
 
+                                <Card title="Head">
+                                    <PointList items={sections[1].content.head} />
+                                </Card>
+
+                                <Card title="Neck">
+                                    <p className="rab-list-item">{sections[1].content.neck}</p>
+                                </Card>
+
+                                <Card title="Trunk">
+                                    <PointList items={sections[1].content.trunk} />
+                                </Card>
+
+                                <Card title="Tail">
+                                    <p className="rab-list-item">{sections[1].content.tail}</p>
+                                </Card>
+
                                 <Card title="Integument (Skin)">
                                     <p className="rab-list-item">{sections[1].content.integument}</p>
+                                </Card>
+
+                                <Card title="Coelom (Body Cavity)" className="rab-highlight-card">
+                                    <PointList items={sections[1].content.coelom} />
                                 </Card>
                             </div>
                         )}
@@ -319,6 +342,10 @@ const Rabbit = () => {
                         {activeTab === 'digestive' && (
                             <div className="rab-content-section">
                                 <SectionHeader title="Digestive System" icon="" />
+
+                                <Card title="Overview">
+                                    <PointList items={sections[2].content.overview} />
+                                </Card>
 
                                 <div className="rab-split-view">
                                     <div className="rab-text-column">
@@ -332,7 +359,12 @@ const Rabbit = () => {
                                     <Model3D src={models.digestive} title="Digestive System" />
                                 </div>
 
-                                <Card title="Dentition">
+                                <Card title="Digestive Glands">
+                                    <PointList items={sections[2].content.digestiveGlands} />
+                                </Card>
+
+                                <Card title="Dentition in Rabbit">
+                                    <PointList items={sections[2].content.dentition.details} />
                                     <div className="rab-formula-box">
                                         {sections[2].content.dentition.visual.map((item, idx) => (
                                             <React.Fragment key={idx}>
@@ -345,8 +377,9 @@ const Rabbit = () => {
                                         ))}
                                     </div>
                                     <p style={{ textAlign: 'center', color: 'var(--rab-text-secondary)' }}>
-                                        Dental Formula: {sections[2].content.dentition.formula}. {sections[2].content.dentition.description}
+                                        Rabbit - {sections[2].content.dentition.formula}
                                     </p>
+                                    <p className="rab-list-item">{sections[2].content.dentition.description}</p>
                                 </Card>
                             </div>
                         )}
@@ -356,9 +389,13 @@ const Rabbit = () => {
                             <div className="rab-content-section">
                                 <SectionHeader title="Respiratory System" icon="" />
 
+                                <Card title="Overview">
+                                    <PointList items={sections[3].content.overview} />
+                                </Card>
+
                                 <div className="rab-split-view">
                                     <div className="rab-text-column">
-                                        <Card title="Lungs Scheme">
+                                        <Card title="Lungs">
                                             <div className="rab-facts-grid" style={{ gridTemplateColumns: 'repeat(2, 1fr)' }}>
                                                 {sections[3].content.lungs.map((lung, idx) => (
                                                     <div key={idx} className="rab-fact-card">
@@ -367,15 +404,15 @@ const Rabbit = () => {
                                                     </div>
                                                 ))}
                                             </div>
-                                            <p className="rab-list-item" style={{ justifyContent: 'center', marginTop: '1rem' }}>
-                                                {sections[3].content.note}
-                                            </p>
+                                        </Card>
+                                        <Card title="Pleura">
+                                            <p className="rab-list-item">{sections[3].content.pleura}</p>
                                         </Card>
                                     </div>
                                     <Model3D src={models.respiratory} title="Respiratory System" />
                                 </div>
 
-                                <Card title="Pathway">
+                                <Card title="Air Pathway">
                                     <div className="rab-flow-container rab-flow-horizontal">
                                         {sections[3].content.pathway.map((step, idx) => (
                                             <React.Fragment key={idx}>
@@ -387,25 +424,36 @@ const Rabbit = () => {
                                         ))}
                                     </div>
                                 </Card>
+
+                                <Card title="Respiratory Structures">
+                                    <PointList items={sections[3].content.details} />
+                                </Card>
+
+                                <Card title="The Breathing Process">
+                                    <PointList items={sections[3].content.breathing} />
+                                </Card>
                             </div>
                         )}
 
-                        {/* 5. CIRCULATORY */}
                         {activeTab === 'circulatory' && (
                             <div className="rab-content-section">
                                 <SectionHeader title="Circulatory System" icon="" />
 
                                 <div className="rab-split-view">
                                     <div className="rab-text-column">
-                                        <Card title="Heart Structure">
-                                            <PointList items={sections[4].content.heart} />
+                                        <Card title="Overview">
+                                            <p className="rab-list-item">{sections[4].content.overview}</p>
                                         </Card>
-                                        <Card title="Valves">
+                                        <Card title="Valves & Openings">
                                             <PointList items={sections[4].content.valves} />
                                         </Card>
                                     </div>
                                     <Model3D src={models.circulatory} title="Circulatory System" />
                                 </div>
+
+                                <Card title="Blood Circulation">
+                                    <PointList items={sections[4].content.circulation} />
+                                </Card>
                             </div>
                         )}
 
@@ -413,6 +461,11 @@ const Rabbit = () => {
                         {activeTab === 'nervous' && (
                             <div className="rab-content-section">
                                 <SectionHeader title="Nervous System" icon="" />
+
+                                <Card title="Overview">
+                                    <PointList items={sections[5].overview} />
+                                </Card>
+
                                 <div className="rab-facts-grid">
                                     {sections[5].facts.map((fact, idx) => (
                                         <div key={idx} className="rab-fact-card">
@@ -422,7 +475,11 @@ const Rabbit = () => {
                                     ))}
                                 </div>
 
-                                <Card title="Brain Regions">
+                                <Card title="Brain - Structure & Protection">
+                                    <PointList items={sections[5].brainDetails} />
+                                </Card>
+
+                                <Card title="Major Regions & Components">
                                     <PointList items={sections[5].brainRegions} />
                                 </Card>
                             </div>
@@ -434,13 +491,18 @@ const Rabbit = () => {
                             <div className="rab-content-section">
                                 <SectionHeader title="Urinogenital System" icon="" />
 
+                                <Card title="Overview">
+                                    <PointList items={sections[6].content.overview} />
+                                </Card>
+
                                 <div className="rab-split-view">
                                     <div className="rab-text-column">
-                                        <Card title="Excretory">
+                                        <Card title="Excretory System">
                                             <p className="rab-list-item">{sections[6].content.excretory}</p>
                                         </Card>
 
-                                        <Card title="Reproductive System">
+                                        <Card title="The Reproductive System">
+                                            <p className="rab-list-item" style={{ marginBottom: '1rem' }}>{sections[6].content.reproGeneral}</p>
                                             <div className="rab-toggle-group">
                                                 <button
                                                     className={`rab-toggle-btn ${reproGender === 'male' ? 'active' : ''}`}
@@ -456,10 +518,8 @@ const Rabbit = () => {
                                                 </button>
                                             </div>
 
-                                            {reproGender === 'male' ? (
+                                            {reproGender === 'male' && (
                                                 <PointList items={sections[6].content.reproductive.male} />
-                                            ) : (
-                                                <PointList items={sections[6].content.reproductive.female} />
                                             )}
                                         </Card>
                                     </div>
@@ -468,6 +528,26 @@ const Rabbit = () => {
                                         title={`Reproductive System (${reproGender})`}
                                     />
                                 </div>
+
+                                {reproGender === 'female' && (
+                                    <>
+                                        <Card title="Anatomy & Structure">
+                                            <PointList items={sections[6].content.reproductive.female} />
+                                        </Card>
+
+                                        <Card title="Common Passageways">
+                                            <PointList items={sections[6].content.commonPassageways} />
+                                        </Card>
+
+                                        <Card title="Accessory Glands">
+                                            <PointList items={sections[6].content.femaleGlands} />
+                                        </Card>
+                                    </>
+                                )}
+
+                                <Card title="General Biological Facts" className="rab-highlight-card">
+                                    <PointList items={sections[6].content.generalFacts} />
+                                </Card>
                             </div>
                         )}
 

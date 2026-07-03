@@ -61,237 +61,201 @@ const HoneyBeePage = () => {
 
       <div className="container">
 
-        {/* Introduction Section [cite: 3] */}
-
+        {/* Introduction Section */}
         <header className="intro-section">
-          <h2 className="section-title">Introduction to Honey Bees</h2>
+          <h2 className="section-title">INTRODUCTION TO HONEY BEE</h2>
           <ul className="info-list">
-            <li>Honey bees are <strong>social insects</strong> that live together in well-organized colonies.</li>
-            <li>Each colony functions as a single unit where every bee has a specific role.</li>
-            <li>They are vital for <strong>pollination</strong>, helping plants reproduce.</li>
-            <li>They produce honey, wax, royal jelly, and propolis for human use.</li>
+            <li>1. Honey bee is a social insect that lives together in a well organized colony.</li>
+            <li>2. Each colony functions like a single unit, where every bee has a specific role.</li>
+            <li>3. Honey bees are important for pollination, which helps plants reproduce.</li>
+            <li>4. They also produce honey, wax, royal jelly, and propolis, which are useful to humans.</li>
           </ul>
         </header>
 
-        {/* Interactive Cards Grid [cite: 8, 9] */}
-        <section className="card-grid">
-
-          {/* Queen Card [cite: 10-14] */}
-          <div className="flip-card">
-            <div className="flip-card-inner">
-              <div className="flip-card-front">
-                <div className="card-img-wrapper">
-                  {/* Replace src below with "/public/queenbee.jpeg" */}
-                  <img
-                    src="https://res.cloudinary.com/duibfmcw1/image/upload/v1771313870/WhatsApp_Image_2026-02-17_at_13.01.26_jon4qf.jpg"
-                    alt="Queen Bee"
-                    className="card-img"
-                  />
-                </div>
-                <h3 className="card-front-title">Queen Bee</h3>
-                <span className="tap-hint">Hover/Tap to Flip</span>
-              </div>
-              <div className="flip-card-back">
-                <h3 style={{ marginBottom: '1rem', color: '#FFD700' }}>The Queen</h3>
-                <ul className="back-list">
-                  <li>Only fertile female (Diploid 2n).</li>
-                  <li>Main function: Laying eggs.</li>
-                  <li>Lays both fertilized & unfertilized eggs.</li>
-                  <li>Controls reproduction using the <strong>Spermatheca</strong>.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          {/* Worker Card [cite: 15-24] */}
-          <div className="flip-card">
-            <div className="flip-card-inner">
-              <div className="flip-card-front">
-                <div className="card-img-wrapper">
-                  {/* Replace src below with "/public/workerbee.jpeg" */}
-                  <img
-                    src="https://res.cloudinary.com/duibfmcw1/image/upload/v1771313870/WhatsApp_Image_2026-02-17_at_13.00.44_myuf1c.jpg"
-                    alt="Worker Bee"
-                    className="card-img"
-                  />
-                </div>
-                <h3 className="card-front-title">Worker Bee</h3>
-                <span className="tap-hint">Hover/Tap to Flip</span>
-              </div>
-              <div className="flip-card-back">
-                <h3 style={{ marginBottom: '1rem', color: '#FFD700' }}>The Worker</h3>
-                <ul className="back-list">
-                  <li>Sterile females (Diploid 2n)[cite: 16].</li>
-                  <li>Produced from fertilized eggs[cite: 17].</li>
-                  <li><strong>Duties:</strong> Collecting nectar/pollen, making honey, feeding larvae, cleaning hive .</li>
-                  <li>They do not reproduce[cite: 24].</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          {/* Drone Card [cite: 25-29] */}
-
-          <div className="flip-card">
-            <div className="flip-card-inner">
-              <div className="flip-card-front">
-                <div className="card-img-wrapper">
-                  {/* Replace src below with "/public/dronebee.jpeg" */}
-                  <img
-                    src="https://res.cloudinary.com/duibfmcw1/image/upload/v1771313874/WhatsApp_Image_2026-02-17_at_13.01.07_eez7i6.jpg"
-                    alt="Drone Bee"
-                    className="card-img"
-                  />
-                </div>
-                <h3 className="card-front-title">Drone Bee</h3>
-                <span className="tap-hint">Hover/Tap to Flip</span>
-              </div>
-              <div className="flip-card-back">
-                <h3 style={{ marginBottom: '1rem', color: '#FFD700' }}>The Drone</h3>
-                <ul className="back-list">
-                  <li>Male bees (Haploid n).</li>
-                  <li>Develop from <strong>unfertilized</strong> eggs.</li>
-                  <li>Only function: Mate with the Queen.</li>
-                  <li>Dies immediately after mating.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Comparative Table Section */}
-        <section className="content-block" style={{ borderTopColor: '#38B2AC' }}>
-          <span className="tag" style={{ background: '#E6FFFA', color: '#285E61' }}>Quick Comparison</span>
-          <h2 className="section-title">Colony Roles & Genetics</h2>
-
-          <div className="table-container">
-            <table className="bee-table">
-              <thead>
-                <tr>
-                  <th>Type</th>
-                  <th>Sex</th>
-                  <th>Ploidy</th>
-                  <th>Origin</th>
-                  <th>Key Role</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>Queen</strong></td>
-                  <td>Female</td>
-                  <td><span className="status-badge status-diploid">Diploid (2n)</span></td>
-                  <td>Fertilized Egg</td>
-                  <td>Reproduction</td>
-                </tr>
-                <tr>
-                  <td><strong>Worker</strong></td>
-                  <td>Female</td>
-                  <td><span className="status-badge status-diploid">Diploid (2n)</span></td>
-                  <td>Fertilized Egg</td>
-                  <td>Work/Foraging</td>
-                </tr>
-                <tr>
-                  <td><strong>Drone</strong></td>
-                  <td>Male</td>
-                  <td><span className="status-badge status-haploid">Haploid (n)</span></td>
-                  <td>Unfertilized Egg</td>
-                  <td>Mating </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        {/* Reproductive System Section [cite: 30-36] */}
-
-        <section className="content-block">
-          <span className="tag">Genetics</span>
-          <h2 className="section-title">Reproductive System</h2>
-
-          <p style={{ fontSize: '1.1rem', marginBottom: '1rem' }}>
-            Honey bees exhibit a unique <strong>Haplodiploid</strong> system of sex determination.The sex of the bee depends entirely on whether the egg is fertilized.
+        {/* Honey Bee Colony Structure */}
+        <section className="content-block" style={{ borderTopColor: '#FFD700' }}>
+          <h2 className="section-title">HONEY BEE COLONY STRUCTURE</h2>
+          <p style={{ fontSize: '1.1rem', marginBottom: '1.5rem', color: 'var(--text-dark)' }}>
+            A honey bee colony consists of three types of bees:
           </p>
 
-          <div className="concept-grid">
-            <div className="concept-card">
-              <span className="concept-title">Female Bees (Queen/Worker)</span>
-              Develop from <strong>Fertilized Eggs</strong>.<br />
-              They have two sets of chromosomes.<br />
-              <strong>Status:</strong> Diploid (2n = 32)
+          <div className="card-grid" style={{ marginTop: '1.5rem' }}>
+            {/* Queen Card */}
+            <div className="flip-card">
+              <div className="flip-card-inner">
+                <div className="flip-card-front">
+                  <div className="card-img-wrapper">
+                    <img
+                      src="https://res.cloudinary.com/duibfmcw1/image/upload/v1771313870/WhatsApp_Image_2026-02-17_at_13.01.26_jon4qf.jpg"
+                      alt="Queen Bee"
+                      className="card-img"
+                    />
+                  </div>
+                  <h3 className="card-front-title">Queen Bee</h3>
+                  <span className="tap-hint">Hover/Tap to Flip</span>
+                </div>
+                <div className="flip-card-back">
+                  <h3 style={{ marginBottom: '1rem', color: '#FFD700' }}>Queen Bee</h3>
+                  <ul className="back-list">
+                    <li>1. The queen bee is the only fertile female in the colony.</li>
+                    <li>2. Her main function is laying eggs.</li>
+                    <li>3. She can lay both fertilized and unfertilized eggs.</li>
+                    <li>4. The queen controls reproduction using stored sperm in a structure called spermatheca.</li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <div className="concept-card">
-              <span className="concept-title">Male Bees (Drones)</span>
-              Develop from <strong>Unfertilized Eggs</strong>.<br />
-              They have one set of chromosomes.<br />
-              <strong>Status:</strong> Haploid (n = 16)
+
+            {/* Worker Card */}
+            <div className="flip-card">
+              <div className="flip-card-inner">
+                <div className="flip-card-front">
+                  <div className="card-img-wrapper">
+                    <img
+                      src="https://res.cloudinary.com/duibfmcw1/image/upload/v1771313870/WhatsApp_Image_2026-02-17_at_13.00.44_myuf1c.jpg"
+                      alt="Worker Bee"
+                      className="card-img"
+                    />
+                  </div>
+                  <h3 className="card-front-title">Worker Bees</h3>
+                  <span className="tap-hint">Hover/Tap to Flip</span>
+                </div>
+                <div className="flip-card-back">
+                  <h3 style={{ marginBottom: '1rem', color: '#FFD700' }}>Worker Bees</h3>
+                  <ul className="back-list">
+                    <li>1. Worker bees are sterile females.</li>
+                    <li>2. They are produced from fertilized eggs.</li>
+                    <li>3. Their duties include:
+                      <ul style={{ listStyleType: 'circle', paddingLeft: '1.25rem', marginTop: '0.25rem' }}>
+                        <li>Collecting nectar and pollen</li>
+                        <li>Making honey and wax</li>
+                        <li>Feeding larvae and queen</li>
+                        <li>Cleaning and protecting the hive</li>
+                      </ul>
+                    </li>
+                    <li>4. They do not take part in reproduction.</li>
+                  </ul>
+                </div>
+              </div>
             </div>
-          </div>
-        </section>
 
-        {/* Parthenogenesis Section  */}
-        <section className="content-block">
-          <span className="tag">Key Mechanism</span>
-          <h2 className="section-title">Parthenogenesis</h2>
-
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '2rem' }}>
-            <div style={{ flex: '1 1 300px' }}>
-              <p style={{ fontSize: '1.1rem', marginBottom: '1rem' }}>
-                Parthenogenesis is a form of reproduction where an egg develops into an embryo <strong>without fertilization</strong>.
-              </p>
-              <ul className="info-list">
-                <li>Common in insects like bees, ants, and wasps.</li>
-                <li>In honey bees, this process produces only <strong>Male Drones</strong>.</li>
-                <li>Allows the colony to produce males quickly to ensure mating opportunities.</li>
-              </ul>
-            </div>
-            <div style={{ flex: '1 1 300px' }}>
-              <div className="concept-card" style={{ height: '100%', borderColor: '#F56565' }}>
-                <span className="concept-title" style={{ color: '#C53030' }}> Parthenogenesis in Honey bee</span>
-
-                <ul style={{ marginTop: '1rem', listStyle: 'circle', paddingLeft: '1.2rem' }}>
-                  <li>Queen lays unfertilized egg intentionally.</li>
-                  <li>These develop directly into Drones[cite: 43].</li>
-                  <li><strong>Formula:</strong> Unfertilized Egg → Male (n).</li>
-                </ul>
+            {/* Drone Card */}
+            <div className="flip-card">
+              <div className="flip-card-inner">
+                <div className="flip-card-front">
+                  <div className="card-img-wrapper">
+                    <img
+                      src="https://res.cloudinary.com/duibfmcw1/image/upload/v1771313874/WhatsApp_Image_2026-02-17_at_13.01.07_eez7i6.jpg"
+                      alt="Drone Bee"
+                      className="card-img"
+                    />
+                  </div>
+                  <h3 className="card-front-title">Drone Bees</h3>
+                  <span className="tap-hint">Hover/Tap to Flip</span>
+                </div>
+                <div className="flip-card-back">
+                  <h3 style={{ marginBottom: '1rem', color: '#FFD700' }}>Drone Bees</h3>
+                  <ul className="back-list">
+                    <li>1. Drone bees are male bees.</li>
+                    <li>2. They develop from unfertilized eggs.</li>
+                    <li>3. Their only function is to mate with the queen.</li>
+                    <li>4. After mating, drones die.</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
+        </section>
 
-          <div className="note-box">
-            💡 <strong>Memory Tip:</strong> Parthenogenesis = Quick Males + Energy Saving + Colony Survival.
+        {/* Reproductive System Section */}
+        <section className="content-block">
+          <span className="tag">Genetics</span>
+          <h2 className="section-title">REPRODUCTIVE SYSTEM IN HONEY BEE</h2>
+          <ul className="info-list" style={{ marginTop: '1rem' }}>
+            <li>1. Honey bees show a haplodiploid system of sex determination.</li>
+            <li>
+              2. In this system:
+              <ul style={{ listStyleType: 'circle', paddingLeft: '1.25rem', marginTop: '0.5rem', marginBottom: '0.5rem' }}>
+                <li>Males are haploid (n)</li>
+                <li>Females are diploid (2n)</li>
+              </ul>
+            </li>
+            <li>3. The sex of the bee depends on whether the egg is fertilized or not.</li>
+          </ul>
+        </section>
+
+        {/* Parthenogenesis Section */}
+        <section className="content-block">
+          <span className="tag">Key Mechanism</span>
+          <h2 className="section-title">PARTHENOGENESIS</h2>
+          <ul className="info-list" style={{ marginTop: '1rem', marginBottom: '2rem' }}>
+            <li>1. Parthenogenesis is a type of reproduction where an egg develops without fertilization.</li>
+            <li>2. It is common in insects like honey bees, ants, and wasps.</li>
+            <li>3. In honey bees, parthenogenesis produces only male bees.</li>
+          </ul>
+
+          <h2 className="section-title">PARTHENOGENESIS IN HONEY BEE</h2>
+          <ul className="info-list" style={{ marginTop: '1rem', marginBottom: '1.5rem' }}>
+            <li>1. The queen bee lays unfertilized eggs intentionally.</li>
+            <li>2. These unfertilized eggs develop directly into drones (male bees).</li>
+            <li>3. Since there is no fertilization, the offspring has only one set of chromosomes.</li>
+            <li>4. Therefore, drone bees are haploid (n).</li>
+          </ul>
+          <p style={{ fontStyle: 'italic', fontWeight: 'bold', color: 'var(--text-dark)', marginBottom: '1.5rem' }}>
+            This specific type of parthenogenesis is called Arrhenotokous parthenogenesis.
+          </p>
+
+          <div className="note-box" style={{ background: '#FFFDF0', borderColor: 'var(--primary-gold)', color: '#744210' }}>
+            <strong>Easy way to remember</strong>
+            <ul style={{ listStyleType: 'none', marginTop: '0.5rem', paddingLeft: 0 }}>
+              <li>• Fertilized egg → Female → Diploid (2n)</li>
+              <li>• Unfertilized egg → Male → Haploid (n)</li>
+            </ul>
           </div>
         </section>
 
-        {/* Gamified Quiz Section */}
-        {/* <section className="quiz-container">
-            <h2 style={{ marginBottom: '1.5rem', fontSize: '2rem' }}>Knowledge Check 🧠</h2>
-            <p style={{ marginBottom: '2rem', opacity: 0.9 }}>
-                Which bee develops from an unfertilized egg?
-            </p>
-            
-            <div className="quiz-options">
-                <button 
-                    className="quiz-btn" 
-                    onClick={() => handleQuizAnswer(false, '❌ Incorrect. Workers come from fertilized eggs!')}
-                >
-                    Worker Bee
-                </button>
-                
-                <button 
-                    className="quiz-btn" 
-                    onClick={() => handleQuizAnswer(true, '✅ Correct! Drones are haploid (n) and come from unfertilized eggs.')}
-                >
-                    Drone Bee
-                </button>
-                
-                <button 
-                    className="quiz-btn" 
-                    onClick={() => handleQuizAnswer(false, '❌ Incorrect. The Queen comes from a fertilized egg.')}
-                >
-                    Queen Bee
-                </button>
-            </div> 
-        </section> */}
+        {/* Difference Section */}
+        <section className="content-block" style={{ borderTopColor: '#38B2AC' }}>
+          <span className="tag" style={{ background: '#E6FFFA', color: '#285E61' }}>Comparison</span>
+          <h2 className="section-title">DIFFERENCE BETWEEN FERTILIZED & UNFERTILIZED EGGS</h2>
+
+          <div className="concept-grid" style={{ marginTop: '1.5rem' }}>
+            <div className="concept-card" style={{ borderLeftColor: '#38B2AC' }}>
+              <span className="concept-title" style={{ color: '#2C7A7B', fontSize: '1.2rem' }}>Fertilized Eggs:</span>
+              <ul className="info-list" style={{ marginTop: '0.5rem' }}>
+                <li>These eggs fuse with sperm stored in the queen’s spermatheca.</li>
+                <li>They develop into female bees, either workers or a queen.</li>
+                <li>Fertilized eggs contain two sets of chromosomes, so they are diploid (2n).</li>
+              </ul>
+            </div>
+
+            <div className="concept-card" style={{ borderLeftColor: '#D69E2E' }}>
+              <span className="concept-title" style={{ color: '#B7791F', fontSize: '1.2rem' }}>Unfertilized Eggs:</span>
+              <ul className="info-list" style={{ marginTop: '0.5rem' }}>
+                <li>These eggs do not fuse with sperm.</li>
+                <li>They develop into male bees called drones.</li>
+                <li>Unfertilized eggs have only one set of chromosomes, so they are haploid (n).</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* Significance Section */}
+        <section className="content-block">
+          <span className="tag">Significance</span>
+          <h2 className="section-title">Why Parthenogenesis Is Important in Honey Bee</h2>
+          <ul className="info-list" style={{ marginTop: '1rem' }}>
+            <li>Parthenogenesis helps the honey bee colony produce male bees (drones) quickly whenever needed.</li>
+            <li>It saves energy, because fertilization is not required for the production of males.</li>
+            <li>It helps in maintaining a proper balance between queen, workers, and drones inside the hive.</li>
+            <li>By ensuring regular reproduction and mating opportunities, parthenogenesis supports the survival and continuity of the colony.</li>
+          </ul>
+
+          <div className="note-box" style={{ marginTop: '2rem' }}>
+            💡 <strong>Easy memory line</strong>
+            <p style={{ marginTop: '0.5rem' }}>Parthenogenesis = quick males + energy saving + colony survival</p>
+          </div>
+        </section>
 
       </div>
     </div>
