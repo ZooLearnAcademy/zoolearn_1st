@@ -29,6 +29,7 @@ const Scopes = lazy(() => import('./components/scopes/Scopes'));
 const ScopeCategory = lazy(() => import('./components/scopes/ScopeCategory'));
 const BlogIndex = lazy(() => import('./components/blog/BlogIndex'));
 const GiraffeBlog = lazy(() => import('./components/blog/giraffe/GiraffeBlog'));
+const Frog = lazy(() => import('./components/home/Organisms/frog/Frog'));
 
 
 // ZooHub Main
@@ -76,6 +77,7 @@ function App() {
               <Route path="/rabbit" element={<Rabbit />} />
               <Route path="/honeybee" element={<HoneyBee />} />
               <Route path="/cockroach" element={<Cockroach />} />
+              <Route path="/frog" element={<Frog />} />
               <Route path="/evolution" element={<UnderDevelopment />} />
               <Route path="/horse-evolution" element={<HorseEvolution />} />
               <Route path="/career-path" element={<CareerPath />} />
