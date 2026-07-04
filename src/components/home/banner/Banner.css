@@ -100,13 +100,75 @@
   color: var(--banner-green);
 }
 
-/* Description */
-.banner-desc {
+/* Animated Modern SaaS Hero Description */
+.banner-desc-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.2rem;
+  margin: 1.5rem 0 2.5rem;
+}
+
+.desc-badge {
+  background: rgba(47, 125, 70, 0.1);
+  color: var(--banner-green);
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: 1px solid rgba(47, 125, 70, 0.2);
+  animation: floatBadge 3s ease-in-out infinite;
+  box-shadow: 0 4px 12px rgba(47, 125, 70, 0.1);
+}
+
+.banner-typing-heading {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--banner-text-main);
+  line-height: 1.4;
+  margin: 0;
+  max-width: 600px;
+  letter-spacing: -0.02em;
+}
+
+.banner-typing-heading > span:not(.typing-text) {
+  color: var(--banner-blue-dark);
+}
+
+.typing-text {
+  color: var(--banner-green);
+  display: inline-block;
+  min-width: 280px;
+  position: relative;
+}
+
+.cursor {
+  display: inline-block;
+  width: 3px;
+  background-color: var(--banner-green);
+  margin-left: 4px;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.banner-desc-subtext {
   font-size: 1.15rem;
+  font-weight: 500;
   color: var(--banner-text-sub);
-  line-height: 1.75;
-  margin: 1.6rem 0;
-  max-width: 540px;
+  margin: 0.5rem 0 0 0;
+  border-left: 3px solid var(--banner-blue);
+  padding-left: 1.2rem;
+  opacity: 0.9;
+}
+
+@keyframes floatBadge {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
 }
 
 /* CTA Buttons Styling */
@@ -219,6 +281,7 @@
   justify-content: center;
   align-items: center;
   perspective: 1200px;
+  margin-left: 80px; /* Move images to the right */
 }
 
 /* Image Base */
@@ -244,7 +307,7 @@
 
 /* Next / Right Image (Behind) */
 .carousel-img.next {
-  transform: translateX(180px) scale(0.85) translateY(50px) rotate(15deg);
+  transform: translateX(250px) scale(0.85) translateY(50px) rotate(15deg);
   z-index: 2;
   opacity: 0.7;
   filter: blur(3px) drop-shadow(0 10px 15px rgba(27, 95, 120, 0.2));
@@ -252,7 +315,7 @@
 
 /* Previous / Left Image (Behind) */
 .carousel-img.prev {
-  transform: translateX(-180px) scale(0.85) translateY(50px) rotate(-15deg);
+  transform: translateX(-250px) scale(0.85) translateY(50px) rotate(-15deg);
   z-index: 2;
   opacity: 0.7;
   filter: blur(3px) drop-shadow(0 10px 15px rgba(27, 95, 120, 0.2));
@@ -351,6 +414,23 @@
     margin: 1.5rem auto 2.5rem;
   }
 
+  .banner-desc-container {
+    align-items: center;
+    margin: 1.5rem auto 2.5rem;
+    text-align: center;
+  }
+
+  .banner-typing-heading {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .banner-desc-subtext {
+    border-left: none;
+    padding-left: 0;
+    font-size: 1rem;
+  }
+
   .banner-logo-wrapper {
     justify-content: center;
     margin-top: 0;
@@ -362,6 +442,7 @@
   .banner-slider.carousel-container {
     height: 320px;
     max-width: 100%;
+    margin-left: 0;
   }
 
   .banner-image.carousel-img {
@@ -369,8 +450,8 @@
     height: 220px;
   }
 
-  .carousel-img.next { transform: translateX(120px) scale(0.85) translateY(40px) rotate(15deg); }
-  .carousel-img.prev { transform: translateX(-120px) scale(0.85) translateY(40px) rotate(-15deg); }
+  .carousel-img.next { transform: translateX(170px) scale(0.85) translateY(40px) rotate(15deg); }
+  .carousel-img.prev { transform: translateX(-170px) scale(0.85) translateY(40px) rotate(-15deg); }
   .carousel-img.next2 { transform: translateX(200px) scale(0.65) translateY(100px) rotate(30deg); }
   .carousel-img.prev2 { transform: translateX(-200px) scale(0.65) translateY(100px) rotate(-30deg); }
   
@@ -405,8 +486,8 @@
     height: 180px;
   }
 
-  .carousel-img.next { transform: translateX(80px) scale(0.8) translateY(30px) rotate(10deg); }
-  .carousel-img.prev { transform: translateX(-80px) scale(0.8) translateY(30px) rotate(-10deg); }
+  .carousel-img.next { transform: translateX(110px) scale(0.8) translateY(30px) rotate(10deg); }
+  .carousel-img.prev { transform: translateX(-110px) scale(0.8) translateY(30px) rotate(-10deg); }
   .carousel-img.next2 { transform: translateX(140px) scale(0.6) translateY(70px) rotate(20deg); }
   .carousel-img.prev2 { transform: translateX(-140px) scale(0.6) translateY(70px) rotate(-20deg); }
 }

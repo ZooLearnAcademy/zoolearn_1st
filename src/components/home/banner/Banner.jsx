@@ -1,4 +1,5 @@
 import { useEffect, useState, useMemo } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Banner.css";
 import CountUp from "../../shared/CountUp";
 
@@ -14,14 +15,17 @@ import echinodermataData from "../../zoohub/echinodermata/EchinodermataData.json
 import hemichordataData from "../../zoohub/hemichordata/HemichordataData.json";
 import chordataData from "../../zoohub/chordata/ChordataData.json";
 
-const extractImages = (data) => {
+const extractImages = (data, phylum) => {
   let images = [];
   if (Array.isArray(data)) {
     data.forEach(cls => {
       if (cls.species && Array.isArray(cls.species)) {
         cls.species.forEach(sp => {
-          if (sp.image) {
-            images.push(sp.image);
+          if (sp.image && sp.slug) {
+            images.push({
+              image: sp.image,
+              link: `/zoohub/${phylum}/${sp.slug}`
+            });
           }
         });
       }
@@ -31,17 +35,17 @@ const extractImages = (data) => {
 };
 
 const phylumData = {
-  Porifera: extractImages(poriferaData),
-  Coelenterata: extractImages(coelenterataData),
-  Ctenophora: extractImages(ctenophoraData),
-  Platyhelminthes: extractImages(platyhelminthesData),
-  Aschelminthes: extractImages(aschelminthesData),
-  Annelida: extractImages(annelidaData),
-  Arthropoda: extractImages(arthropodaData),
-  Mollusca: extractImages(molluscaData),
-  Echinodermata: extractImages(echinodermataData),
-  Hemichordata: extractImages(hemichordataData),
-  Chordata: extractImages(chordataData)
+  Porifera: extractImages(poriferaData, 'porifera'),
+  Coelenterata: extractImages(coelenterataData, 'coelenterata'),
+  Ctenophora: extractImages(ctenophoraData, 'ctenophora'),
+  Platyhelminthes: extractImages(platyhelminthesData, 'platyhelminthes'),
+  Aschelminthes: extractImages(aschelminthesData, 'aschelminthes'),
+  Annelida: extractImages(annelidaData, 'annelida'),
+  Arthropoda: extractImages(arthropodaData, 'arthropoda'),
+  Mollusca: extractImages(molluscaData, 'mollusca'),
+  Echinodermata: extractImages(echinodermataData, 'echinodermata'),
+  Hemichordata: extractImages(hemichordataData, 'hemichordata'),
+  Chordata: extractImages(chordataData, 'chordata')
 };
 
 function generatePhylumPlaylist() {
@@ -71,10 +75,41 @@ function generatePhylumPlaylist() {
 }
 
 export default function ZoologyHero() {
+  const navigate = useNavigate();
   const images = useMemo(() => generatePhylumPlaylist(), []);
 
   const [index, setIndex] = useState(0);
   const [imageLoaded, setImageLoaded] = useState(false);
+
+  // Typewriter effect state
+  const typeWords = useMemo(() => ["visual learning.", "interactive 3D models.", "exam-focused content."], []);
+  const [currentWord, setCurrentWord] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [loopNum, setLoopNum] = useState(0);
+
+  useEffect(() => {
+    let timer;
+    const i = loopNum % typeWords.length;
+    const fullText = typeWords[i];
+
+    if (isDeleting) {
+      timer = setTimeout(() => {
+        setCurrentWord(fullText.substring(0, currentWord.length - 1));
+        if (currentWord === "") {
+          setIsDeleting(false);
+          setLoopNum(loopNum + 1);
+        }
+      }, 50);
+    } else {
+      timer = setTimeout(() => {
+        setCurrentWord(fullText.substring(0, currentWord.length + 1));
+        if (currentWord === fullText) {
+          timer = setTimeout(() => setIsDeleting(true), 2000);
+        }
+      }, 100);
+    }
+    return () => clearTimeout(timer);
+  }, [currentWord, isDeleting, loopNum, typeWords]);
 
   // Auto-slide every 5 seconds
   useEffect(() => {
@@ -89,8 +124,10 @@ export default function ZoologyHero() {
   useEffect(() => {
     const nextIndex = (index + 1) % images.length;
     const img = new Image();
-    img.src = images[nextIndex];
-  }, [index]);
+    if (images[nextIndex]?.image) {
+      img.src = images[nextIndex].image;
+    }
+  }, [index, images]);
 
   return (
     <section className="banner-hero" aria-label="Zoology Learning Platform Hero Banner">
@@ -103,38 +140,58 @@ export default function ZoologyHero() {
               src="https://res.cloudinary.com/duibfmcw1/image/upload/v1765947727/logopng_2_webaac.png" 
               alt="ZooLearn Logo Symbol" 
               className="banner-logo-img"
+              draggable={false}
+              style={{ userSelect: 'none' }}
             />
             <img 
               src="https://res.cloudinary.com/dstunh4mx/image/upload/v1781102458/name_alone-removebg-preview_o8wt5i.png" 
               alt="ZooLearn Brand Name" 
               className="banner-logo-text-img"
+              draggable={false}
+              style={{ userSelect: 'none' }}
             />
           </div>
 
           <div style={{ height: '3rem' }}></div>
 
-          <p className="banner-desc" style={{ fontSize: '1.125rem', marginTop: '1.25rem', marginBottom: '2rem' }}>
-            Build strong zoology concepts through visual learning, interactive models, and exam-focused content — designed for students and researchers.
-          </p>
+          <div className="banner-desc-container">
+            <span className="desc-badge">Learn Visually</span>
+            <h2 className="banner-typing-heading">
+              Build strong <span>zoology concepts</span>
+              <br />
+              through <span className="typing-text">{currentWord}<span className="cursor">|</span></span>
+            </h2>
+            <p className="banner-desc-subtext">Designed exclusively for students and researchers.</p>
+          </div>
         </div>
 
         {/* RIGHT IMAGE SLIDER & STATS */}
         <div className="banner-right" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2rem' }}>
           <div className="banner-slider carousel-container">
-            {images.map((src, i) => {
+            {images.map((item, i) => {
               let position = 'hidden';
               if (i === index) position = 'active';
               else if (i === (index + 1) % images.length) position = 'next';
-              else if (i === (index + 2) % images.length) position = 'next2';
               else if (i === (index - 1 + images.length) % images.length) position = 'prev';
-              else if (i === (index - 2 + images.length) % images.length) position = 'prev2';
+
+              const handleClick = () => {
+                if (position === 'active') {
+                  navigate(item.link);
+                } else if (position === 'next' || position === 'prev') {
+                  setIndex(i);
+                  setImageLoaded(false);
+                }
+              };
 
               return (
                 <img
                   key={i}
-                  src={src}
+                  src={item.image}
                   alt={`Species ${i + 1}`}
                   className={`banner-image carousel-img ${position}`}
+                  onClick={handleClick}
+                  draggable={false}
+                  style={{ cursor: 'pointer', userSelect: 'none' }}
                 />
               );
             })}

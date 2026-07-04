@@ -427,28 +427,42 @@ function ZooHub() {
 
 
 
-  // 💾 Restore scroll position instantly on mount (refresh or back from species)
+  // 💾 Restore scroll position robustly on mount
   useEffect(() => {
     const saved = sessionStorage.getItem('zoohub-scroll');
     if (saved !== null) {
-      // Use requestAnimationFrame to ensure DOM is fully painted before restoring
-      requestAnimationFrame(() => {
-        window.scrollTo({ top: parseInt(saved, 10), behavior: 'instant' });
-      });
+      const scrollPos = parseInt(saved, 10);
+      // Attempt immediate restore
+      window.scrollTo({ top: scrollPos, behavior: 'instant' });
+      
+      // Attempt delayed restores to allow child components and images to render
+      const t1 = setTimeout(() => window.scrollTo({ top: scrollPos, behavior: 'instant' }), 100);
+      const t2 = setTimeout(() => window.scrollTo({ top: scrollPos, behavior: 'instant' }), 300);
+      const t3 = setTimeout(() => window.scrollTo({ top: scrollPos, behavior: 'instant' }), 600);
+      
+      return () => {
+        clearTimeout(t1);
+        clearTimeout(t2);
+        clearTimeout(t3);
+      };
     }
   }, []);
 
-  // 💾 Save scroll position on every scroll & on unmount
+  // 💾 Save scroll position safely
   useEffect(() => {
+    let timeoutId;
     const saveScroll = () => {
-      sessionStorage.setItem('zoohub-scroll', window.scrollY);
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => {
+        // Prevent saving 0 if it happens instantly during a route transition
+        sessionStorage.setItem('zoohub-scroll', window.scrollY);
+      }, 50);
     };
 
     window.addEventListener('scroll', saveScroll, { passive: true });
     return () => {
-      // Also save on unmount (navigating away)
-      sessionStorage.setItem('zoohub-scroll', window.scrollY);
       window.removeEventListener('scroll', saveScroll);
+      clearTimeout(timeoutId);
     };
   }, []);
 

@@ -8,8 +8,6 @@ const blogPosts = [
     slug: '/blog/giraffe',
     category: 'World Giraffe Day',
     categoryIcon: '🦒',
-    date: 'June 21, 2025',
-    readTime: '12 min read',
     title: 'World Giraffe Day',
     subtitle: 'The Tallest Story Ever Told',
     description:
@@ -125,10 +123,7 @@ export default function BlogIndex() {
                     <span className="bl-card-category" style={{ color: post.accentColor, background: post.accentLight }}>
                       {post.categoryIcon} {post.category}
                     </span>
-                    <div className="bl-card-meta">
-                      <span>📅 {post.date}</span>
-                      <span>⏱ {post.readTime}</span>
-                    </div>
+                    
                   </div>
 
                   <h3 className="bl-card-title">{post.title}</h3>

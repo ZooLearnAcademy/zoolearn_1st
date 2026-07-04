@@ -13,19 +13,19 @@ const Homepage = () => {
 
   const curriculumItems = [
     {
-      title: "Basic Zoology",
+      title: "LIving World",
       description:
         "Fundamentals of animal life, cell biology, and basic physiological structures.",
       icon: "https://res.cloudinary.com/duibfmcw1/image/upload/v1767780953/001-zoology_baecrg.png",
       route: "/living-world",
     },
-    {
-      title: "Basic Features of Classification",
-      description:
-        "Taxonomy, phylogeny, biological hierarchy, and animal kingdom organization.",
-      icon: "https://res.cloudinary.com/duibfmcw1/image/upload/v1767780954/004-habitat_z6ev5r.png",
-      route: "/basic-features-of-classification",
-    },
+    // {
+    //   title: "Basic Features of Classification",
+    //   description:
+    //     "Taxonomy, phylogeny, biological hierarchy, and animal kingdom organization.",
+    //   icon: "https://res.cloudinary.com/duibfmcw1/image/upload/v1767780954/004-habitat_z6ev5r.png",
+    //   route: "/basic-features-of-classification",
+    // },
     {
       title: "Patterns of complexities",
       description:
@@ -34,9 +34,9 @@ const Homepage = () => {
       route: "/anatomy",
     },
     {
-      title: "Kingdom of Animalia",
+      title: "Kingdom Animalia",
       description:
-        "",
+        "Taxonomy, phylogeny, biological hierarchy, and animal kingdom organization.",
       icon: "https://res.cloudinary.com/duibfmcw1/image/upload/v1767780954/005-wild-animals_gikq7m.png",
       route: "/kingdom-animalia",
     },
@@ -92,14 +92,15 @@ const Homepage = () => {
       /* hours: 2, */
       route: "/cockroach",
     },
-    /* {
+     {
        id: "frog",
        name: "Frog",
        scientificName: "Rana tigrina",
        classification: "Class: Amphibia",
        image: "https://img.icons8.com/fluency/96/frog.png",
-       hours: 12,
-     }, */
+      //  hours: 12,
+       route: "/frog",
+     }, 
     {
       id: "honeybee",
       name: "Honey Bee",
@@ -117,16 +118,16 @@ const Homepage = () => {
       image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1766035808/008-evolution_o5byjy.png",
       /* hours: 3, */
       route: "/evolution",
-    },
-    {
-       id: "horse",
-       name: "Horse Evolution",
-       scientificName: "Equus ferus caballus",
-       classification: "Class: Mammalia",
-       image: "https://img.icons8.com/fluency/96/trotting-horse.png",
-       /* hours: 3, */
-       route: "/horse-evolution",
-     }
+    }
+    // {
+    //    id: "horse",
+    //    name: "Horse Evolution",
+    //    scientificName: "Equus ferus caballus",
+    //    classification: "Class: Mammalia",
+    //    image: "https://img.icons8.com/fluency/96/trotting-horse.png",
+    //    /* hours: 3, */
+    //    route: "/horse-evolution",
+    //  }
   ];
 
   return (

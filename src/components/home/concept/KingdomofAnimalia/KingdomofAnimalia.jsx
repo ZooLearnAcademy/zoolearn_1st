@@ -14,6 +14,7 @@ import Mollusca from './Mollusca';
 import Echinodermata from './Echinodermata';
 import Hemichordata from './Hemichordata';
 import Chordata from './Chordata';
+import BasicFeatures from '../BasicFeatures/BasicFeatures';
 import { ScrollReveal } from '../../../shared/ScrollReveal';
 
 // Import newly generated images
@@ -25,18 +26,19 @@ import mollImg from '../../../../assets/images/KingdomAnimalia/mollusca.png';
 import echiImg from '../../../../assets/images/KingdomAnimalia/echinodermata.png';
 
 const animaliaPhylaList = [
-  { id: 0, title: "Classification History", name: "Classification History", des: "Aristotle (Ancient Greece): The Beginning. Aristotle was the earliest to attempt a more scientific basis for classification. He used simple morphological characters to classify plants into trees, shrubs and herbs. He also divided animals into two groups, those which had red blood and those that did not.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Aristotle_Altemps_Inv8575.jpg/512px-Aristotle_Altemps_Inv8575.jpg", theme: "#04AA6D" },
-  { id: 1, title: "PHYLUM 1", name: "Porifera", des: "Commonly known as sponges. These are primitive, multicellular, marine animals with a porous body that filters water to obtain food and oxygen.", img: "https://images.unsplash.com/photo-1544078739-8fcbd3ec4e72?auto=format&fit=crop&q=80&w=2000", theme: "#fbbf24" },
-  { id: 2, title: "PHYLUM 2", name: "Coelenterata", des: "Also known as Cnidaria (like Jellyfish and Corals). They are aquatic, mostly marine, with tentacles equipped with stinging cells called cnidoblasts.", img: "https://images.unsplash.com/photo-1541845157-a6d2d100c931?auto=format&fit=crop&q=80&w=2000", theme: "#3b82f6" },
-  { id: 3, title: "PHYLUM 3", name: "Ctenophora", des: "Commonly known as sea walnuts or comb jellies. They are exclusively marine and move using eight external rows of ciliated comb plates.", img: "https://images.unsplash.com/photo-1615822396116-2de99d91ae61?auto=format&fit=crop&q=80&w=2000", theme: "#c084fc" },
-  { id: 4, title: "PHYLUM 4", name: "Platyhelminthes", des: "The flatworms. They have a dorso-ventrally flattened body and are mostly endoparasites found in animals, including humans.", img: platyImg, theme: "#ef4444" },
-  { id: 5, title: "PHYLUM 5", name: "Aschelminthes", des: "The roundworms (Nematoda). Their body is circular in cross-section. They can be free-living, aquatic, terrestrial, or parasitic.", img: aschImg, theme: "#84cc16" },
-  { id: 6, title: "PHYLUM 6", name: "Annelida", des: "Segmented worms like earthworms and leeches. Their body surface is distinctly marked out into segments or metameres.", img: anneImg, theme: "#d97706" },
-  { id: 7, title: "PHYLUM 7", name: "Arthropoda", des: "The largest phylum, including insects, spiders, and crustaceans. They have jointed appendages and a hard chitinous exoskeleton.", img: arthImg, theme: "#f97316" },
-  { id: 8, title: "PHYLUM 8", name: "Mollusca", des: "The second largest animal phylum (snails, octopuses). They are soft-bodied animals usually covered by a calcareous shell.", img: mollImg, theme: "#0ea5e9" },
-  { id: 9, title: "PHYLUM 9", name: "Echinodermata", des: "Spiny-bodied animals like starfish and sea urchins. They have an endoskeleton of calcareous ossicles and a unique water vascular system.", img: echiImg, theme: "#ec4899" },
-  { id: 10, title: "PHYLUM 10", name: "Hemichordata", des: "A small group of worm-like marine animals, such as acorn worms. They have a cylindrical body composed of an anterior proboscis, a collar, and a trunk.", img: "https://images.unsplash.com/photo-1582967788600-aff3a5591031?q=80&w=2070&auto=format&fit=crop", theme: "#14b8a6" },
-  { id: 11, title: "PHYLUM 11", name: "Chordata", des: "Animals with a notochord, a dorsal hollow nerve cord, and paired pharyngeal gill slits. This includes all vertebrates (fish, amphibians, reptiles, birds, mammals).", img: "https://images.unsplash.com/photo-1444464666168-49d633b867ad?q=80&w=2069&auto=format&fit=crop", theme: "#8b5cf6" }
+  { id: 0, title: "Basic Features", name: "Basic Features of Classification", des: "Fundamentals of animal classification", img: "", theme: "#f43f5e" },
+  { id: 1, title: "Classification History", name: "Classification History", des: "Aristotle (Ancient Greece): The Beginning. Aristotle was the earliest to attempt a more scientific basis for classification. He used simple morphological characters to classify plants into trees, shrubs and herbs. He also divided animals into two groups, those which had red blood and those that did not.", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Aristotle_Altemps_Inv8575.jpg/512px-Aristotle_Altemps_Inv8575.jpg", theme: "#04AA6D" },
+  { id: 2, title: "PHYLUM 1", name: "Porifera", des: "Commonly known as sponges. These are primitive, multicellular, marine animals with a porous body that filters water to obtain food and oxygen.", img: "https://images.unsplash.com/photo-1544078739-8fcbd3ec4e72?auto=format&fit=crop&q=80&w=2000", theme: "#fbbf24" },
+  { id: 3, title: "PHYLUM 2", name: "Coelenterata", des: "Also known as Cnidaria (like Jellyfish and Corals). They are aquatic, mostly marine, with tentacles equipped with stinging cells called cnidoblasts.", img: "https://images.unsplash.com/photo-1541845157-a6d2d100c931?auto=format&fit=crop&q=80&w=2000", theme: "#3b82f6" },
+  { id: 4, title: "PHYLUM 3", name: "Ctenophora", des: "Commonly known as sea walnuts or comb jellies. They are exclusively marine and move using eight external rows of ciliated comb plates.", img: "https://images.unsplash.com/photo-1615822396116-2de99d91ae61?auto=format&fit=crop&q=80&w=2000", theme: "#c084fc" },
+  { id: 5, title: "PHYLUM 4", name: "Platyhelminthes", des: "The flatworms. They have a dorso-ventrally flattened body and are mostly endoparasites found in animals, including humans.", img: platyImg, theme: "#ef4444" },
+  { id: 6, title: "PHYLUM 5", name: "Aschelminthes", des: "The roundworms (Nematoda). Their body is circular in cross-section. They can be free-living, aquatic, terrestrial, or parasitic.", img: aschImg, theme: "#84cc16" },
+  { id: 7, title: "PHYLUM 6", name: "Annelida", des: "Segmented worms like earthworms and leeches. Their body surface is distinctly marked out into segments or metameres.", img: anneImg, theme: "#d97706" },
+  { id: 8, title: "PHYLUM 7", name: "Arthropoda", des: "The largest phylum, including insects, spiders, and crustaceans. They have jointed appendages and a hard chitinous exoskeleton.", img: arthImg, theme: "#f97316" },
+  { id: 9, title: "PHYLUM 8", name: "Mollusca", des: "The second largest animal phylum (snails, octopuses). They are soft-bodied animals usually covered by a calcareous shell.", img: mollImg, theme: "#0ea5e9" },
+  { id: 10, title: "PHYLUM 9", name: "Echinodermata", des: "Spiny-bodied animals like starfish and sea urchins. They have an endoskeleton of calcareous ossicles and a unique water vascular system.", img: echiImg, theme: "#ec4899" },
+  { id: 11, title: "PHYLUM 10", name: "Hemichordata", des: "A small group of worm-like marine animals, such as acorn worms. They have a cylindrical body composed of an anterior proboscis, a collar, and a trunk.", img: "https://images.unsplash.com/photo-1582967788600-aff3a5591031?q=80&w=2070&auto=format&fit=crop", theme: "#14b8a6" },
+  { id: 12, title: "PHYLUM 11", name: "Chordata", des: "Animals with a notochord, a dorsal hollow nerve cord, and paired pharyngeal gill slits. This includes all vertebrates (fish, amphibians, reptiles, birds, mammals).", img: "https://images.unsplash.com/photo-1444464666168-49d633b867ad?q=80&w=2069&auto=format&fit=crop", theme: "#8b5cf6" }
 ];
 
 // Import lucide icons for menu
@@ -62,9 +64,8 @@ const AnimalKingdom = () => {
     if (currentIndex === 0) setLineHeight(0); // Reset timeline progress on tab switch
   }, [currentIndex]);
 
-  // Timeline Progress Scroll Handler
   useEffect(() => {
-    if (currentIndex !== 0) return; // Only track for classification history
+    if (currentIndex !== 1) return; // Only track for classification history
 
     const handleTimelineScroll = () => {
       if (!containerRef.current) return;
@@ -132,32 +133,33 @@ const AnimalKingdom = () => {
   const handleNext = () => setCurrentIndex(currentIndex < animaliaPhylaList.length - 1 ? currentIndex + 1 : currentIndex);
   const handlePrev = () => setCurrentIndex(currentIndex > 0 ? currentIndex - 1 : currentIndex);
 
-  // Helper to render phylum-specific components or default content
   const renderPhylumContent = () => {
     switch(currentIndex) {
       case 0:
-        return <ClassificationHistory lineHeight={lineHeight} containerRef={containerRef} />;
+        return <BasicFeatures />;
       case 1:
-        return <Porifera />;
+        return <ClassificationHistory lineHeight={lineHeight} containerRef={containerRef} />;
       case 2:
-        return <Coelenterata />;
+        return <Porifera />;
       case 3:
-        return <Ctenophora />;
+        return <Coelenterata />;
       case 4:
-        return <Platyhelminthes />;
+        return <Ctenophora />;
       case 5:
-        return <Aschelminthes />;
+        return <Platyhelminthes />;
       case 6:
-        return <Annelida />;
+        return <Aschelminthes />;
       case 7:
-        return <Arthropoda />;
+        return <Annelida />;
       case 8:
-        return <Mollusca />;
+        return <Arthropoda />;
       case 9:
-        return <Echinodermata />;
+        return <Mollusca />;
       case 10:
-        return <Hemichordata />;
+        return <Echinodermata />;
       case 11:
+        return <Hemichordata />;
+      case 12:
         return <Chordata />;
       default:
         return null;
@@ -189,17 +191,29 @@ const AnimalKingdom = () => {
             </div>
             <div className="w3-progress-text">
               {currentIndex === 0
+                ? 'Basic Features'
+                : currentIndex === 1
                 ? 'Classification History'
-                : `Phylum ${currentIndex} of 11`}
+                : `Phylum ${currentIndex - 1} of 11`}
             </div>
           </div>
-
           <ul className="w3-sidebar-list">
-            {/* Classification History — item #0 */}
-            <li key="ch-0">
+            {/* Basic Features of Classification — item #0 */}
+            <li key="ch-basic">
               <button
                 className={`w3-sidebar-btn w3-sidebar-btn--history ${currentIndex === 0 ? 'w3-active-side' : ''}`}
                 onClick={() => setCurrentIndex(0)}
+              >
+                <span className="w3-sidebar-dot" style={{ background: '#f43f5e' }} />
+                Basic Features
+              </button>
+            </li>
+
+            {/* Classification History — item #1 */}
+            <li key="ch-1">
+              <button
+                className={`w3-sidebar-btn w3-sidebar-btn--history ${currentIndex === 1 ? 'w3-active-side' : ''}`}
+                onClick={() => setCurrentIndex(1)}
               >
                 <span className="w3-sidebar-dot" style={{ background: '#04AA6D' }} />
                 Classification History
@@ -210,7 +224,7 @@ const AnimalKingdom = () => {
             <li className="w3-sidebar-divider" aria-hidden="true" />
 
             {/* All 11 Phyla */}
-            {animaliaPhylaList.slice(1).map((phylum) => (
+            {animaliaPhylaList.slice(2).map((phylum) => (
               <li key={phylum.id}>
                 <button
                   className={`w3-sidebar-btn ${currentIndex === phylum.id ? 'w3-active-side' : ''}`}
@@ -229,7 +243,7 @@ const AnimalKingdom = () => {
 
         {/* MAIN CONTENT AREA */}
         <main className="w3-content">
-          {currentIndex === 0 ? (
+          {currentIndex === 1 ? (
             <div className="timeline-header-section">
               <ScrollReveal animation="fade-down" delay={100} duration={800}>
                 <span className="timeline-site-tag">ZOOLERN.IN</span>
