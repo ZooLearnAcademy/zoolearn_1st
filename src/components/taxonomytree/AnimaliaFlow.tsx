@@ -11,19 +11,13 @@ import "reactflow/dist/style.css";
 import { useNavigate } from "react-router-dom";
 
 import CustomNode from "./CustomNode";
-import { animaliaTree } from "./data/animaliaData";
+import { animaliaTree, AnimaliaNode } from "./data/animaliaData";
 
 /**
  * nodeTypes MUST be outside to avoid re-renders
  */
 const nodeTypes = {
   custom: CustomNode,
-};
-
-type TreeNode = {
-  id: string;
-  label: string;
-  children?: TreeNode[];
 };
 
 function FlowContent() {
@@ -36,7 +30,7 @@ function FlowContent() {
   const spacingX = window.innerWidth < 768 ? 160 : 240;
   const spacingY = 120;
 
-  const handleNodeClick = (parentId: string, node: TreeNode) => {
+  const handleNodeClick = (parentId: string, node: AnimaliaNode) => {
     setActiveNode(node.id);
 
     if (!node.children || node.children.length === 0) {
@@ -56,7 +50,7 @@ function FlowContent() {
     const edgesList: Edge[] = [];
 
     const buildTreeRecursive = (
-      node: TreeNode,
+      node: AnimaliaNode,
       x: number,
       y: number,
       parent?: string
@@ -76,16 +70,19 @@ function FlowContent() {
       });
 
       if (parent) {
+        const isActiveEdge = openNodes[parent] === node.id || activeNode === node.id;
+        
         edgesList.push({
           id: `edge-${parent}-${node.id}`,
           source: parent,
           target: node.id,
           type: 'default',
+          animated: true,
           style: {
-            stroke: "#ffffff",
-            strokeWidth: 2,
+            stroke: isActiveEdge ? "#ffd54f" : "#ffffff",
+            strokeWidth: isActiveEdge ? 3 : 2,
             strokeDasharray: '5,5',
-            opacity: 1
+            opacity: isActiveEdge ? 1 : 0.3
           },
         });
       }
@@ -105,13 +102,7 @@ function FlowContent() {
     return { nodes: nodesList, edges: edgesList };
   }, [openNodes, activeNode, spacingX]);
 
-  // Ensure view fits on initial load and when tree expands
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      fitView({ padding: 0.2, duration: 800 });
-    }, 100);
-    return () => clearTimeout(timer);
-  }, [nodes, fitView]);
+  // Removed automatic fitView so the zoom stays stable while interacting
 
   return (
     <div style={{ height: "100vh", width: "100%", background: "#121212" }}>
@@ -121,6 +112,7 @@ function FlowContent() {
         nodeTypes={nodeTypes}
         fitView
         minZoom={0.1}
+        nodesConnectable={false}
         proOptions={{ hideAttribution: true }}
       >
         <Background color="#333" gap={20} />

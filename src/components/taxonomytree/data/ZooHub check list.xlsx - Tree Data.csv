@@ -1,0 +1,300 @@
+Kingdom,Phylum,Sub-Phylum,Class,Sub-Class,Infra-Class,Super-Order,Order,Sub-Order,Super-Family,Family,Sub-Family,Genus,Species,Common Name
+Animalia,Porifera,-,Calcarea,-,,,Leucosolenida,-,,Leucosoleniidae,-,Leucosolenia,-,White tubular sponge
+,,-,,-,,,,-,,Sycettidae,-,Sycon,-,Scypha sponge
+,,-,,-,,,,-,,Grantiidae,-,Grantia,-,Grant’s sponge
+,,-,Hexactinellida,-,,,Amphidiscosida,-,,Hyalonematidae,-,Hyalonema,-,Glass rope sponge
+,,-,,-,,,Lyssacinosida,-,,Euplectellidae,-,Euplectella,-,Venus’ flower basket
+,,-,Demospongiae,-,,,Spongillida,-,,Spongillidae,-,Spongilla,-,Freshwater sponge
+,,-,,-,,,Haplosclerida,-,,Chalinidae,-,Chalina,-,Finger sponge
+,,-,,-,,,Dictyoceratida,-,,Spongiidae,-,Euspongia,-,Bath sponge
+,,-,,-,,,Clionaida,-,,Clionaidae,-,Cliona,-,Boring sponge
+,,-,,-,,,Haplosclerida,-,,Petrosiidae,-,Xestospongia,-,Giant barrel sponge
+,Cnidaria,-,Hydrozoa,-,,,Anthoathecata,-,,Hydridae,-,Hydra,-,Freshwater polyp
+,,-,,-,,,Leptothecata,-,,Campanulariidae,-,Obelia,-,Sea fur / Sea moss
+,,-,,-,,,Siphonophorae,-,,Physaliidae,-,Physalia,-,Portuguese man-of-war
+,,-,Scyphozoa,-,,,Semaeostomeae,-,,Ulmaridae,-,Aurelia,-,Moon jelly / Jellyfish
+,,-,Anthozoa,-,,,Actiniaria,-,,Hormathiidae,-,Adamsia,-,Sea anemone
+,,-,,-,,,,-,,Metridiidae,-,Metridium,-,Plumose anemone
+,,-,,-,,,Pennatulacea,-,,Pennatulidae,-,Pennatula,-,Sea pen
+,,-,,-,,,Alcyonacea,-,,Gorgoniidae,-,Gorgonia,-,Sea fan
+,,-,,-,,,,-,,Coralliidae,-,Corallium,-,Red coral
+,,-,,-,,,Antipatharia,-,,Antipathidae,-,Antipatharia,-,Black corals
+,,-,,-,,,Scleractinia,-,,Meandrinidae,-,Meandrina,-,Brain coral
+,Ctenophora,-,Tentaculata,-,,,Cydippida,-,,Coeloplanidae,-,Ctenoplana,-,Creeping comb jelly
+,,-,,-,,,,-,,Pleurobrachiidae,-,Pleurobrachia,-,Sea gooseberry
+,,-,,-,,,,-,,Hormiphoridae,-,Hormiphora,-,Comb jelly
+,,-,,-,,,Cestida,-,,Cestidae,-,Cestum,-,Venus’ girdle
+,,-,Nuda,-,,,Beroida,-,,Beroidae,-,Beroe,-,Comb jelly (Beroe)
+,Platyhelminthes,-,Turbellaria,Rhabditophora,,,Tricladida,-,,Dugesiidae,-,Dugesia,-,Planarian
+,,-,Trematoda,Digenea,,,Plagiorchiida,-,,Fasciolidae,-,Fasciola,Fasciola hepatica,Liver fluke
+,,-,,,,,Diplostomida,-,,Schistosomatidae,-,Schistosoma,-,Blood fluke
+,,-,Cestoda,Eucestoda,,,Cyclophyllidea,-,,Taeniidae,-,Taenia,Taenia saginata,Beef tapeworm
+,,-,,,,,,-,,,-,,Taenia solium,Pork tapeworm
+,,-,,,,,,-,,,-,Echinococcus,-,Dog tapeworm
+,Nematoda,-,Chromadorea,-,,,Ascaridida,-,,Ascarididae,-,Ascaris,Ascaris lumbricoides,Giant intestinal roundworm
+,,-,,-,,,Oxyurida,-,,Oxyuridae,-,Enterobius,Enterobius vermicularis,Pinworm
+,,-,,-,,,Strongylida,-,,Ancylostomatidae,-,Ancylostoma,Ancylostoma duodenale,Old World hookworm
+,,-,,-,,,Spirurida,-,,Onchocercidae,-,Wuchereria,Wuchereria bancrofti,Filarial worm
+,,-,,-,,,,-,,,-,Loa,Loa loa,Eye worm
+,,-,Enoplea,-,,,Trichocephalida,-,,Trichuridae,-,Trichuris,Trichuris trichiura,Whipworm
+,,-,,-,,,Trichinellida,-,,Trichinellidae,-,Trichinella,Trichinella spiralis,Trichina worm
+,,-,Chromadorea,-,,,Spirurida,-,,Dracunculidae,-,Dracunculus,Dracunculus medinensis,Guinea worm
+,Annelida,-,Polychaeta,-,,,Sedentaria,-,,Chaetopteridae,-,Chaetopterus,-,Parchment tube worm
+,,-,,-,,,Capitellida,-,,Arenicolidae,-,Arenicola,-,Lugworm
+,,-,,-,,,Phyllodocida,-,,Nereididae,-,Nereis,-,Ragworm
+,,-,,-,,,,-,,Aphroditidae,-,Aphrodita,-,Sea mouse
+,,-,Clitellata,-,,,Tubificida,-,,Tubificidae,-,Tubifex,-,Sludge worm
+,,-,,-,,,Haplotaxida,-,,Megascolecidae,-,Lampito,Lampito mauritii,Indian earthworm
+,,-,,-,,,,-,,Eudrilidae,-,Eudrilus,Eudrilus eugeniae,African night crawler
+,,-,,-,,,,-,,Megascolecidae,-,Perionyx,Perionyx excavatus,Indian blue worm
+,,-,,-,,,,-,,,-,Octochaetona,Octochaetona thurstoni,Tamil Nadu earthworm / blue-grey epigeic earthworm
+,,-,,-,,,,-,,,-,Pheretima,Pheretima posthuma,Earthworm
+,,-,,-,,,,-,,,-,Megascolex,-,Giant earthworm
+,,-,,-,,,,-,,Lumbricidae,-,Lumbricus,-,Common earthworm
+,,-,,-,,,Arhynchobdellida,-,,Hirudinidae,-,Hirudinaria,Hirudinaria granulosa,Indian cattle leech
+,,-,,-,,,,-,,,-,Hirudo,-,Medicinal leech
+,Onychophora,-,Udeonychophora,,,,Euonychophora,,,Peripatidae,,Peripatus,-,Velvet worm
+,Arthropoda,Chelicerata,Merostomata,,,,Xiphosurida,,,Limulidae,,Limulus,-,Horseshoe crab
+,,,Arachnida,,,,Scorpiones,,,Buthidae,,Buthus,-,Scorpion
+,,,,,,,,,,Scorpionidae,,Palamneus,-,Black scorpion
+,,,,,,,Araneae,,,Araneidae,,Aranaeus,-,Garden spider
+,,Myriapoda,Chilopoda,,,,Scolopendromorpha,,,Scolopendridae,,Scolopendra,Scolopendra hardwickei,Centipede
+,,,Diplopoda,,,,Spirostreptida,,,Spirostreptidae,,Archispirostreptus,Archispirostreptus gigas,Giant African millipede
+,,Crustacea,Copepoda,,,,Cyclopoida,,,Cyclopidae,,Cyclops,-,Cyclops
+,,,Branchiopoda,,,,Cladocera,,,Daphniidae,,Daphnia,-,Water flea
+,,,Malacostraca,,,,Decapoda,,,Luciferidae,,Lucifer,-,Ghost shrimp
+,,,,,,,,,,Palaemonidae,,Palaemon,-,Freshwater prawn
+,,,,,,,,,,,,Macrobrachium,-,Giant freshwater prawn
+,,,,,,,,,,Astacidae,,Astacus,-,Crayfish
+,,,,,,,,,,Palinuridae,,Palinurus,-,Spiny lobster
+,,,,,,,,,,Paguridae,,Eupagurus,-,Hermit crab
+,,,,,,,,,,Cancridae,,Cancer,-,Edible crab
+,,Hexapoda,Insecta,,,,Zygentoma,,,Lepismatidae,,Lepisma,Lepisma saccharina,Silverfish
+,,,,,,,Blattodea,,,Blattidae,,Periplaneta,Periplaneta americana,Cockroach
+,,,,,,,Orthoptera,,,Acrididae,,Locusta,-,Locust
+,,,,,,,Hemiptera,,,Kerriidae,,Laccifer,-,Lac insect
+,,,,,,,Lepidoptera,,,Bombycidae,,Bombyx,Bombyx mori,Mulberry silkworm
+,,,,,,,,,,Saturniidae,,Antheraea,Antheraea mylitta,Tasar silkworm
+,,,,,,,,,,,,,Antheraea proylei,Oak tasar silkworm
+,,,,,,,,,,,,,Antheraea assamensis,Muga silkworm
+,,,,,,,,,,,,Philosamia,Philosamia ricini,Eri silkworm
+,,,,,,,Hymenoptera,,,Apidae,,Apis,Apis indica,Indian honey bee
+,,,,,,,Diptera,,,Culicidae,,Anopheles,-,Malaria mosquito
+,,,,,,,,,,,,Culex,-,Filariasis mosquito
+,,,,,,,,,,,,Aedes,-,Dengue mosquito
+,,,,,,,,,,Muscidae,,Musca,Musca domestica,Housefly
+,,,,,,,,,,Glossinidae,,Glossina,-,Tsetse fly
+,,,,,,,,,,Psychodidae,,Phlebotomus,-,Sandfly
+,,,,,,,Siphonaptera,,,Pulicidae,,Xenopsylla,-,Rat flea
+,Mollusca,Aculifera,Polyplacophora,,,,Chitonida,,,Chaetopleuridae,,Chaetopleura,-,Bristle chiton
+,,,,,,,,,,Chitonidae,,Chiton,-,Coat-of-mail shell / Sea cradle
+,,Conchifera,Monoplacophora,,,,Tryblidiida,,,Neopilinidae,,Neopilina,Neopilina galathea,Living fossil mollusc
+,,,Scaphopoda,,,,Dentaliida,,,Dentaliidae,,Dentalium,-,Tusk shell
+,,,Bivalvia,,,,Unionida,,,Unionidae,,Unio,-,Freshwater mussel
+,,,,,,,,,,,,Lamellidens,-,Freshwater pearl mussel
+,,,,,,,Mytilida,,,Mytilidae,,Mytilus,-,Marine mussel
+,,,,,,,Ostreida,,,Ostreidae,,Ostrea,-,Oyster
+,,,,,,,,,,Pteriidae,,Pinctada,-,Pearl oyster
+,,,,,,,,,,Spondylidae,,Spondylus,-,Thorny oyster
+,,,Gastropoda,,,,Architaenioglossa,,,Ampullariidae,,Pila,Pila globosa,Apple snail
+,,,,,,,Aplysiida,,,Aplysiidae,,Aplysia,-,Sea hare
+,,,,,,,Neogastropoda,,,Conidae,,Conus,Conus marmoreus,Marbled cone shell
+,,,Cephalopoda,,,,Nautilida,,,Nautilidae,,Nautilus,-,Pearly nautilus
+,,,,,,,Sepiida,,,Sepiidae,,Sepia,-,Cuttlefish
+,,,,,,,Myopsida,,,Loliginidae,,Loligo,-,Squid
+,,,,,,,Oegopsida,,,Architeuthidae,,Architeuthis,-,Giant squid
+,,,,,,,Octopoda,,,Octopodidae,,Octopus,-,Octopus
+,Echinodermata, Crinozoa,Crinoidea, Crinoidea,,,Comatulida,-,Antedonidae,Antedonidae,Antedoninae,Antedon,-,Feather star
+,,Asterozoa,Asteroidea,Ambuloasteroidea,Neoasteroidea,Forcipulatacea,Forcipulatida,,,Asteriidae,,Asterias,-,Starfish
+,,,,,,Valvatacea,Paxillosida,,,Astropectinidae,,Astropecten,-,Sand star
+,,,,,,-,Valvatida,,,Oreasteridae,,Pentaceros,-,Five-armed starfish
+,,,Ophiuroidea,Myophiuroida,Metophiurida,Euryophiurida,Ophiurida,Ophiurina,,Ophiuridae,,Ophiura,-,Brittle star
+,,,,,,,,Gnathophiurina,Ophiactoidea,Ophiotrichidae,,Ophiothrix,-,Brittle star
+,,Echinozoa,Echinoidea,,,,Camarodonta,,,Echinidae,,Echinus,-,Sea urchin
+,,,,,,,Spatangoida,,,Loveniidae,,Echinocardium,-,Heart urchin
+,,,Holothuroidea,,,,Dendrochirotida,,,Cucumariidae,,Cucumaria,-,Sea cucumber
+,,,,,,,Aspidochirotida,,,Holothuriidae,,Holothuria,-,Sea cucumber
+,Hemichordata,,Enteropneusta,,,,Enteropneusta,,,Harrimaniidae,,Saccoglossus,-,Acorn worm
+,,,,,,,,,,Ptychoderidae,,Balanoglossus,-,Acorn worm
+,,,,,,,,,,,,Ptychodera,-,Acorn worm
+,Chordata,,Ascidiacea (Urochordata),,,,Phlebobranchia,,,Ascidiidae,,Ascidia,-,Sea squirt
+,,,,,,,Stolidobranchia,,,Pyuridae,,Herdmania,-,Red sea squirt
+,,,Thaliacea (Urochordata),,,,Salpida,,,Salpidae,,Salpa,-,Salp
+,,,,,,,Doliolida,,,Doliolidae,,Doliolum,-,Doliolum
+,,,,,,,Pyrosomatida,,,Pyrosomatidae,,Pyrosoma,-,Fire body
+,,,Leptocardii (Cephalochordata),,,,Amphioxiformes,,,Branchiostomatidae,,Branchiostoma,Branchiostoma lanceolatum,Lancelet / Amphioxus
+,,,Ostracodermi,,,,Osteostraci,,,Cephalaspididae,,Cephalaspis,-,Ostracoderm (armoured jawless fish)
+,,,Cyclostomata,,,,Myxiniformes,,,Myxinidae,,Myxine,Myxine glutinosa,Hagfish / Slime eel
+,,,,,,,Petromyzontiformes,,,Petromyzontidae,,Petromyzon,Petromyzon marinus,Sea lamprey
+,,,Placodermi✞,,,,Climatiiformes,,,Climatiidae,,Climatius,-,Spiny shark
+,,,Chondrichthyes,,,,Carcharhiniformes,,,Carcharhinidae,,Scoliodon,Scoliodon laticaudus,Dogfish
+,,,,,,,Pristiformes,,,Pristidae,,Pristis,-,Sawfish
+,,,,,,,Myliobatiformes,,,Dasyatidae,,Trygon,-,Stingray
+,,,,,,,Torpediniformes,,,Torpedinidae,,Torpedo,-,Electric ray
+,,,,,,,Lamniformes,,,Lamnidae,,Carcharodon,Carcharodon carcharias,Great white shark
+,,,Osteichthyes,Sarcopterygii,,,Coelacanthiformes,,,Latimeriidae,,Latimeria,Latimeria chalumnae,Coelacanth
+,,,,,,,Lepidosireniformes,,,Protopteridae,,Protopterus,Protopterus annectens,African lungfish
+,,,,Actinopterygii,,,Beloniformes,,,Exocoetidae,,Exocoetus,-,Flying fish
+,,,,,,,Syngnathiformes,,,Syngnathidae,,Hippocampus,-,Sea horse
+,,,,,,,Cypriniformes,,,Cyprinidae,,Labeo,Labeo rohita,Rohu
+,,,,,,,,,,,,Catla,Catla catla,Catla
+,,,,,,,Siluriformes,,,Clariidae,,Clarias,Clarias batrachus,Walking catfish
+,,,,,,,Carangiformes,,,Echeneidae,,Echeneis,-,Remora / Sucker fish
+,,,,,,,Anabantiformes,,,Osphronemidae,,Betta,Betta splendens,Fighting fish
+,,,,,,,Cichliformes,,,Cichlidae,,Pterophyllum,Pterophyllum scalare,Angel fish
+,,,,,,,Cypriniformes,,,Cyprinidae,,Cirrhinus,Cirrhinus mrigala,Mrigal
+,,,Amphibia,,,,Gymnophiona,,,Ichthyophiidae,,Ichthyophis,-,Caecilian
+,,,,,,,Urodela,,,Proteidae,,Necturus,Necturus maculosus,Mud puppy
+,,,,,,,,,,Ambystomatidae,,Ambystoma,Ambystoma tigrinum,Tiger salamander
+,,,,,,,,,,Salamandridae,,Salamandra,-,Fire salamander
+,,,,,,,Anura,,,Bufonidae,,Bufo,-,Toad
+,,,,,,,,,,Alytidae,,Alytes,-,Midwife toad
+,,,,,,,,,,Hylidae,,Hyla,-,Tree frog
+,,,,,,,,,,Rhacophoridae,,Rhacophorus,-,Flying frog
+,,,,,,,,,,Ranidae,,Rana,Rana tigerina,Frog
+,,,Reptilia,,,,Cotylosauria✞,,,Romeriidae✞,,Hylonomus✞,-,Early reptile
+,,,,,,,Rhynchocephalia,,,Sphenodontidae,,Sphenodon,Sphenodon punctatum,Tuatara
+,,,,,,,Squamata,,,Gekkonidae,,Hemidactylus,-,House lizard
+,,,,,,,,,,Agamidae,,Calotes,-,Garden lizard
+,,,,,,,,,,,,Draco,-,Flying lizard
+,,,,,,,,,,Chamaeleonidae,,Chamaeleon,-,Chameleon
+,,,,,,,,,,Phrynosomatidae,,Phrynosoma,-,Horned devil
+,,,,,,,,,,Varanidae,,Varanus,-,Monitor lizard
+,,,,,,,,,,Typhlopidae,,Typhlops,-,Blind snake
+,,,,,,,,,,Pythonidae,,Python,-,Python
+,,,,,,,,,,Elapidae,,Naja,Naja naja,Indian cobra
+,,,,,,,,,,,,Bungarus,-,Krait
+,,,,,,,,,,Viperidae,,Vipera,Vipera russelli,Russell’s viper
+,,,,,,,,,,Elapidae,,Hydrophis,-,Sea snake
+,,,,,,,,,,Colubridae,,Lampropeltis,Lampropeltis triangulum,Milk snake
+,,,,,,,Testudines,,,Cheloniidae,,Chelone,-,Sea turtle
+,,,,,,,,,,Testudinidae,,Testudo,-,Tortoise
+,,,,,,,Crocodilia,,,Crocodylidae,,Crocodylus,-,Crocodile
+,,,,,,,,,,Gavialidae,,Gavialis,Gavialis gangeticus,Gharial
+,,,,,,,,,,Alligatoridae,,Alligator,-,Alligator
+,,,,,,,Ichthyosauria✞,,,Ichthyosauridae✞,,Ichthyosaurus✞,-,Fish lizard
+,,,,,,,Ornithischia✞,,,Stegosauridae✞,,Stegosaurus✞,-,Roofed lizard
+,,,,,,,,,,Ceratopsidae✞,,Triceratops✞,-,Three-horned dinosaur
+,,,,,,,Saurischia✞,,,Brachiosauridae✞,,Brachiosaurus✞,-,Arm lizard
+,,,,,,,,,,Tyrannosauridae✞,,Tyrannosaurus✞,-,Tyrant lizard king
+,,,,,,,Pterosauria✞,,,Pteranodontidae✞,,Pteranodon✞,-,Winged reptile
+,,,Aves,,,,Archaeopterygiformes,,,Archaeopterygidae,,Archaeopteryx,-,First bird / Primitive bird
+,,,,,,,Struthioniformes,,,Struthionidae,,Struthio,Struthio camelus,Ostrich
+,,,,,,,Rheiformes,,,Rheidae,,Rhea,-,Rhea
+,,,,,,,Casuariiformes,,,Dromaiidae,,Dromaius,Dromaius novaehollandiae,Emu
+,,,,,,,,,,Casuariidae,,Casuarius,-,Cassowary
+,,,,,,,Apterygiformes,,,Apterygidae,,Apteryx,-,Kiwi
+,,,,,,,Sphenisciformes,,,Spheniscidae,,Aptenodytes,Aptenodytes forsteri,Emperor penguin
+,,,,,,,Galliformes,,,Phasianidae,,Gallus,Gallus gallus,Domestic fowl
+,,,,,,,,,,,,Pavo,Pavo cristatus,Peacock
+,,,,,,,Accipitriformes,,,Accipitridae,,Neophron,-,Egyptian vulture
+,,,,,,,Procellariiformes,,,Diomedeidae,,Diomedea,-,Albatross
+,,,,,,,Columbiformes,,,Columbidae,,Chalcophaps,Chalcophaps indica,Emerald dove
+,,,,,,,,,,,,Columba,-,Pigeon
+,,,,,,,,,,,,Raphus✞,Raphus cucullatus✞,Dodo
+,,,,,,,Psittaciformes,,,Psittaculidae,,Psittacula,-,Parrot
+,,,,,,,Apodiformes,,,Trochilidae,,-,-,Hummingbird
+,,,,,,,Passeriformes,,,Corvidae,,Corvus,-,Crow
+,,,,,,,,,,Oriolidae,,Pitohui,Pitohui dichrous,Poison bird
+,,,,,,,,,,Passeridae,,Passer,-,House sparrow
+,,,,,,,,,,Thraupidae,,Geospiza,Geospiza magnirostris,Large ground finch
+,,,,,,,,,,,,,Geospiza fortis,Medium ground finch
+,,,,,,,,,,,,,Geospiza fuliginosa,Small ground finch
+,,,,,,,,,,,,,Geospiza difficilis,Sharp-beaked ground finch
+,,,,,,,,,,,,,Geospiza scandens,Cactus ground finch
+,,,,,,,,,,,,Camarhynchus,Camarhynchus psittacula,Large tree finch
+,,,,,,,,,,,,,Camarhynchus parvulus,Small tree finch
+,,,,,,,,,,,,,Camarhynchus pallidus,Woodpecker finch
+,,,,,,,,,,,,Certhidea,Certhidea olivacea,Warbler finch
+,,,,,,,,,,,,Platyspiza,Platyspiza crassirostris,Vegetarian finch
+,,,Mammalia,,,,Monotremata,,,Ornithorhynchidae,,Ornithorhynchus,Ornithorhynchus anatinus,Duck-billed platypus
+,,,,,,,,,,Tachyglossidae,,Echidna,-,Spiny anteater
+,,,,,,,Didelphimorphia,,,Didelphidae,,Didelphis,Didelphis marsupialis,Opossum
+,,,,,,,,,,Dasyuridae,,Antechinus,Antechinus flavipes,Yellow-footed antechinus
+,,,,,,,,,,,,Sminthopsis,-,Marsupial mouse
+,,,,,,,,,,,,Dasyurus,Dasyurus maculatus,Spotted-tailed quoll
+,,,,,,,,,,Thylacinidae✞,,Thylacinus✞,Thylacinus cynocephalus✞,Tasmanian tiger / Thylacine
+,,,,,,,,,,Myrmecobiidae,,Myrmecobius,Myrmecobius fasciatus,Numbat
+,,,,,,,Peramelemorphia,,,Peramelidae,,Perameles,-,Bandicoot
+,,,,,,,Notoryctemorphia,,,Notoryctidae,,Notoryctes,-,Marsupial mole
+,,,,,,,Diprotodontia,,,Macropodidae,,Macropus,-,Kangaroo
+,,,,,,,,,,Phascolarctidae,,Phascolarctos,Phascolarctos cinereus,Koala
+,,,,,,,,,,Vombatidae,,Vombatus,-,Wombat
+,,,,,,,,,,Petauridae,,Petaurus,Petaurus breviceps,Sugar glider
+,,,,,,,,,,Phalangeridae,,Spilocuscus,Spilocuscus maculatus,Spotted cuscus
+,,,,,,,Proboscidea,,,Elephantidae,,Elephas,Elephas maximus,Asian elephant
+,,,,,,,,,,,,Loxodonta,Loxodonta africana,African elephant
+,,,,,,,Sirenia,,,Dugongidae,,Dugong,Dugong dugon,Dugong
+,,,,,,,,,,Trichechidae,,Trichechus,-,Manatee
+,,,,,,,Pholidota,,,Manidae,,Manis,Manis crassicaudata,Indian pangolin
+,,,,,,,Pilosa,,,Myrmecophagidae,,Myrmecophaga,Myrmecophaga tridactyla,Anteater
+,,,,,,,Perissodactyla,,,Hyracotheriidae✞,,Hyracotherium✞,-,Dawn horse✞
+,,,,,,,,,,Equidae,,Orohippus✞,-,Mountain horse✞
+,,,,,,,,,,,,Mesohippus✞,-,Middle horse✞
+,,,,,,,,,,,,Miohippus✞,-,Miocene horse✞
+,,,,,,,,,,,,Parahippus✞,-,Near horse✞
+,,,,,,,,,,,,Merychippus✞,-,Ruminant-like horse✞
+,,,,,,,,,,,,Pliohippus✞,-,Pliocene horse✞
+,,,,,,,,,,,,Callippus✞,-,Beautiful horse✞
+,,,,,,,,,,,,Equus,Equus ferus,Wild horse
+,,,,,,,,,,,,,Equus caballus,Domestic horse
+,,,,,,,,,,,,,Equus asinus,Donkey
+,,,,,,,,,,,,,Equus mulus,Mule
+,,,,,,,,,,Rhinocerotidae,,Rhinoceros,Rhinoceros unicornis,One-horned rhinoceros
+,,,,,,,Artiodactyla,,,Camelidae,,Camelus,-,Camel
+,,,,,,,,,,Bovidae,,Capra,Capra hircus,Goat
+,,,,,,,,,,,,Ovis,Ovis aries,Sheep
+,,,,,,,,,,,,Bos,Bos indicus,Zebu
+,,,,,,,Cetacea,,,Delphinidae,,Delphinus,-,Dolphin
+,,,,,,,,,,Physeteridae,,Physeter,Physeter macrocephalus,Sperm whale
+,,,,,,,,,,Balaenopteridae,,Balaenoptera,Balaenoptera musculus,Blue whale
+,,,,,,,Carnivora,,,Canidae,,Canis,Canis lupus familiaris,Dog
+,,,,,,,,,,,,,Canis lupus,Wolf
+,,,,,,,,,,Felidae,,Felis,Felis catus,Cat
+,,,,,,,,,,,,Lynx,-,Lynx
+,,,,,,,,,,,,Panthera,Panthera pardus,Leopard
+,,,,,,,,,,,,,Panthera tigris,Tiger
+,,,,,,,,,,,,,Panthera leo,Lion
+,,,,,,,,,,,,Panthera,Panthera leo × Panthera tigris,Liger
+,,,,,,,,,,Ursidae,,Helarctos,Helarctos malayanus,Sun bear
+,,,,,,,,,,,,Ursus,Ursus thibetanus,Asiatic black bear
+,,,,,,,,,,,,,Ursus americanus,American black bear
+,,,,,,,,,,,,,Ursus arctos,Brown bear
+,,,,,,,,,,,,,Ursus maritimus,Polar bear
+,,,,,,,,,,Mustelidae,,Lutra,-,Otter
+,,,,,,,,,,Phocidae,,Phoca,-,Seal
+,,,,,,,Eulipotyphla,,,Talpidae,,Talpa,-,Mole
+,,,,?,,,Rodentia,,,Muridae,,Mus,Mus musculus,Mouse
+,,,,,,,,,,,,Rattus,Rattus fuscipes,Bush rat
+,,,,,,,,,,Sciuridae,,Funambulus,Funambulus palmarum,Palm squirrel
+,,,,,,,,,,,,Sciurus,-,Tree squirrel
+,,,,,,,,,,,,Pteromyini,-,Flying squirrel
+,,,,,,,Chiroptera,,,Pteropodidae,,Pteropus,-,Flying fox
+,,,,,,,Lagomorpha,,,Leporidae,,Oryctolagus,Oryctolagus cuniculus,European rabbit
+,,,,,,,,,,,,Lepus,Lepus nigricollis,Indian hare
+,,,,,,,,,,,,,Lepus arcticus,Arctic hare
+,,,,,,,,,,,,,Lepus americanus,Snowshoe hare
+,,,,,,,,,,,,,Lepus californicus,Black-tailed jackrabbit
+,,,,,,,,,,,,,Lepus alleni,Antelope jackrabbit
+,,,,,,,Primates,,,Lemuridae,,Lemur,Lemur catta,Ring-tailed lemur
+,,,,,,,,,,Cercopithecidae,,Macaca,Macaca mulatta,Macaque
+,,,,,,,,,,Hylobatidae,,Hylobates,Hylobates hoolock,Hoolock gibbon
+,,,,,,,,,,Hominidae,,Pongo,Pongo pygmaeus,Orangutan
+,,,,,,,,,,,,Gorilla,Gorilla gorilla,Gorilla
+,,,,,,,,,,,,Pan,Pan troglodytes,Chimpanzee
+,,,,,,,,,,Proconsulidae✞,,Proconsul✞,Proconsul africanus✞,Early ape
+,,,,,,,,,,Hominidae,,Dryopithecus,Dryopithecus africanus✞,Extinct ape
+,,,,,,,,,,,,Kenyapithecus,Kenyapithecus wickeri✞,Kenyan ape
+,,,,,,,,,,,,Sivapithecus✞,-,Siwalik ape
+,,,,,,,,,,,,Ramapithecus✞,-,Extinct hominid
+,,,,,,,,,,,,Ardipithecus✞,Ardipithecus ramidus✞,Black skull
+,,,,,,,,,,,,Australopithecus✞,Australopithecus afarensis✞,Lucy’s species
+,,,,,,,,,,,,,Australopithecus africanus✞,Southern ape
+,,,,,,,,,,,,Paranthropus✞,Paranthropus aethiopicus✞,Earliest human ancestor
+,,,,,,,,,,,,,Paranthropus boisei✞,Nutcracker Man
+,,,,,,,,,,,,,Paranthropus robustus✞,Robust australopithecine
+,,,,,,,,,,,,Homo,Homo habilis✞,Handy man
+,,,,,,,,,,,,,Homo erectus✞,Upright man
+,,,,,,,,,,,,,Homo heidelbergensis✞,Heidelberg man
+,,,,,,,,,,,,,Homo neanderthalensis✞,Neanderthal man
+,,,,,,,,,,,,,Homo sapiens,Modern man

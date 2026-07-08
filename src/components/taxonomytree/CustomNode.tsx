@@ -42,12 +42,14 @@ export default function CustomNode({ data }: { data: CustomNodeData }) {
       <Handle
         type="target"
         position={Position.Top}
-        style={{ background: "#ffffff", width: 6, height: 6, opacity: 0.8 }}
+        isConnectable={false}
+        style={{ background: "transparent", border: "none" }}
       />
       <Handle
         type="source"
         position={Position.Bottom}
-        style={{ background: "#ffffff", width: 6, height: 6, opacity: 0.8 }}
+        isConnectable={false}
+        style={{ background: "transparent", border: "none" }}
       />
     </div>
   );
