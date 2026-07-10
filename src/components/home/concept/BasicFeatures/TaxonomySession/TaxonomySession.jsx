@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import AnimaliaFlow from "./tree/AnimaliaFlow"; 
+import { Maximize2, ArrowLeft } from "lucide-react";
 import "./TaxonomySession.css";
 
 const TaxonomySession = () => {
@@ -9,10 +10,10 @@ const TaxonomySession = () => {
     if (isFullScreen) {
       document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = "auto";
+      document.body.style.overflow = ""; // Set to empty string to prevent misalignment
     }
     return () => {
-      document.body.style.overflow = "auto";
+      document.body.style.overflow = "";
     };
   }, [isFullScreen]);
 
@@ -38,7 +39,7 @@ const TaxonomySession = () => {
               className="taxonomy-open-btn" 
               onClick={() => setIsFullScreen(true)}
             >
-              <span>⤢</span> Open Interactive View
+              <Maximize2 size={16} /> Open Interactive View
             </button>
           </div>
           
@@ -56,8 +57,9 @@ const TaxonomySession = () => {
             <button 
               className="taxonomy-back-btn" 
               onClick={() => setIsFullScreen(false)}
+              style={{ display: 'flex', alignItems: 'center', gap: '6px' }}
             >
-              ← Back to Page
+              <ArrowLeft size={16} /> Back to Page
             </button>
             <span className="taxonomy-fullscreen-title">Evolutionary Framework</span>
           </header>
