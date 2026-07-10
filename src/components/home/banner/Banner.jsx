@@ -141,6 +141,7 @@ export default function ZoologyHero() {
               alt="ZooLearn Logo Symbol" 
               className="banner-logo-img"
               draggable={false}
+              fetchpriority="high"
               style={{ userSelect: 'none' }}
             />
             <img 
@@ -148,6 +149,7 @@ export default function ZoologyHero() {
               alt="ZooLearn Brand Name" 
               className="banner-logo-text-img"
               draggable={false}
+              fetchpriority="high"
               style={{ userSelect: 'none' }}
             />
           </div>

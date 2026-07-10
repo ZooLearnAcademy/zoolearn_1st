@@ -15,10 +15,18 @@ import BodyPlans from "./BodyPlans/BodyPlans";
 import ProtostomeComparison from "./BodyPlans/ProtostomeComparison";
 import Development from "./Development/Development";
 import TaxonomySession from "./TaxonomySession/TaxonomySession";
+import { SEO } from "../../../../shared";
 
 const BasicFeatures = () => {
   return (
-    <div className="basic-features-page">
+    <>
+      <SEO 
+        title="Basic Features of Classification"
+        description="Understand the fundamental basis of biological classification, including symmetry, coelom, germ layers, and body plans."
+        keywords="Biological Classification, Coelom, Body Symmetry, Germ Layers, Taxonomy, Biology Basics"
+        canonicalUrl="/basic-features-of-classification"
+      />
+      <main className="basic-features-page">
       <div className="basic-features-container">
         
         {/* The Intro Banner with Navigation Buttons */}
@@ -61,7 +69,8 @@ const BasicFeatures = () => {
         </section>
 
       </div>
-    </div>
+    </main>
+    </>
   );
 };
 

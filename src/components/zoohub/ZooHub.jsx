@@ -20,6 +20,7 @@ import Chordata from "./chordata/Chordata";
 import { ScrollReveal } from "../shared/ScrollReveal";
 import Skeleton, { SkeletonSearchItem } from "../shared/Skeleton";
 import CountUp from "../shared/CountUp";
+import { SEO } from "../shared";
 
 // Static data moved outside component to prevent re-creation on every render
 const phylumIcons = {
@@ -567,8 +568,23 @@ function ZooHub() {
     }
   };
 
+  const schema = {
+    "@type": "CollectionPage",
+    "name": "ZooHub - The Animal Kingdom Explorer",
+    "description": "Explore 11 major animal phyla and hundreds of species in ZooLearn's comprehensive ZooHub portal.",
+    "url": "https://zoolearn.in/zoohub"
+  };
+
   return (
     <div className="zoohub-page">
+      <SEO 
+        title="ZooHub: Explore the Animal Kingdom"
+        description="Dive into ZooHub to explore the 11 major phyla of the Animal Kingdom. Learn about species from Porifera to Chordata with interactive Biology materials."
+        keywords="ZooHub, Animal Kingdom, Phylum, Species, Biology, Zoology, Taxonomy, Chordata, Arthropoda"
+        canonicalUrl="/zoohub"
+        schema={schema}
+      />
+
       {/* 🎯 BANNER - Home page style with left content + right carousel */}
       {/* 🎯 FULL SCREEN HERO BANNER */}
       <div className="zoohub-banner" ref={bannerRef}>

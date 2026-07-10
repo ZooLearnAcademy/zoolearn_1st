@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Menu, X, ArrowUp } from 'lucide-react';
 import { ScrollReveal } from '../../../shared/ScrollReveal';
+import { SEO } from "../../../../shared";
 import './Patterns.css';
 
 const Patterns = () => {
@@ -1638,7 +1639,14 @@ const Patterns = () => {
   const currentThemeClass = themeMap[activeTab] || '';
 
   return (
-    <div className={`patt-zoo-page ${currentThemeClass}`} id="patt-patterns">
+    <>
+      <SEO 
+        title="Comparative Anatomy & Patterns of Complexity"
+        description="Learn about the anatomy and patterns of complexity in animals, comparing systems like digestive, respiratory, circulatory, nervous, excretory, and reproductive across different phyla."
+        keywords="Comparative Anatomy, Digestive System, Respiratory System, Circulatory System, Nervous System, Reproductive System, Biology, ZooLearn"
+        canonicalUrl="/anatomy"
+      />
+      <div className={`patt-zoo-page ${currentThemeClass}`} id="patt-patterns">
 
       {/* FULL PAGE HERO BANNER */}
       <section className="patt-hero-banner">
@@ -2007,7 +2015,8 @@ const Patterns = () => {
           </div>
         </div>
       )}
-    </div >
+      </div>
+    </>
   );
 };
 

@@ -16,6 +16,7 @@ import Hemichordata from './Hemichordata';
 import Chordata from './Chordata';
 import BasicFeatures from '../BasicFeatures/BasicFeatures';
 import { ScrollReveal } from '../../../shared/ScrollReveal';
+import { SEO } from "../../../../shared";
 
 // Import newly generated images
 import platyImg from '../../../../assets/images/KingdomAnimalia/platyhelminthes.png';
@@ -167,8 +168,15 @@ const AnimalKingdom = () => {
   };
 
   return (
-    <div className="w3-layout-wrapper">
-      <div className="w3-main-container">
+    <>
+      <SEO 
+        title="Kingdom Animalia"
+        description="Comprehensive guide to Kingdom Animalia. Discover the classification history, characteristics of major phyla, and in-depth study materials for Zoology."
+        keywords="Kingdom Animalia, Animal Kingdom, Classification, Phylum, Zoology, Biology, Porifera, Chordata"
+        canonicalUrl="/kingdom-animalia"
+      />
+      <div className="w3-layout-wrapper">
+        <div className="w3-main-container">
         
         {/* MOBILE SIDEBAR OVERLAY */}
         <div 
@@ -287,7 +295,8 @@ const AnimalKingdom = () => {
         {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
       </button>
 
-    </div>
+      </div>
+    </>
   );
 };
 

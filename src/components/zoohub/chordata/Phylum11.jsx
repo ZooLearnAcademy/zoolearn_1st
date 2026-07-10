@@ -1,4 +1,5 @@
 import React from "react";
+import { SEO } from "../../shared";
 import { ScrollReveal, StaggerReveal } from "../../shared/ScrollReveal";
 import { BookOpen, Microscope, Ruler, Network, Globe, Landmark } from "lucide-react";
 import { useParams, Link } from "react-router-dom";
@@ -29,8 +30,24 @@ const Phylum11 = () => {
     classificationMap[key] = value;
   });
 
+  
+  const schema = {
+    "@type": "WebPage",
+    "name": species.name,
+    "description": species.description,
+    "url": `https://zoolearn.in/zoohub/chordata/${slug}`
+  };
+
   return (
-    <div className="phyl-genus-sycon-container">
+    <>
+      <SEO 
+        title={`${species.name} - ${species.scientificName}`}
+        description={species.description}
+        keywords={`${species.name}, ${species.scientificName}, Chordata, Zoology, Animal Kingdom`}
+        canonicalUrl={`/zoohub/chordata/${slug}`}
+        schema={schema}
+      />
+      <div className="phyl-genus-sycon-container">
 
       {/* ========== HERO SECTION ========== */}
       <div className="phyl-hero">
@@ -186,6 +203,7 @@ const Phylum11 = () => {
 
       </div>
     </div>
+      </>
   );
 };
 

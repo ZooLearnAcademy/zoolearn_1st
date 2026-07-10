@@ -1,5 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import './App.css';
 
 // Layout components
@@ -52,10 +53,11 @@ function App() {
   const location = useLocation();
 
   return (
-    <ToastProvider>
-      <div className="app-container">
-        {/* Scroll to top on route change */}
-        <ScrollToTop />
+    <HelmetProvider>
+      <ToastProvider>
+        <div className="app-container">
+          {/* Scroll to top on route change */}
+          <ScrollToTop />
 
         {/* Header Section */}
         <Header />
@@ -124,10 +126,11 @@ function App() {
           </Suspense>
         </main>
 
-        {/* Footer Section */}
-        <Footer />
-      </div>
-    </ToastProvider>
+          {/* Footer Section */}
+          <Footer />
+        </div>
+      </ToastProvider>
+    </HelmetProvider>
   );
 }
 

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { SEO } from '../shared';
 import './blog.css';
 
 const blogPosts = [
@@ -59,6 +60,12 @@ export default function BlogIndex() {
 
   return (
     <div className="bl-page">
+      <SEO 
+        title="ZooLearn Blog: Biology & Zoology Articles"
+        description="Read the latest articles on Biology, Zoology, Animal behavior, Evolutionary history, and Conservation on the ZooLearn Blog."
+        keywords="Biology Blog, Zoology Articles, Evolution, Animal Facts, Science Blog"
+        canonicalUrl="/blog"
+      />
       {/* ── HERO ── */}
       <section className="bl-hero">
         <div className="bl-hero-bg-pattern" />

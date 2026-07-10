@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { careerCategories } from '../../data/scopesData';
 import { ChevronRight, Compass, Sparkles } from 'lucide-react';
+import { SEO } from '../shared';
 import './Scopes.css';
 
 const Scopes = () => {
@@ -12,6 +13,12 @@ const Scopes = () => {
 
     return (
         <div className="scopes-container">
+            <SEO 
+                title="Scopes of Zoology & Biology"
+                description="Discover the vast scopes and applications of Zoology and Life Sciences in research, medicine, environmental conservation, and industry."
+                keywords="Zoology Scopes, Biology Scopes, Research, Biotechnology, Wildlife Conservation"
+                canonicalUrl="/scopes"
+            />
             <div className="scopes-bg-blob blob-1"></div>
             <div className="scopes-bg-blob blob-2"></div>
 
