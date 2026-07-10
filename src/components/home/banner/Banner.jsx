@@ -152,7 +152,7 @@ export default function ZoologyHero() {
             />
           </div>
 
-          <div style={{ height: '3rem' }}></div>
+          <div className="banner-spacer" style={{ height: '3rem' }}></div>
 
           <div className="banner-desc-container">
             <span className="desc-badge">Learn Visually</span>
@@ -166,7 +166,7 @@ export default function ZoologyHero() {
         </div>
 
         {/* RIGHT IMAGE SLIDER & STATS */}
-        <div className="banner-right" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2rem' }}>
+        <div className="banner-right">
           <div className="banner-slider carousel-container">
             {images.map((item, i) => {
               let position = 'hidden';
@@ -198,7 +198,7 @@ export default function ZoologyHero() {
           </div>
 
           {/* STATS SECTION MOVED BELOW IMAGES */}
-          <div className="banner-stats" style={{ display: 'flex', justifyContent: 'center', width: '100%', marginTop: '3rem' }}>
+          <div className="banner-stats">
             <div className="banner-stat-item" style={{ alignItems: 'center' }}>
               <span className="banner-stat-number">
                 <CountUp end={100} duration={2000} />+

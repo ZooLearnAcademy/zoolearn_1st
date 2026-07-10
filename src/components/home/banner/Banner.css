@@ -218,9 +218,11 @@
 ===================================================== */
 .banner-stats {
   display: flex;
+  justify-content: center;
   align-items: center;
+  width: 100%;
   gap: 2.5rem;
-  margin-top: 1rem;
+  margin-top: 3rem;
 }
 
 .banner-stat-item {
@@ -269,7 +271,10 @@
 ===================================================== */
 .banner-right {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
+  gap: 2rem;
 }
 
 .banner-slider.carousel-container {
@@ -401,7 +406,6 @@
 
 @media (max-width: 768px) {
   .banner-container {
-    grid-template-columns: 1fr;
     text-align: center;
     gap: 4rem;
   }
@@ -424,17 +428,12 @@
     font-size: 1.4rem;
     text-align: center;
   }
-
   .banner-desc-subtext {
     border-left: none;
     padding-left: 0;
     font-size: 1rem;
   }
 
-  .banner-logo-wrapper {
-    justify-content: center;
-    margin-top: 0;
-  }
   
   .banner-logo-text-img { height: 130px; }
   .banner-logo-img { width: 130px; height: 130px; }
@@ -513,32 +512,50 @@
 ===================================================== */
 @media (max-width: 900px) {
   .banner-container {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     text-align: center;
     gap: 2rem;
   }
 
-  .banner-title {
-    font-size: 2.2rem;
-    word-wrap: break-word;
-    /* Ensure hydration */
+  .banner-left, .banner-right {
+    display: contents;
   }
 
-  .banner-desc {
-    margin: auto;
+  .banner-spacer {
+    display: none;
   }
 
-  /* Updated responsive styles for Stats */
+  .banner-logo-wrapper {
+    order: 1;
+    flex-direction: column;
+  }
+
+  .banner-slider.carousel-container {
+    order: 2;
+    height: 350px;
+    margin-top: 1.5rem;
+  }
+
   .banner-stats {
+    order: 3;
     flex-direction: row;
     justify-content: center;
     gap: 2rem;
     margin: 2rem auto 0;
   }
 
-  .banner-slider.carousel-container {
-    height: 350px;
-    margin-top: 1.5rem;
+  .banner-desc-container {
+    order: 4;
+  }
+
+  .banner-title {
+    font-size: 2.2rem;
+    word-wrap: break-word;
+  }
+
+  .banner-desc {
+    margin: auto;
   }
 
   .banner-image.carousel-img {
