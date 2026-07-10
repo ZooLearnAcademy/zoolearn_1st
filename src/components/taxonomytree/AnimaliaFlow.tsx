@@ -223,23 +223,30 @@ function FlowContent() {
             }
           `}</style>
           <div style={{
-            background: '#ff4081',
-            color: 'white',
-            padding: '10px 20px',
-            borderRadius: '24px',
-            fontWeight: 'bold',
-            fontSize: '18px',
-            boxShadow: '0 6px 20px rgba(255, 64, 129, 0.4)',
-            marginBottom: '8px'
+            background: 'rgba(30, 41, 59, 0.95)',
+            color: '#f8fafc',
+            padding: '8px 16px',
+            borderRadius: '8px',
+            fontWeight: '500',
+            fontSize: '14px',
+            letterSpacing: '0.3px',
+            boxShadow: '0 4px 15px rgba(0, 0, 0, 0.2)',
+            border: '1px solid rgba(255,255,255,0.1)',
+            marginBottom: '12px',
+            position: 'relative'
           }}>
-            Hey! Click me to explore the Kingdom! 🐾
-          </div>
-          <div style={{
-            fontSize: '48px',
-            lineHeight: '1',
-            filter: 'drop-shadow(0 4px 5px rgba(0,0,0,0.3))'
-          }}>
-            👇
+            Click to expand the Kingdom
+            <div style={{
+              position: 'absolute',
+              bottom: '-6px',
+              left: '50%',
+              transform: 'translateX(-50%)',
+              width: 0,
+              height: 0,
+              borderLeft: '6px solid transparent',
+              borderRight: '6px solid transparent',
+              borderTop: '6px solid rgba(30, 41, 59, 0.95)'
+            }} />
           </div>
         </div>
       )}
