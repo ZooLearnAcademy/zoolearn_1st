@@ -2,11 +2,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { careerCategories } from '../../data/careersData';
+import { SEO } from '../shared';
 import './CareerPath.css';
 
 const CareerPath = () => {
     return (
         <div className="career-path-container">
+            <SEO 
+                title="Zoology & Life Science Careers"
+                description="Explore various career paths, educational requirements, and salary expectations in the field of Zoology and Life Sciences."
+                keywords="Zoology Careers, Life Science Careers, Biology Jobs, Career Path, ZooLearn"
+                canonicalUrl="/career-path"
+            />
             <div className="career-path-header">
                 <h1>Zoology & Life Science Career Categories</h1>
                 <p>Select a category to explore specific career options, educational pathways, and salary expectations.</p>

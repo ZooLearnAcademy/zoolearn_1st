@@ -8,7 +8,7 @@ const stages = [
     neck: 'Short (Deer-like)',
     environment: 'Dense prehistoric forests',
     desc: 'The earliest known ancestor. With a thick build and short neck, it was perfectly adapted to browsing low-lying forest vegetation.',
-    image: '/transform_1.png'
+    image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1783697837/zoolearn/giraffe/fuzdsqrd2bkoauro5w8i.jpg"
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const stages = [
     neck: 'Slightly Elongated',
     environment: 'Transitional woodland',
     desc: 'As the forests began to thin, the first subtle signs of elongation appeared in the cervical vertebrae, allowing it to reach slightly higher leaves.',
-    image: '/transform_2.png'
+    image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1783697838/zoolearn/giraffe/vnu6jvx7dj70oiq1t3h9.jpg"
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ const stages = [
     neck: 'Medium (~1 meter)',
     environment: 'Early dry savanna',
     desc: 'A crucial transitional form. The cranial end of the C3 vertebra stretched out (the first elongation boost), giving it a distinctive mid-length neck.',
-    image: '/transform_3.png'
+    image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1783697840/zoolearn/giraffe/xc7xeax5e7x60oztbhzl.jpg"
   },
   {
     id: 4,
@@ -35,7 +35,7 @@ const stages = [
     neck: 'Extreme (~2.4 meters)',
     environment: 'Open African savanna',
     desc: 'The second elongation boost occurred (lengthening the caudal end of the vertebrae). Fully adapted to dominate the high canopy of the open savanna.',
-    image: '/transform_4.png'
+    image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1783697841/zoolearn/giraffe/y1izgulqngy7iej6m99m.jpg"
   }
 ];
 

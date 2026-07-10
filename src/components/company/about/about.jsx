@@ -1,6 +1,7 @@
 import "./about.css";
 import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { SEO } from "../../shared";
 
 const About = () => {
   const location = useLocation();
@@ -16,12 +17,25 @@ const About = () => {
       }
     };
 
-
     handleScroll();
   }, [location]);
 
+  const schema = {
+    "@type": "AboutPage",
+    "name": "About ZooLearn",
+    "description": "ZooLearn is a specialized educational platform dedicated to zoology, animal taxonomy, and biological sciences.",
+    "url": "https://zoolearn.in/about"
+  };
+
   return (
     <>
+      <SEO 
+        title="About Us"
+        description="Learn about ZooLearn, our mission, future plans, and the dedicated team building the modern educational platform for Zoology and Biology."
+        keywords="About ZooLearn, Biology Education Team, Zoology Platform, ZooLearn Mission"
+        canonicalUrl="/about"
+        schema={schema}
+      />
       <div className="about-container">
         {/* Header */}
         <section className="about-header">

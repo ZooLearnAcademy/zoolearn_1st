@@ -10,3 +10,4 @@ export { default as OptimizedImage } from './OptimizedImage';
 export { default as UnderDevelopment } from './UnderDevelopment';
 export { default as ScrollToTop } from './ScrollToTop';
 export { default as CountUp } from './CountUp';
+export { default as SEO } from './SEO';

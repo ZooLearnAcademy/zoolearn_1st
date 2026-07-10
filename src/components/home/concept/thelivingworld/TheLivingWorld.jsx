@@ -6,6 +6,7 @@ import Binomial from "./Binomial/Binomial";
 import TaxonomyPage from "./pramid/TaxonomyPage";
 import TaxonomySystematics from "./TaxonomySystematics/TaxonomySystematics";
 import LivingWorldIntro from "./LivingWorldIntro/LivingWorldIntro";
+import { SEO } from "../../../shared";
 
 import "./TheLivingWorld.css";
 
@@ -13,6 +14,12 @@ function LearnTheLivingWorld() {
   
   return (
     <main className="living-world-page">
+      <SEO 
+        title="The Living World"
+        description="Learn about the diversity of living organisms, taxonomy, systematics, and binomial nomenclature. Comprehensive biology study material."
+        keywords="Living World, Taxonomy, Binomial Nomenclature, Biology, Zoology, Systematics"
+        canonicalUrl="/living-world"
+      />
       
       {/* 1. Banner (Intro) */}
       <div className="banner-wrapper">

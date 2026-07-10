@@ -16,14 +16,15 @@ import Hemichordata from './Hemichordata';
 import Chordata from './Chordata';
 import BasicFeatures from '../BasicFeatures/BasicFeatures';
 import { ScrollReveal } from '../../../shared/ScrollReveal';
+import { SEO } from "../../../shared";
 
 // Import newly generated images
-import platyImg from '../../../../assets/images/KingdomAnimalia/platyhelminthes.png';
-import aschImg from '../../../../assets/images/KingdomAnimalia/aschelminthes.png';
-import anneImg from '../../../../assets/images/KingdomAnimalia/annelida.png';
-import arthImg from '../../../../assets/images/KingdomAnimalia/arthropoda.png';
-import mollImg from '../../../../assets/images/KingdomAnimalia/mollusca.png';
-import echiImg from '../../../../assets/images/KingdomAnimalia/echinodermata.png';
+import platyImg from 'https://res.cloudinary.com/duibfmcw1/image/upload/v1783699118/zoolearn/assets/rdposdenokuwown2pnty.jpg';
+import aschImg from 'https://res.cloudinary.com/duibfmcw1/image/upload/v1783699113/zoolearn/assets/z8v5zwi6er5avlacn6ef.jpg';
+import anneImg from 'https://res.cloudinary.com/duibfmcw1/image/upload/v1783699111/zoolearn/assets/o5k5coib4jrmg3upmdyb.jpg';
+import arthImg from 'https://res.cloudinary.com/duibfmcw1/image/upload/v1783699112/zoolearn/assets/koo5yzjnlalvyrtny2sw.jpg';
+import mollImg from 'https://res.cloudinary.com/duibfmcw1/image/upload/v1783699116/zoolearn/assets/zhjjyyutidm2ucrfme5f.jpg';
+import echiImg from 'https://res.cloudinary.com/duibfmcw1/image/upload/v1783699114/zoolearn/assets/bkazfsbvpm6ccvpc5rsm.jpg';
 
 const animaliaPhylaList = [
   { id: 0, title: "Basic Features", name: "Basic Features of Classification", des: "Fundamentals of animal classification", img: "", theme: "#f43f5e" },
@@ -167,8 +168,15 @@ const AnimalKingdom = () => {
   };
 
   return (
-    <div className="w3-layout-wrapper">
-      <div className="w3-main-container">
+    <>
+      <SEO 
+        title="Kingdom Animalia"
+        description="Comprehensive guide to Kingdom Animalia. Discover the classification history, characteristics of major phyla, and in-depth study materials for Zoology."
+        keywords="Kingdom Animalia, Animal Kingdom, Classification, Phylum, Zoology, Biology, Porifera, Chordata"
+        canonicalUrl="/kingdom-animalia"
+      />
+      <div className="w3-layout-wrapper">
+        <div className="w3-main-container">
         
         {/* MOBILE SIDEBAR OVERLAY */}
         <div 
@@ -287,7 +295,8 @@ const AnimalKingdom = () => {
         {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
       </button>
 
-    </div>
+      </div>
+    </>
   );
 };
 

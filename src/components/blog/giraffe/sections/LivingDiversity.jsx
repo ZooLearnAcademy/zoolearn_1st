@@ -6,28 +6,28 @@ const species = [
     scientific: 'Giraffa tippelskirchi',
     status: 'Vulnerable',
     statusColor: '#eab308',
-    image: '/div_masai.png'
+    image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1783697796/zoolearn/giraffe/giyhygjbp5qjrfxcmukg.jpg"
   },
   {
     name: 'Northern Giraffe',
     scientific: 'Giraffa camelopardalis',
     status: 'Critically Endangered',
     statusColor: '#dc2626',
-    image: '/div_northern.png'
+    image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1783697798/zoolearn/giraffe/citwqtqhsosnlucpmyxp.jpg"
   },
   {
     name: 'Reticulated Giraffe',
     scientific: 'Giraffa reticulata',
     status: 'Endangered',
     statusColor: '#ea580c',
-    image: '/div_reticulated.png'
+    image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1783697800/zoolearn/giraffe/czqc3kzlh23muozzemxy.jpg"
   },
   {
     name: 'Southern Giraffe',
     scientific: 'Giraffa giraffa',
     status: 'Least Concern',
     statusColor: '#16a34a',
-    image: '/div_southern.png'
+    image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1783697802/zoolearn/giraffe/a1iedrcwnxcfzrogzt7f.jpg"
   }
 ];
 

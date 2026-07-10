@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { SEO } from '../shared';
 import './blog.css';
 
 const blogPosts = [
@@ -12,7 +13,7 @@ const blogPosts = [
     subtitle: 'The Tallest Story Ever Told',
     description:
       'Celebrate the longest day of the year with the tallest animal on Earth. Explore 24 million years of evolutionary history, the science behind the iconic neck, four distinct species, and the silent extinction threatening these gentle giants.',
-    image: '/giraffa_camelopardalis.png',
+    image: 'https://res.cloudinary.com/duibfmcw1/image/upload/v1783697468/zoolearn/lciu7nfitbacw92deppl.png',
     tags: ['Evolution', 'Conservation', 'Taxonomy', 'Africa'],
     stats: [
       { label: 'Neck', value: '2.4 m' },
@@ -59,6 +60,12 @@ export default function BlogIndex() {
 
   return (
     <div className="bl-page">
+      <SEO 
+        title="ZooLearn Blog: Biology & Zoology Articles"
+        description="Read the latest articles on Biology, Zoology, Animal behavior, Evolutionary history, and Conservation on the ZooLearn Blog."
+        keywords="Biology Blog, Zoology Articles, Evolution, Animal Facts, Science Blog"
+        canonicalUrl="/blog"
+      />
       {/* ── HERO ── */}
       <section className="bl-hero">
         <div className="bl-hero-bg-pattern" />

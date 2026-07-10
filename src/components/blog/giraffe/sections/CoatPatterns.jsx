@@ -5,7 +5,7 @@ const coatData = [
     id: 'reticulated',
     name: 'Reticulated Giraffe',
     scientific: 'Giraffa reticulata',
-    image: '/coat_reticulated.png',
+    image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1783697790/zoolearn/giraffe/fvh8xl685zbkluixneim.jpg",
     color: '#ea580c', // orange-600
     description: 'Perhaps the most visually striking, the Reticulated giraffe is defined by sharp, uniform, reddish-brown polygons separated by stark, bright white lines. This creates a highly distinct "cobweb" or net-like effect. Found primarily in northeastern Kenya.',
     features: [
@@ -18,7 +18,7 @@ const coatData = [
     id: 'masai',
     name: 'Masai Giraffe',
     scientific: 'Giraffa tippelskirchi',
-    image: '/coat_masai.png',
+    image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1783697785/zoolearn/giraffe/klcervl4bejvjafktktd.jpg",
     color: '#b45309', // amber-700
     description: 'The Masai giraffe is easily identified by its extremely dark, almost chocolate-brown spots that are highly irregular, jagged, and vine-like. The edges look like splattered stars or oak leaves. They dominate the landscapes of Kenya and Tanzania.',
     features: [
@@ -31,7 +31,7 @@ const coatData = [
     id: 'southern',
     name: 'Southern Giraffe',
     scientific: 'Giraffa giraffa',
-    image: '/coat_southern.png',
+    image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1783697794/zoolearn/giraffe/oz19xqs1udin9teuo7hp.jpg",
     color: '#16a34a', // green-600
     description: 'Characterized by star-shaped patches that are less sharply defined than the Reticulated, but more rounded than the Masai. Crucially, their spots extend all the way down their legs to the hooves. Found in Namibia, South Africa, and Botswana.',
     features: [
@@ -44,7 +44,7 @@ const coatData = [
     id: 'northern',
     name: 'Northern Giraffe',
     scientific: 'Giraffa camelopardalis',
-    image: '/coat_northern.png',
+    image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1783697787/zoolearn/giraffe/ov1nhjy2qacmgkls8qoc.jpg",
     color: '#dc2626', // red-600
     description: 'The Northern giraffe generally has large, paler chestnut-brown spots with relatively smooth edges, set against a pale cream background. Unlike the Southern giraffe, their lower legs are noticeably pale and mostly spot-free.',
     features: [

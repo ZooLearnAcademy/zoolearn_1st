@@ -26,6 +26,30 @@ function FlowContent() {
 
   const [openNodes, setOpenNodes] = useState<Record<string, string>>({});
   const [activeNode, setActiveNode] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [searchError, setSearchError] = useState("");
+  const [suggestions, setSuggestions] = useState<string[]>([]);
+
+  useEffect(() => {
+    if (!searchQuery.trim()) {
+      setSuggestions([]);
+      return;
+    }
+    const query = searchQuery.trim().toLowerCase();
+    const matches: string[] = [];
+    const searchRecursive = (node: AnimaliaNode) => {
+      if (matches.length >= 5) return;
+      const isMatch = node.label.toLowerCase().includes(query) || (node.commonName && node.commonName.toLowerCase().includes(query));
+      if (isMatch && node.label.toLowerCase() !== query) matches.push(node.label);
+      if (node.children) {
+        for (const child of node.children) {
+          searchRecursive(child);
+        }
+      }
+    };
+    searchRecursive(animaliaTree);
+    setSuggestions(matches);
+  }, [searchQuery]);
 
   const spacingX = window.innerWidth < 768 ? 160 : 240;
   const spacingY = 120;
@@ -44,6 +68,69 @@ function FlowContent() {
     }));
   };
 
+  const executeSearch = (q: string) => {
+    setSearchError("");
+    if (!q.trim()) return;
+
+    const query = q.trim().toLowerCase();
+
+    const findPath = (
+      node: AnimaliaNode,
+      path: string[] = []
+    ): { found: AnimaliaNode | null; path: string[] } => {
+      const isMatch =
+        node.label.toLowerCase().includes(query) ||
+        (node.commonName && node.commonName.toLowerCase().includes(query));
+
+      if (isMatch) return { found: node, path };
+
+      if (node.children) {
+        for (const child of node.children) {
+          const res = findPath(child, [...path, node.id]);
+          if (res.found) return res;
+        }
+      }
+      return { found: null, path: [] };
+    };
+
+    const result = findPath(animaliaTree);
+
+    if (result.found) {
+      const newOpenNodes = { ...openNodes };
+      if (result.path.length > 0 && result.path[0] === "animalia") {
+          newOpenNodes["root"] = "animalia";
+      }
+      result.path.forEach((id, index) => {
+        const childIdToOpen = result.path[index + 1] || result.found!.id;
+        newOpenNodes[id] = childIdToOpen;
+      });
+      setOpenNodes(newOpenNodes);
+      setActiveNode(result.found.id);
+      
+      setTimeout(() => {
+        const flowNode = useReactFlow().getNode(result.found!.id);
+        if (flowNode) {
+            useReactFlow().setCenter(flowNode.position.x, flowNode.position.y, { zoom: 1, duration: 800 });
+        }
+      }, 100);
+      
+    } else {
+      setSearchError("No matching species/taxon found.");
+    }
+  };
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    setSuggestions([]);
+    executeSearch(searchQuery);
+  };
+
+  const handleSuggestionClick = (s: string) => {
+    setSearchQuery(s);
+    setSuggestions([]);
+    executeSearch(s);
+  };
+
   // Generate stable nodes and edges arrays
   const { nodes, edges } = useMemo(() => {
     const nodesList: Node[] = [];
@@ -56,6 +143,9 @@ function FlowContent() {
       parent?: string
     ) => {
       const isLeaf = !node.children || node.children.length === 0;
+
+      const isRoot = !parent;
+      const isRootOpen = openNodes["root"] === "animalia";
 
       nodesList.push({
         id: node.id,
@@ -90,7 +180,12 @@ function FlowContent() {
       if (!node.children) return;
 
       const openChild = openNodes[parent ?? "root"];
-      if (parent && openChild !== node.id) return;
+      
+      if (isRoot) {
+        if (!isRootOpen) return;
+      } else {
+        if (openChild !== node.id) return;
+      }
 
       node.children.forEach((child, index) => {
         const offset = (index - (node.children!.length - 1) / 2) * spacingX;
@@ -105,7 +200,49 @@ function FlowContent() {
   // Removed automatic fitView so the zoom stays stable while interacting
 
   return (
-    <div style={{ height: "100vh", width: "100%", background: "#121212" }}>
+    <div style={{ height: "100vh", width: "100%", background: "#121212", position: "relative" }}>
+      {openNodes["root"] !== "animalia" && (
+        <div 
+          style={{
+            position: 'absolute',
+            top: '38%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            pointerEvents: 'none',
+            zIndex: 10,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            animation: 'bounce-point 1.5s infinite',
+          }}
+        >
+          <style>{`
+            @keyframes bounce-point {
+              0%, 100% { transform: translate(-50%, -50%) translateY(0); }
+              50% { transform: translate(-50%, -50%) translateY(-20px); }
+            }
+          `}</style>
+          <div style={{
+            background: '#ff4081',
+            color: 'white',
+            padding: '10px 20px',
+            borderRadius: '24px',
+            fontWeight: 'bold',
+            fontSize: '18px',
+            boxShadow: '0 6px 20px rgba(255, 64, 129, 0.4)',
+            marginBottom: '8px'
+          }}>
+            Hey! Click me to explore the Kingdom! 🐾
+          </div>
+          <div style={{
+            fontSize: '48px',
+            lineHeight: '1',
+            filter: 'drop-shadow(0 4px 5px rgba(0,0,0,0.3))'
+          }}>
+            👇
+          </div>
+        </div>
+      )}
       <ReactFlow
         nodes={nodes}
         edges={edges}
@@ -118,23 +255,71 @@ function FlowContent() {
         <Background color="#333" gap={20} />
 
         <Panel position="top-right" style={{ marginTop: "100px", marginRight: "20px" }}>
-          <div style={{ display: 'flex', gap: '10px' }}>
-            <button
-              onClick={() => { setOpenNodes({}); setActiveNode(null); }}
-              style={{
-                background: "#222", color: "white", padding: "8px 12px", borderRadius: "6px", border: "1px solid #444", cursor: "pointer"
-              }}
-            >
-              Reset Tree
-            </button>
-            <button
-              onClick={() => fitView({ duration: 800, padding: 0.2 })}
-              style={{
-                background: "#222", color: "white", padding: "8px 12px", borderRadius: "6px", border: "1px solid #444", cursor: "pointer"
-              }}
-            >
-              Reset View
-            </button>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', alignItems: 'flex-end' }}>
+            <form onSubmit={handleSearch} style={{ display: 'flex', gap: '8px' }}>
+              <div style={{ position: 'relative' }}>
+                <input
+                  type="text"
+                  placeholder="Search taxon (e.g. Tiger)"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  style={{
+                    padding: "8px 12px",
+                    borderRadius: "6px",
+                    border: "1px solid #444",
+                    background: "#222",
+                    color: "white",
+                    outline: "none"
+                  }}
+                />
+                {suggestions.length > 0 && (
+                  <ul style={{
+                    position: 'absolute', top: '100%', left: 0, width: '100%',
+                    background: '#222', listStyle: 'none', padding: 0, margin: '4px 0 0 0',
+                    borderRadius: '6px', zIndex: 10, border: '1px solid #444', overflow: 'hidden'
+                  }}>
+                    {suggestions.map(s => (
+                      <li
+                        key={s}
+                        onClick={() => handleSuggestionClick(s)}
+                        style={{ padding: '8px 12px', cursor: 'pointer', borderBottom: '1px solid #333', color: '#fff', fontSize: '14px' }}
+                        onMouseEnter={(e) => (e.currentTarget.style.background = '#333')}
+                        onMouseLeave={(e) => (e.currentTarget.style.background = 'transparent')}
+                      >
+                        {s}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+              <button
+                type="submit"
+                style={{
+                  background: "#ffd54f", color: "#000", padding: "8px 12px", borderRadius: "6px", border: "none", cursor: "pointer", fontWeight: "bold"
+                }}
+              >
+                Search
+              </button>
+            </form>
+            {searchError && <span style={{ color: "#ff6b6b", fontSize: "0.85rem", background: "#222", padding: "4px 8px", borderRadius: "4px" }}>{searchError}</span>}
+            <div style={{ display: 'flex', gap: '10px' }}>
+              <button
+                onClick={() => { setOpenNodes({}); setActiveNode(null); setSearchQuery(""); setSearchError(""); }}
+                style={{
+                  background: "#222", color: "white", padding: "8px 12px", borderRadius: "6px", border: "1px solid #444", cursor: "pointer"
+                }}
+              >
+                Reset Tree
+              </button>
+              <button
+                onClick={() => fitView({ duration: 800, padding: 0.2 })}
+                style={{
+                  background: "#222", color: "white", padding: "8px 12px", borderRadius: "6px", border: "1px solid #444", cursor: "pointer"
+                }}
+              >
+                Reset View
+              </button>
+            </div>
           </div>
         </Panel>
       </ReactFlow>
