@@ -147,7 +147,7 @@ export default function GiraffeBlog() {
           <div className="gir-hero-visual">
             <div className="gir-hero-image-wrapper">
               <img
-                src="/giraffa_camelopardalis.png"
+                src="https://res.cloudinary.com/duibfmcw1/image/upload/v1783697468/zoolearn/lciu7nfitbacw92deppl.png"
                 alt="Giraffa camelopardalis — Modern Giraffe"
                 className="gir-hero-img"
               />

@@ -6,7 +6,7 @@ import Binomial from "./Binomial/Binomial";
 import TaxonomyPage from "./pramid/TaxonomyPage";
 import TaxonomySystematics from "./TaxonomySystematics/TaxonomySystematics";
 import LivingWorldIntro from "./LivingWorldIntro/LivingWorldIntro";
-import { SEO } from "../../../../shared";
+import { SEO } from "../../../shared";
 
 import "./TheLivingWorld.css";
 

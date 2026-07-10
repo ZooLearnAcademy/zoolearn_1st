@@ -15,7 +15,7 @@ import BodyPlans from "./BodyPlans/BodyPlans";
 import ProtostomeComparison from "./BodyPlans/ProtostomeComparison";
 import Development from "./Development/Development";
 import TaxonomySession from "./TaxonomySession/TaxonomySession";
-import { SEO } from "../../../../shared";
+import { SEO } from "../../../shared";
 
 const BasicFeatures = () => {
   return (

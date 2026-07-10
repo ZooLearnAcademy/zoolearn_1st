@@ -13,7 +13,7 @@ const blogPosts = [
     subtitle: 'The Tallest Story Ever Told',
     description:
       'Celebrate the longest day of the year with the tallest animal on Earth. Explore 24 million years of evolutionary history, the science behind the iconic neck, four distinct species, and the silent extinction threatening these gentle giants.',
-    image: '/giraffa_camelopardalis.png',
+    image: 'https://res.cloudinary.com/duibfmcw1/image/upload/v1783697468/zoolearn/lciu7nfitbacw92deppl.png',
     tags: ['Evolution', 'Conservation', 'Taxonomy', 'Africa'],
     stats: [
       { label: 'Neck', value: '2.4 m' },

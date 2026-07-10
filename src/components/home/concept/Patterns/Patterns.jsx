@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Menu, X, ArrowUp } from 'lucide-react';
 import { ScrollReveal } from '../../../shared/ScrollReveal';
-import { SEO } from "../../../../shared";
+import { SEO } from "../../../shared";
 import './Patterns.css';
 
 const Patterns = () => {

@@ -6,37 +6,37 @@ const ancestors = [
     year: "25 - 20 Mya",
     name: "Palaeomerycidae (Ancestral Family)",
     description: "The base family from which all giraffids arose. They lived across Europe, Asia, and Africa, sharing the landscape with the ancestors of modern pronghorns. This is the earliest ancestor, arising from the gelocid ancestral assemblage.",
-    img: "/Palaeomerycidae.png"
+    img: "https://res.cloudinary.com/duibfmcw1/image/upload/v1783697780/zoolearn/giraffe/rij9bmoko4mjf9l4bwku.png"
   },
   {
     year: "16 Mya",
     name: "Canthumeryx (The First Giraffid)",
     description: "The earliest known true member of the giraffe family. Fossil evidence from Libya and Kenya shows the very first signs of neck vertebrae elongating compared to their width.",
-    img: "/Canthumeryx.png"
+    img: "https://res.cloudinary.com/duibfmcw1/image/upload/v1783697776/zoolearn/giraffe/vbsoph0rxycktykztcba.png"
   },
   {
     year: "12 Mya",
     name: "Giraffokeryx (The Short-Neck Branch)",
     description: "An intermediate offshoot that thrived on low vegetation in Eurasia. This branch represents lineages that reverted to short necks to graze on low shrubs.",
-    img: "/evo_giraffokeryx_nobg.png"
+    img: "https://res.cloudinary.com/duibfmcw1/image/upload/v1783697805/zoolearn/giraffe/mt4yznqkibudji3jxxby.png"
   },
   {
     year: "7 - 3 Mya",
     name: "Samotherium (The Transitional Link)",
     description: "A crucial transitional form with a neck roughly 1 meter long (half that of a modern giraffe). This species underwent the very first 'elongation boost' — the cranial end of the C3 vertebra stretched out.",
-    img: "/Samotherium.png"
+    img: "https://res.cloudinary.com/duibfmcw1/image/upload/v1783697784/zoolearn/giraffe/plnzzwl5qxzq2sphvzfe.png"
   },
   {
     year: "7 - 9 Mya",
     name: "Bohlinia (The Direct Ancestor)",
     description: "The terminal ancestor before modern giraffes. Roughly the same size as modern giraffes, their progeny migrated from Eurasia into Africa via Ethiopia.",
-    img: "/Bohlinia.png"
+    img: "https://res.cloudinary.com/duibfmcw1/image/upload/v1783697774/zoolearn/giraffe/nbfwgvoxp6kvbsr3ps3m.png"
   },
   {
     year: "1 Mya",
     name: "Giraffa camelopardalis (The Modern Era)",
     description: "The first fossils of the fully modern, completely long-necked giraffe appear in East Africa, marking the completion of the second elongation boost — the caudal end of the vertebrae lengthened.",
-    img: "/Giraffa camelopardalis.png"
+    img: "https://res.cloudinary.com/duibfmcw1/image/upload/v1783697468/zoolearn/lciu7nfitbacw92deppl.png"
   }
 ];
 
