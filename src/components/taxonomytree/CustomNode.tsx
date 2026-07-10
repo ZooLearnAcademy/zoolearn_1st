@@ -2,6 +2,7 @@ import { Handle, Position } from "reactflow";
 
 type CustomNodeData = {
   label: string;
+  subtitle?: string;
   isLeaf: boolean;
   isActive: boolean;
   onClick: () => void;
@@ -37,6 +38,11 @@ export default function CustomNode({ data }: { data: CustomNodeData }) {
       }}
     >
       {data.label}
+      {data.subtitle && (
+        <div style={{ fontSize: 9, opacity: 0.8, marginTop: 4 }}>
+          {data.subtitle}
+        </div>
+      )}
 
       {/* Connection Handles */}
       <Handle

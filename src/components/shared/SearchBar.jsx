@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation, Link } from 'react-router-dom';
 import { Search, X, ArrowRight, Dna, Bug, Fish, Bird, Leaf, BookOpen } from 'lucide-react';
 import './SearchBar.css';
 
@@ -86,8 +86,7 @@ const SearchBar = ({ onClose, isOpen }) => {
                 type: 'phylum',
                 name: p.name,
                 path: p.path,
-                description: p.desc,
-                icon: '🧬'
+                description: p.desc
             });
         });
 
@@ -105,8 +104,7 @@ const SearchBar = ({ onClose, isOpen }) => {
                             name: sp.name || sp.commonName,
                             scientificName: sp.scientificName || sp.name, // Fallback
                             description: sp.description || `${pName} species`,
-                            path: sp.path || `${pPath}/${sp.slug}`,
-                            icon: sp.icon || '🐾'
+                            path: sp.path || `${pPath}/${sp.slug}`
                         });
                     });
                 } else {
@@ -116,8 +114,7 @@ const SearchBar = ({ onClose, isOpen }) => {
                         name: item.name,
                         scientificName: item.scientificName,
                         description: typeof item.description === 'string' ? item.description : (item.introduction?.[0] || `${pName} species`),
-                        path: item.path || `${pPath}/${item.slug}`,
-                        icon: item.icon || '🐾'
+                        path: item.path || `${pPath}/${item.slug}`
                     });
                 }
             });
@@ -144,8 +141,7 @@ const SearchBar = ({ onClose, isOpen }) => {
                             name: sp.name,
                             scientificName: sp.scientificName,
                             path: sp.path,
-                            description: sp.description || `Mollusca: ${cls.className}`,
-                            icon: '🐙'
+                            description: sp.description || `Mollusca: ${cls.className}`
                         });
                     });
                 }
@@ -162,8 +158,7 @@ const SearchBar = ({ onClose, isOpen }) => {
                             name: sp.name,
                             scientificName: sp.scientificName,
                             path: sp.path,
-                            description: `Chordata: ${cls.className}`,
-                            icon: '🦴'
+                            description: `Chordata: ${cls.className}`
                         });
                     });
                 }
@@ -177,8 +172,7 @@ const SearchBar = ({ onClose, isOpen }) => {
             name: 'Rabbit',
             scientificName: rabbitData.taxonomy?.scientificName || 'Oryctolagus cuniculus',
             path: '/rabbit',
-            description: 'Mammal, Lagomorpha',
-            icon: '🐰'
+            description: 'Mammal, Lagomorpha'
         });
 
         // Leech (Hirudinaria)
@@ -187,8 +181,7 @@ const SearchBar = ({ onClose, isOpen }) => {
             name: 'Leech',
             scientificName: 'Hirudinaria granulosa',
             path: '/leech',
-            description: 'Sanguivoruous Annelid',
-            icon: '🩸'
+            description: 'Sanguivoruous Annelid'
         });
 
         // Honey Bee
@@ -197,8 +190,7 @@ const SearchBar = ({ onClose, isOpen }) => {
             name: 'Honey Bee',
             scientificName: 'Apis mellifera',
             path: '/honeybee',
-            description: 'Social Insect',
-            icon: '🐝'
+            description: 'Social Insect'
         });
 
         return index;
@@ -326,16 +318,14 @@ const SearchBar = ({ onClose, isOpen }) => {
                 {results.length > 0 && (
                     <div className="sb-results" ref={resultsRef}>
                         {results.map((item, index) => (
-                            <div
+                            <Link
+                                to={item.path}
                                 key={`${item.type}-${item.path}-${index}`}
                                 className={`sb-result-item ${index === selectedIndex ? 'sb-selected' : ''}`}
-                                onClick={() => handleSelect(item)}
+                                onClick={() => { setQuery(''); setResults([]); onClose?.(); }}
                                 onMouseEnter={() => setSelectedIndex(index)}
+                                style={{ textDecoration: 'none' }}
                             >
-                                <span className="sb-result-icon">
-                                    {/* Handle Emoji or Component Icon */}
-                                    {typeof item.icon === 'string' ? item.icon : typeIcons[item.type]}
-                                </span>
                                 <div className="sb-result-content">
                                     <span className="sb-result-name">{item.name}</span>
                                     {item.scientificName && (
@@ -346,10 +336,9 @@ const SearchBar = ({ onClose, isOpen }) => {
                                     )}
                                 </div>
                                 <span className={`sb-result-type sb-type-${item.type}`}>
-                                    {typeIcons[item.type]}
                                     {typeLabels[item.type]}
                                 </span>
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 )}
@@ -357,7 +346,7 @@ const SearchBar = ({ onClose, isOpen }) => {
                 {/* No results */}
                 {query && results.length === 0 && !isLoading && (
                     <div className="sb-no-results">
-                        <span className="sb-no-results-icon">🔍</span>
+                        <span className="sb-no-results-icon"><Search size={24} /></span>
                         <p>No results found for "<strong>{query}</strong>"</p>
                         <span className="sb-no-results-hint">Try searching for a species, phylum, or concept</span>
                     </div>
@@ -368,18 +357,18 @@ const SearchBar = ({ onClose, isOpen }) => {
                     <div className="sb-suggestions">
                         <div className="sb-suggestions-header">Quick Links</div>
                         <div className="sb-suggestions-grid">
-                            <button className="sb-suggestion" onClick={() => { navigate('/zoohub'); onClose?.(); }}>
-                                🦎 ZooHub
-                            </button>
-                            <button className="sb-suggestion" onClick={() => { navigate('/zoohub/chordata'); onClose?.(); }}>
-                                🦴 Chordata
-                            </button>
-                            <button className="sb-suggestion" onClick={() => { navigate('/zoohub/arthropoda'); onClose?.(); }}>
-                                🦂 Arthropoda
-                            </button>
-                            <button className="sb-suggestion" onClick={() => { navigate('/living-world'); onClose?.(); }}>
-                                🌍 Living World
-                            </button>
+                            <Link to="/zoohub" className="sb-suggestion" onClick={() => { onClose?.(); }} style={{ textDecoration: 'none' }}>
+                                ZooHub
+                            </Link>
+                            <Link to="/zoohub/chordata" className="sb-suggestion" onClick={() => { onClose?.(); }} style={{ textDecoration: 'none' }}>
+                                Chordata
+                            </Link>
+                            <Link to="/zoohub/arthropoda" className="sb-suggestion" onClick={() => { onClose?.(); }} style={{ textDecoration: 'none' }}>
+                                Arthropoda
+                            </Link>
+                            <Link to="/living-world" className="sb-suggestion" onClick={() => { onClose?.(); }} style={{ textDecoration: 'none' }}>
+                                Living World
+                            </Link>
                         </div>
                         <div className="sb-keyboard-hints">
                             <span><kbd>↑</kbd><kbd>↓</kbd> Navigate</span>

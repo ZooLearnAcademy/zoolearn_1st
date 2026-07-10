@@ -110,8 +110,7 @@ export default function Header() {
               title="Search (Ctrl+K)"
             >
               <Search size={18} />
-              <span className="hea-search-text">Search</span>
-              <kbd className="hea-search-kbd">⌘K</kbd>
+              <span className="hea-search-placeholder">Search...</span>
             </button>
           </div>
 
