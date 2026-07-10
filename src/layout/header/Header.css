@@ -401,7 +401,7 @@
   border: none;
   cursor: pointer;
   padding: 0;
-  z-index: 1001;
+  z-index: 10005;
   position: relative;
 }
 
