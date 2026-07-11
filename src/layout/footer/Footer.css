@@ -123,6 +123,60 @@
   transform: translateX(8px);
 }
 
+/* CONTACT DROPDOWN */
+.contact-dropdown-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-toggle {
+  cursor: pointer;
+  color: #e2e8f0;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+  position: relative;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  user-select: none;
+}
+
+.contact-toggle:hover {
+  color: #4ade80;
+  transform: translateX(8px);
+}
+
+.contact-dropdown {
+  margin-top: 10px !important;
+  margin-left: 14px !important;
+  padding-left: 10px !important;
+  border-left: 2px solid rgba(74, 222, 128, 0.3);
+  animation: slideDownFade 0.3s ease forwards;
+}
+
+.contact-dropdown li a {
+  font-size: 0.85rem !important;
+  color: #cbd5e1 !important;
+}
+
+.contact-dropdown-link {
+  display: flex !important;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-icon {
+  flex-shrink: 0;
+}
+
+.contact-dropdown li a:hover {
+  color: #4ade80 !important;
+}
+
+@keyframes slideDownFade {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 /* COPYRIGHT */
 .foo-zl-copyright {
   background: rgba(0, 0, 0, 0.4);
