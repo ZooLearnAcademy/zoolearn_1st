@@ -1,0 +1,183 @@
+/* ==========================================
+   CLASSIFICATION HISTORY TIMELINE STYLING
+   ========================================== */
+
+.timeline-container-wrapper {
+  background-color: #f3f0e9; /* Exact Parchment/Cream from reference */
+  padding: 4rem 1rem;
+  width: 100%;
+  color: #333;
+}
+
+.timeline-container {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* Central Vertical Line */
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1.5px;
+  background: #ede9d0; /* Very light gold parchment-like track */
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+/* Scroll-based Progress Line */
+.timeline-progress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: #d4af37; /* Light Premium Gold */
+  transition: height 0.3s ease-out;
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.35);
+}
+
+/* Timeline Item Layout */
+.timeline-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 6rem;
+  width: 100%;
+  z-index: 10; /* Ensure items are well above the line */
+}
+
+.timeline-pane {
+  flex: 1;
+  padding: 0 40px;
+}
+
+.pane-left {
+  text-align: right;
+}
+
+.pane-right {
+  text-align: left;
+}
+
+/* Center Marker (Date) */
+.timeline-marker {
+  width: 80px;
+  height: 32px;
+  background: #2c2c2c; /* Exact Dark Grey from reference */
+  color: #ffcc33; /* Gold/Yellow Year */
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  flex-shrink: 0;
+  z-index: 20; /* High priority */
+  position: relative;
+}
+
+/* Content Groups */
+.content-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.align-right {
+  align-items: flex-end;
+}
+
+.align-left {
+  align-items: flex-start;
+}
+
+.phylum-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 1.2rem;
+  line-height: 1.2;
+}
+
+.phylum-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #444;
+  white-space: pre-line;
+  max-width: 450px;
+}
+
+/* Image Styling */
+.phylum-image-wrapper {
+  position: relative;
+  width: 280px;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.phylum-image-wrapper:hover {
+  transform: scale(1.05);
+}
+
+.phylum-image-wrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+}
+
+.image-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle, rgba(21, 128, 61, 0.08) 0%, transparent 70%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .timeline-line {
+    left: 20px;
+  }
+  
+  .timeline-item {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 4rem;
+  }
+  
+  .timeline-pane {
+    padding-left: 50px;
+    padding-right: 0;
+    text-align: left;
+    width: 100%;
+  }
+
+  .pane-left, .pane-right {
+    text-align: left;
+  }
+
+  .align-right {
+    align-items: flex-start;
+  }
+
+  .timeline-marker {
+    position: absolute;
+    left: -15px;
+    top: 0;
+  }
+  
+  .phylum-image-wrapper {
+    width: 220px;
+    margin-top: 1rem;
+  }
+}

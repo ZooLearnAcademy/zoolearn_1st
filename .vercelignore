@@ -1,0 +1,8 @@
+venv
+only data not for project
+build_log.txt
+build_output.txt
+build_result.txt
+errs.js
+team-qr-codes
+generate-qr.mjs

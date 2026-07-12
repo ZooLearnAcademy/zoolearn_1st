@@ -1,0 +1,642 @@
+/* =====================================================
+   ZOOLOGY HERO BANNER
+   Green → Blue Gradient (Restored)
+   Fully Scoped | No Collisions
+===================================================== */
+
+.banner-hero {
+  /* ===== BRAND COLORS ===== */
+  --banner-green: #2f7d46;
+  /* Zoo green */
+  --banner-green-soft: #e6f4ec;
+  --banner-blue-light: #bfe8f2;
+  --banner-blue: #47bee5;
+  --banner-blue-dark: #2b6f86;
+
+  /* ===== TEXT ===== */
+  --banner-text-main: #0f172a;
+  --banner-text-sub: #334155;
+
+  /* Updated to match new header height */
+  min-height: calc(100vh - var(--header-height));
+  display: flex;
+  align-items: center;
+  /* Removed padding-top to eliminate gap */
+  padding: 0;
+
+  /* 🌿➡️🌊 Green to Blue Gradient */
+  background: linear-gradient(120deg,
+      #d1f7dc 0%,
+      #d9eef7 100%);
+}
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+.banner-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0.5rem 1.5rem;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  width: 100%;
+}
+
+/* =====================================================
+   LEFT CONTENT
+===================================================== */
+.banner-left {
+  animation: bannerFadeUp 1s ease;
+}
+
+/* =====================================================
+   LOGO COMPONENT
+===================================================== */
+.banner-logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 1.5rem;
+  margin-top: -1rem;
+}
+
+.banner-logo-img {
+  width: 190px;
+  height: 190px;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.15));
+}
+
+.banner-logo-text-img {
+  height: 190px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Audience badge */
+.banner-badge {
+  display: inline-block;
+  background: rgba(47, 143, 179, 0.22);
+  color: #0b3a4a;
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 600;
+  margin-bottom: 1.4rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+}
+
+/* Title */
+.banner-title {
+  font-size: 3.4rem;
+  font-weight: 800;
+  color: var(--banner-text-main);
+  line-height: 1.15;
+  margin: 0 0 0.5rem 0;
+}
+
+.banner-highlight {
+  color: var(--banner-green);
+}
+
+/* Animated Modern SaaS Hero Description */
+.banner-desc-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.2rem;
+  margin: 1.5rem 0 2.5rem;
+}
+
+.desc-badge {
+  background: rgba(47, 125, 70, 0.1);
+  color: var(--banner-green);
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: 1px solid rgba(47, 125, 70, 0.2);
+  animation: floatBadge 3s ease-in-out infinite;
+  box-shadow: 0 4px 12px rgba(47, 125, 70, 0.1);
+}
+
+.banner-typing-heading {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--banner-text-main);
+  line-height: 1.4;
+  margin: 0;
+  max-width: 600px;
+  letter-spacing: -0.02em;
+}
+
+.banner-typing-heading > span:not(.typing-text) {
+  color: var(--banner-blue-dark);
+}
+
+.typing-text {
+  color: var(--banner-green);
+  display: inline-block;
+  min-width: 280px;
+  position: relative;
+}
+
+.cursor {
+  display: inline-block;
+  width: 3px;
+  background-color: var(--banner-green);
+  margin-left: 4px;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.banner-desc-subtext {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--banner-text-sub);
+  margin: 0.5rem 0 0 0;
+  border-left: 3px solid var(--banner-blue);
+  padding-left: 1.2rem;
+  opacity: 0.9;
+}
+
+@keyframes floatBadge {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* CTA Buttons Styling */
+.banner-ctas {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.banner-btn-primary {
+  background: var(--banner-green);
+  color: white;
+  padding: 0.8rem 1.8rem;
+  border-radius: 12px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(46, 125, 50, 0.3);
+}
+
+.banner-btn-primary:hover {
+  background: var(--banner-green-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(46, 125, 50, 0.4);
+}
+
+.banner-btn-secondary {
+  background: white;
+  color: var(--banner-blue-dark);
+  padding: 0.8rem 1.8rem;
+  border-radius: 12px;
+  font-weight: 700;
+  border: 1.5px solid rgba(27, 95, 120, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.banner-btn-secondary:hover {
+  background: #f8fafb;
+  border-color: var(--banner-blue-dark);
+  transform: translateY(-2px);
+}
+
+/* =====================================================
+   NEW: STATS SECTION (Replaces Buttons)
+===================================================== */
+.banner-stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.banner-stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.banner-stat-number {
+  font-size: 2.4rem;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 0.2rem;
+  /* Use gradient text for numbers */
+  background: linear-gradient(135deg, var(--banner-green), var(--banner-blue-dark));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.banner-stat-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--banner-text-sub);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Vertical Divider between stats */
+.banner-stat-divider {
+  width: 2px;
+  height: 50px;
+  background-color: rgba(43, 111, 134, 0.15);
+  border-radius: 2px;
+}
+
+/* Focus states for accessibility */
+.banner-nav:focus {
+  outline: 3px solid var(--banner-blue);
+  outline-offset: 2px;
+}
+
+/* =====================================================
+   RIGHT IMAGE / SLIDER
+===================================================== */
+.banner-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.banner-slider.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: 480px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1200px;
+  margin-left: 80px; /* Move images to the right */
+}
+
+/* Image Base */
+.banner-image.carousel-img {
+  position: absolute;
+  width: 65%;
+  height: 300px;
+  object-fit: contain;
+  border-radius: 22px;
+  background-color: transparent;
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform, opacity, filter;
+  animation: none;
+}
+
+/* Active / Center Image */
+.carousel-img.active {
+  transform: translateX(0) scale(1.1) translateY(0);
+  z-index: 3;
+  opacity: 1;
+  filter: drop-shadow(0 20px 30px rgba(27, 95, 120, 0.35));
+}
+
+/* Next / Right Image (Behind) */
+.carousel-img.next {
+  transform: translateX(250px) scale(0.85) translateY(50px) rotate(15deg);
+  z-index: 2;
+  opacity: 0.7;
+  filter: blur(3px) drop-shadow(0 10px 15px rgba(27, 95, 120, 0.2));
+}
+
+/* Previous / Left Image (Behind) */
+.carousel-img.prev {
+  transform: translateX(-250px) scale(0.85) translateY(50px) rotate(-15deg);
+  z-index: 2;
+  opacity: 0.7;
+  filter: blur(3px) drop-shadow(0 10px 15px rgba(27, 95, 120, 0.2));
+}
+
+/* Next 2 / Far Right Image */
+.carousel-img.next2 {
+  transform: translateX(320px) scale(0.65) translateY(160px) rotate(30deg);
+  z-index: 1;
+  opacity: 0.4;
+  filter: blur(5px) drop-shadow(0 5px 10px rgba(27, 95, 120, 0.1));
+}
+
+/* Previous 2 / Far Left Image */
+.carousel-img.prev2 {
+  transform: translateX(-320px) scale(0.65) translateY(160px) rotate(-30deg);
+  z-index: 1;
+  opacity: 0.4;
+  filter: blur(5px) drop-shadow(0 5px 10px rgba(27, 95, 120, 0.1));
+}
+
+/* Hidden Images */
+.carousel-img.hidden {
+  transform: translateX(0) scale(0.4) translateY(200px);
+  z-index: 0;
+  opacity: 0;
+  filter: blur(8px);
+}
+
+/* Removed slider navigation buttons since they are no longer in DOM */
+
+/* Slider indicators */
+.banner-slider-indicators {
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.banner-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(43, 111, 134, 0.3);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.banner-indicator.active {
+  background: var(--banner-blue-dark);
+  transform: scale(1.2);
+}
+
+.banner-indicator:hover {
+  background: var(--banner-blue);
+}
+
+/* =====================================================
+   RESPONSIVE DESIGN
+===================================================== */
+
+@media (max-width: 1024px) {
+  .banner-title {
+    font-size: 2.8rem;
+  }
+
+  .banner-slider.carousel-container {
+    height: 380px;
+  }
+
+  .banner-image.carousel-img {
+    height: 260px;
+  }
+
+  .banner-logo-text-img { height: 155px; }
+  .banner-logo-img { width: 155px; height: 155px; }
+}
+
+@media (max-width: 768px) {
+  .banner-container {
+    text-align: center;
+    gap: 4rem;
+  }
+
+  .banner-title {
+    font-size: 2.4rem;
+  }
+
+  .banner-desc {
+    margin: 1.5rem auto 2.5rem;
+  }
+
+  .banner-desc-container {
+    align-items: center;
+    margin: 1.5rem auto 2.5rem;
+    text-align: center;
+  }
+
+  .banner-typing-heading {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  .banner-desc-subtext {
+    border-left: none;
+    padding-left: 0;
+    font-size: 1rem;
+  }
+
+  
+  .banner-logo-text-img { height: 130px; }
+  .banner-logo-img { width: 130px; height: 130px; }
+
+  .banner-slider.carousel-container {
+    height: 250px;
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  .banner-image.carousel-img {
+    width: 45%;
+    height: 130px;
+    border-radius: 40px;
+  }
+
+  .carousel-img.next { transform: translateX(170px) scale(0.85) translateY(40px) rotate(15deg); }
+  .carousel-img.prev { transform: translateX(-170px) scale(0.85) translateY(40px) rotate(-15deg); }
+  .carousel-img.next2 { transform: translateX(200px) scale(0.65) translateY(100px) rotate(30deg); }
+  .carousel-img.prev2 { transform: translateX(-200px) scale(0.65) translateY(100px) rotate(-30deg); }
+  
+  .banner-stats {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  
+  .banner-stat-divider {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-hero {
+    padding-top: 3rem;
+  }
+
+  .banner-title {
+    font-size: 2rem;
+  }
+
+  .banner-logo-text-img { height: 100px; }
+  .banner-logo-img { width: 100px; height: 100px; }
+
+  .banner-slider.carousel-container {
+    height: 260px;
+  }
+
+  .banner-image.carousel-img {
+    width: 70%;
+    height: 180px;
+  }
+
+  .carousel-img.next { transform: translateX(110px) scale(0.8) translateY(30px) rotate(10deg); }
+  .carousel-img.prev { transform: translateX(-110px) scale(0.8) translateY(30px) rotate(-10deg); }
+  .carousel-img.next2 { transform: translateX(140px) scale(0.6) translateY(70px) rotate(20deg); }
+  .carousel-img.prev2 { transform: translateX(-140px) scale(0.6) translateY(70px) rotate(-20deg); }
+}
+
+/* =====================================================
+   ENTRY ANIMATION
+===================================================== */
+@keyframes bannerFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+@media (max-width: 900px) {
+  .banner-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .banner-left, .banner-right {
+    display: contents;
+  }
+
+  .banner-spacer {
+    display: none;
+  }
+
+  .banner-logo-wrapper {
+    order: 1;
+    flex-direction: column;
+  }
+
+  .banner-slider.carousel-container {
+    order: 2;
+    height: 350px;
+    margin-top: 1.5rem;
+  }
+
+  .banner-stats {
+    order: 3;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem auto 0;
+  }
+
+  .banner-desc-container {
+    order: 4;
+  }
+
+  .banner-title {
+    font-size: 2.2rem;
+    word-wrap: break-word;
+  }
+
+  .banner-desc {
+    margin: auto;
+  }
+
+  .banner-image.carousel-img {
+    height: 240px;
+    margin-top: 0;
+  }
+
+  .banner-nav {
+    display: none;
+  }
+
+  .banner-slider-indicators {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-hero {
+    min-height: auto;
+  }
+
+  .banner-container {
+    padding: 2rem 0;
+  }
+
+  .banner-title {
+    font-size: 1.5rem;
+    /* Reduced to fit */
+    line-height: 1.2;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  .banner-desc {
+    font-size: 1rem;
+  }
+
+  .banner-badge {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .banner-stat-number {
+    font-size: 2rem;
+  }
+
+  .banner-stat-label {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 359px) {
+  .banner-hero {
+    min-height: 70vh;
+    padding: 1rem 0.75rem;
+  }
+
+  .banner-title {
+    font-size: 1.3rem;
+  }
+
+  .banner-desc {
+    font-size: 0.85rem;
+  }
+
+  .banner-stats {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .banner-stat-number {
+    font-size: 1.6rem;
+  }
+
+  .banner-slider.carousel-container {
+    height: 180px;
+  }
+
+  .banner-image.carousel-img {
+    height: 100px;
+    border-radius: 25px;
+  }
+}

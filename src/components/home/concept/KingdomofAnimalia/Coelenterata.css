@@ -1,0 +1,552 @@
+/* ============================================================
+   COELENTERATA – OCEAN BLUE THEME
+   All rules scoped under .phylum-coelenterata to prevent
+   cross-page CSS leaks.
+   ============================================================ */
+
+/* --- ANIMATIONS --- */
+@keyframes coel-float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes coel-pulse-glow {
+  0% { opacity: 0.15; transform: scale(1); }
+  50% { opacity: 0.25; transform: scale(1.02); }
+  100% { opacity: 0.15; transform: scale(1); }
+}
+
+/* --- BASE CONTAINER --- */
+.phylum-coelenterata {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 30px 80px;
+  font-family: 'Inter', system-ui, sans-serif;
+  color: #0f172a;
+  background-color: transparent;
+  background-image: radial-gradient(#e2e8f0 1.2px, transparent 1.2px);
+  background-size: 30px 30px;
+  overflow-x: hidden;
+}
+
+/* Background mesh glow */
+.phylum-coelenterata .hero-glow {
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.12) 0%, rgba(255,255,255,0) 70%);
+  filter: blur(80px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* --- HERO BANNER (SIDE-BY-SIDE: CONTENT LEFT, IMAGE RIGHT) --- */
+.phylum-coelenterata .phylum-hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 50px;
+  align-items: center;
+  margin-bottom: 90px;
+  padding: 2rem 0;
+  position: relative;
+  z-index: 1;
+}
+
+.phylum-coelenterata .hero-content {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.phylum-coelenterata .hero-badge-group {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  justify-content: flex-start;
+}
+
+.phylum-coelenterata .hero-badge {
+  padding: 8px 18px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+}
+
+.phylum-coelenterata .hero-badge.marine {
+  background: #dbeafe;
+  border-color: #93c5fd;
+  color: #1d4ed8;
+}
+
+.phylum-coelenterata .hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 12px;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.phylum-coelenterata .hero-tagline {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1d4ed8;
+  margin-bottom: 28px;
+  font-style: italic;
+}
+
+.phylum-coelenterata .hero-intro-text p {
+  font-size: 1.08rem;
+  line-height: 1.8;
+  color: #334155;
+  margin-bottom: 14px;
+}
+
+/* --- VISUAL CONTAINER (RIGHT SIDE BANNER) --- */
+.phylum-coelenterata .hero-visual {
+  width: 100%;
+  max-width: 100%;
+}
+
+.phylum-coelenterata .visual-container {
+  position: relative;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.phylum-coelenterata .visual-container::before {
+  content: '';
+  position: absolute;
+  inset: 5px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #3b82f6, #dbeafe);
+  filter: blur(35px);
+  opacity: 0.25;
+  z-index: 0;
+  animation: coel-pulse-glow 6s infinite ease-in-out;
+}
+
+.phylum-coelenterata .visual-mesh {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(45deg, #dbeafe 25%, transparent 25%),
+    linear-gradient(-45deg, #dbeafe 25%, transparent 25%);
+  background-size: 20px 20px;
+  opacity: 0.6;
+  border-radius: 30px;
+  z-index: 1;
+  transform: translate(15px, 15px);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.phylum-coelenterata .hero-main-img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 24px;
+  border: 4px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 30px 60px -15px rgba(59, 130, 246, 0.3), 0 0 0 1px rgba(226, 232, 240, 0.6);
+  position: relative;
+  z-index: 2;
+  animation: coel-float 6s ease-in-out infinite;
+}
+
+.phylum-coelenterata .anatomy-img.hero-main-img {
+  height: auto;
+  max-height: 500px;
+  object-fit: contain;
+  animation: coel-float 7s ease-in-out infinite reverse;
+}
+
+/* --- SECTIONS --- */
+.phylum-coelenterata .phylum-section {
+  margin-bottom: 60px;
+  padding: 40px 0;
+  border-top: 1px solid #f1f5f9;
+}
+
+.phylum-coelenterata .section-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 40px;
+  color: #0f172a;
+}
+
+.phylum-coelenterata .title-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: #dbeafe;
+  border-radius: 12px;
+  border: 1px solid #93c5fd;
+}
+
+.phylum-coelenterata .section-icon {
+  width: 26px;
+  height: 26px;
+  color: #1d4ed8;
+}
+
+.phylum-coelenterata .features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.phylum-coelenterata .feature-card {
+  background: #ffffff;
+  padding: 24px 28px;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  border-left: 5px solid #cbd5e1;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);
+}
+
+.phylum-coelenterata .feature-card:hover {
+  transform: translateY(-4px);
+  border-left-color: #3b82f6;
+  box-shadow: 0 12px 24px -8px rgba(59, 130, 246, 0.15);
+}
+
+.phylum-coelenterata .feature-label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  letter-spacing: 0.05em;
+}
+
+.phylum-coelenterata .feature-value {
+  display: block;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+/* --- SPLIT SECTION (CONTENT LEFT, IMAGE RIGHT) --- */
+.phylum-coelenterata .split-section {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.phylum-coelenterata .split-section.reverse {
+  grid-template-columns: 0.9fr 1.1fr;
+}
+
+/* --- PREMIUM LIST --- */
+.phylum-coelenterata .premium-list {
+  list-style: none;
+  padding: 0;
+}
+
+.phylum-coelenterata .premium-list li {
+  position: relative;
+  padding-left: 45px;
+  margin-bottom: 24px;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  color: #475569;
+}
+
+.phylum-coelenterata .premium-list li::before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 6px;
+  width: 24px;
+  height: 24px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%233b82f6' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* --- INFO BANNER --- */
+.phylum-coelenterata .info-banner {
+  display: flex;
+  gap: 25px;
+  background: #dbeafe;
+  padding: 35px;
+  border-radius: 20px;
+  border: 1px solid #93c5fd;
+  box-shadow: inset 0 2px 10px rgba(255,255,255,0.5);
+  align-items: center;
+}
+
+.phylum-coelenterata .banner-icon {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.1);
+  border: 1px solid #dbeafe;
+}
+
+.phylum-coelenterata .banner-text {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #1d4ed8;
+}
+
+/* --- CALLOUT BOX --- */
+.phylum-coelenterata .callout-box {
+  background: #dbeafe;
+  border-left: 4px solid #3b82f6;
+  border-radius: 10px;
+  padding: 18px 22px;
+  font-size: 1rem;
+  color: #1d4ed8;
+  line-height: 1.7;
+  margin-top: 28px;
+}
+
+/* --- CLASSIFICATION CARDS --- */
+.phylum-coelenterata .class-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 28px;
+}
+
+.phylum-coelenterata .class-detail-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-top: 4px solid #3b82f6;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 4px 12px -4px rgba(59, 130, 246, 0.08);
+  transition: all 0.3s ease;
+}
+
+.phylum-coelenterata .class-detail-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px -8px rgba(59, 130, 246, 0.18);
+}
+
+.phylum-coelenterata .class-detail-card h3 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 16px;
+}
+
+.phylum-coelenterata .class-detail-card p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #475569;
+  margin-bottom: 12px;
+  font-style: italic;
+}
+
+/* --- HIGHLIGHTED CARD (tree → card interaction) --- */
+@keyframes coel-highlight-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4); }
+  50% { box-shadow: 0 0 20px 6px rgba(59, 130, 246, 0.25); }
+  100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4); }
+}
+
+.phylum-coelenterata .class-detail-card.highlighted {
+  border-color: #3b82f6;
+  border-top-color: #3b82f6;
+  border-width: 2px;
+  border-top-width: 4px;
+  background: #eff6ff;
+  transform: translateY(-6px);
+  animation: coel-highlight-pulse 1.5s ease-in-out 2;
+  box-shadow: 0 14px 28px -8px rgba(59, 130, 246, 0.25);
+}
+
+.phylum-coelenterata .class-detail-card.highlighted h3 {
+  color: #1d4ed8;
+}
+
+/* --- THINK FURTHER CARDS --- */
+.phylum-coelenterata .think-further-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.phylum-coelenterata .think-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 32px;
+  border: 1px solid #e2e8f0;
+  border-left: 5px solid #3b82f6;
+  box-shadow: 0 4px 12px -4px rgba(0,0,0,0.06);
+  transition: all 0.3s ease;
+}
+
+.phylum-coelenterata .think-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px -8px rgba(59, 130, 246, 0.18);
+}
+
+.phylum-coelenterata .think-card-title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+/* --- ANATOMY DIAGRAM WRAPPER --- */
+.phylum-coelenterata .anatomy-diagram-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.phylum-coelenterata .anatomy-img-clickable {
+  cursor: zoom-in;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.phylum-coelenterata .anatomy-img-clickable:hover {
+  transform: scale(1.02);
+  box-shadow: 0 20px 40px -10px rgba(59, 130, 246, 0.25);
+}
+
+/* --- PLAIN NESTED LIST --- */
+.phylum-coelenterata .plain-list {
+  list-style: disc;
+  padding-left: 24px;
+  margin: 0;
+}
+
+.phylum-coelenterata .plain-list li {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #475569;
+  margin-bottom: 6px;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 992px) {
+  .phylum-coelenterata .phylum-hero {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+  .phylum-coelenterata .hero-content {
+    align-items: center;
+    text-align: center;
+  }
+  .phylum-coelenterata .hero-badge-group {
+    justify-content: center;
+  }
+  .phylum-coelenterata .split-section,
+  .phylum-coelenterata .split-section.reverse {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .phylum-coelenterata .hero-title {
+    font-size: 3.5rem;
+  }
+  .phylum-coelenterata .think-further-grid {
+    grid-template-columns: 1fr;
+  }
+  .phylum-coelenterata .class-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .phylum-coelenterata .hero-title {
+    font-size: 2.6rem;
+  }
+  .phylum-coelenterata {
+    padding: 24px 16px 50px;
+  }
+  .phylum-coelenterata .features-grid {
+    grid-template-columns: 1fr;
+  }
+  .phylum-coelenterata .hero-main-img {
+    height: 260px;
+  }
+  .phylum-coelenterata .section-title {
+    font-size: 1.5rem;
+    gap: 10px;
+  }
+  .phylum-coelenterata .title-icon-wrapper {
+    width: 40px;
+    height: 40px;
+  }
+  .phylum-coelenterata .section-icon {
+    width: 20px;
+    height: 20px;
+  }
+  .phylum-coelenterata .hero-tagline {
+    font-size: 1.1rem;
+  }
+  .phylum-coelenterata .hero-intro-text p {
+    font-size: 0.95rem;
+  }
+  .phylum-coelenterata .premium-list li {
+    padding-left: 36px;
+    font-size: 0.95rem;
+    margin-bottom: 18px;
+  }
+  .phylum-coelenterata .premium-list li::before {
+    width: 20px;
+    height: 20px;
+  }
+  .phylum-coelenterata .feature-card {
+    padding: 18px 20px;
+  }
+  .phylum-coelenterata .feature-value {
+    font-size: 1rem;
+  }
+  .phylum-coelenterata .think-card {
+    padding: 22px;
+  }
+  .phylum-coelenterata .info-banner {
+    padding: 22px;
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+  .phylum-coelenterata .class-detail-card {
+    padding: 20px;
+  }
+  .phylum-coelenterata .callout-box {
+    padding: 14px 16px;
+    font-size: 0.92rem;
+  }
+  .phylum-coelenterata .phylum-section {
+    margin-bottom: 40px;
+    padding: 28px 0;
+  }
+}
