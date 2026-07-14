@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
+import { Sun, Eye, Shield, Activity } from 'lucide-react';
 
 const adaptations = [
   {
     id: 'belly',
-    icon: '☀️',
+    icon: <Sun size={32} />,
     title: 'Solar Panel Belly',
     subtitle: 'Thermal Regulation',
     points: [
@@ -16,7 +17,7 @@ const adaptations = [
   },
   {
     id: 'eyes',
-    icon: '🕶️',
+    icon: <Eye size={32} />,
     title: 'Built-in Sunglasses',
     subtitle: 'Anti-Glare Protection',
     points: [
@@ -29,7 +30,7 @@ const adaptations = [
   },
   {
     id: 'venom',
-    icon: '🦂',
+    icon: <Shield size={32} />,
     title: 'Venom Immunity',
     subtitle: 'Chemical Defense',
     points: [
@@ -42,7 +43,7 @@ const adaptations = [
   },
   {
     id: 'claws',
-    icon: '🐾',
+    icon: <Activity size={32} />,
     title: 'Excavation Master',
     subtitle: 'Rapid Digging System',
     points: [

@@ -212,7 +212,7 @@ export default function MeerkatBlog() {
           <div className="meer-content-card">
             {/* ── SECTION: Why World Meerkat Day ── */}
             <section id="meerkat-day" className="meer-blog-section">
-              <h2 className="meer-section-heading">🐾 Why World Meerkat Day?</h2>
+              <h2 className="meer-section-heading">Why World Meerkat Day?</h2>
               <div className="meer-section-box">
                 {/* Large Banner Image */}
                 <div className="meer-section-banner-wrapper">
@@ -252,17 +252,17 @@ export default function MeerkatBlog() {
 
                 <div className="meer-day-highlights" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px', marginTop: '30px' }}>
                   <div className="meer-day-card" style={{ background: 'white', padding: '20px', borderRadius: '12px', border: '1px solid var(--meer-border)', textAlign: 'center', boxShadow: 'var(--meer-shadow-soft)' }}>
-                    <span className="meer-day-icon" style={{ fontSize: '2rem', display: 'block', marginBottom: '10px' }}>📅</span>
+                    <span className="meer-day-icon" style={{ display: 'block', marginBottom: '10px', color: 'var(--meer-primary)' }}><CalendarDays size={32} /></span>
                     <h4 style={{ color: 'var(--meer-primary-dark)', marginBottom: '10px' }}>When?</h4>
                     <p style={{ fontSize: '0.9rem', color: 'var(--meer-text-secondary)', lineHeight: '1.5' }}>July 3rd every year — a special day dedicated to the Suricata genus</p>
                   </div>
                   <div className="meer-day-card" style={{ background: 'white', padding: '20px', borderRadius: '12px', border: '1px solid var(--meer-border)', textAlign: 'center', boxShadow: 'var(--meer-shadow-soft)' }}>
-                    <span className="meer-day-icon" style={{ fontSize: '2rem', display: 'block', marginBottom: '10px' }}>🤝</span>
+                    <span className="meer-day-icon" style={{ display: 'block', marginBottom: '10px', color: 'var(--meer-primary)' }}><Users size={32} /></span>
                     <h4 style={{ color: 'var(--meer-primary-dark)', marginBottom: '10px' }}>Why Celebrate?</h4>
                     <p style={{ fontSize: '0.9rem', color: 'var(--meer-text-secondary)', lineHeight: '1.5' }}>To honor their unmatched cooperation, intricate communication, and community survival instincts</p>
                   </div>
                   <div className="meer-day-card" style={{ background: 'white', padding: '20px', borderRadius: '12px', border: '1px solid var(--meer-border)', textAlign: 'center', boxShadow: 'var(--meer-shadow-soft)' }}>
-                    <span className="meer-day-icon" style={{ fontSize: '2rem', display: 'block', marginBottom: '10px' }}>🛡️</span>
+                    <span className="meer-day-icon" style={{ display: 'block', marginBottom: '10px', color: 'var(--meer-primary)' }}><Shield size={32} /></span>
                     <h4 style={{ color: 'var(--meer-primary-dark)', marginBottom: '10px' }}>Our Mission</h4>
                     <p style={{ fontSize: '0.9rem', color: 'var(--meer-text-secondary)', lineHeight: '1.5' }}>Support habitat protection and address challenges like severe Kalahari droughts</p>
                   </div>
@@ -274,7 +274,7 @@ export default function MeerkatBlog() {
 
             {/* ── SECTION: Meet the Meerkat ── */}
             <section id="meet-meerkat" className="meer-blog-section">
-              <h2 className="meer-section-heading">🐾 Meet the Meerkat</h2>
+              <h2 className="meer-section-heading">Meet the Meerkat</h2>
               
               <div className="meer-section-box meer-horizontal-layout">
                 <div className="meer-horizontal-text">
@@ -336,7 +336,7 @@ export default function MeerkatBlog() {
 
             {/* ── SECTION: Biological Marvels ── */}
             <section id="adaptations" className="meer-blog-section">
-              <h2 className="meer-section-heading">🌟 Biological Marvels</h2>
+              <h2 className="meer-section-heading">Biological Marvels</h2>
               <SurvivalAdaptations />
             </section>
 
@@ -344,7 +344,7 @@ export default function MeerkatBlog() {
 
             {/* ── SECTION: Back Striping ── */}
             <section id="stripes" className="meer-blog-section">
-              <h2 className="meer-section-heading">🏷️ Back Striping Patterns</h2>
+              <h2 className="meer-section-heading">Back Striping Patterns</h2>
               <BackStripes />
             </section>
 
@@ -352,7 +352,7 @@ export default function MeerkatBlog() {
 
             {/* ── SECTION: Science of Altruism ── */}
             <section id="altruism" className="meer-blog-section">
-              <h2 className="meer-section-heading">🔬 Science of Altruism</h2>
+              <h2 className="meer-section-heading">Science of Altruism</h2>
               <AltruismScience />
             </section>
 
@@ -360,7 +360,7 @@ export default function MeerkatBlog() {
 
             {/* ── SECTION: Daily Routine ── */}
             <section id="routine" className="meer-blog-section">
-              <h2 className="meer-section-heading">⏳ A Day in the Life</h2>
+              <h2 className="meer-section-heading">A Day in the Life</h2>
               <DailyRoutine />
             </section>
 
@@ -368,7 +368,7 @@ export default function MeerkatBlog() {
 
             {/* ── SECTION: Taxonomy ── */}
             <section id="taxonomy" className="meer-blog-section">
-              <h2 className="meer-section-heading">🧬 Taxonomy & Evolution</h2>
+              <h2 className="meer-section-heading">Taxonomy & Evolution</h2>
               <Taxonomy />
             </section>
 
@@ -376,7 +376,7 @@ export default function MeerkatBlog() {
 
             {/* ── SECTION: Living Subspecies ── */}
             <section id="diversity" className="meer-blog-section">
-              <h2 className="meer-section-heading">🌍 Living Subspecies</h2>
+              <h2 className="meer-section-heading">Living Subspecies</h2>
               <LivingDiversity />
             </section>
 
@@ -384,7 +384,7 @@ export default function MeerkatBlog() {
 
             {/* ── SECTION: Ancestry ── */}
             <section id="ancestry" className="meer-blog-section">
-              <h2 className="meer-section-heading">🌿 15-Million-Year Ancestry</h2>
+              <h2 className="meer-section-heading">15-Million-Year Ancestry</h2>
               <Ancestry />
             </section>
 
@@ -392,7 +392,7 @@ export default function MeerkatBlog() {
 
             {/* ── SECTION: Evolution Timeline ── */}
             <section id="timeline" className="meer-blog-section">
-              <h2 className="meer-section-heading">⏳ Mongoose Evolution Timeline</h2>
+              <h2 className="meer-section-heading">Mongoose Evolution Timeline</h2>
               <EvolutionTimeline />
             </section>
 

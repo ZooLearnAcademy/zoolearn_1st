@@ -1,4 +1,4 @@
-import React from 'react';
+import { Trees, Leaf, Footprints, Sun, Clock } from 'lucide-react';
 
 export default function EvolutionTimeline() {
   const timelineData = [
@@ -11,10 +11,10 @@ export default function EvolutionTimeline() {
   ];
 
   const timeSpans = [
-    { stage: 'Feliformia to Herpestidae', time: '15 → 10 Mya', duration: '5 Million Years', icon: '🌲' },
-    { stage: 'Herpestidae to Suricata', time: '10 → 5 Mya', duration: '5 Million Years', icon: '🌿' },
-    { stage: 'Suricata to Suricata major', time: '5 → 2 Mya', duration: '3 Million Years', icon: '🐾' },
-    { stage: 'Suricata major to Modern', time: '2 → 1 Mya', duration: '1 Million Years', icon: '☀️' }
+    { stage: 'Feliformia to Herpestidae', time: '15 → 10 Mya', duration: '5 Million Years', icon: <Trees size={24} /> },
+    { stage: 'Herpestidae to Suricata', time: '10 → 5 Mya', duration: '5 Million Years', icon: <Leaf size={24} /> },
+    { stage: 'Suricata to Suricata major', time: '5 → 2 Mya', duration: '3 Million Years', icon: <Footprints size={24} /> },
+    { stage: 'Suricata major to Modern', time: '2 → 1 Mya', duration: '1 Million Years', icon: <Sun size={24} /> }
   ];
 
   return (
@@ -39,7 +39,7 @@ export default function EvolutionTimeline() {
             </div>
           ))}
           <div className="gir-epoch-card total" style={{ borderColor: 'var(--meer-primary)' }}>
-            <div className="gir-epoch-icon">⏳</div>
+            <div className="gir-epoch-icon"><Clock size={24} /></div>
             <div className="gir-epoch-content">
               <div className="gir-epoch-time">15 → 1 Mya</div>
               <h4>Total Evolution</h4>
@@ -109,7 +109,7 @@ export default function EvolutionTimeline() {
         </div>
 
         <div className="gir-callout gir-callout-fact" style={{ marginTop: '2rem', borderLeftColor: 'var(--meer-primary)' }}>
-          <strong>🐾 Unique Achievement:</strong> Modern meerkats are the only mongooses to evolve complete division of labor, altruistic guard rotations, and active teaching (mentoring) of hunting strategies.
+          <strong>Unique Achievement:</strong> Modern meerkats are the only mongooses to evolve complete division of labor, altruistic guard rotations, and active teaching (mentoring) of hunting strategies.
         </div>
       </div>
       

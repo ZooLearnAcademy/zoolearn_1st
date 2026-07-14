@@ -32,7 +32,7 @@ const blogPosts = [
     title: 'World Meerkat Day',
     subtitle: 'The Social Sentinels of the Desert',
     description: 'Discover the fascinating social structures, survival strategies, and complex communication of meerkats in the harsh Kalahari Desert environment.',
-    image: 'https://images.unsplash.com/photo-1549471013-3364d7220b75?q=80&w=1200&auto=format&fit=crop',
+    image: 'https://res.cloudinary.com/duibfmcw1/image/upload/v1784024833/meerkat_in_another_page_h2xwi1.jpg',
     tags: ['Behavior', 'Social Structure', 'Desert', 'Mammals'],
     stats: [
       { label: 'Weight', value: '731 g' },

@@ -1,28 +1,29 @@
 import React from 'react';
+import { Dna, Telescope, MessageSquare, RefreshCcw, Swords } from 'lucide-react';
 
 const altruisticForces = [
   {
-    icon: '🧬',
+    icon: <Dna size={24} />,
     title: 'Kin Selection',
     desc: 'Helpers in a mob share a high percentage of genes with the alpha pair\'s offspring. By sacrificing their food and safety to protect the pups, they ensure their own genetic lineage survives.'
   },
   {
-    icon: '🔭',
+    icon: <Telescope size={24} />,
     title: 'Vigilance Trade-off',
     desc: 'Meerkats must dig deep to find grubs, leaving them blind to danger. Having one dedicated sentinel look out allows foragers to work efficiently without constantly stopping to scan.'
   },
   {
-    icon: '🗣️',
+    icon: <MessageSquare size={24} />,
     title: 'Vocal Language Coordination',
     desc: 'Sentinels communicate constantly via "peeps" to signal safety, and issue precise alarm calls specifying the danger type (air vs. land) and urgency level, saving precious seconds.'
   },
   {
-    icon: '🔄',
+    icon: <RefreshCcw size={24} />,
     title: 'Sentinel Rotations',
     desc: 'Guard duty is highly demanding. Mobs rotate sentinel shifts throughout the day, ensuring everyone gets a chance to forage and maintain their strength.'
   },
   {
-    icon: '⚔️',
+    icon: <Swords size={24} />,
     title: 'Territorial Defense',
     desc: 'Meerkats defend elaborate underground burrows and food territories. Larger mobs have a higher success rate in repelling rival clans during territory wars.'
   }
