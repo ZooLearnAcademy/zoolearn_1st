@@ -1,1 +1,0 @@
-import{r as o,j as l}from"./index-CfhCWXRP.js";function c({children:r,className:s="",...t}){const e=o.useRef(null);return l.jsx("div",{ref:e,className:`scroll-reveal ${s}`,children:r})}export{c as S};

@@ -30,6 +30,7 @@ const Scopes = lazy(() => import('./components/scopes/Scopes'));
 const ScopeCategory = lazy(() => import('./components/scopes/ScopeCategory'));
 const BlogIndex = lazy(() => import('./components/blog/BlogIndex'));
 const GiraffeBlog = lazy(() => import('./components/blog/giraffe/GiraffeBlog'));
+const MeerkatBlog = lazy(() => import('./components/blog/meerkat/pages/MeerkatBlog'));
 const Frog = lazy(() => import('./components/home/Organisms/frog/Frog'));
 
 
@@ -88,6 +89,7 @@ function App() {
               <Route path="/scopes/:categoryId" element={<ScopeCategory />} />
               <Route path="/blog" element={<BlogIndex />} />
               <Route path="/blog/giraffe" element={<GiraffeBlog />} />
+              <Route path="/blog/meerkat" element={<MeerkatBlog />} />
 
 
 

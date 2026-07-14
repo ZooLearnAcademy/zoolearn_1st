@@ -24,6 +24,25 @@ const blogPosts = [
     accentLight: '#dcfce7',
     featured: true,
   },
+  {
+    id: 'meerkat',
+    slug: '/blog/meerkat',
+    category: 'World Meerkat Day',
+    categoryIcon: '🐾',
+    title: 'World Meerkat Day',
+    subtitle: 'The Social Sentinels of the Desert',
+    description: 'Discover the fascinating social structures, survival strategies, and complex communication of meerkats in the harsh Kalahari Desert environment.',
+    image: 'https://images.unsplash.com/photo-1549471013-3364d7220b75?q=80&w=1200&auto=format&fit=crop',
+    tags: ['Behavior', 'Social Structure', 'Desert', 'Mammals'],
+    stats: [
+      { label: 'Weight', value: '731 g' },
+      { label: 'Lifespan', value: '12 yrs' },
+      { label: 'Group Size', value: '30' },
+    ],
+    accentColor: '#d97706',
+    accentLight: '#fef3c7',
+    featured: false,
+  },
   // Add more blog posts here as you create them
 ];
 
