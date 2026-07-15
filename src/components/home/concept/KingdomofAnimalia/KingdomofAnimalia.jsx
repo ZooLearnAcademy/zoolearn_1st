@@ -19,12 +19,12 @@ import { ScrollReveal } from '../../../shared/ScrollReveal';
 import { SEO } from "../../../shared";
 
 // Import newly generated images
-import platyImg from 'https://res.cloudinary.com/duibfmcw1/image/upload/v1783699118/zoolearn/assets/rdposdenokuwown2pnty.jpg';
-import aschImg from 'https://res.cloudinary.com/duibfmcw1/image/upload/v1783699113/zoolearn/assets/z8v5zwi6er5avlacn6ef.jpg';
-import anneImg from 'https://res.cloudinary.com/duibfmcw1/image/upload/v1783699111/zoolearn/assets/o5k5coib4jrmg3upmdyb.jpg';
-import arthImg from 'https://res.cloudinary.com/duibfmcw1/image/upload/v1783699112/zoolearn/assets/koo5yzjnlalvyrtny2sw.jpg';
-import mollImg from 'https://res.cloudinary.com/duibfmcw1/image/upload/v1783699116/zoolearn/assets/zhjjyyutidm2ucrfme5f.jpg';
-import echiImg from 'https://res.cloudinary.com/duibfmcw1/image/upload/v1783699114/zoolearn/assets/bkazfsbvpm6ccvpc5rsm.jpg';
+const platyImg = 'https://res.cloudinary.com/duibfmcw1/image/upload/v1783699118/zoolearn/assets/rdposdenokuwown2pnty.jpg';
+const aschImg = 'https://res.cloudinary.com/duibfmcw1/image/upload/v1783699113/zoolearn/assets/z8v5zwi6er5avlacn6ef.jpg';
+const anneImg = 'https://res.cloudinary.com/duibfmcw1/image/upload/v1783699111/zoolearn/assets/o5k5coib4jrmg3upmdyb.jpg';
+const arthImg = 'https://res.cloudinary.com/duibfmcw1/image/upload/v1783699112/zoolearn/assets/koo5yzjnlalvyrtny2sw.jpg';
+const mollImg = 'https://res.cloudinary.com/duibfmcw1/image/upload/v1783699116/zoolearn/assets/zhjjyyutidm2ucrfme5f.jpg';
+const echiImg = 'https://res.cloudinary.com/duibfmcw1/image/upload/v1783699114/zoolearn/assets/bkazfsbvpm6ccvpc5rsm.jpg';
 
 const animaliaPhylaList = [
   { id: 0, title: "Basic Features", name: "Basic Features of Classification", des: "Fundamentals of animal classification", img: "", theme: "#f43f5e" },
