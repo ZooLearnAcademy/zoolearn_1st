@@ -43,6 +43,25 @@ const blogPosts = [
     accentLight: '#fef3c7',
     featured: false,
   },
+  {
+    id: 'horse-evolution',
+    slug: '/blog/horse-evolution',
+    category: 'Evolution',
+    categoryIcon: '🐴',
+    title: 'Evolution of the Horse',
+    subtitle: 'A 55-Million-Year Evolutionary Journey',
+    description: 'Explore how climate shifts transformed Eohippus from a small forest dweller to the modern, single-toed Equus in our interactive horse evolution blog.',
+    image: 'https://res.cloudinary.com/duibfmcw1/image/upload/v1774341098/Equus_ferus_vk3fio.png',
+    tags: ['Evolution', 'Adaptations', 'Equidae', 'Fossils'],
+    stats: [
+      { label: 'Toes', value: '4 to 1' },
+      { label: 'Timeline', value: '55 Mya' },
+      { label: 'Genera', value: '10+' },
+    ],
+    accentColor: '#b45309',
+    accentLight: '#ffedd5',
+    featured: false,
+  },
   // Add more blog posts here as you create them
 ];
 
@@ -136,6 +155,7 @@ export default function BlogIndex() {
                     src={post.image}
                     alt={post.title}
                     className="bl-card-img"
+                    style={post.id === 'horse-evolution' ? { objectFit: 'contain', padding: '28px' } : {}}
                   />
                   <div className="bl-card-image-overlay" />
                   {post.featured && (

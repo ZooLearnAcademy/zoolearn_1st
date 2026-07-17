@@ -120,6 +120,19 @@
   flex-shrink: 0;
 }
 
+.w3-sidebar-progress-item {
+  padding: 0.25rem 0.65rem 0.5rem;
+}
+
+.w3-sidebar-progress-item .w3-sidebar-progress {
+  padding: 0.75rem 0.85rem;
+  border: 1px solid rgba(4, 170, 109, 0.15);
+  border-radius: var(--zl-radius);
+  background: rgba(4, 170, 109, 0.05); /* Match the green/theme of Patterns of Complexity */
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.01);
+  border-bottom: 1px solid rgba(4, 170, 109, 0.15);
+}
+
 .w3-progress-label {
   font-size: 0.7rem;
   font-weight: 600;
@@ -1047,4 +1060,67 @@
   .info-banner .banner-text {
     font-size: 1rem !important;
   }
+}
+
+/* ==========================================
+   NESTED TOPICS STYLING FOR SIDEBAR
+   ========================================== */
+.w3-sidebar-nested-topics {
+  padding: 0.25rem 0.65rem 0.5rem 1.4rem;
+}
+
+.w3-nested-topics-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border-left: 1.5px solid var(--zl-border);
+  padding-left: 0.75rem;
+}
+
+.w3-nested-topic-btn {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--zl-text-secondary);
+  font-family: 'Inter', inherit;
+  transition: background var(--zl-transition), color var(--zl-transition), transform 0.15s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.w3-nested-topic-btn:hover {
+  background: var(--zl-primary-light);
+  color: var(--zl-primary-dark);
+  transform: translateX(2px);
+}
+
+.w3-active-nested-topic {
+  background: rgba(4, 170, 109, 0.08) !important;
+  color: var(--zl-accent) !important;
+  font-weight: 600 !important;
+}
+
+.w3-nested-topic-bullet {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--zl-text-muted);
+  flex-shrink: 0;
+  transition: background var(--zl-transition), transform var(--zl-transition);
+}
+
+.w3-active-nested-topic .w3-nested-topic-bullet {
+  background: var(--zl-accent);
+  transform: scale(1.25);
+  box-shadow: 0 0 4px var(--zl-accent);
 }

@@ -19,13 +19,6 @@ const Homepage = () => {
       icon: "https://res.cloudinary.com/duibfmcw1/image/upload/v1767780953/001-zoology_baecrg.png",
       route: "/living-world",
     },
-    // {
-    //   title: "Basic Features of Classification",
-    //   description:
-    //     "Taxonomy, phylogeny, biological hierarchy, and animal kingdom organization.",
-    //   icon: "https://res.cloudinary.com/duibfmcw1/image/upload/v1767780954/004-habitat_z6ev5r.png",
-    //   route: "/basic-features-of-classification",
-    // },
     {
       title: "Patterns of complexities",
       description:

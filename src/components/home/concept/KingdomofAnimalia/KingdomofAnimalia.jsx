@@ -18,7 +18,7 @@ import BasicFeatures from '../BasicFeatures/BasicFeatures';
 import { ScrollReveal } from '../../../shared/ScrollReveal';
 import { SEO } from "../../../shared";
 
-// Import newly generated images
+// Import newly generated images as string constants
 const platyImg = 'https://res.cloudinary.com/duibfmcw1/image/upload/v1783699118/zoolearn/assets/rdposdenokuwown2pnty.jpg';
 const aschImg = 'https://res.cloudinary.com/duibfmcw1/image/upload/v1783699113/zoolearn/assets/z8v5zwi6er5avlacn6ef.jpg';
 const anneImg = 'https://res.cloudinary.com/duibfmcw1/image/upload/v1783699111/zoolearn/assets/o5k5coib4jrmg3upmdyb.jpg';
@@ -139,7 +139,7 @@ const AnimalKingdom = () => {
       case 0:
         return <BasicFeatures />;
       case 1:
-        return <ClassificationHistory lineHeight={lineHeight} containerRef={containerRef} />;
+        return <ClassificationHistory containerRef={containerRef} lineHeight={lineHeight} />;
       case 2:
         return <Porifera />;
       case 3:
@@ -188,23 +188,6 @@ const AnimalKingdom = () => {
         {/* LEFT SIDEBAR - Permanently Fixed Menu */}
         <aside className={`w3-sidebar ${isMobileMenuOpen ? 'open' : ''}`} ref={sidebarRef}>
 
-          {/* Progress Bar */}
-          <div className="w3-sidebar-progress">
-            <div className="w3-progress-label">Exploration Progress</div>
-            <div className="w3-progress-track">
-              <div
-                className="w3-progress-fill"
-                style={{ width: `${(currentIndex / (animaliaPhylaList.length - 1)) * 100}%` }}
-              />
-            </div>
-            <div className="w3-progress-text">
-              {currentIndex === 0
-                ? 'Basic Features'
-                : currentIndex === 1
-                ? 'Classification History'
-                : `Phylum ${currentIndex - 1} of 11`}
-            </div>
-          </div>
           <ul className="w3-sidebar-list">
             {/* Basic Features of Classification — item #0 */}
             <li key="ch-basic">
@@ -251,15 +234,7 @@ const AnimalKingdom = () => {
 
         {/* MAIN CONTENT AREA */}
         <main className="w3-content">
-          {currentIndex === 1 ? (
-            <div className="timeline-header-section">
-              <ScrollReveal animation="fade-down" delay={100} duration={800}>
-                <span className="timeline-site-tag">ZOOLERN.IN</span>
-                <h1 className="timeline-main-title">Kingdom Animalia</h1>
-                <p className="timeline-subtitle">Classification of Animal Kingdom</p>
-              </ScrollReveal>
-            </div>
-          ) : null}
+          {/* Timeline header section removed */}
           
           {/* Render Component-based or Default Content */}
           {renderPhylumContent()}
