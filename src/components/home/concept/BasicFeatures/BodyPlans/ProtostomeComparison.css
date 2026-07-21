@@ -4,9 +4,9 @@
 .proto-comparison-wrapper {
   font-family: 'Segoe UI', 'Roboto', sans-serif;
   max-width: 1100px;
-  margin: 40px auto;
+  margin: 30px auto;
   padding: 10px;
-  perspective: 1000px; /* Enables 3D effects */
+  perspective: 1000px;
 }
 
 /* Flex Rows */
@@ -22,7 +22,7 @@
   display: flex;
   gap: 15px;
   margin-bottom: 15px;
-  min-height: 300px;
+  min-height: auto;
 }
 
 /* =========================================
@@ -126,8 +126,8 @@
 }
 
 .proto-hover-card:hover {
-  transform: translateY(-12px) scale(1.02);
-  box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
   z-index: 10;
 }
 
@@ -268,10 +268,11 @@
    ========================================= */
 .proto-row-content {
   flex: 1;
-  padding: 30px 20px;
+  padding: 20px 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   border-radius: 12px;
   position: relative;
   border: 1px solid rgba(0,0,0,0.05);
@@ -363,28 +364,80 @@
 
 .proto-info-box {
   background: rgba(255,255,255,0.85);
-  padding: 15px 20px;
+  padding: 14px 18px;
   border-radius: 12px;
-  font-size: 0.95rem;
+  font-size: 0.93rem;
   color: #263238;
   text-align: center;
   border: 1px solid rgba(0,0,0,0.05);
   box-shadow: 0 4px 6px rgba(0,0,0,0.05);
   transition: all 0.3s ease;
-  margin-top: 10px;
+  margin-top: 8px;
+  width: 100%;
+}
+
+/* Combined single-box layout for definitions */
+.proto-combined-box {
+  margin-top: 0;
+}
+
+.proto-combined-box p {
+  margin: 0 0 10px 0;
+  line-height: 1.55;
+}
+
+.proto-combined-box p:last-child {
+  margin-bottom: 0;
+}
+
+.proto-box-highlight {
+  font-weight: 700;
+  color: #1e293b;
+  padding-top: 8px;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  font-size: 0.95rem;
+}
+
+/* Definition images */
+.proto-def-img-wrap {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 12px;
+  margin-bottom: 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.proto-def-img {
+  width: 100%;
+  height: auto;
+  max-height: 220px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.proto-hover-card:hover .proto-def-img {
+  transform: scale(1.03);
 }
 
 .proto-hover-card:hover .proto-info-box {
   background: rgba(255,255,255,0.95);
-  transform: translateY(-5px);
-  box-shadow: 0 8px 12px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0,0,0,0.08);
 }
 
 .proto-info-box strong {
-  display: block;
+  display: inline;
   color: #000;
-  margin-bottom: 8px;
   font-size: 1rem;
+}
+
+/* When strong is used as a section title (coelom, examples), keep it block */
+.proto-pulse-anim .proto-info-box strong,
+.proto-compact-examples .proto-info-box strong {
+  display: block;
+  margin-bottom: 8px;
 }
 
 /* COMPACT EXAMPLES SECTION */

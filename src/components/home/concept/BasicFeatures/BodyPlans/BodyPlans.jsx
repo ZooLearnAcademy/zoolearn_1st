@@ -16,7 +16,7 @@ const BodyPlansPage = () => {
       icon: "",
       color: "#3498db",
       complexity: "Low",
-      diagram: "cells"
+      image: "https://res.cloudinary.com/dstunh4mx/image/upload/v1783940315/Cell_Aggregate_Body_Plan_buoolm.jpg"
     },
     {
       id: 2,
@@ -31,7 +31,7 @@ const BodyPlansPage = () => {
       icon: "",
       color: "#2ecc71",
       complexity: "Medium",
-      diagram: "sac"
+      image: "https://res.cloudinary.com/dstunh4mx/image/upload/v1783940315/Blind_Sac_Body_Plan_y625wp.jpg"
     },
     {
       id: 3,
@@ -46,7 +46,7 @@ const BodyPlansPage = () => {
       icon: "",
       color: "#e74c3c",
       complexity: "High",
-      diagram: "tube"
+      image: "https://res.cloudinary.com/dstunh4mx/image/upload/v1783940315/Tube-Within-a-Tube_Body_Plan_r8jim1.jpg"
     }
   ];
 
@@ -76,29 +76,13 @@ const BodyPlansPage = () => {
               <div className="bodyplans-card-body">
                 <p className="bodyplans-plan-description">{plan.description}</p>
                 
-                {/* Diagram Visualization */}
-                <div className={`bodyplans-diagram bodyplans-diagram-${plan.diagram}`}>
-                  {plan.diagram === 'cells' && (
-                    <div className="bodyplans-cells-diagram">
-                      {[...Array(12)].map((_, i) => (
-                        <div key={i} className="bodyplans-cell" style={{ animationDelay: `${i * 0.1}s` }}></div>
-                      ))}
-                    </div>
-                  )}
-                  {plan.diagram === 'sac' && (
-                    <div className="bodyplans-sac-diagram">
-                      <div className="bodyplans-sac-opening">⭕</div>
-                      <div className="bodyplans-sac-cavity"></div>
-                    </div>
-                  )}
-                  {plan.diagram === 'tube' && (
-                    <div className="bodyplans-tube-diagram">
-                      <div className="bodyplans-outer-tube"></div>
-                      <div className="bodyplans-inner-tube"></div>
-                      <div className="bodyplans-mouth-label">Mouth</div>
-                      <div className="bodyplans-anus-label">Anus</div>
-                    </div>
-                  )}
+                {/* Image */}
+                <div className="bodyplans-diagram">
+                  <img 
+                    src={plan.image} 
+                    alt={plan.title} 
+                    className="bodyplans-diagram-img" 
+                  />
                 </div>
 
                 <div className="bodyplans-features-list">

@@ -1,4 +1,4 @@
-import React, { memo, useState } from "react";
+import React, { memo } from "react";
 import PropTypes from 'prop-types';
 import "./BodySymmetry.css";
 
@@ -56,56 +56,41 @@ EvolutionNote.displayName = "EvolutionNote";
  * Main Component
  */
 const BodySymmetry = ({ title = "Body Symmetry", contentData = CONTENT_DATA }) => {
-  // NEW: State to track which card is currently flipped
-  const [flippedCardId, setFlippedCardId] = useState(null);
-
-  const toggleFlip = (id) => {
-    setFlippedCardId(flippedCardId === id ? null : id);
-  };
-
   return (
     <section className="bs-section">
       <div className="bs-container">
         
-        {/* HEADER - Kept exactly as it was */}
+        {/* HEADER */}
         <header className="bs-header">
           <h2 id="body-symmetry-title" className="bs-title">{title}</h2>
           <div className="bs-underline" aria-hidden="true"></div>
         </header>
 
-        {/* UPDATED CONTENT GRID */}
+        {/* CONTENT GRID - Single cards (no flip) */}
         <div className="bs-content-grid">
           {contentData.map((item) => (
             <div 
               key={item.id} 
-              className="bs-flip-card"
-              onClick={() => toggleFlip(item.id)} /* Tap to flip */
+              className="bs-card"
             >
-              <div className={`bs-card-inner ${flippedCardId === item.id ? 'is-flipped' : ''}`}>
-                
-                {/* FRONT SIDE (Image) */}
-                <div className="bs-card-front">
-                  <img 
-                    src={item.img || "https://res.cloudinary.com/duibfmcw1/image/upload/v1767626750/BodySymmetry_af1lgn.png"} 
-                    alt={item.title} 
-                    className="bs-card-img" 
-                  />
-                  <div className="bs-card-label">{item.title}</div>
-                </div>
+              {/* Image Section */}
+              <div className="bs-card-image-wrapper">
+                <img 
+                  src={item.img || "https://res.cloudinary.com/duibfmcw1/image/upload/v1767626750/BodySymmetry_af1lgn.png"} 
+                  alt={item.title} 
+                  className="bs-card-img" 
+                />
+              </div>
 
-                {/* BACK SIDE (Text Content) */}
-                <div className="bs-card-back">
-                  <h3 className="bs-card-title">{item.title}</h3>
-                  <div className="bs-card-body">
-                    <p className="bs-text">{item.description}</p>
-                    {item.extra && (
-                      <div className="bs-extra-info">
-                        <strong>Significance:</strong> {item.extra}
-                      </div>
-                    )}
+              {/* Text Content Section */}
+              <div className="bs-card-content">
+                <h3 className="bs-card-title">{item.title}</h3>
+                <p className="bs-text">{item.description}</p>
+                {item.extra && (
+                  <div className="bs-extra-info">
+                    <strong>Significance:</strong> {item.extra}
                   </div>
-                </div>
-
+                )}
               </div>
             </div>
           ))}

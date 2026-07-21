@@ -147,107 +147,36 @@
   line-height: 1.5;
   margin-bottom: 20px;
   font-size: 1rem;
-  text-align: center;
+  text-align: left;
   min-height: 50px; /* Aligns content visually */
 }
 
-/* Diagram Styles */
+/* Diagram/Image Styles */
 .bodyplans-diagram {
-  height: 100px;
+  height: auto;
+  max-height: 200px;
   margin: 15px 0 25px;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: #f1f5f9;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 10px;
 }
 
-.bodyplans-cells-diagram {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 8px;
+.bodyplans-diagram-img {
+  max-width: 100%;
+  max-height: 180px;
+  object-fit: contain;
+  display: block;
+  border-radius: 8px;
 }
-
-.bodyplans-cell {
-  width: 25px;
-  height: 25px;
-  background: #3498db;
-  border-radius: 50%;
-  opacity: 0.7;
-  animation: bodyplans-pulse 2s infinite;
-}
-
-@keyframes bodyplans-pulse {
-  0%, 100% { transform: scale(1); opacity: 0.7; }
-  50% { transform: scale(1.1); opacity: 1; }
-}
-
-.bodyplans-sac-diagram {
-  position: relative;
-  width: 100px;
-  height: 70px;
-  background: linear-gradient(135deg, #2ecc71, #27ae60);
-  border-radius: 50% 50% 0 0;
-}
-
-.bodyplans-sac-opening {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 1.8rem;
-  color: white;
-}
-
-.bodyplans-sac-cavity {
-  position: absolute;
-  top: 15px;
-  left: 8px;
-  right: 8px;
-  bottom: 8px;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 40% 40% 0 0;
-}
-
-.bodyplans-tube-diagram {
-  position: relative;
-  width: 160px;
-  height: 70px;
-}
-
-.bodyplans-outer-tube {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 3px solid #e74c3c;
-  border-radius: 10px;
-}
-
-.bodyplans-inner-tube {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  right: 12px;
-  bottom: 12px;
-  background: linear-gradient(90deg, #ff6b6b, #ee5a52);
-  border-radius: 5px;
-}
-
-.bodyplans-mouth-label, .bodyplans-anus-label {
-  position: absolute;
-  font-size: 0.7rem;
-  font-weight: 600;
-  color: #2c3e50;
-  background: rgba(255,255,255,0.8);
-  padding: 0 4px;
-}
-
-.bodyplans-mouth-label { top: -20px; left: 5px; }
-.bodyplans-anus-label { top: -20px; right: 5px; }
 
 .bodyplans-features-list {
   margin: 10px 0 20px;
   margin-bottom: auto;
+  text-align: left;
 }
 
 .bodyplans-features-title {
@@ -255,6 +184,12 @@
   color: #2c3e50;
   margin-bottom: 10px;
   font-weight: 600;
+}
+
+.bodyplans-features-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .bodyplans-feature-item {
@@ -265,6 +200,7 @@
   color: #5a6c7d;
   line-height: 1.4;
   font-size: 0.95rem;
+  text-align: left;
 }
 
 .bodyplans-feature-marker {
@@ -279,6 +215,7 @@
   border-radius: 10px;
   margin-top: 15px;
   border-left: 4px solid #3498db;
+  text-align: left;
 }
 
 .bodyplans-example-label {
@@ -312,6 +249,6 @@
 /* Responsive */
 @media (max-width: 768px) {
   .bodyplans-section-title { font-size: 2rem; }
-  .bodyplans-bodyplan-card { max-width: 100%; } /* Allow full width on mobile */
+  .bodyplans-bodyplan-card { max-width: 100%; }
   .bodyplans-card-body { padding: 20px; }
 }

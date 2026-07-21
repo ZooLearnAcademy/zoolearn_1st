@@ -17,19 +17,19 @@ const COELOM_TYPES = [
     id: "acoelomate",
     title: "Triploblastic Acoelomate",
     description: "These animals do not contain any space between their body wall and gut.",
-    image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1767626839/TriploblasticAcoelomate_twtml1.png"
+    image: "https://res.cloudinary.com/dstunh4mx/image/upload/v1783954007/Triploblastic_Acoelomate_otahu9.jpg"
   },
   {
     id: "pseudo",
     title: "Triploblastic Pseudocoelomate",
     description: "These animals have a false body cavity, a fluid-filled space separating the gut from the body wall.",
-    image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1767626852/TriploblasticPseudocoelomate_gecq6s.png"
+    image: "https://res.cloudinary.com/dstunh4mx/image/upload/v1783954006/Triploblastic_Pseudocoelomate_mew0sn.jpg"
   },
   {
     id: "eucoelomate",
     title: "Triploblastic Eucoelomate",
     description: "These animals have a true coelom lined by mesoderm on both sides.",
-    image: "https://res.cloudinary.com/duibfmcw1/image/upload/v1767626849/TriploblasticEucoelomate_z2rhpi.png"
+    image: "https://res.cloudinary.com/dstunh4mx/image/upload/v1783954063/Triploblastic_Eucoelomate_nqxjsx.jpg"
   }
 ];
 

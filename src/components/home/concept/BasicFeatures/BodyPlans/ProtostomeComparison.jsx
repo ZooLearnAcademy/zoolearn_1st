@@ -20,34 +20,32 @@ const ProtostomeComparison = () => {
       {/* ===== DEFINITIONS ===== */}
       <div className="proto-content-row proto-slide-in proto-delay-1">
         <div className="proto-row-content proto-bg-protostome proto-hover-card" data-label="PROTOSTOME">
-
-          <div className="proto-info-box">
-            In protostomous animals, the first opening formed in the embryo
-            (blastopore) becomes the <strong>mouth</strong>.
-            The anus forms later at another place.
+          <div className="proto-info-box proto-combined-box">
+            <p>In protostomous animals, the first opening formed in the embryo (blastopore) becomes the <strong>mouth</strong>. The anus forms later at another place.</p>
+            <p>Simple to moderately complex body organization. Mostly belong to one major evolutionary line.</p>
+            <p className="proto-box-highlight">👉 Blastopore → Mouth first</p>
           </div>
-          <div className="proto-info-box">
-            Simple to moderately complex body organization.
-            Mostly belong to one major evolutionary line.
-          </div>
-          <div className="proto-info-box proto-highlight-text">
-            👉 Blastopore → Mouth first
+          <div className="proto-def-img-wrap">
+            <img
+              src="https://res.cloudinary.com/dstunh4mx/image/upload/v1783938934/photo_2026-07-13_16-05-21_breq5x.jpg"
+              alt="Protostomous development"
+              className="proto-def-img"
+            />
           </div>
         </div>
 
         <div className="proto-row-content proto-bg-deuterostome proto-hover-card" data-label="DEUTEROSTOME">
-
-          <div className="proto-info-box">
-            In deuterostomous animals, the blastopore develops into the
-            <strong> anus</strong>.
-            The mouth forms later on the opposite side.
+          <div className="proto-info-box proto-combined-box">
+            <p>In deuterostomous animals, the blastopore develops into the <strong>anus</strong>. The mouth forms later on the opposite side.</p>
+            <p>More advanced animals with complex body organization and internal skeletons.</p>
+            <p className="proto-box-highlight">👉 Blastopore → Anus first</p>
           </div>
-          <div className="proto-info-box">
-            More advanced animals with complex body organization
-            and internal skeletons.
-          </div>
-          <div className="proto-info-box proto-highlight-text">
-            👉 Blastopore → Anus first
+          <div className="proto-def-img-wrap">
+            <img
+              src="https://res.cloudinary.com/dstunh4mx/image/upload/v1783939081/deuterstomes_nzbetg.jpg"
+              alt="Deuterostomous development"
+              className="proto-def-img"
+            />
           </div>
         </div>
       </div>

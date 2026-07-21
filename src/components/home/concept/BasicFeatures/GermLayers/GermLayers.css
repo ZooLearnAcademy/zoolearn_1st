@@ -192,10 +192,15 @@
 .gl-def-list li {
   margin-bottom: 12px;
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   font-size: 0.95rem;
   line-height: 1.5;
   color: #334155;
+}
+
+.gl-def-list li strong {
+  display: inline;
+  margin-right: 4px;
 }
 
 /* Color Dots */

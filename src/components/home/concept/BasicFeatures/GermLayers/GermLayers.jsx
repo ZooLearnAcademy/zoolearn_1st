@@ -71,15 +71,15 @@ export default function GermLayers() {
             <ul className="gl-def-list">
               <li>
                 <span className="gl-dot gl-ecto"></span>
-                <strong>Ectoderm:</strong> Forms epidermis and nervous tissue.
+                <span><strong>Ectoderm:</strong> Forms epidermis and nervous tissue.</span>
               </li>
               <li>
                 <span className="gl-dot gl-meso"></span>
-                <strong>Mesoderm:</strong> Forms skeletal, muscular, connective tissue, and coelom.
+                <span><strong>Mesoderm:</strong> Forms skeletal, muscular, connective tissue, and coelom.</span>
               </li>
               <li>
                 <span className="gl-dot gl-endo"></span>
-                <strong>Endoderm:</strong> Forms vital organs and their linings.
+                <span><strong>Endoderm:</strong> Forms vital organs and their linings.</span>
               </li>
             </ul>
           </div>
