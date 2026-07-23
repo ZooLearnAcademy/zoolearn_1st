@@ -16,8 +16,7 @@
     #ffffff,
     #ecfeff
   );
-  background-size: 300% 300%;
-  animation: intro-gradientShift 12s ease infinite;
+  background-size: 100% 100%;
 }
 
 /* COLOR GLOWS */
@@ -59,7 +58,6 @@
 /* LEFT CONTENT */
 .intro-hero-content {
   flex: 0 0 58%;
-  animation: intro-fadeUp 1.2s ease forwards;
 }
 
 /* TAG */
@@ -145,7 +143,6 @@
   max-width: 100%;
   height: auto;
   border-radius: 30px;
-  animation: intro-imageFloat 6s ease-in-out infinite;
 }
 
 .intro-hero-actions {

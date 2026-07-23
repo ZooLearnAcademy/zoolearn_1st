@@ -6,7 +6,7 @@ import ClassificationHistory from './ClassificationHistory';
 import Porifera from './Porifera';
 import Coelenterata from './Coelenterata';
 import Ctenophora from './Ctenophora';
-import Platyhelminthes from './Platyhelminthes'; 
+import Platyhelminthes from './Platyhelminthes';
 import Aschelminthes from './Aschelminthes';
 import Annelida from './Annelida';
 import Arthropoda from './Arthropoda';
@@ -48,6 +48,8 @@ import { Menu, X } from 'lucide-react';
 const AnimalKingdom = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
+  const [showSidebar, setShowSidebar] = useState(true);
   const sidebarRef = useRef(null);
   const containerRef = useRef(null); // Ref for timeline container
   const [lineHeight, setLineHeight] = useState(0); // Scrolled percentage for timeline
@@ -72,7 +74,7 @@ const AnimalKingdom = () => {
       if (!containerRef.current) return;
       const { top, height } = containerRef.current.getBoundingClientRect();
       const viewportHeight = window.innerHeight;
-      
+
       const scrollStart = viewportHeight / 2;
       const progress = ((scrollStart - top) / height) * 100;
       setLineHeight(Math.min(100, Math.max(0, progress)));
@@ -135,7 +137,7 @@ const AnimalKingdom = () => {
   const handlePrev = () => setCurrentIndex(currentIndex > 0 ? currentIndex - 1 : currentIndex);
 
   const renderPhylumContent = () => {
-    switch(currentIndex) {
+    switch (currentIndex) {
       case 0:
         return <BasicFeatures />;
       case 1:
@@ -169,7 +171,7 @@ const AnimalKingdom = () => {
 
   return (
     <>
-      <SEO 
+      <SEO
         title="Kingdom Animalia"
         description="Comprehensive guide to Kingdom Animalia. Discover the classification history, characteristics of major phyla, and in-depth study materials for Zoology."
         keywords="Kingdom Animalia, Animal Kingdom, Classification, Phylum, Zoology, Biology, Porifera, Chordata"
@@ -177,98 +179,130 @@ const AnimalKingdom = () => {
       />
       <div className="w3-layout-wrapper">
         <div className="w3-main-container">
-        
-        {/* MOBILE SIDEBAR OVERLAY */}
-        <div 
-          className={`w3-sidebar-overlay ${isMobileMenuOpen ? 'show' : ''}`}
-          onClick={() => setIsMobileMenuOpen(false)}
-          aria-hidden="true"
-        />
 
-        {/* LEFT SIDEBAR - Permanently Fixed Menu */}
-        <aside className={`w3-sidebar ${isMobileMenuOpen ? 'open' : ''}`} ref={sidebarRef}>
+          {/* MOBILE SIDEBAR OVERLAY */}
+          <div
+            className={`w3-sidebar-overlay ${isMobileMenuOpen ? 'show' : ''}`}
+            onClick={() => setIsMobileMenuOpen(false)}
+            aria-hidden="true"
+          />
 
-          <ul className="w3-sidebar-list">
-            {/* Basic Features of Classification — item #0 */}
-            <li key="ch-basic">
+          {/* LEFT SIDEBAR - Fixed Menu matching Patterns & Living World */}
+          <aside className={`w3-sidebar ${isMobileMenuOpen ? 'open' : ''} ${!showSidebar ? 'w3-sidebar-hidden' : ''}`} ref={sidebarRef}>
+            <div className="w3-sidebar-header">
               <button
-                className={`w3-sidebar-btn w3-sidebar-btn--history ${currentIndex === 0 ? 'w3-active-side' : ''}`}
-                onClick={() => setCurrentIndex(0)}
+                className="w3-mobile-close-btn"
+                onClick={() => setIsMobileMenuOpen(false)}
+                aria-label="Close navigation menu"
               >
-                <span className="w3-sidebar-dot" style={{ background: '#f43f5e' }} />
-                Basic Features
+                <X size={24} />
               </button>
-            </li>
+            </div>
 
-            {/* Classification History — item #1 */}
-            <li key="ch-1">
-              <button
-                className={`w3-sidebar-btn w3-sidebar-btn--history ${currentIndex === 1 ? 'w3-active-side' : ''}`}
-                onClick={() => setCurrentIndex(1)}
-              >
-                <span className="w3-sidebar-dot" style={{ background: '#04AA6D' }} />
-                Classification History
-              </button>
-            </li>
+            {/* Learning Progress Indicator - Matching The Living World & Patterns Page */}
+            <div className="w3-sidebar-progress">
+              <div className="w3-progress-label">Learning Progress</div>
+              <div className="w3-progress-track">
+                <div
+                  className="w3-progress-fill"
+                  style={{ width: `${Math.max(Math.round(((currentIndex + 1) / animaliaPhylaList.length) * 100), scrollProgress)}%` }}
+                />
+              </div>
+              <div className="w3-progress-text">
+                Topic {currentIndex + 1} of {animaliaPhylaList.length} ({Math.max(Math.round(((currentIndex + 1) / animaliaPhylaList.length) * 100), scrollProgress)}%)
+              </div>
+            </div>
 
-            {/* Divider */}
-            <li className="w3-sidebar-divider" aria-hidden="true" />
-
-            {/* All 11 Phyla */}
-            {animaliaPhylaList.slice(2).map((phylum) => (
-              <li key={phylum.id}>
+            <ul className="w3-sidebar-list">
+              {/* Basic Features of Classification — item #0 */}
+              <li key="ch-basic">
                 <button
-                  className={`w3-sidebar-btn ${currentIndex === phylum.id ? 'w3-active-side' : ''}`}
-                  onClick={() => setCurrentIndex(phylum.id)}
+                  className={`w3-sidebar-btn w3-sidebar-btn--history ${currentIndex === 0 ? 'w3-active-side' : ''}`}
+                  onClick={() => setCurrentIndex(0)}
                 >
-                  <span
-                    className="w3-sidebar-dot"
-                    style={{ background: phylum.theme }}
-                  />
-                  {phylum.name}
+                  <span className="w3-sidebar-dot" style={{ background: '#f43f5e' }} />
+                  Basic Features
                 </button>
               </li>
-            ))}
-          </ul>
-        </aside>
 
-        {/* MAIN CONTENT AREA */}
-        <main className="w3-content">
-          {/* Timeline header section removed */}
-          
-          {/* Render Component-based or Default Content */}
-          {renderPhylumContent()}
+              {/* Classification History — item #1 */}
+              <li key="ch-1">
+                <button
+                  className={`w3-sidebar-btn w3-sidebar-btn--history ${currentIndex === 1 ? 'w3-active-side' : ''}`}
+                  onClick={() => setCurrentIndex(1)}
+                >
+                  <span className="w3-sidebar-dot" style={{ background: '#04AA6D' }} />
+                  Classification History
+                </button>
+              </li>
 
-        </main>
-      </div>
+              {/* Divider */}
+              <li className="w3-sidebar-divider" aria-hidden="true" />
 
-      {/* ===== GLOBAL LIGHTBOX MODAL ===== */}
-      {lightboxSrc && (
-        <div
-          className="zl-lightbox-overlay"
-          role="dialog"
-          aria-modal="true"
-          aria-label="Image preview"
-          onClick={closeLightbox}
-        >
-          <button className="zl-lightbox-close" onClick={closeLightbox} aria-label="Close">
-            ✕
+              {/* All 11 Phyla */}
+              {animaliaPhylaList.slice(2).map((phylum) => (
+                <li key={phylum.id}>
+                  <button
+                    className={`w3-sidebar-btn ${currentIndex === phylum.id ? 'w3-active-side' : ''}`}
+                    onClick={() => setCurrentIndex(phylum.id)}
+                  >
+                    <span
+                      className="w3-sidebar-dot"
+                      style={{ background: phylum.theme }}
+                    />
+                    {phylum.name}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </aside>
+
+          {/* Floating Menu Button for Mobile */}
+          <button
+            className="w3-mobile-fab"
+            onClick={() => setIsMobileMenuOpen(true)}
+            aria-label="Open navigation menu"
+          >
+            <Menu size={24} />
           </button>
-          <div className="zl-lightbox-inner" onClick={(e) => e.stopPropagation()}>
-            <img src={lightboxSrc} alt={lightboxAlt} className="zl-lightbox-img" />
-            {lightboxAlt && <p className="zl-lightbox-caption">{lightboxAlt}</p>}
-          </div>
-        </div>
-      )}
 
-      {/* ===== MOBILE MENU FAB ===== */}
-      <button 
-        className={`zl-mobile-menu-fab ${isMobileMenuOpen ? 'active' : ''}`}
-        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        aria-label="Toggle Navigation Menu"
-      >
-        {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-      </button>
+          {/* MAIN CONTENT AREA */}
+          <main className={`w3-content ${!showSidebar ? 'w3-content-full' : ''}`}>
+            {/* Timeline header section removed */}
+
+            {/* Render Component-based or Default Content */}
+            {renderPhylumContent()}
+
+          </main>
+        </div>
+
+        {/* ===== GLOBAL LIGHTBOX MODAL ===== */}
+        {lightboxSrc && (
+          <div
+            className="zl-lightbox-overlay"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Image preview"
+            onClick={closeLightbox}
+          >
+            <button className="zl-lightbox-close" onClick={closeLightbox} aria-label="Close">
+              ✕
+            </button>
+            <div className="zl-lightbox-inner" onClick={(e) => e.stopPropagation()}>
+              <img src={lightboxSrc} alt={lightboxAlt} className="zl-lightbox-img" />
+              {lightboxAlt && <p className="zl-lightbox-caption">{lightboxAlt}</p>}
+            </div>
+          </div>
+        )}
+
+        {/* ===== MOBILE MENU FAB ===== */}
+        <button
+          className={`zl-mobile-menu-fab ${isMobileMenuOpen ? 'active' : ''}`}
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label="Toggle Navigation Menu"
+        >
+          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
 
       </div>
     </>

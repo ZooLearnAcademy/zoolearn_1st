@@ -24,15 +24,11 @@ const LivingWorldIntro = () => {
           <h1 className="lwi-hero-title">The Living World</h1>
 
           <p className="lwi-hero-text">
-            The living world encompasses all organisms on Earth, from microscopic
-            bacteria to massive blue whales. Understanding what makes something
-            <strong> “living”</strong> and how we classify this incredible
-            diversity is fundamental to the study of biology.
+            The living world consists of an enormous variety of organisms that inhabit diverse environments such as cold mountains, deciduous forests, oceans, deserts, and hot springs. Each distinct type of plant, animal, or microorganism is known as a species.
           </p>
 
           <p className="lwi-hero-text">
-            This chapter explores the characteristics of life, biodiversity, and
-            the systematic organization of organisms through taxonomy.
+            Scientists have identified and described approximately 1.7–1.8 million species, representing the rich biodiversity of our planet. Biodiversity refers to the variety of living organisms present on Earth.
           </p>
 
            

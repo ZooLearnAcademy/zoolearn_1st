@@ -1,188 +1,141 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ProtostomeComparison.css";
 
+const protostomeImg = "https://res.cloudinary.com/dstunh4mx/image/upload/v1783938934/photo_2026-07-13_16-05-21_breq5x.jpg";
+const deuterostomeImg = "https://res.cloudinary.com/dstunh4mx/image/upload/v1783939081/deuterstomes_nzbetg.jpg";
+
 const ProtostomeComparison = () => {
+  const [lightboxImg, setLightboxImg] = useState(null);
+
+  const handleImageClick = (src, title) => {
+    setLightboxImg({ src, title });
+  };
+
   return (
-    <div className="proto-comparison-wrapper">
-
-      {/* ===== HEADER ===== */}
-      <div className="proto-header-row proto-slide-in">
-        <div className="proto-header-col proto-header-protostome">
-          <h2>PROTOSTOMOUS</h2>
-          <p>(proto: first; stomium: mouth)</p>
-        </div>
-        <div className="proto-header-col proto-header-deuterostome">
-          <h2>DEUTEROSTOMOUS</h2>
-          <p>(deuteron: second; stomium: mouth)</p>
-        </div>
+    <div className="simple-proto-container">
+      {/* HEADER */}
+      <div className="simple-proto-header">
+        <h2 className="simple-proto-title">Protostomes vs. Deuterostomes</h2>
+        <p className="simple-proto-subtitle">
+          Key differences in embryonic cleavage, coelom formation, and fate of the blastopore
+        </p>
       </div>
 
-      {/* ===== DEFINITIONS ===== */}
-      <div className="proto-content-row proto-slide-in proto-delay-1">
-        <div className="proto-row-content proto-bg-protostome proto-hover-card" data-label="PROTOSTOME">
-          <div className="proto-info-box proto-combined-box">
-            <p>In protostomous animals, the first opening formed in the embryo (blastopore) becomes the <strong>mouth</strong>. The anus forms later at another place.</p>
-            <p>Simple to moderately complex body organization. Mostly belong to one major evolutionary line.</p>
-            <p className="proto-box-highlight">👉 Blastopore → Mouth first</p>
+      {/* 2-COLUMN COMPARISON DECK */}
+      <div className="simple-proto-grid">
+
+        {/* PROTOSTOMES COLUMN */}
+        <div className="simple-proto-card protostome">
+          <div className="simple-proto-card-header">
+            <h3>Protostomous Animals</h3>
+            <span className="simple-proto-tag">Blastopore → Mouth First</span>
+            <p className="simple-proto-etymology">(proto: first; stoma: mouth)</p>
           </div>
-          <div className="proto-def-img-wrap">
-            <img
-              src="https://res.cloudinary.com/dstunh4mx/image/upload/v1783938934/photo_2026-07-13_16-05-21_breq5x.jpg"
-              alt="Protostomous development"
-              className="proto-def-img"
-            />
+
+          <div className="simple-proto-card-body">
+            <p className="simple-proto-desc">
+              The first opening formed in the embryo (blastopore) develops into the <strong>mouth</strong>. 
+              The anus forms later at a secondary site.
+            </p>
+
+            {/* CLICKABLE DIAGRAM */}
+            <div 
+              className="simple-proto-img-box clickable"
+              onClick={() => handleImageClick(protostomeImg, "Development of Protostome")}
+              title="Click to view full image"
+            >
+              <img
+                src={protostomeImg}
+                alt="Development of Protostome"
+                className="simple-proto-img"
+              />
+              <span className="simple-proto-zoom-badge">🔍 Click to Expand</span>
+            </div>
+            <p className="simple-proto-img-caption">Development of Protostome</p>
+
+            <div className="simple-proto-features">
+              <div className="simple-proto-feature-row">
+                <strong>Cleavage:</strong>
+                <span>Spiral and Determinate</span>
+              </div>
+              <div className="simple-proto-feature-row">
+                <strong>Coelom Formation:</strong>
+                <span>Schizocoelous (splitting of solid mesoderm masses)</span>
+              </div>
+              <div className="simple-proto-feature-row">
+                <strong>Fate of Blastopore:</strong>
+                <span>Becomes the Mouth</span>
+              </div>
+            </div>
+
+            <div className="simple-proto-examples">
+              <strong>Examples:</strong> Flatworms, Roundworms, Annelids, Arthropods, Molluscs
+            </div>
           </div>
         </div>
 
-        <div className="proto-row-content proto-bg-deuterostome proto-hover-card" data-label="DEUTEROSTOME">
-          <div className="proto-info-box proto-combined-box">
-            <p>In deuterostomous animals, the blastopore develops into the <strong>anus</strong>. The mouth forms later on the opposite side.</p>
-            <p>More advanced animals with complex body organization and internal skeletons.</p>
-            <p className="proto-box-highlight">👉 Blastopore → Anus first</p>
+        {/* DEUTEROSTOMES COLUMN */}
+        <div className="simple-proto-card deuterostome">
+          <div className="simple-proto-card-header">
+            <h3>Deuterostomous Animals</h3>
+            <span className="simple-proto-tag">Blastopore → Anus First</span>
+            <p className="simple-proto-etymology">(deuteron: second; stoma: mouth)</p>
           </div>
-          <div className="proto-def-img-wrap">
-            <img
-              src="https://res.cloudinary.com/dstunh4mx/image/upload/v1783939081/deuterstomes_nzbetg.jpg"
-              alt="Deuterostomous development"
-              className="proto-def-img"
-            />
+
+          <div className="simple-proto-card-body">
+            <p className="simple-proto-desc">
+              The blastopore develops into the <strong>anus</strong>. 
+              The mouth forms later on the opposite side of the developing digestive tube.
+            </p>
+
+            {/* CLICKABLE DIAGRAM */}
+            <div 
+              className="simple-proto-img-box clickable"
+              onClick={() => handleImageClick(deuterostomeImg, "Development of Deuterostome")}
+              title="Click to view full image"
+            >
+              <img
+                src={deuterostomeImg}
+                alt="Development of Deuterostome"
+                className="simple-proto-img"
+              />
+              <span className="simple-proto-zoom-badge">🔍 Click to Expand</span>
+            </div>
+            <p className="simple-proto-img-caption">Development of Deuterostome</p>
+
+            <div className="simple-proto-features">
+              <div className="simple-proto-feature-row">
+                <strong>Cleavage:</strong>
+                <span>Radial and Indeterminate</span>
+              </div>
+              <div className="simple-proto-feature-row">
+                <strong>Coelom Formation:</strong>
+                <span>Enterocoelous (folds of archenteron gut)</span>
+              </div>
+              <div className="simple-proto-feature-row">
+                <strong>Fate of Blastopore:</strong>
+                <span>Becomes the Anus</span>
+              </div>
+            </div>
+
+            <div className="simple-proto-examples">
+              <strong>Examples:</strong> Echinoderms, Hemichordates, Chordates (including Vertebrates)
+            </div>
           </div>
         </div>
+
       </div>
 
-      {/* ===== CLEAVAGE ===== */}
-      <div className="proto-content-row proto-slide-in proto-delay-2">
-        <div className="proto-row-content proto-bg-protostome proto-hover-card">
-          <div className="proto-badge-pill">(a) CLEAVAGE</div>
-          <div className="proto-visual-frame">
-            <div 
-              className="proto-sprite-img"
-              style={{
-                backgroundImage: `url('https://res.cloudinary.com/duibfmcw1/image/upload/v1767600219/image_2_jfn8yx.png')`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center'
-              }}
-              title="Spiral cleavage in protostomes"
-            ></div>
-          </div>
-          <span className="proto-stage-title">Eight-cell stage</span>
-          <p className="proto-row-desc">Spiral and determinate cleavage</p>
-        </div>
-
-        <div className="proto-row-content proto-bg-deuterostome proto-hover-card">
-          <div className="proto-badge-pill">(a) CLEAVAGE</div>
-          <div className="proto-visual-frame">
-            <div 
-              className="proto-sprite-img"
-              style={{
-                backgroundImage:`url('https://res.cloudinary.com/duibfmcw1/image/upload/v1767600218/image_2_hjofss.png')`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center'
-                
-              }}
-              title="Radial cleavage in deuterostomes"
-            ></div>
-          </div>
-          <span className="proto-stage-title">Eight-cell stage</span>
-          <p className="proto-row-desc">Radial and indeterminate cleavage</p>
-        </div>
-      </div>
-
-      {/* ===== COELOM FORMATION ===== */}
-      <div className="proto-content-row proto-slide-in proto-delay-3">
-        <div className="proto-row-content proto-bg-protostome proto-hover-card proto-pulse-anim">
-          <div className="proto-badge-pill">(b) COELOM FORMATION</div>
-          <div className="proto-visual-frame">
-            <div 
-              className="proto-sprite-img"
-              style={{
-                backgroundImage: `url('https://res.cloudinary.com/duibfmcw1/image/upload/v1767600220/image_3_h5sibm.png')`,
-                backgroundSize: 'cover',
-                backgroundColor: '#ffffff'
-              }}
-              title="Schizocoelous coelom formation"
-            ></div>
-          </div>
-          <div className="proto-info-box">
-            <strong>SCHIZOCOELOUS FORMATION</strong>
-            Solid masses of mesoderm split to form the coelom cavity.
+      {/* LOCAL LIGHTBOX MODAL OVERLAY */}
+      {lightboxImg && (
+        <div className="proto-lightbox-overlay" onClick={() => setLightboxImg(null)}>
+          <div className="proto-lightbox-content" onClick={(e) => e.stopPropagation()}>
+            <button className="proto-lightbox-close" onClick={() => setLightboxImg(null)}>✕</button>
+            <img src={lightboxImg.src} alt={lightboxImg.title} className="proto-lightbox-img" />
+            <p className="proto-lightbox-caption">{lightboxImg.title}</p>
           </div>
         </div>
-
-        <div className="proto-row-content proto-bg-deuterostome proto-hover-card proto-pulse-anim">
-          <div className="proto-badge-pill">(b) COELOM FORMATION</div>
-          <div className="proto-visual-frame">
-            <div 
-              className="proto-sprite-img"
-              style={{
-                backgroundImage: `url('https://res.cloudinary.com/duibfmcw1/image/upload/v1767600218/image_3_pxwhbm.png')`,
-                backgroundSize: 'cover',
-                backgroundColor: '#ffffff'
-              }}
-              title="Enterocoelous coelom formation"
-            ></div>
-          </div>
-          <div className="proto-info-box">
-            <strong>ENTEROCOELOUS FORMATION</strong>
-            Folds of the archenteron form the coelom cavity.
-          </div>
-        </div>
-      </div>
-
-      {/* ===== FATE OF BLASTOPORE ===== */}
-      <div className="proto-content-row proto-slide-in proto-delay-3">
-        <div className="proto-row-content proto-bg-protostome proto-hover-card">
-          <div className="proto-badge-pill">(c) FATE OF BLASTOPORE</div>
-          <div className="proto-visual-frame">
-            <div 
-              className="proto-sprite-img"
-              style={{
-                backgroundImage: `url('https://res.cloudinary.com/duibfmcw1/image/upload/v1767600221/image_4_br8wr3.png')`,
-                backgroundSize: 'cover',
-                backgroundColor: '#f0f7fa'
-              }}
-              title="Protostome development process"
-            ></div>
-          </div>
-          <p className="proto-row-desc">Mouth develops from blastopore</p>
-          <p className="proto-row-desc">Digestive tube → Anus forms secondarily</p>
-        </div>
-
-        <div className="proto-row-content proto-bg-deuterostome proto-hover-card">
-          <div className="proto-badge-pill">(c) FATE OF BLASTOPORE</div>
-          <div className="proto-visual-frame">
-            <div 
-              className="proto-sprite-img"
-              style={{
-                backgroundImage: `url('https://res.cloudinary.com/duibfmcw1/image/upload/v1767600219/image_4_bzdgh2.png')`,
-                backgroundSize: 'cover',
-                backgroundColor: '#f1f8e9'
-              }}
-              title="Deuterostome development process"
-            ></div>
-          </div>
-          <p className="proto-row-desc">Anus develops from blastopore</p>
-          <p className="proto-row-desc">Digestive tube → Mouth forms secondarily</p>
-        </div>
-      </div>
-
-      {/* ===== EXAMPLES ===== */}
-      <div className="proto-content-row proto-slide-in proto-delay-3 proto-compact-examples">
-        <div className="proto-row-content proto-bg-protostome proto-hover-card">
-          <div className="proto-info-box">
-            <strong>PROTOSTOME EXAMPLES</strong>
-            Flatworms, Roundworms, Annelids, Arthropods, Molluscs
-          </div>
-        </div>
-
-        <div className="proto-row-content proto-bg-deuterostome proto-hover-card">
-          <div className="proto-info-box">
-            <strong>DEUTEROSTOME EXAMPLES</strong>
-            Echinoderms, Hemichordates, Chordates (including vertebrates)
-          </div>
-        </div>
-      </div>
-
+      )}
     </div>
   );
 };

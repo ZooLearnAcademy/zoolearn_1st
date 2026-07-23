@@ -22,8 +22,8 @@ const BasicFeaturesIndex = () => {
       <div className="intro-hero-container">
         {/* LEFT CONTENT */}
         <div className="intro-hero-content">
-          <h1 className="intro-hero-title">
-            Basic Features of Classification
+          <h1 className="intro-hero-title" style={{ whiteSpace: 'nowrap' }}>
+            Kingdom Animalia
           </h1>
 
           <p className="intro-hero-text">

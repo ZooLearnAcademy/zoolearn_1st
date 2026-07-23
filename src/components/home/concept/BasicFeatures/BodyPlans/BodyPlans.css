@@ -1,254 +1,304 @@
-/* BodyPlansPage.css */
-.bodyplans-body-plans-page {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 20px;
-  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
-  background: #f8fafc;
+/* Horizontal Stacked Body Plans Layout */
+.horizontal-bp-section {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
-/* ============================
-   BODY PLANS GALLERY
-   ============================ */
-.bodyplans-bodyplans-section {
-  margin: 60px 0;
-}
-
-.bodyplans-section-header {
+.horizontal-bp-header {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 2.5rem;
 }
 
-.bodyplans-section-title {
-  font-size: 3rem;
-  color: #2c3e50; /* Darker color for better contrast */
-  margin-bottom: 15px;
-  font-weight: 700;
-  position: relative;
-  display: inline-block;
+.horizontal-bp-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
 }
 
-.bodyplans-section-title::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100px;
-  height: 4px;
-  background: linear-gradient(90deg, #3498db, #2ecc71);
-  border-radius: 2px;
+.horizontal-bp-subtitle {
+  font-size: 1.05rem;
+  color: #64748b;
 }
 
-.bodyplans-section-subtitle {
-  font-size: 1.2rem;
-  color: #7f8c8d;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-/* --- LAYOUT FIX: FLEXBOX FOR BETTER CENTERING & SIZING --- */
-.bodyplans-bodyplans-gallery {
+/* LIST OF HORIZONTAL CARDS */
+.horizontal-bp-list {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* Centers the cards */
-  gap: 30px;
-  align-items: stretch; /* Makes cards equal height */
+  flex-direction: column;
+  gap: 2rem;
 }
 
-/* --- CARD SIZING FIX --- */
-.bodyplans-bodyplan-card {
-  background: white;
+.horizontal-bp-card {
+  background: #ffffff;
   border-radius: 20px;
-  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 2rem;
+  padding: 1.75rem;
   position: relative;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
-  transition: all 0.4s ease;
-  border: 1px solid #e1e8ed;
-  
-  /* Flexbox logic for internal content */
-  display: flex;
-  flex-direction: column; 
-  
-  /* SIZE CONTROLS */
-  width: 100%;
-  max-width: 360px; /* Prevents cards from getting too wide */
-  min-width: 300px; /* Prevents cards from getting too squished */
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-.bodyplans-bodyplan-card:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
-}
-
-.bodyplans-card-glow {
+.horizontal-bp-card::before {
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  height: 100%;
-  opacity: 0.05;
-  z-index: 1;
+  bottom: 0;
+  width: 5px;
+  background: var(--accent-color, #0f766e);
+}
+
+.horizontal-bp-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  border-color: #cbd5e1;
+}
+
+/* LEFT IMAGE WRAPPER */
+.horizontal-bp-img-wrapper {
+  background: #f8fafc;
+  border-radius: 14px;
+  border: 1px solid #f1f5f9;
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  min-height: 220px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.horizontal-bp-img-wrapper:hover {
+  transform: scale(1.02);
+  border-color: #cbd5e1;
+}
+
+.horizontal-bp-img {
+  max-width: 100%;
+  max-height: 200px;
+  object-fit: contain;
+}
+
+.horizontal-bp-zoom {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(4px);
+  padding: 0.25rem 0.65rem;
+  border-radius: 12px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #475569;
+  border: 1px solid rgba(0, 0, 0, 0.08);
   pointer-events: none;
 }
 
-.bodyplans-card-header {
-  padding: 25px;
-  color: white;
-  position: relative;
-  z-index: 2;
+/* RIGHT CONTENT DETAILS */
+.horizontal-bp-content {
   display: flex;
   flex-direction: column;
+  gap: 0.75rem;
+}
+
+.horizontal-bp-top-bar {
+  display: flex;
   align-items: center;
-  text-align: center;
+  justify-content: space-between;
 }
 
-.bodyplans-plan-icon {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
+.horizontal-bp-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #cbd5e1;
 }
 
-.bodyplans-plan-title {
-  font-size: 1.6rem; /* Slightly adjusted for fit */
-  margin: 0 0 10px 0;
+.horizontal-bp-badge {
+  font-size: 0.78rem;
   font-weight: 700;
-  line-height: 1.2;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
-.bodyplans-complexity-tag {
-  background: rgba(255, 255, 255, 0.2);
-  padding: 5px 15px;
-  border-radius: 15px;
-  font-size: 0.85rem;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  backdrop-filter: blur(10px);
+.horizontal-bp-badge.low {
+  background: #e0f2fe;
+  color: #0369a1;
 }
 
-.bodyplans-complexity-dot {
-  width: 8px;
-  height: 8px;
-  background: white;
-  border-radius: 50%;
+.horizontal-bp-badge.medium {
+  background: #dcfce7;
+  color: #15803d;
 }
 
-.bodyplans-card-body {
-  padding: 25px;
-  position: relative;
-  z-index: 2;
-  flex: 1; /* Pushes footer to bottom */
-  display: flex;
-  flex-direction: column;
+.horizontal-bp-badge.high {
+  background: #f3e8ff;
+  color: #7e22ce;
 }
 
-.bodyplans-plan-description {
-  color: #5a6c7d;
-  line-height: 1.5;
-  margin-bottom: 20px;
-  font-size: 1rem;
-  text-align: left;
-  min-height: 50px; /* Aligns content visually */
+.horizontal-bp-card-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+  line-height: 1.25;
 }
 
-/* Diagram/Image Styles */
-.bodyplans-diagram {
-  height: auto;
-  max-height: 200px;
-  margin: 15px 0 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #f1f5f9;
-  border-radius: 12px;
-  overflow: hidden;
-  padding: 10px;
-}
-
-.bodyplans-diagram-img {
-  max-width: 100%;
-  max-height: 180px;
-  object-fit: contain;
-  display: block;
-  border-radius: 8px;
-}
-
-.bodyplans-features-list {
-  margin: 10px 0 20px;
-  margin-bottom: auto;
-  text-align: left;
-}
-
-.bodyplans-features-title {
-  font-size: 1.1rem;
-  color: #2c3e50;
-  margin-bottom: 10px;
-  font-weight: 600;
-}
-
-.bodyplans-features-list ul {
-  list-style: none;
-  padding: 0;
+.horizontal-bp-card-desc {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.6;
   margin: 0;
 }
 
-.bodyplans-feature-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  margin-bottom: 8px;
-  color: #5a6c7d;
-  line-height: 1.4;
-  font-size: 0.95rem;
-  text-align: left;
+.horizontal-bp-features-box {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 0.9rem 1.2rem;
+  border: 1px solid #e2e8f0;
 }
 
-.bodyplans-feature-marker {
-  color: #2ecc71;
-  font-weight: bold;
+.horizontal-bp-features-heading {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #1e293b;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.5rem;
+}
+
+.horizontal-bp-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.horizontal-bp-features-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  color: #334155;
+  line-height: 1.4;
+}
+
+.horizontal-bp-bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  margin-top: 0.45rem;
   flex-shrink: 0;
 }
 
-.bodyplans-example-box {
-  background: #f8fafc;
-  padding: 12px;
-  border-radius: 10px;
-  margin-top: 15px;
-  border-left: 4px solid #3498db;
-  text-align: left;
-}
-
-.bodyplans-example-label {
-  font-weight: 600;
-  color: #2c3e50;
-  margin-right: 5px;
-  font-size: 0.9rem;
-}
-
-.bodyplans-example-text {
-  color: #3498db;
-  font-weight: 500;
-  font-size: 0.9rem;
-}
-
-.bodyplans-card-footer {
-  padding: 15px;
-  text-align: center;
-  border-top: 1px solid #e1e8ed;
-  background: #f8fafc;
+.horizontal-bp-examples-box {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
   margin-top: auto;
+  flex-wrap: wrap;
 }
 
-.bodyplans-plan-number {
-  font-size: 2rem;
-  font-weight: 800;
-  color: #bdc3c7;
-  opacity: 0.7;
+.horizontal-bp-examples-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #0f172a;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .bodyplans-section-title { font-size: 2rem; }
-  .bodyplans-bodyplan-card { max-width: 100%; }
-  .bodyplans-card-body { padding: 20px; }
+.horizontal-bp-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.horizontal-bp-chip {
+  background: #f1f5f9;
+  color: #334155;
+  padding: 0.3rem 0.75rem;
+  border-radius: 16px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  border: 1px solid #e2e8f0;
+}
+
+/* LIGHTBOX MODAL OVERLAY */
+.horizontal-bp-lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  animation: bpFadeIn 0.2s ease;
+}
+
+.horizontal-bp-lightbox-content {
+  position: relative;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.horizontal-bp-lightbox-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  background: #f1f5f9;
+  border: none;
+  font-size: 1.2rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #64748b;
+  transition: all 0.2s ease;
+}
+
+.horizontal-bp-lightbox-close:hover {
+  background: #fee2e2;
+  color: #ef4444;
+}
+
+.horizontal-bp-lightbox-img {
+  max-width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.horizontal-bp-lightbox-caption {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+@keyframes bpFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* RESPONSIVE */
+@media (max-width: 850px) {
+  .horizontal-bp-card {
+    grid-template-columns: 1fr;
+  }
 }
